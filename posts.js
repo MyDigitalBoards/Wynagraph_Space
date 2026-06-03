@@ -16,7 +16,7 @@ window.POSTS = [
     date: "2026-05-10",
     category: "Droits & Démarches",
     excerpt: "Comptes bancaires, réseaux sociaux, photos cloud… À notre mort, nos données numériques survivent. Voici comment s'y préparer avec un graphe.",
-    graphId: "theme-legal-fin-de-vie-numerique",
+    graphId: "cartographie-succession-complete",
     body: `
       <p>Nous accumulons des traces numériques depuis des années : comptes bancaires en ligne, profils sur les réseaux sociaux, photos dans le cloud, abonnements, gestionnaires de mots de passe… À notre décès, tout cela ne disparaît pas automatiquement.</p>
 
