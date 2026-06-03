@@ -11,8 +11,8 @@
 
 window.POSTS = [
   {
-    id: "cartographier-fin-de-vie-numerique",
-    title: "Pourquoi cartographier sa fin de vie numérique ?",
+    id: "cartographie-succession-complete",
+    title: "Pourquoi anticiper sa fin de vie numérique ?",
     date: "2026-05-10",
     category: "Droits & Démarches",
     excerpt: "Comptes bancaires, réseaux sociaux, photos cloud… À notre mort, nos données numériques survivent. Voici comment s'y préparer avec un graphe.",
