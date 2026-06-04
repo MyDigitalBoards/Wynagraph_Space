@@ -86,6 +86,7 @@ function buildNetwork(container, graph, opts = {}) {
     interaction: {
       hover: interactive,
       zoomView: interactive,
+      zoomSpeed: 0.5, 
       dragView: interactive,
       dragNodes: interactive,
       selectable: interactive,
