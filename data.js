@@ -7,42 +7,12 @@ window.GRAPHS = [
   "description": "Vue d'ensemble des formalités administratives et patrimoniales.",
   "longDescription": "Cette cartographie intègre les obligations légales, gestion des contrats, délais et organismes à contacter.",
   "nodes": [
-    {
-      "id": "personne_conjoint",
-      "label": "Conjoint",
-      "group": "Personne",
-      "size": 18
-    },
-    {
-      "id": "allocation_pension_de_réversion",
-      "label": "Pension de réversion",
-      "group": "Allocation",
-      "size": 18
-    },
-    {
-      "id": "formalite_etablissement_du_certificat_de_décès",
-      "label": "Etablissement du certificat de décès",
-      "group": "Formalite",
-      "size": 18
-    },
-    {
-      "id": "personne_médecin",
-      "label": "Médecin",
-      "group": "Personne",
-      "size": 18
-    },
-    {
-      "id": "defunt_défunt",
-      "label": "Défunt",
-      "group": "Defunt",
-      "size": 24
-    },
-    {
-      "id": "derniere_volonte_inhumation",
-      "label": "Inhumation",
-      "group": "Derniere_volonte",
-      "size": 18
-    },
+    {"id": "personne_conjoint","label": "Conjoint","group": "Personne","size": 18},
+    {"id": "allocation_pension_de_réversion","label": "Pension de réversion","group": "Allocation","size": 18},
+    {"id": "formalite_etablissement_du_certificat_de_décès","label": "Etablissement du certificat de décès","group": "Formalite",     "size": 18},
+    {"id": "personne_médecin","label": "Médecin","group": "Personne","size": 18},
+    {"id": "defunt_défunt","label": "Défunt","group": "Defunt","size": 24},
+    {"id": "derniere_volonte_inhumation","label": "Inhumation","group": "Derniere_volonte","size": 18},
     {
       "id": "formalite_informer_les_organismes_payeurs",
       "label": "Informer les organismes payeurs",
@@ -1051,63 +1021,6 @@ window.GRAPHS = [
   ]
 },
 {
-  "id": "theme-gastronomie-michelin-paris",
-  "title": "Les Étoilés Michelin de Paris",
-  "category": "Gastronomie & Tourisme",
-  "description": "Une cartographie des palaces, des grands chefs et des distinctions de la capitale.",
-  "longDescription": "Paris est l'une des capitales mondiales de la gastronomie. Ce graphe explore l'écosystème ultra-connecté des tables triples étoilées, des chefs d'orchestre qui les dirigent, de leurs styles culinaires et des producteurs d'élite qui font l'excellence de ces assiettes.",
-  "nodes": [
-    { "id": "guide_michelin", "label": "Le Guide Michelin Paris", "group": "racine", "size": 28 },
-    
-    // Les Distinctions (Étoiles)
-    { "id": "3_etoiles", "label": "★★★ (Exceptionnel)", "group": "distinction", "size": 22 },
-    { "id": "etoile_verte", "label": "♣ Étoile Verte (Durable)", "group": "distinction", "size": 18 },
-    
-    // Les Grands Chefs
-    { "id": "chef_passard", "label": "Alain Passard", "group": "chef", "size": 18 },
-    { "id": "chef_alleno", "label": "Yannick Alléno", "group": "chef", "size": 18 },
-    { "id": "chef_pacaud", "label": "Bernard Pacaud", "group": "chef", "size": 18 },
-    
-    // Les Restaurants / Palaces
-    { "id": "rest_arpège", "label": "L'Arpège (Paris 7e)", "group": "restaurant", "size": 20 },
-    { "id": "rest_ledoyen", "label": "Alléno Paris au Pavillon Ledoyen (Paris 8e)", "group": "restaurant", "size": 20 },
-    { "id": "rest_ambroisie", "label": "L'Ambroisie (Place des Vosges, Paris 4e)", "group": "restaurant", "size": 20 },
-    
-    // Styles de Cuisine
-    { "id": "cuisine_legumiere", "label": "Haute Cuisine Légumière", "group": "style", "size": 14 },
-    { "id": "cuisine_sauces", "label": "Cuisine Moderniste & Extractions (Sauces)", "group": "style", "size": 14 },
-    { "id": "cuisine_classique", "label": "Classicisme Français Absolu", "group": "style", "size": 14 },
-    
-    // Les Producteurs d'Exception
-    { "id": "prod_ferme_arpège", "label": "Les Potagers de l'Arpège (Sarthe/Eure)", "group": "producteur", "size": 14 }
-  ],
-  "edges": [
-    // Attribution des étoiles par le Guide
-    { "source": "guide_michelin", "target": "3_etoiles", "label": "Décerne" },
-    { "source": "guide_michelin", "target": "etoile_verte", "label": "Valorise via" },
-    
-    // Liens vers les restaurants triples étoilés
-    { "source": "rest_arpège", "target": "3_etoiles", "label": "Détient (depuis 1996)" },
-    { "source": "rest_ledoyen", "target": "3_etoiles", "label": "Détient" },
-    { "source": "rest_ambroisie", "target": "3_etoiles", "label": "Détient (plus longue longévité)" },
-    
-    // Liens Chefs -> Restaurants
-    { "source": "chef_passard", "target": "rest_arpège", "label": "Chef Propriétaire de" },
-    { "source": "chef_alleno", "target": "rest_ledoyen", "label": "Dirige les cuisines de" },
-    { "source": "chef_pacaud", "target": "rest_ambroisie", "label": "Fondateur et Chef de" },
-    
-    // Liens Restaurants -> Identité Culinaire
-    { "source": "rest_arpège", "target": "cuisine_legumiere", "label": "A pour signature la" },
-    { "source": "rest_ledoyen", "target": "cuisine_sauces", "label": "Innovers grâce à la" },
-    { "source": "rest_ambroisie", "target": "cuisine_classique", "label": "Incarne le" },
-    
-    // L'éco-système et les distinctions durables
-    { "source": "rest_arpège", "target": "etoile_verte", "label": "A obtenu l'" },
-    { "source": "rest_arpège", "target": "prod_ferme_arpège", "label": "S'approvisionne exclusivement dans" },
-    { "source": "prod_ferme_arpège", "target": "cuisine_legumiere", "label": "Alimente la" }
-  ]
-},
-{
   "id": "theme-patrimoine-monuments-monde",
   "title": "Merveilles de l'Architecture Mondiale",
   "category": "Histoire & Voyage",
@@ -1228,67 +1141,6 @@ window.GRAPHS = [
   ]
 },
 {
-  "id": "theme-dev-perso-best-sellers",
-  "title": "La Carte du Développement Personnel",
-  "category": "Psychologie & Bien-être",
-  "description": "Une cartographie des livres incontournables, de leurs philosophies et de leurs outils.",
-  "longDescription": "Le développement personnel regroupe des approches très variées. Ce graphe connecte les plus grands best-sellers mondiaux à leurs courants de pensée fondateurs, tout en mettant en lumière les concepts clés et les exercices pratiques que chaque livre transmet.",
-  "nodes": [
-    { "id": "racine_dev_perso", "label": "Épanouissement Personnel", "group": "racine", "size": 28 },
-    
-    // Courants théoriques / Philosophies de fond
-    { "id": "courant_stoicisme", "label": "Stoïcisme & Philosophie Antique", "group": "philosophie", "size": 18 },
-    { "id": "courant_tcc", "label": "Psychologie Cognitive (TCC)", "group": "philosophie", "size": 18 },
-    { "id": "courant_systemique", "label": "Approche Systémique & Habitudes", "group": "philosophie", "size": 18 },
-    
-    // Les Livres Majeurs
-    { "id": "livre_atomic_habits", "label": "Atomic Habits (James Clear)", "group": "livre", "size": 22 },
-    { "id": "livre_obstacle_way", "label": "L'Obstacle est le Chemin (Ryan Holiday)", "group": "livre", "size": 22 },
-    { "id": "livre_4_accords", "label": "Les Quatre Accords Toltèques (Don Miguel Ruiz)", "group": "livre", "size": 22 },
-    
-    // Les Auteurs
-    { "id": "auteur_clear", "label": "James Clear", "group": "auteur", "size": 15 },
-    { "id": "auteur_holiday", "label": "Ryan Holiday", "group": "auteur", "size": 15 },
-    { "id": "auteur_ruiz", "label": "Don Miguel Ruiz", "group": "auteur", "size": 15 },
-    
-    // Concepts Clés / Leçons de vie
-    { "id": "concept_interets_composes", "label": "L'effet cumulé des petites actions", "group": "concept", "size": 14 },
-    { "id": "concept_dichotomie_controle", "label": "La dichotomie du contrôle", "group": "concept", "size": 14 },
-    { "id": "concept_parole_impeccable", "label": "La parole impeccable", "group": "concept", "size": 14 },
-    
-    // Outils Pratiques / Actions pour le lecteur
-    { "id": "outil_regle_2_min", "label": "La règle des 2 minutes", "group": "outil", "size": 13 },
-    { "id": "outil_journaling", "label": "L'écriture quotidienne (Journaling)", "group": "outil", "size": 13 },
-    { "id": "outil_communication", "label": "La communication non-violente", "group": "outil", "size": 13 }
-  ],
-  "edges": [
-    // Liens Auteurs -> Livres
-    { "source": "livre_atomic_habits", "target": "auteur_clear", "label": "Écrit par" },
-    { "source": "livre_obstacle_way", "target": "auteur_holiday", "label": "Écrit par" },
-    { "source": "livre_4_accords", "target": "auteur_ruiz", "label": "Écrit par" },
-    
-    // Liens Livres -> Courants de pensée
-    { "source": "livre_atomic_habits", "target": "courant_systemique", "label": "S'appuie sur l'" },
-    { "source": "livre_obstacle_way", "target": "courant_stoicisme", "label": "Vulgarise le" },
-    { "source": "livre_4_accords", "target": "courant_tcc", "label": "Partage des mécanismes de la" },
-    
-    // Liens Livres -> Concepts clés
-    { "source": "livre_atomic_habits", "target": "concept_interets_composes", "label": "Démontre le pouvoir de" },
-    { "source": "livre_obstacle_way", "target": "concept_dichotomie_controle", "label": "Repose sur la" },
-    { "source": "livre_4_accords", "target": "concept_parole_impeccable", "label": "Met en premier accord" },
-    
-    // Liens Concepts -> Outils pratiques (Comment appliquer le concept)
-    { "source": "concept_interets_composes", "target": "outil_regle_2_min", "label": "S'active via" },
-    { "source": "concept_dichotomie_controle", "target": "outil_journaling", "label": "Se pratique par l'" },
-    { "source": "concept_parole_impeccable", "target": "outil_communication", "label": "Se traduit par la" },
-    
-    // Rattachement à la racine pour la navigation
-    { "source": "racine_dev_perso", "target": "livre_atomic_habits", "label": "Inclus" },
-    { "source": "racine_dev_perso", "target": "livre_obstacle_way", "label": "Inclus" },
-    { "source": "racine_dev_perso", "target": "livre_4_accords", "label": "Inclus" }
-  ]
-},
-  {
   "id": "theme-nutrition-saisons-vegetaux",
   "title": "Le Calendrier des Fruits & Légumes",
   "category": "Écologie & Nutrition",
@@ -1469,126 +1321,7 @@ window.GRAPHS = [
     { "source": "item_blazer_marine", "target": "item_chemise_blanche", "label": "Se superpose sur" }
   ]
 },
-  {
-  "id": "theme-musique-samples",
-  "title": "Une Généalogie du Son",
-  "category": "Pop Culture",
-  "description": "Cartographie des samples et des influences à travers les générations de musiciens.",
-  "longDescription": "Rien ne se perd, tout se transforme. Ce graphe retrace comment un morceau de funk des années 70 est devenu la fondation de hits majeurs du Hip-Hop et de la French Touch dans les décennies suivantes.",
-  "nodes": [
-    { "id": "racine_musique", "label": "Histoire du Sample", "group": "racine", "size": 28 },
-    // Artistes / Morceaux Originaux
-    { "id": "winstons", "label": "The Winstons - Amen, Brother (1969)", "group": "original", "size": 22 },
-    { "id": "edwin_birdsong", "label": "Edwin Birdsong - Cola Bottle Baby (1979)", "group": "original", "size": 20 },
-    // Artistes qui ont samplé
-    { "id": "daft_punk", "label": "Daft Punk - Harder, Better, Faster, Stronger (2001)", "group": "moderne", "size": 18 },
-    { "id": "kanye_west", "label": "Kanye West - Stronger (2007)", "group": "moderne", "size": 18 },
-    { "id": "nwa", "label": "N.W.A - Straight Outta Compton (1988)", "group": "moderne", "size": 16 },
-    { "id": "prodigy", "label": "The Prodigy - Firestarter (1996)", "group": "moderne", "size": 16 },
-    // Genres musicaux
-    { "id": "genre_hiphop", "label": "Hip-Hop / Rap", "group": "genre", "size": 14 },
-    { "id": "genre_drum_bass", "label": "Drum and Bass", "group": "genre", "size": 14 },
-    { "id": "genre_french_touch", "label": "French Touch", "group": "genre", "size": 14 }
-  ],
-  "edges": [
-    { "source": "racine_musique", "target": "winstons", "label": "Source rythmique" },
-    { "source": "racine_musique", "target": "edwin_birdsong", "label": "Source mélodique" },
-    // L'impact de "Amen, Brother" (Le Amen Break)
-    { "source": "nwa", "target": "winstons", "label": "A samplé le rythme de" },
-    { "source": "prodigy", "target": "winstons", "label": "A accéléré le rythme de" },
-    { "source": "nwa", "target": "genre_hiphop", "label": "Pionnier du" },
-    { "source": "prodigy", "target": "genre_drum_bass", "label": "A popularisé la" },
-    // La chaîne de Daft Punk à Kanye
-    { "source": "daft_punk", "target": "edwin_birdsong", "label": "A samplé les synthés de" },
-    { "source": "daft_punk", "target": "genre_french_touch", "label": "Pilier de la" },
-    { "source": "kanye_west", "target": "daft_punk", "label": "A vocalement samplé" },
-    { "source": "kanye_west", "target": "genre_hiphop", "label": "A dominé le" }
-  ]
-},
-  {
-  "id": "theme-education-scolarite-france",
-  "title": "Le Parcours Scolaire en France",
-  "category": "Société & Éducation",
-  "description": "Une cartographie chronologique de l'école maternelle aux études supérieures.",
-  "longDescription": "Le système éducatif français est structuré en grands cycles bien définis. Ce graphe chronologique retrace le parcours type d'un élève, matérialise l'âge d'obligation scolaire et met en lumière les paliers d'orientation majeurs.",
-  "nodes": [
-    { "id": "systeme_educatif", "label": "Scolarité Obligatoire", "group": "racine", "size": 28 },
-    
-    // Premier Degré (École primaire)
-    { "id": "cycle_maternelle", "label": "École Maternelle (Petite, Moyenne, Grande Section)", "group": "premier_degre", "size": 20 },
-    { "id": "cycle_elementaire", "label": "École Élémentaire (CP, CE1, CE2, CM1, CM2)", "group": "premier_degre", "size": 24 },
-    
-    // Second Degré (Collège et Lycée)
-    { "id": "cycle_college", "label": "Le Collège (de la 6ème à la 3ème)", "group": "second_degre", "size": 22 },
-    { "id": "filiere_lycee_general", "label": "Lycée Général & Technologique (Seconde, Première, Terminale)", "group": "orientation", "size": 18 },
-    { "id": "filiere_lycee_pro", "label": "Voie Professionnelle (Bac Pro / CAP)", "group": "orientation", "size": 18 },
-    
-    // Les Grands Examens / Diplômes Jalons
-    { "id": "diplome_brevet", "label": "Diplôme National du Brevet (DNB)", "group": "examen", "size": 14 },
-    { "id": "diplome_bac", "label": "Le Baccalauréat", "group": "examen", "size": 15 },
-    
-    // L'Après-Bac (Ouverture)
-    { "id": "post_bac", "label": "Enseignement Supérieur (Université, Prépas, BTS)", "group": "superieur", "size": 16 }
-  ],
-  "edges": [
-    // Fil chronologique principal
-    { "source": "systeme_educatif", "target": "cycle_maternelle", "label": "Début de l'obligation à 3 ans" },
-    { "source": "cycle_maternelle", "target": "cycle_elementaire", "label": "Entrée au CP à 6 ans" },
-    { "source": "cycle_elementaire", "target": "cycle_college", "label": "Entrée en 6ème à 11 ans" },
-    
-    // Le passage du Brevet au Collège
-    { "source": "cycle_college", "target": "diplome_brevet", "label": "S'achève par l'examen du" },
-    
-    // Bifurcation / Orientation après la 3ème
-    { "source": "cycle_college", "target": "filiere_lycee_general", "label": "Orientation possible en fin de 3ème" },
-    { "source": "cycle_college", "target": "filiere_lycee_pro", "label": "Orientation possible en fin de 3ème" },
-    
-    // Les diplômes de fin de second degré
-    { "source": "filiere_lycee_general", "target": "diplome_bac", "label": "Prépare au" },
-    { "source": "filiere_lycee_pro", "target": "diplome_bac", "label": "Prépare au" },
-    
-    // Passerelle vers le supérieur
-    { "source": "diplome_bac", "target": "post_bac", "label": "Ouvre l'accès à l'" }
-  ]
-},
-{
-  "id": "theme-cinema-dune",
-  "title": "L'Échiquier d'Arrakis (Dune)",
-  "category": "Cinéma & Séries",
-  "description": "Les relations politiques, familiales et mystiques de l'univers de Frank Herbert.",
-  "longDescription": "Suivez les fils de la trahison et de la prophétie. Ce graphe relie les grandes Maisons, les personnages clés et les forces écologiques de la planète de sable Arrakis.",
-  "nodes": [
-    { "id": "arrakis", "label": "Arrakis (Dune)", "group": "racine", "size": 28 },
-    // Factions / Maisons
-    { "id": "maison_atreides", "label": "Maison Atréides", "group": "faction", "size": 20 },
-    { "id": "maison_harkonnen", "label": "Maison Harkonnen", "group": "faction", "size": 20 },
-    { "id": "fremen", "label": "Les Fremen (Peuple)", "group": "faction", "size": 18 },
-    // Personnages
-    { "id": "paul", "label": "Paul Atréides", "group": "personnage", "size": 22 },
-    { "id": "jessica", "label": "Dame Jessica", "group": "personnage", "size": 16 },
-    { "id": "vladimir", "label": "Baron Vladimir Harkonnen", "group": "personnage", "size": 18 },
-    { "id": "chani", "label": "Chani", "group": "personnage", "size": 16 },
-    // Éléments clés
-    { "id": "epice", "label": "L'Épice (Mélange)", "group": "ressource", "size": 18 },
-    { "id": "ver_sable", "label": "Shai-Hulud (Ver de sable)", "group": "creature", "size": 18 }
-  ],
-  "edges": [
-    { "source": "arrakis", "target": "epice", "label": "Unique producteur de" },
-    { "source": "ver_sable", "target": "arrakis", "label": "Façonne l'écosystème de" },
-    { "source": "ver_sable", "target": "epice", "label": "Crée indirectement" },
-    // Liens de factions
-    { "source": "paul", "target": "maison_atreides", "label": "Héritier de" },
-    { "source": "jessica", "target": "maison_atreides", "label": "Concubine du Duc de" },
-    { "source": "vladimir", "target": "maison_harkonnen", "label": "Dirigeant de" },
-    // Conflits et Alliances
-    { "source": "maison_atreides", "target": "maison_harkonnen", "label": "Guerre ancestrale contre" },
-    { "source": "paul", "target": "jessica", "label": "Fils de" },
-    { "source": "paul", "target": "fremen", "label": "Devient le Messie (Muad'Dib) des" },
-    { "source": "paul", "target": "chani", "label": "Amoureux de" },
-    { "source": "chani", "target": "fremen", "label": "Guerrière" },
-    { "source": "fremen", "target": "ver_sable", "label": "Révère et chevauche" }
-  ]
-},
+
 {
   "id": "theme-finance-private-equity-criteria",
   "title": "Due Diligence en Private Equity",
@@ -1635,42 +1368,7 @@ window.GRAPHS = [
     { "source": "pilier_risques", "target": "crit_gp_commit", "label": "Exige un fort" }
   ]
 },
-{
-  "id": "theme-skilltree-frontend",
-  "title": "Devenir Développeur Front-End",
-  "category": "Développement Personnel",
-  "description": "Le parcours d'apprentissage guidé et les prérequis pour maîtriser le web moderne.",
-  "longDescription": "Visualisez votre progression comme dans un jeu vidéo. Ce graphe de compétences (Skill Tree) indique par quoi commencer et quelles technologies débloquer pour devenir un expert Front-End.",
-  "nodes": [
-    { "id": "metier_frontend", "label": "Expert Front-End", "group": "racine", "size": 28 },
-    // Les Fondations (Niveau 1)
-    { "id": "html", "label": "HTML5 (Structure)", "group": "fondation", "size": 20 },
-    { "id": "css", "label": "CSS3 (Style)", "group": "fondation", "size": 20 },
-    { "id": "javascript", "label": "JavaScript ES6 (Logique)", "group": "fondation", "size": 22 },
-    // Compétences Intermédiaires (Niveau 2)
-    { "id": "flexbox", "label": "Layouts (Flexbox/Grid)", "group": "intermediaire", "size": 15 },
-    { "id": "git", "label": "Git & GitHub", "group": "intermediaire", "size": 16 },
-    { "id": "api_fetch", "label": "Appels API (Fetch/Axios)", "group": "intermediaire", "size": 15 },
-    // Spécialisations / Frameworks (Niveau 3)
-    { "id": "react", "label": "React.js / Next.js", "group": "avance", "size": 18 },
-    { "id": "tailwind", "label": "Tailwind CSS", "group": "avance", "size": 14 },
-    { "id": "typescript", "label": "TypeScript", "group": "avance", "size": 16 }
-  ],
-  "edges": [
-    { "source": "metier_frontend", "target": "html", "label": "Requiert la base" },
-    // Liens de dépendance (A pour apprendre B)
-    { "source": "html", "target": "css", "label": "Indissociable de" },
-    { "source": "css", "target": "flexbox", "label": "Nécessaire pour" },
-    { "source": "flexbox", "target": "tailwind", "label": "Facilite l'usage de" },
-    { "source": "html", "target": "javascript", "label": "Donne de la dynamique via" },
-    { "source": "javascript", "target": "api_fetch", "label": "Indispensable pour" },
-    { "source": "javascript", "target": "react", "label": "Est le socle de" },
-    { "source": "javascript", "target": "typescript", "label": "Évolue vers" },
-    // Consolidation finale vers l'objectif
-    { "source": "react", "target": "metier_frontend", "label": "Valide le niveau pour" },
-    { "source": "git", "target": "metier_frontend", "label": "Compétence transverse exigée pour" }
-  ]
-},
+
 {
   "id": "theme-mode-entretien-textile",
   "title": "Le Guide d'Entretien des Matières",
@@ -2075,7 +1773,7 @@ window.GRAPHS = [
 },
 {
   "id": "theme-sciences-fonctionnement-cerveau",
-  "title": "La Toile des Neurosciences",
+  "title": "Le cerveau connecté",
   "category": "Sciences & Santé",
   "description": "Une cartographie des structures, fonctions et de la chimie du cerveau humain.",
   "longDescription": "Le cerveau est une machine biologique d'une complexité infinie. Ce graphe structure ses grandes régions anatomiques, les associe à nos capacités quotidiennes (mémoire, vision, logique) et descend jusqu'à l'échelle cellulaire pour montrer comment les neurotransmetteurs dictent nos comportements.",
@@ -2129,62 +1827,7 @@ window.GRAPHS = [
     { "source": "chem_serotonine", "target": "fonc_emotions", "label": "Stabilise le sommeil et les" }
   ]
 },
-{
-  "id": "theme-nature-fabrication-miel-etapes",
-  "title": "La Toile de Fabrication du Miel",
-  "category": "Nature & Biologie",
-  "description": "Une cartographie chronologique du travail des abeilles, de la fleur jusqu'au pot.",
-  "longDescription": "Le miel est le fruit d'une organisation collective fascinante. Ce graphe détaille chaque étape du processus de transformation : de la récolte du nectar par les butineuses au travail de déshydratation des ouvrières, jusqu'à la mise en pot finale par l'apiculteur.",
-  "nodes": [
-    { "id": "racine_miel", "label": "La Fabrication du Miel", "group": "racine", "size": 28 },
-    
-    // Étape 1 : La Récolte (À l'extérieur)
-    { "id": "etape_butinage", "label": "1. Le Butinage", "group": "etape", "size": 22 },
-    { "id": "act_recolte_nectar", "label": "Récolte du Nectar & Miellat", "group": "action", "size": 16 },
-    { "id": "bio_jabot", "label": "Stockage temporaire dans le Jabot", "group": "biologie", "size": 16 },
-    
-    // Étape 2 : La Transformation (Dans la ruche)
-    { "id": "etape_transformation", "label": "2. La Trophallaxie (Passage de bouche à bouche)", "group": "etape", "size": 22 },
-    { "id": "act_enrichissement", "label": "Enrichissement en Enzymes (Invertase)", "group": "action", "size": 16 },
-    { "id": "act_ventilation", "label": "3. La Déshydratation (Ventilation mécanique)", "group": "action", "size": 18 },
-    
-    // Étape 3 : Le Stockage (Le garde-manger)
-    { "id": "etape_stockage", "label": "4. Le Mûrissement & Conservation", "group": "etape", "size": 22 },
-    { "id": "bio_alveole", "label": "Dépôt dans les Alvéoles de cire", "group": "biologie", "size": 16 },
-    { "id": "act_operculation", "label": "Operculation (Fermeture étanche à la cire)", "group": "action", "size": 16 },
-    
-    // Étape 4 : L'Intervention Humaine
-    { "id": "etape_apiculteur", "label": "5. La Récolte de l'Apiculteur", "group": "etape", "size": 22 },
-    { "id": "act_extraction", "label": "Désoperculation & Extraction par Centrifugation", "group": "action", "size": 16 },
-    { "id": "prod_pot_miel", "label": "🍯 Le Pot de Miel Final", "group": "produit", "size": 24 }
-  ],
-  "edges": [
-    // Fil conducteur principal (Chronologie globale)
-    { "source": "racine_miel", "target": "etape_butinage", "label": "Début du cycle" },
-    { "source": "etape_butinage", "target": "etape_transformation", "label": "Retour à la ruche" },
-    { "source": "etape_transformation", "target": "act_ventilation", "label": "Baisse du taux d'humidité" },
-    { "source": "act_ventilation", "target": "etape_stockage", "label": "Une fois mûr" },
-    { "source": "etape_stockage", "target": "etape_apiculteur", "label": "Quand les hausses sont prêtes" },
-    
-    // Détails Étape 1 : Butinage
-    { "source": "etape_butinage", "target": "act_recolte_nectar", "label": "L'abeille butineuse réalise la" },
-    { "source": "act_recolte_nectar", "target": "bio_jabot", "label": "Le liquide est aspiré dans le" },
-    
-    // Détails Étape 2 : Transformation chimique
-    { "source": "bio_jabot", "target": "etape_transformation", "label": "Transmis aux abeilles receveuses par" },
-    { "source": "etape_transformation", "target": "act_enrichissement", "label": "Le transit répété permet l'" },
-    
-    // Détails Étape 3 : Stockage et séchage
-    { "source": "act_enrichissement", "target": "bio_alveole", "label": "Le pré-miel est placé dans une" },
-    { "source": "act_ventilation", "target": "bio_alveole", "label": "Les ouvrières battent des ailes pour sécher l'" },
-    { "source": "bio_alveole", "target": "act_operculation", "label": "Quand l'eau tombe à ~18%, déclenchement de l'" },
-    
-    // Détails Étape 4 : Extraction apicole
-    { "source": "act_operculation", "target": "etape_apiculteur", "label": "Le cadre operculé est retiré par" },
-    { "source": "etape_apiculteur", "target": "act_extraction", "label": "L'humain procède à l'" },
-    { "source": "act_extraction", "target": "prod_pot_miel", "label": "Permet d'obtenir" }
-  ]
-},
+
 {
   "id": "theme-sciences-cycle-lunaire-complet",
   "title": "La Toile du Cycle Lunaire",
@@ -2238,66 +1881,6 @@ window.GRAPHS = [
     // Liaisons de la Pleine Lune
     { "source": "phase_pleine", "target": "pos_opposition", "label": "Causée par" },
     { "source": "pos_opposition", "target": "phen_marees_vives", "label": "Attractions alignées ➡️" }
-  ]
-},
-{
-  "id": "theme-genealogie-famille-jackson",
-  "title": "L'Arbre Généalogique de la Famille Jackson",
-  "category": "Histoire & Culture Pop",
-  "description": "La cartographie de l'une des dynasties musicales les plus célèbres au monde.",
-  "longDescription": "De Joe et Katherine Jackson jusqu'à la troisième génération, ce graphe structure les liens de parenté de cette famille d'artistes hors norme. Il met en évidence la fratrie des Jackson 5 et la descendance directe du Roi de la Pop.",
-  "nodes": [
-    { "id": "famille_jackson", "label": "Dynastie Jackson", "group": "racine", "size": 28 },
-    
-    // G1 : Les Parents Fondateurs
-    { "id": "par_joe", "label": "Joe Jackson (Père / Manager)", "group": "g1_parents", "size": 22 },
-    { "id": "par_katherine", "label": "Katherine Jackson (Mère)", "group": "g1_parents", "size": 22 },
-    
-    // G2 : La Fratrie (Les Enfants)
-    { "id": "enf_rebbie", "label": "Rebbie Jackson", "group": "g2_enfants", "size": 18 },
-    { "id": "enf_jackie", "label": "Jackie Jackson", "group": "g2_enfants", "size": 18 },
-    { "id": "enf_tito", "label": "Tito Jackson", "group": "g2_enfants", "size": 18 },
-    { "id": "enf_jermaine", "label": "Jermaine Jackson", "group": "g2_enfants", "size": 18 },
-    { "id": "enf_latoya", "label": "La Toya Jackson", "group": "g2_enfants", "size": 18 },
-    { "id": "enf_marlon", "label": "Marlon Jackson", "group": "g2_enfants", "size": 18 },
-    { "id": "enf_michael", "label": "👑 Michael Jackson", "group": "g2_enfants_star", "size": 25 },
-    { "id": "enf_randy", "label": "Randy Jackson", "group": "g2_enfants", "size": 18 },
-    { "id": "enf_janet", "label": "🎵 Janet Jackson", "group": "g2_enfants_star", "size": 22 },
-    
-    // G3 : Exemples clés de la 3ème Génération (Petits-enfants)
-    { "id": "pt_paris", "label": "Paris Jackson (Fille de Michael)", "group": "g3_petits_enfants", "size": 16 },
-    { "id": "pt_prince", "label": "Prince Jackson (Fils de Michael)", "group": "g3_petits_enfants", "size": 16 },
-    { "id": "pt_bigi", "label": "Bigi 'Blanket' Jackson (Fils de Michael)", "group": "g3_petits_enfants", "size": 16 },
-    { "id": "pt_eissa", "label": "Eissa Al Mana (Fils de Janet)", "group": "g3_petits_enfants", "size": 15 },
-    { "id": "pt_taj", "label": "Taj Jackson (Fils de Tito / Groupe 3T)", "group": "g3_petits_enfants", "size": 15 }
-  ],
-  "edges": [
-    // Union des parents
-    { "source": "par_joe", "target": "par_katherine", "label": "Mariés en 1949" },
-    { "source": "famille_jackson", "target": "par_joe", "label": "Fondateur" },
-    { "source": "famille_jackson", "target": "par_katherine", "label": "Fondatrice" },
-    
-    // Enfants de Joe & Katherine (G2)
-    { "source": "par_katherine", "target": "enf_rebbie", "label": "Mère de" },
-    { "source": "par_katherine", "target": "enf_jackie", "label": "Mère de" },
-    { "source": "par_katherine", "target": "enf_tito", "label": "Mère de" },
-    { "source": "par_katherine", "target": "enf_jermaine", "label": "Mère de" },
-    { "source": "par_katherine", "target": "enf_latoya", "label": "Mère de" },
-    { "source": "par_katherine", "target": "enf_marlon", "label": "Mère de" },
-    { "source": "par_katherine", "target": "enf_michael", "label": "Mère de" },
-    { "source": "par_katherine", "target": "enf_randy", "label": "Mère de" },
-    { "source": "par_katherine", "target": "enf_janet", "label": "Mère de" },
-    
-    { "source": "par_joe", "target": "enf_michael", "label": "Père & Manager de" },
-    { "source": "par_joe", "target": "enf_janet", "label": "Père de" },
-    
-    // Liens vers la troisième génération (G3)
-    { "source": "enf_michael", "target": "pt_prince", "label": "Père de" },
-    { "source": "enf_michael", "target": "pt_paris", "label": "Père de" },
-    { "source": "enf_michael", "target": "pt_bigi", "label": "Père de" },
-    
-    { "source": "enf_janet", "target": "pt_eissa", "label": "Mère de" },
-    { "source": "enf_tito", "target": "pt_taj", "label": "Père de (Membre des 3T)" }
   ]
 },
 {
@@ -2358,7 +1941,7 @@ window.GRAPHS = [
 },
 {
   "id": "theme-administration-declaration-impots-france",
-  "title": "Le Parcours de la Déclaration d'Impôts en Ligne",
+  "title": "La Déclaration d'Impôts en Ligne",
   "category": "Administration & Finance",
   "description": "Les étapes officielles et obligatoires pour déclarer ses revenus sur impots.gouv.fr.",
   "longDescription": "La déclaration des revenus en ligne est obligatoire en France. Ce graphe chronologique détaille le parcours sécurisé pour valider vos revenus, déclarer vos charges déductibles et finaliser votre signature électronique afin d'éviter les pénalités.",
@@ -2541,7 +2124,7 @@ window.GRAPHS = [
 },
 {
   "id": "theme-ia-vulgarisation-grand-public",
-  "title": "Découvrir l'Intelligence Artificielle simplement",
+  "title": "Découvrir l'Intelligence Artificielle",
   "category": "Technologie / Découverte",
   "description": "Une carte simple pour comprendre comment l'IA imite nos sens au quotidien.",
   "longDescription": "L'Intelligence Artificielle peut sembler mystérieuse. Ce graphe l'explique simplement en reliant les technologies de l'IA aux capacités humaines que nous utilisons tous les jours : voir, parler, écouter et réfléchir.",
@@ -2599,7 +2182,7 @@ window.GRAPHS = [
 },
 {
   "id": "theme-tech-ecosysteme-reseaux-sociaux-2026",
-  "title": "La Toile des Réseaux Sociaux et Maisons Mères",
+  "title": "Des Réseaux Sociaux",
   "category": "Économie & Technologie",
   "description": "Cartographie des réseaux sociaux mondiaux et des conglomérats qui les possèdent.",
   "longDescription": "Le paysage des réseaux sociaux est hyper-centralisé. Ce graphe structure les liens de propriété exclusifs entre les plateformes grand public (messageries, vidéos, réseaux pros) et les géants de la Tech (Meta, Alphabet, ByteDance...) qui tirent les ficelles économiques.",
@@ -2763,85 +2346,7 @@ window.GRAPHS = [
     { "source": "meca_graisse_brune", "target": "bienfait_calories", "label": "Entraîne la" }
   ]
 },
-{
-  "id": "theme-economie-fortunes-mondiales-2026",
-  "title": "Les Plus Grandes Fortunes Mondiales par Domaine",
-  "category": "Économie & Business",
-  "description": "Cartographie des milliardaires les plus riches de la planète classés par secteur d'activité.",
-  "longDescription": "Le classement des ultra-riches mondiaux évolue constamment au gré des marchés boursiers. Ce graphe structure les plus grands patrimoines de la planète en les segmentant par domaine d'excellence (Tech, Luxe, Finance, Industrie) et en isolant l'entreprise qui a bâti leur empire.",
-  "nodes": [
-    { "id": "racine_milliardaires", "label": "Top Fortunes Mondiales", "group": "racine", "size": 30 },
-    
-    // DOMAINE 1 : TECHNOLOGIE
-    { "id": "dom_tech", "label": "💻 Technologies & IA", "group": "domaine", "size": 24 },
-    { "id": "rich_elon_musk", "label": "Elon Musk", "group": "milliardaire", "size": 22 },
-    { "id": "rich_jeff_bezos", "label": "Jeff Bezos", "group": "milliardaire", "size": 20 },
-    { "id": "rich_mark_zuckerberg", "label": "Mark Zuckerberg", "group": "milliardaire", "size": 20 },
-    { "id": "rich_jensen_huang", "label": "Jensen Huang", "group": "milliardaire", "size": 18 },
-    
-    { "id": "cie_tesla_spacex", "label": "Tesla & SpaceX", "group": "entreprise", "size": 16 },
-    { "id": "cie_amazon", "label": "Amazon", "group": "entreprise", "size": 16 },
-    { "id": "cie_meta", "label": "Meta (Facebook)", "group": "entreprise", "size": 16 },
-    { "id": "cie_nvidia", "label": "Nvidia (Puces IA)", "group": "entreprise", "size": 16 },
-    
-    // DOMAINE 2 : LUXE & RETAIL
-    { "id": "dom_luxe_retail", "label": "🛍️ Luxe & Grande Distribution", "group": "domaine", "size": 24 },
-    { "id": "rich_bernard_arnault", "label": "Bernard Arnault & famille", "group": "milliardaire", "size": 20 },
-    { "id": "rich_amancio_ortega", "label": "Amancio Ortega", "group": "milliardaire", "size": 17 },
-    
-    { "id": "cie_lvmh", "label": "LVMH", "group": "entreprise", "size": 16 },
-    { "id": "cie_inditex", "label": "Inditex (Zara)", "group": "entreprise", "size": 15 },
-    
-    // DOMAINE 3 : FINANCE & INVESTISSEMENT
-    { "id": "dom_finance", "label": "📈 Finance & Investissement", "group": "domaine", "size": 23 },
-    { "id": "rich_warren_buffett", "label": "Warren Buffett", "group": "milliardaire", "size": 19 },
-    
-    { "id": "cie_berkshire", "label": "Berkshire Hathaway", "group": "entreprise", "size": 16 },
-    
-    // DOMAINE 4 : LOGICIELS & LOGISTIQUE INDUSTRIELLE
-    { "id": "dom_industrie_logiciel", "label": "⚙️ Logiciels d'Entreprise & Industrie", "group": "domaine", "size": 23 },
-    { "id": "rich_larry_ellison", "label": "Larry Ellison", "group": "milliardaire", "size": 19 },
-    
-    { "id": "cie_oracle", "label": "Oracle", "group": "entreprise", "size": 16 }
-  ],
-  "edges": [
-    // Connexion de la racine aux domaines économiques
-    { "source": "racine_milliardaires", "target": "dom_tech", "label": "Secteur pivot :" },
-    { "source": "racine_milliardaires", "target": "dom_luxe_retail", "label": "Secteur pivot :" },
-    { "source": "racine_milliardaires", "target": "dom_finance", "label": "Secteur pivot :" },
-    { "source": "racine_milliardaires", "target": "dom_industrie_logiciel", "label": "Secteur pivot :" },
-    
-    // Raccordement Domaine Tech
-    { "source": "dom_tech", "target": "rich_elon_musk", "label": "Mené par" },
-    { "source": "dom_tech", "target": "rich_jeff_bezos", "label": "Comprend" },
-    { "source": "dom_tech", "target": "rich_mark_zuckerberg", "label": "Comprend" },
-    { "source": "dom_tech", "target": "rich_jensen_huang", "label": "Poussé par l'IA via" },
-    
-    { "source": "rich_elon_musk", "target": "cie_tesla_spacex", "label": "Fondateur/Actionnaire de" },
-    { "source": "rich_jeff_bezos", "target": "cie_amazon", "label": "Fondateur de" },
-    { "source": "rich_mark_zuckerberg", "target": "cie_meta", "label": "Fondateur de" },
-    { "source": "rich_jensen_huang", "target": "cie_nvidia", "label": "CEO & Cofondateur de" },
-    
-    // Raccordement Domaine Luxe & Retail
-    { "source": "dom_luxe_retail", "target": "rich_bernard_arnault", "label": "Mené par" },
-    { "source": "dom_luxe_retail", "target": "rich_amancio_ortega", "label": "Comprend" },
-    
-    { "source": "rich_bernard_arnault", "target": "cie_lvmh", "label": "Président de" },
-    { "source": "rich_amancio_ortega", "target": "cie_inditex", "label": "Fondateur de" },
-    
-    // Raccordement Domaine Finance
-    { "source": "dom_finance", "target": "rich_warren_buffett", "label": "Mené par" },
-    { "source": "rich_warren_buffett", "target": "cie_berkshire", "label": "Dirige" },
-    
-    // Raccordement Domaine Industrie / Logiciel
-    { "source": "dom_industrie_logiciel", "target": "rich_larry_ellison", "label": "Mené par" },
-    { "source": "rich_larry_ellison", "target": "cie_oracle", "label": "Cofondateur de" },
-    
-    // Liens transverses de synergie boursière (Optionnel mais réaliste)
-    { "source": "cie_nvidia", "target": "cie_meta", "label": "Fournit les puces IA à" },
-    { "source": "cie_berkshire", "target": "dom_luxe_retail", "label": "Investit massivement dans le" }
-  ]
-},
+
 {
   "id": "theme-nostalgie-jeux-ecole-annees-90",
   "title": "Les Jeux de Récré Incontournables des Années 90",
@@ -2895,158 +2400,7 @@ window.GRAPHS = [
     { "source": "jeu_cartes_pokemon", "target": "jeu_tamagotchi", "label": "Se disputaient le titre de roi de la récré en 1999" }
   ]
 },
-{
-  "id": "theme-popculture-saga-harry-potter",
-  "title": "L'Univers Étendu de la Saga Harry Potter",
-  "category": "Pop Culture & Littérature",
-  "description": "Cartographie complète de l'empire magique de J.K. Rowling, des romans d'origine aux extensions cross-médias.",
-  "longDescription": "Débutée en 1997, la saga Harry Potter est devenue l'un des phénomènes culturels et économiques les plus massifs de l'histoire. Ce graphe structure cet univers en séparant l'œuvre littéraire, l'univers cinématographique, la mythologie interne (factions) et les extensions contemporaines.",
-  "nodes": [
-    { "id": "racine_potter", "label": "Le Monde des Sorciers (Wizarding World)", "group": "racine", "size": 30 },
-    
-    // BRANCHE 1 : La Saga Littéraire Originale (Le Cœur)
-    { "id": "cat_romans", "label": "📚 Les 7 Romans Fondateurs (1997-2007)", "group": "categorie", "size": 24 },
-    { "id": "rom_ecole_sorciers", "label": "1. L'École des sorciers", "group": "roman", "size": 16 },
-    { "id": "rom_chambre_secrets", "label": "2. La Chambre des secrets", "group": "roman", "size": 16 },
-    { "id": "rom_prisonnier_azkaban", "label": "3. Le Prisonnier d'Azkaban", "group": "roman", "size": 17 },
-    { "id": "rom_coupe_feu", "label": "4. La Coupe de feu", "group": "roman", "size": 17 },
-    { "id": "rom_ordre_phenix", "label": "5. L'Ordre du Phénix", "group": "roman", "size": 17 },
-    { "id": "rom_prince_sang_mele", "label": "6. Le Prince de sang-mêlé", "group": "roman", "size": 17 },
-    { "id": "rom_reliques_mort", "label": "7. Les Reliques de la Mort", "group": "roman", "size": 18 },
-    
-    // BRANCHE 2 : La Mythologie Interne (Factions & Lieux)
-    { "id": "cat_lore", "label": "🔮 Factions & Institutions Clés", "group": "categorie", "size": 24 },
-    { "id": "lore_poudlard", "label": "École de Magie Poudlard", "group": "lieu", "size": 20 },
-    { "id": "lore_gryffondor", "label": "Gryffondor", "group": "maison", "size": 15 },
-    { "id": "lore_serpentard", "label": "Serpentard", "group": "maison", "size": 15 },
-    { "id": "lore_poufsouffle", "label": "Poufsouffle", "group": "maison", "size": 14 },
-    { "id": "lore_serdaigle", "label": "Serdaigle", "group": "maison", "size": 14 },
-    { "id": "lore_ordre_phenix", "label": "L'Ordre du Phénix (Alliance)", "group": "faction", "size": 18 },
-    { "id": "lore_mangemorts", "label": "Les Mangemorts (Voldemort)", "group": "faction", "size": 18 },
-    
-    // BRANCHE 3 : L'Univers Cinématographique (Warner Bros)
-    { "id": "cat_cinema", "label": "🎬 Adaptations & Blockbusters", "group": "categorie", "size": 24 },
-    { "id": "film_films_originaux", "label": "Les 8 Films Harry Potter (2001-2011)", "group": "cinema", "size": 21 },
-    { "id": "film_animaux_fantastiques", "label": "Trilogie 'Les Animaux Fantastiques'", "group": "cinema", "size": 17 },
-    
-    // BRANCHE 4 : Les Extensions Modernes & Gaming
-    { "id": "cat_extensions", "label": "🎮 Extensions & Univers Étendu", "group": "categorie", "size": 23 },
-    { "id": "ext_enfant_maudit", "label": "Pièce de Théâtre : L'Enfant Maudit", "group": "theatre", "size": 16 },
-    { "id": "ext_hogwarts_legacy", "label": "Jeu Vidéo : Hogwarts Legacy (Succès historique)", "group": "gaming", "size": 19 }
-  ],
-  "edges": [
-    // Connexions de la racine aux 4 piliers de la franchise
-    { "source": "racine_potter", "target": "cat_romans", "label": "A pour origine" },
-    { "source": "racine_potter", "target": "cat_lore", "label": "Repose sur le" },
-    { "source": "racine_potter", "target": "cat_cinema", "label": "S'est développée via" },
-    { "source": "racine_potter", "target": "cat_extensions", "label": "Se prolonge avec" },
-    
-    // Chronologie des Romans
-    { "source": "cat_romans", "target": "rom_ecole_sorciers", "label": "Début (1997) :" },
-    { "source": "rom_ecole_sorciers", "target": "rom_chambre_secrets", "label": "Suivi de" },
-    { "source": "rom_chambre_secrets", "target": "rom_prisonnier_azkaban", "label": "Suivi de" },
-    { "source": "rom_prisonnier_azkaban", "target": "rom_coupe_feu", "label": "Bascule vers le sombre avec" },
-    { "source": "rom_coupe_feu", "target": "rom_ordre_phenix", "label": "Suivi de" },
-    { "source": "rom_ordre_phenix", "target": "rom_prince_sang_mele", "label": "Suivi de" },
-    { "source": "rom_prince_sang_mele", "target": "rom_reliques_mort", "label": "Conclusion (2007) :" },
-    
-    // Liens du Lore magique
-    { "source": "cat_lore", "target": "lore_poudlard", "label": "Épicentre :" },
-    { "source": "lore_poudlard", "target": "lore_gryffondor", "label": "Divisée en 4 Maisons :" },
-    { "source": "lore_poudlard", "target": "lore_serpentard", "label": "Divisée en 4 Maisons :" },
-    { "source": "lore_poudlard", "target": "lore_poufsouffle", "label": "Divisée en 4 Maisons :" },
-    { "source": "lore_poudlard", "target": "lore_serdaigle", "label": "Divisée en 4 Maisons :" },
-    { "source": "cat_lore", "target": "lore_ordre_phenix", "label": "Camp du Bien :" },
-    { "source": "cat_lore", "target": "lore_mangemorts", "label": "Camp du Mal :" },
-    
-    // Liens Cinéma
-    { "source": "cat_cinema", "target": "film_films_originaux", "label": "Adapte fidèlement les romans" },
-    { "source": "cat_cinema", "target": "film_animaux_fantastiques", "label": "Préquel se déroulant au XXe siècle" },
-    
-    // Liens Extensions et Gaming
-    { "source": "cat_extensions", "target": "ext_enfant_maudit", "label": "Suite officielle sous forme de" },
-    { "source": "cat_extensions", "target": "ext_hogwarts_legacy", "label": "Plonge le joueur au XIXe siècle dans" },
-    
-    // Connexions transverses cruciales (La cohérence de l'univers)
-    { "source": "rom_reliques_mort", "target": "film_films_originaux", "label": "A été découpé en 2 films au cinéma" },
-    { "source": "lore_gryffondor", "target": "lore_ordre_phenix", "label": "Fournit la majorité des membres de" },
-    { "source": "lore_serpentard", "target": "lore_mangemorts", "label": "Berceau historique des" },
-    { "source": "lore_poudlard", "target": "ext_hogwarts_legacy", "label": "Sert de décor principal à" }
-  ]
-},
-{
-  "id": "theme-medias-influenceurs-francais-2026",
-  "title": "La Cartographie des Grands Créateurs de Contenu Français",
-  "category": "Médias & Société",
-  "description": "Les visages majeurs du web français et l'écosystème de leurs entreprises.",
-  "longDescription": "L'industrie de l'influence en France s'est structurée de manière spectaculaire. Ce graphe met en évidence les plus grands créateurs de contenu francophones (YouTube, Twitch, TikTok), leurs domaines de spécialité et les marques physiques ou événements majeurs qu'ils ont créés.",
-  "nodes": [
-    { "id": "racine_influence", "label": "Le Web Créatif Français", "group": "racine", "size": 30 },
-    
-    // SECTEUR 1 : DIVERTISSEMENT & BLOCKBUSTERS LÉGENDAIRES
-    { "id": "sec_divertissement", "label": "🎬 Divertissement & Grands Formats", "group": "secteur", "size": 24 },
-    { "id": "creator_squeezie", "label": "Squeezie (Lucas Hauchard)", "group": "createur", "size": 22 },
-    { "id": "creator_amixem", "label": "Amixem (Maxime Chabroud)", "group": "createur", "size": 19 },
-    
-    { "id": "brand_gentlemates", "label": "Gentle Mates (Structure Esport co-fondée)", "group": "entreprise", "size": 16 },
-    { "id": "brand_space_fox", "label": "Space Fox (Marque de vêtements d'Amixem)", "group": "entreprise", "size": 15 },
-    
-    // SECTEUR 2 : GAMING & STREAMING EN DIRECT (TWITCH)
-    { "id": "sec_gaming_twitch", "label": "🎮 Gaming & Communautés Live", "group": "secteur", "size": 24 },
-    { "id": "creator_kameto", "label": "Kameto (Kamel Kebir)", "group": "createur", "size": 20 },
-    { "id": "creator_aminematue", "label": "AmineMaTue (Amine Mohamed)", "group": "createur", "size": 20 },
-    
-    { "id": "brand_kcorp", "label": "Karmine Corp (Club esport majeur en Europe)", "group": "entreprise", "size": 17 },
-    { "id": "event_kings_league", "label": "Événements Live (Eleven All Stars, Kings League France)", "group": "evenement", "size": 16 },
-    
-    // SECTEUR 3 : LIFESTYLE, VLOG & MODE
-    { "id": "sec_lifestyle_mode", "label": "✨ Lifestyle, Vlog & Mode", "group": "secteur", "size": 23 },
-    { "id": "creator_lena_situations", "label": "Léna Situations (Léna Mahfouf)", "group": "createur", "size": 21 },
-    { "id": "creator_mister_v", "label": "Mister V (Yvick Letexier)", "group": "createur", "size": 19 },
-    
-    { "id": "brand_hotel_mafouf", "label": "Hôtel Mahfouf (Marque de vêtements & concept-store)", "group": "entreprise", "size": 16 },
-    { "id": "brand_la_pizza_delamama", "label": "La Pizza Delamama (Succès en grande distribution)", "group": "entreprise", "size": 15 },
-    
-    // SECTEUR 4 : POP-CULTURE, SOCIÉTÉ & VOYAGE
-    { "id": "sec_societe_culture", "label": "🌍 Pop-Culture, Enquêtes & Voyage", "group": "secteur", "size": 23 },
-    { "id": "creator_gaspard_g", "label": "Gaspard G (Gaspard Guérin)", "group": "createur", "size": 18 },
-    { "id": "creator_papi_grenier", "label": "Joueur du Grenier / Frédéric Molas", "group": "createur", "size": 18 }
-  ],
-  "edges": [
-    // Connexions de la racine aux différents secteurs du web français
-    { "source": "racine_influence", "target": "sec_divertissement", "label": "S'organise autour du" },
-    { "source": "racine_influence", "target": "sec_gaming_twitch", "label": "S'organise autour du" },
-    { "source": "racine_influence", "target": "sec_lifestyle_mode", "label": "S'organise autour de la" },
-    { "source": "racine_influence", "target": "sec_societe_culture", "label": "S'organise autour de la" },
-    
-    // Liens Branche Divertissement
-    { "source": "sec_divertissement", "target": "creator_squeezie", "label": "Premier créateur de France :" },
-    { "source": "sec_divertissement", "target": "creator_amixem", "label": "Leader des studios à Angers :" },
-    { "source": "creator_squeezie", "target": "brand_gentlemates", "label": "A co-créé la structure" },
-    { "source": "creator_amixem", "target": "brand_space_fox", "label": "A fondé la marque" },
-    
-    // Liens Branche Gaming / Twitch
-    { "source": "sec_gaming_twitch", "target": "creator_kameto", "label": "Pilier du streaming :" },
-    { "source": "sec_gaming_twitch", "target": "creator_aminematue", "label": "Roi des événements Twitch :" },
-    { "source": "creator_kameto", "target": "brand_kcorp", "label": "CEO & Fondateur de la" },
-    { "source": "creator_aminematue", "target": "event_kings_league", "label": "Organisateur en chef d'" },
-    
-    // Liens Branche Lifestyle / Mode
-    { "source": "sec_lifestyle_mode", "target": "creator_lena_situations", "label": "Incontournable internationale :" },
-    { "source": "sec_lifestyle_mode", "target": "creator_mister_v", "label": "Créateur multi-casquettes :" },
-    { "source": "creator_lena_situations", "target": "brand_hotel_mafouf", "label": "Propriétaire de l'" },
-    { "source": "creator_mister_v", "target": "brand_la_pizza_delamama", "label": "A commercialisé" },
-    
-    // Liens Branche Société / Culture
-    { "source": "sec_societe_culture", "target": "creator_gaspard_g", "label": "Décrypte l'actualité via" },
-    { "source": "sec_societe_culture", "target": "creator_papi_grenier", "label": "Analyse le rétro-gaming avec" },
-    
-    // Liens transverses d'alliances et projets communs
-    { "source": "creator_squeezie", "target": "creator_aminematue", "label": "Partenaires sur les GP Explorer / Eleven All Stars" },
-    { "source": "brand_kcorp", "target": "brand_gentlemates", "label": "Rivalité historique dans l'esport français" },
-    { "source": "creator_mister_v", "target": "creator_squeezie", "label": "Collaborent régulièrement sur des vidéos" }
-  ]
-},
+,
 {
   "id": "theme-services-urgence-france-europe",
   "title": "Répertoire des Numéros d'Urgence",
