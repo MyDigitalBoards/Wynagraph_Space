@@ -1,14 +1,3 @@
-// ─────────────────────────────────────────────────────────────────────────────
-// POSTS.JS — Articles du blog WynaGraph Space
-// ─────────────────────────────────────────────────────────────────────────────
-// Pour ajouter un article :
-//   1. Copiez un bloc existant
-//   2. Donnez-lui un "id" unique (slug, sans espaces ni accents)
-//   3. Renseignez "graphId" avec l'id du graphe dans data.js (ou "" si aucun)
-//   4. Écrivez votre contenu dans "body" en HTML simple
-//   5. Sauvegardez — l'article apparaît automatiquement sur le site
-// ─────────────────────────────────────────────────────────────────────────────
-
 window.POSTS = [
   {
     id: "cartographie-succession-complete",
