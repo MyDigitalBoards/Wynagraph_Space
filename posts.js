@@ -49,7 +49,7 @@ window.POSTS = [
       <p>Une liste de tâches dit quoi faire. Elle ne dit pas pourquoi telle tâche bloque telle autre, ni quel nœud central, s'il est débloqué, ferait tomber cinq autres obstacles. Un graphe le montre immédiatement.</p>
 
       <h3>WynaGraph pour visualiser</h3>
-      <p>C'est exactement pour ça qu'existe WynaGraph Workspace : créer ces cartes connectées depuis vos propres données, sans outil complexe, sans cloud, sans compte. Il vous siffit d'entrer vos donnée pour obtenir une visualisation immédiate.</p>
+      <p>C'est exactement pour ça qu'existe WynaGraph Workspace : créer ces cartes connectées depuis vos propres données, sans outil complexe, sans cloud, sans compte. Il vous suffit d'entrer vos données pour obtenir une visualisation immédiate.</p>
     `
   },
 ];
