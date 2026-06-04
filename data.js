@@ -2,7 +2,7 @@
 window.GRAPHS = [
   {
   "id": "cartographie-succession-complete",
-  "title": "Succession et démarches après décès : le guide pour ne rien oublier",
+  "title": "Succession et démarches après décès : un guide pour ne rien oublier",
   "category": "Droits & Démarches",
   "description": "Vue d'ensemble des formalités administratives et patrimoniales.",
   "longDescription": "Cette cartographie intègre les obligations légales, gestion des contrats, délais et organismes à contacter.",
@@ -13,966 +13,614 @@ window.GRAPHS = [
     {"id": "personne_médecin","label": "Médecin","group": "Personne","size": 18},
     {"id": "defunt_défunt","label": "Défunt","group": "Defunt","size": 24},
     {"id": "derniere_volonte_inhumation","label": "Inhumation","group": "Derniere_volonte","size": 18},
-    {
-      "id": "formalite_informer_les_organismes_payeurs",
+    {      "id": "formalite_informer_les_organismes_payeurs",
       "label": "Informer les organismes payeurs",
       "group": "Formalite",
       "size": 18
     },
-    {
-      "id": "organisme_bailleur",
+    {      "id": "organisme_bailleur",
       "label": "Bailleur",
       "group": "Organisme",
       "size": 18
     },
-    {
-      "id": "patrimoine_biens_professionnels",
+    {      "id": "patrimoine_biens_professionnels",
       "label": "Biens professionnels",
       "group": "Patrimoine",
       "size": 18
     },
-    {
-      "id": "bien_entreprise",
+    {      "id": "bien_entreprise",
       "label": "Entreprise",
       "group": "Bien",
-      "size": 18
-    },
-    {
-      "id": "bien_fonds_de_commerce",
+      "size": 18    },
+    {      "id": "bien_fonds_de_commerce",
       "label": "Fonds de commerce",
       "group": "Bien",
-      "size": 18
-    },
-    {
-      "id": "patrimoine_biens_matériels",
+      "size": 18    },
+    {      "id": "patrimoine_biens_matériels",
       "label": "Biens Matériels",
       "group": "Patrimoine",
-      "size": 18
-    },
-    {
-      "id": "bien_objets_d'art_ou_de_collection",
+      "size": 18    },
+    {      "id": "bien_objets_d'art_ou_de_collection",
       "label": "Objets d'art ou de collection",
       "group": "Bien",
-      "size": 18
-    },
-    {
-      "id": "formalite_déclarer_le_décès",
+      "size": 18    },
+    {      "id": "formalite_déclarer_le_décès",
       "label": "Déclarer le décès",
       "group": "Formalite",
-      "size": 18
-    },
-    {
-      "id": "delais_dans_les_24_heures",
+      "size": 18    },
+    {      "id": "delais_dans_les_24_heures",
       "label": "Dans les 24 heures",
       "group": "Delais",
-      "size": 18
-    },
-    {
-      "id": "contrat_contrat_d'assurance_obsèques",
+      "size": 18    },
+    {      "id": "contrat_contrat_d'assurance_obsèques",
       "label": "Contrat d'assurance obsèques",
       "group": "Contrat",
-      "size": 18
-    },
-    {
-      "id": "depense_achat_d'une_concession",
+      "size": 18    },
+    {      "id": "depense_achat_d'une_concession",
       "label": "Achat d'une concession",
       "group": "Depense",
-      "size": 18
-    },
-    {
-      "id": "formalite_organisation_des_funérailles",
+      "size": 18    },
+    {      "id": "formalite_organisation_des_funérailles",
       "label": "Organisation des funérailles",
       "group": "Formalite",
-      "size": 18
-    },
-    {
-      "id": "personne_voisin",
+      "size": 18    },
+    {      "id": "personne_voisin",
       "label": "Voisin",
       "group": "Personne",
-      "size": 18
-    },
-    {
-      "id": "depense_transport_du_corps",
+      "size": 18    },
+    {      "id": "depense_transport_du_corps",
       "label": "Transport du corps",
       "group": "Depense",
-      "size": 18
-    },
-    {
-      "id": "personne_légataire",
+      "size": 18    },
+    {      "id": "personne_légataire",
       "label": "Légataire",
       "group": "Personne",
-      "size": 18
-    },
-    {
-      "id": "patrimoine_propriété_intellectuelle",
+      "size": 18    },
+    {      "id": "patrimoine_propriété_intellectuelle",
       "label": "Propriété intellectuelle",
       "group": "Patrimoine",
-      "size": 18
-    },
-    {
-      "id": "depense_inhumation_ou_crémation",
+      "size": 18    },
+    {      "id": "depense_inhumation_ou_crémation",
       "label": "Inhumation ou Crémation",
       "group": "Depense",
-      "size": 18
-    },
-    {
-      "id": "depense_cérémonie_d'accompagnement",
+      "size": 18    },
+    {      "id": "depense_cérémonie_d'accompagnement",
       "label": "Cérémonie d'accompagnement",
       "group": "Depense",
-      "size": 18
-    },
-    {
-      "id": "formalite_vérifier_l'existence_d'un_testament",
+      "size": 18    },
+    {      "id": "formalite_vérifier_l'existence_d'un_testament",
       "label": "Vérifier l'existence d'un Testament",
       "group": "Formalite",
-      "size": 18
-    },
-    {
-      "id": "organisme_fichier_central_des_dispositions_de_dernières_volontés",
+      "size": 18    },
+    {      "id": "organisme_fichier_central_des_dispositions_de_dernières_volontés",
       "label": "Fichier central des dispositions de dernières volontés",
       "group": "Organisme",
-      "size": 18
-    },
-    {
-      "id": "contrat_contrat_d'assurance_vie",
+      "size": 18    },
+    {      "id": "contrat_contrat_d'assurance_vie",
       "label": "Contrat d'assurance Vie",
       "group": "Contrat",
-      "size": 18
-    },
-    {
-      "id": "organisme_agira",
+      "size": 18    },
+    {      "id": "organisme_agira",
       "label": "AGIRA",
       "group": "Organisme",
-      "size": 18
-    },
-    {
-      "id": "dette_emprunt",
+      "size": 18    },
+    {      "id": "dette_emprunt",
       "label": "Emprunt",
       "group": "Dette",
-      "size": 18
-    },
-    {
-      "id": "contrat_contrat_d'assurance_décès",
+      "size": 18    },
+    {      "id": "contrat_contrat_d'assurance_décès",
       "label": "Contrat d'assurance décès",
       "group": "Contrat",
-      "size": 18
-    },
-    {
-      "id": "document_testament",
+      "size": 18    },
+    {      "id": "document_testament",
       "label": "Testament",
       "group": "Document",
-      "size": 18
-    },
-    {
-      "id": "testament_olographe",
+      "size": 18    },
+    {      "id": "testament_olographe",
       "label": "Olographe",
       "group": "Testament",
-      "size": 18
-    },
-    {
-      "id": "formalite_recherche_d'une_assurance_obsèques",
+      "size": 18    },
+    {      "id": "formalite_recherche_d'une_assurance_obsèques",
       "label": "Recherche d'une assurance obsèques",
       "group": "Formalite",
-      "size": 18
-    },
-    {
-      "id": "delais_dans_les_48_heures",
+      "size": 18    },
+    {      "id": "delais_dans_les_48_heures",
       "label": "Dans les 48 heures",
       "group": "Delais",
-      "size": 18
-    },
-    {
-      "id": "organisme_caisse_de_retraite",
+      "size": 18    },
+    {      "id": "organisme_caisse_de_retraite",
       "label": "Caisse de retraite",
       "group": "Organisme",
-      "size": 18
-    },
-    {
-      "id": "delais_dans_les_6_jours",
+      "size": 18    },
+    {      "id": "delais_dans_les_6_jours",
       "label": "Dans les 6 jours",
       "group": "Delais",
-      "size": 18
-    },
-    {
-      "id": "allocation_capital_décès_de_la_cpam",
+      "size": 18    },
+    {      "id": "allocation_capital_décès_de_la_cpam",
       "label": "Capital décès de la CPAM",
       "group": "Allocation",
-      "size": 18
-    },
-    {
-      "id": "formalite_organiser_la_succession",
+      "size": 18    },
+    {      "id": "formalite_organiser_la_succession",
       "label": "Organiser la succession",
       "group": "Formalite",
-      "size": 18
-    },
-    {
-      "id": "organisme_maison_de_retraite",
+      "size": 18    },
+    {      "id": "organisme_maison_de_retraite",
       "label": "Maison de retraite",
       "group": "Organisme",
-      "size": 18
-    },
-    {
-      "id": "entreprise_pompes_funèbres",
+      "size": 18    },
+    {      "id": "entreprise_pompes_funèbres",
       "label": "Pompes funèbres",
       "group": "Entreprise",
-      "size": 18
-    },
-    {
-      "id": "depense_achat_et_pose_d'un_emblème_sur_la_sépulture",
+      "size": 18    },
+    {      "id": "depense_achat_et_pose_d'un_emblème_sur_la_sépulture",
       "label": "Achat et pose d'un emblème sur la sépulture",
       "group": "Depense",
-      "size": 18
-    },
-    {
-      "id": "depense_achat_de_fleurs",
+      "size": 18    },
+    {      "id": "depense_achat_de_fleurs",
       "label": "Achat de fleurs",
       "group": "Depense",
-      "size": 18
-    },
-    {
-      "id": "dette_impôts",
+      "size": 18    },
+    {      "id": "dette_impôts",
       "label": "Impôts",
       "group": "Dette",
-      "size": 18
-    },
-    {
-      "id": "organisme_centre_des_impôts",
+      "size": 18    },
+    {      "id": "organisme_centre_des_impôts",
       "label": "Centre des impôts",
       "group": "Organisme",
-      "size": 18
-    },
-    {
-      "id": "entreprise_office_notarial",
+      "size": 18    },
+    {      "id": "entreprise_office_notarial",
       "label": "Office Notarial",
       "group": "Entreprise",
-      "size": 18
-    },
-    {
-      "id": "delais_dans_le_mois",
+      "size": 18    },
+    {      "id": "delais_dans_le_mois",
       "label": "Dans le mois",
       "group": "Delais",
-      "size": 18
-    },
-    {
-      "id": "derniere_volonte_crémation",
+      "size": 18    },
+    {      "id": "derniere_volonte_crémation",
       "label": "Crémation",
       "group": "Derniere_volonte",
-      "size": 18
-    },
-    {
-      "id": "formalite_gérer_les_comptes_bancaires",
+      "size": 18    },
+    {      "id": "formalite_gérer_les_comptes_bancaires",
       "label": "Gérer les comptes bancaires",
       "group": "Formalite",
-      "size": 18
-    },
-    {
-      "id": "delais_dans_les_10_jours",
+      "size": 18    },
+    {      "id": "delais_dans_les_10_jours",
       "label": "Dans les 10 jours",
       "group": "Delais",
-      "size": 18
-    },
-    {
-      "id": "formalite_déclaration_de_revenus",
+      "size": 18    },
+    {      "id": "formalite_déclaration_de_revenus",
       "label": "Déclaration de revenus",
       "group": "Formalite",
-      "size": 18
-    },
-    {
-      "id": "entreprise_etablissement_bancaire",
+      "size": 18    },
+    {      "id": "entreprise_etablissement_bancaire",
       "label": "Etablissement bancaire",
       "group": "Entreprise",
-      "size": 18
-    },
-    {
-      "id": "formalite_résiliation_des_abonnements",
+      "size": 18    },
+    {      "id": "formalite_résiliation_des_abonnements",
       "label": "Résiliation des abonnements",
       "group": "Formalite",
-      "size": 18
-    },
-    {
-      "id": "formalite_déclaration_de_succession",
+      "size": 18    },
+    {      "id": "formalite_déclaration_de_succession",
       "label": "Déclaration de succession",
       "group": "Formalite",
-      "size": 18
-    },
-    {
-      "id": "actif_financier_produits_d'épargne",
+      "size": 18    },
+    {      "id": "actif_financier_produits_d'épargne",
       "label": "Produits d'épargne",
       "group": "Actif_financier",
-      "size": 18
-    },
-    {
-      "id": "contret_contrat_d'assurance_vie",
+      "size": 18    },
+    {      "id": "contret_contrat_d'assurance_vie",
       "label": "Contrat d'assurance Vie",
       "group": "Contret",
-      "size": 18
-    },
-    {
-      "id": "bien_equipements",
+      "size": 18    },
+    {      "id": "bien_equipements",
       "label": "Equipements",
       "group": "Bien",
-      "size": 18
-    },
-    {
-      "id": "bien_brevet",
+      "size": 18    },
+    {      "id": "bien_brevet",
       "label": "Brevet",
       "group": "Bien",
-      "size": 18
-    },
-    {
-      "id": "bien_droits_d'auteur",
+      "size": 18    },
+    {      "id": "bien_droits_d'auteur",
       "label": "Droits d'auteur",
       "group": "Bien",
-      "size": 18
-    },
-    {
-      "id": "organisme_mairie",
+      "size": 18    },
+    {      "id": "organisme_mairie",
       "label": "Mairie",
       "group": "Organisme",
-      "size": 18
-    },
-    {
-      "id": "organisme_hôpital",
+      "size": 18    },
+    {      "id": "organisme_hôpital",
       "label": "Hôpital",
       "group": "Organisme",
-      "size": 18
-    },
-    {
-      "id": "delais_dans_les_6_mois",
+      "size": 18    },
+    {      "id": "delais_dans_les_6_mois",
       "label": "Dans les 6 mois",
       "group": "Delais",
-      "size": 18
-    },
-    {
-      "id": "personne_amis",
+      "size": 18    },
+    {      "id": "personne_amis",
       "label": "Amis",
       "group": "Personne",
-      "size": 18
-    },
-    {
-      "id": "testament_authentique",
+      "size": 18    },
+    {      "id": "testament_authentique",
       "label": "Authentique",
       "group": "Testament",
-      "size": 18
-    },
-    {
-      "id": "formalite_établissement_de_l'acte_de_décès",
+      "size": 18    },
+    {      "id": "formalite_établissement_de_l'acte_de_décès",
       "label": "Etablissement de l'acte de décès",
       "group": "Formalite",
-      "size": 18
-    },
-    {
-      "id": "testament_mystique",
+      "size": 18    },
+    {      "id": "testament_mystique",
       "label": "Mystique",
       "group": "Testament",
-      "size": 18
-    },
-    {
-      "id": "patrimoine_placements_financiers",
+      "size": 18    },
+    {      "id": "patrimoine_placements_financiers",
       "label": "Placements financiers",
       "group": "Patrimoine",
-      "size": 18
-    },
-    {
-      "id": "actif_financier_dépôt_bancaire",
+      "size": 18    },
+    {      "id": "actif_financier_dépôt_bancaire",
       "label": "Dépôt bancaire",
       "group": "Actif_financier",
-      "size": 18
-    },
-    {
-      "id": "actif_financier_actions",
+      "size": 18    },
+    {      "id": "actif_financier_actions",
       "label": "Actions",
       "group": "Actif_financier",
-      "size": 18
-    },
-    {
-      "id": "actif_financier_cotisations_retraite",
+      "size": 18    },
+    {      "id": "actif_financier_cotisations_retraite",
       "label": "Cotisations retraite",
       "group": "Actif_financier",
-      "size": 18
-    },
-    {
-      "id": "actif_financier_parts_de_fonds_collectifs",
+      "size": 18    },
+    {      "id": "actif_financier_parts_de_fonds_collectifs",
       "label": "Parts de fonds collectifs",
       "group": "Actif_financier",
-      "size": 18
-    },
-    {
-      "id": "patrimoine_foncier_et_immobilier",
+      "size": 18    },
+    {      "id": "patrimoine_foncier_et_immobilier",
       "label": "Foncier et Immobilier",
       "group": "Patrimoine",
-      "size": 18
-    },
-    {
-      "id": "propriete_habitation",
+      "size": 18    },
+    {      "id": "propriete_habitation",
       "label": "Habitation",
       "group": "Propriete",
-      "size": 18
-    },
-    {
-      "id": "depense_courriers_d'invitation_et_de_remerciements",
+      "size": 18    },
+    {      "id": "depense_courriers_d'invitation_et_de_remerciements",
       "label": "Courriers d'invitation et de remerciements",
       "group": "Depense",
-      "size": 18
-    },
-    {
-      "id": "propriete_terrain",
+      "size": 18    },
+    {      "id": "propriete_terrain",
       "label": "Terrain",
       "group": "Propriete",
-      "size": 18
-    },
-    {
-      "id": "entreprise_employeur",
+      "size": 18    },
+    {      "id": "entreprise_employeur",
       "label": "Employeur",
       "group": "Entreprise",
-      "size": 18
-    },
-    {
-      "id": "personne_collègue",
+      "size": 18    },
+    {      "id": "personne_collègue",
       "label": "Collègue",
       "group": "Personne",
-      "size": 18
-    },
-    {
-      "id": "allocation_allocation_de_veuvage",
+      "size": 18    },
+    {      "id": "allocation_allocation_de_veuvage",
       "label": "Allocation de veuvage",
       "group": "Allocation",
-      "size": 18
-    },
-    {
-      "id": "personne_famille",
+      "size": 18    },
+    {      "id": "personne_famille",
       "label": "Famille",
       "group": "Personne",
-      "size": 18
-    },
-    {
-      "id": "allocation_allocation_de_soutien_familial",
+      "size": 18    },
+    {"id": "allocation_allocation_de_soutien_familial",
       "label": "Allocation de soutien familial",
       "group": "Allocation",
-      "size": 18
-    },
-    {
-      "id": "organisme_service_des_eaux_de_la_commune",
+      "size": 18},
+    {"id": "organisme_service_des_eaux_de_la_commune",
       "label": "Service des eaux de la commune",
       "group": "Organisme",
-      "size": 18
-    },
-    {
-      "id": "organisme_centre_national_de_traitement_fbfv",
+      "size": 18    },
+    {      "id": "organisme_centre_national_de_traitement_fbfv",
       "label": "Centre national de traitement FBFV",
       "group": "Organisme",
-      "size": 18
-    },
-    {
-      "id": "bien_véhicules",
+      "size": 18    },
+    {      "id": "bien_véhicules",
       "label": "Véhicules",
       "group": "Bien",
-      "size": 18
-    },
-    {
-      "id": "entreprise_opérateur_téléphonique",
+      "size": 18    },
+    {      "id": "entreprise_opérateur_téléphonique",
       "label": "Opérateur téléphonique",
       "group": "Entreprise",
-      "size": 18
-    },
-    {
-      "id": "entreprise_fournisseur_d'accès_internet",
+      "size": 18    },
+    {      "id": "entreprise_fournisseur_d'accès_internet",
       "label": "Fournisseur d'accès Internet",
       "group": "Entreprise",
-      "size": 18
-    },
-    {
-      "id": "entreprise_assurance",
+      "size": 18    },
+    {      "id": "entreprise_assurance",
       "label": "Assurance",
       "group": "Entreprise",
-      "size": 18
-    },
-    {
-      "id": "bien_meubles",
+      "size": 18    },
+    {      "id": "bien_meubles",
       "label": "Meubles",
       "group": "Bien",
-      "size": 18
-    },
-    {
-      "id": "organisme_france_travail",
+      "size": 18    },
+    { "id": "organisme_france_travail",
       "label": "France travail",
       "group": "Organisme",
-      "size": 18
-    },
-    {
-      "id": "organisme_caisse_d'allocations_familliales",
+      "size": 18    },
+    { "id": "organisme_caisse_d'allocations_familliales",
       "label": "Caisse d'allocations familliales",
       "group": "Organisme",
-      "size": 18
-    },
-    {
-      "id": "depense_avis_d'obsèques",
+      "size": 18    },
+    {      "id": "depense_avis_d'obsèques",
       "label": "Avis d'obsèques",
       "group": "Depense",
-      "size": 18
-    }
+      "size": 18    }
   ],
   "edges": [
-    {
-      "source": "personne_conjoint",
+    {      "source": "personne_conjoint",
       "target": "allocation_pension_de_réversion",
-      "label": "PEUT BENEFICIER"
-    },
-    {
-      "source": "formalite_etablissement_du_certificat_de_décès",
+      "label": "PEUT BENEFICIER"    },
+    {      "source": "formalite_etablissement_du_certificat_de_décès",
       "target": "personne_médecin",
-      "label": "ETABLI PAR"
-    },
-    {
-      "source": "defunt_défunt",
+      "label": "ETABLI PAR"    },
+    {      "source": "defunt_défunt",
       "target": "derniere_volonte_inhumation",
-      "label": "A EXPRIME"
-    },
-    {
-      "source": "formalite_informer_les_organismes_payeurs",
+      "label": "A EXPRIME"    },
+    {      "source": "formalite_informer_les_organismes_payeurs",
       "target": "organisme_bailleur",
-      "label": "CONTACTER"
-    },
-    {
-      "source": "patrimoine_biens_professionnels",
+      "label": "CONTACTER"    },
+    {      "source": "patrimoine_biens_professionnels",
       "target": "bien_entreprise",
-      "label": "INCLUT"
-    },
-    {
-      "source": "patrimoine_biens_professionnels",
+      "label": "INCLUT"    },
+    {      "source": "patrimoine_biens_professionnels",
       "target": "bien_fonds_de_commerce",
-      "label": "INCLUT"
-    },
-    {
-      "source": "patrimoine_biens_matériels",
+      "label": "INCLUT"    },
+    {      "source": "patrimoine_biens_matériels",
       "target": "bien_objets_d'art_ou_de_collection",
-      "label": "INCLUT"
-    },
-    {
-      "source": "formalite_déclarer_le_décès",
+      "label": "INCLUT"    },
+    {      "source": "formalite_déclarer_le_décès",
       "target": "delais_dans_les_24_heures",
-      "label": "A EFFECTUER"
-    },
-    {
-      "source": "contrat_contrat_d'assurance_obsèques",
+      "label": "A EFFECTUER"    },
+    {      "source": "contrat_contrat_d'assurance_obsèques",
       "target": "depense_achat_d'une_concession",
-      "label": "POUR FINANCER"
-    },
-    {
-      "source": "formalite_organisation_des_funérailles",
+      "label": "POUR FINANCER"    },
+    {      "source": "formalite_organisation_des_funérailles",
       "target": "personne_voisin",
-      "label": "INFORMER"
-    },
-    {
-      "source": "contrat_contrat_d'assurance_obsèques",
+      "label": "INFORMER"    },
+    {      "source": "contrat_contrat_d'assurance_obsèques",
       "target": "depense_transport_du_corps",
-      "label": "POUR FINANCER"
-    },
-    {
-      "source": "personne_légataire",
+      "label": "POUR FINANCER"    },
+    {      "source": "personne_légataire",
       "target": "patrimoine_biens_professionnels",
-      "label": "HERITE"
-    },
-    {
-      "source": "personne_légataire",
+      "label": "HERITE"    },
+    {      "source": "personne_légataire",
       "target": "patrimoine_propriété_intellectuelle",
-      "label": "HERITE"
-    },
-    {
-      "source": "contrat_contrat_d'assurance_obsèques",
+      "label": "HERITE"    },
+    {      "source": "contrat_contrat_d'assurance_obsèques",
       "target": "depense_inhumation_ou_crémation",
-      "label": "POUR FINANCER"
-    },
-    {
-      "source": "contrat_contrat_d'assurance_obsèques",
+      "label": "POUR FINANCER"    },
+    {      "source": "contrat_contrat_d'assurance_obsèques",
       "target": "depense_cérémonie_d'accompagnement",
-      "label": "POUR FINANCER"
-    },
-    {
-      "source": "formalite_vérifier_l'existence_d'un_testament",
+      "label": "POUR FINANCER"    },
+    {      "source": "formalite_vérifier_l'existence_d'un_testament",
       "target": "organisme_fichier_central_des_dispositions_de_dernières_volontés",
-      "label": "CONSULTER"
-    },
-    {
-      "source": "contrat_contrat_d'assurance_vie",
+      "label": "CONSULTER"    },
+    {      "source": "contrat_contrat_d'assurance_vie",
       "target": "organisme_agira",
-      "label": "CONSULTER"
-    },
-    {
-      "source": "defunt_défunt",
+      "label": "CONSULTER"    },
+    {      "source": "defunt_défunt",
       "target": "personne_conjoint",
-      "label": "ETAIT MARIE"
-    },
-    {
-      "source": "dette_emprunt",
+      "label": "ETAIT MARIE"    },
+    {      "source": "dette_emprunt",
       "target": "contrat_contrat_d'assurance_décès",
-      "label": "COUVERT PAR"
-    },
-    {
-      "source": "document_testament",
+      "label": "COUVERT PAR"    },
+    {      "source": "document_testament",
       "target": "testament_olographe",
-      "label": "PEUT ÊTRE"
-    },
-    {
-      "source": "contrat_contrat_d'assurance_décès",
+      "label": "PEUT ÊTRE"    },
+    {      "source": "contrat_contrat_d'assurance_décès",
       "target": "organisme_agira",
-      "label": "ENREGISTRE AUPRES"
-    },
-    {
-      "source": "formalite_recherche_d'une_assurance_obsèques",
+      "label": "ENREGISTRE AUPRES"    },
+    {      "source": "formalite_recherche_d'une_assurance_obsèques",
       "target": "delais_dans_les_48_heures",
-      "label": "A EFFECTUER"
-    },
-    {
-      "source": "formalite_informer_les_organismes_payeurs",
+      "label": "A EFFECTUER"    },
+    {      "source": "formalite_informer_les_organismes_payeurs",
       "target": "organisme_caisse_de_retraite",
-      "label": "CONTACTER"
-    },
-    {
-      "source": "formalite_organisation_des_funérailles",
+      "label": "CONTACTER"    },
+    {      "source": "formalite_organisation_des_funérailles",
       "target": "delais_dans_les_6_jours",
-      "label": "A EFFECTUER"
-    },
-    {
-      "source": "formalite_organisation_des_funérailles",
+      "label": "A EFFECTUER"    },
+    {      "source": "formalite_organisation_des_funérailles",
       "target": "allocation_capital_décès_de_la_cpam",
-      "label": "SOLLICITER"
-    },
-    {
-      "source": "formalite_organiser_la_succession",
+      "label": "SOLLICITER"    },
+    {      "source": "formalite_organiser_la_succession",
       "target": "organisme_fichier_central_des_dispositions_de_dernières_volontés",
-      "label": "CONSULTER"
-    },
-    {
-      "source": "formalite_déclarer_le_décès",
+      "label": "CONSULTER"    },
+    { "source": "formalite_déclarer_le_décès",
       "target": "organisme_maison_de_retraite",
-      "label": "DECLARE PAR"
-    },
-    {
-      "source": "formalite_organisation_des_funérailles",
+      "label": "DECLARE PAR"    },
+    {      "source": "formalite_organisation_des_funérailles",
       "target": "entreprise_pompes_funèbres",
-      "label": "CONTACTER"
-    },
-    {
-      "source": "contrat_contrat_d'assurance_obsèques",
+      "label": "CONTACTER"    },
+    {      "source": "contrat_contrat_d'assurance_obsèques",
       "target": "depense_achat_et_pose_d'un_emblème_sur_la_sépulture",
-      "label": "POUR FINANCER"
-    },
-    {
-      "source": "contrat_contrat_d'assurance_obsèques",
+      "label": "POUR FINANCER"    },
+    {      "source": "contrat_contrat_d'assurance_obsèques",
       "target": "depense_achat_de_fleurs",
-      "label": "POUR FINANCER"
-    },
-    {
-      "source": "defunt_défunt",
+      "label": "POUR FINANCER"    },
+    {      "source": "defunt_défunt",
       "target": "dette_impôts",
-      "label": "DOIT PAYER"
-    },
-    {
-      "source": "defunt_défunt",
+      "label": "DOIT PAYER"    },
+    {      "source": "defunt_défunt",
       "target": "dette_emprunt",
-      "label": "DOIT REMBOURSER"
-    },
-    {
-      "source": "dette_impôts",
+      "label": "DOIT REMBOURSER"    },
+    {      "source": "dette_impôts",
       "target": "organisme_centre_des_impôts",
-      "label": "ENREGISTRE AUPRES"
-    },
-    {
-      "source": "formalite_organiser_la_succession",
+      "label": "ENREGISTRE AUPRES"    },
+    {      "source": "formalite_organiser_la_succession",
       "target": "entreprise_office_notarial",
-      "label": "CONTACTER"
-    },
-    {
-      "source": "formalite_organiser_la_succession",
+      "label": "CONTACTER"    },
+    {      "source": "formalite_organiser_la_succession",
       "target": "delais_dans_le_mois",
-      "label": "A EFFECTUER"
-    },
-    {
-      "source": "defunt_défunt",
+      "label": "A EFFECTUER"    },
+    {      "source": "defunt_défunt",
       "target": "derniere_volonte_crémation",
-      "label": "A EXPRIME"
-    },
-    {
-      "source": "formalite_gérer_les_comptes_bancaires",
+      "label": "A EXPRIME"    },
+    {      "source": "formalite_gérer_les_comptes_bancaires",
       "target": "delais_dans_le_mois",
-      "label": "A EFFECTUER"
-    },
-    {
-      "source": "formalite_informer_les_organismes_payeurs",
+      "label": "A EFFECTUER"    },
+    {      "source": "formalite_informer_les_organismes_payeurs",
       "target": "delais_dans_les_10_jours",
-      "label": "A EFFECTUER"
-    },
-    {
-      "source": "formalite_déclaration_de_revenus",
+      "label": "A EFFECTUER"    },
+    {      "source": "formalite_déclaration_de_revenus",
       "target": "organisme_centre_des_impôts",
-      "label": "DECLARER A"
-    },
-    {
-      "source": "dette_emprunt",
+      "label": "DECLARER A"    },
+    {      "source": "dette_emprunt",
       "target": "entreprise_etablissement_bancaire",
-      "label": "ENREGISTRE AUPRES"
-    },
-    {
-      "source": "formalite_résiliation_des_abonnements",
+      "label": "ENREGISTRE AUPRES"    },
+    {      "source": "formalite_résiliation_des_abonnements",
       "target": "delais_dans_le_mois",
-      "label": "A EFFECTUER"
-    },
-    {
-      "source": "formalite_déclaration_de_succession",
+      "label": "A EFFECTUER"    },
+    {      "source": "formalite_déclaration_de_succession",
       "target": "organisme_centre_des_impôts",
-      "label": "DECLARER A"
-    },
-    {
-      "source": "actif_financier_produits_d'épargne",
+      "label": "DECLARER A"    },
+    {      "source": "actif_financier_produits_d'épargne",
       "target": "contret_contrat_d'assurance_vie",
-      "label": "CONSTITUE"
-    },
-    {
-      "source": "patrimoine_biens_matériels",
+      "label": "CONSTITUE"    },
+    {      "source": "patrimoine_biens_matériels",
       "target": "bien_equipements",
-      "label": "INCLUT"
-    },
-    {
-      "source": "formalite_recherche_d'une_assurance_obsèques",
+      "label": "INCLUT"    },
+    {      "source": "formalite_recherche_d'une_assurance_obsèques",
       "target": "organisme_agira",
-      "label": "CONSULTER"
-    },
-    {
-      "source": "patrimoine_propriété_intellectuelle",
+      "label": "CONSULTER"    },
+    {      "source": "patrimoine_propriété_intellectuelle",
       "target": "bien_brevet",
-      "label": "INCLUT"
-    },
-    {
-      "source": "patrimoine_propriété_intellectuelle",
+      "label": "INCLUT"    },
+    {      "source": "patrimoine_propriété_intellectuelle",
       "target": "bien_droits_d'auteur",
-      "label": "INCLUT"
-    },
-    {
-      "source": "formalite_déclarer_le_décès",
+      "label": "INCLUT"    },
+    {      "source": "formalite_déclarer_le_décès",
       "target": "organisme_mairie",
-      "label": "DECLARER A"
-    },
-    {
-      "source": "formalite_déclarer_le_décès",
+      "label": "DECLARER A"    },
+    {      "source": "formalite_déclarer_le_décès",
       "target": "organisme_hôpital",
-      "label": "DECLARE PAR"
-    },
-    {
-      "source": "formalite_déclaration_de_revenus",
+      "label": "DECLARE PAR"    },
+    {      "source": "formalite_déclaration_de_revenus",
       "target": "delais_dans_les_6_mois",
-      "label": "A EFFECTUER"
-    },
-    {
-      "source": "formalite_organisation_des_funérailles",
+      "label": "A EFFECTUER"    },
+    {      "source": "formalite_organisation_des_funérailles",
       "target": "personne_amis",
-      "label": "INFORMER"
-    },
-    {
-      "source": "formalite_déclaration_de_succession",
+      "label": "INFORMER"    },
+    {      "source": "formalite_déclaration_de_succession",
       "target": "delais_dans_les_6_mois",
-      "label": "A EFFECTUER"
-    },
-    {
-      "source": "document_testament",
+      "label": "A EFFECTUER"    },
+    {      "source": "document_testament",
       "target": "testament_authentique",
-      "label": "PEUT ÊTRE"
-    },
-    {
-      "source": "formalite_établissement_de_l'acte_de_décès",
+      "label": "PEUT ÊTRE"    },
+    {      "source": "formalite_établissement_de_l'acte_de_décès",
       "target": "organisme_mairie",
-      "label": "ETABLI PAR"
-    },
-    {
-      "source": "formalite_établissement_du_certificat_de_décès",
+      "label": "ETABLI PAR"    },
+    {      "source": "formalite_établissement_du_certificat_de_décès",
       "target": "delais_dans_les_24_heures",
-      "label": "A EFFECTUER"
-    },
-    {
-      "source": "document_testament",
+      "label": "A EFFECTUER"    },
+    {      "source": "document_testament",
       "target": "testament_mystique",
-      "label": "PEUT ÊTRE"
-    },
-    {
-      "source": "testament_authentique",
+      "label": "PEUT ÊTRE"    },
+    {      "source": "testament_authentique",
       "target": "organisme_fichier_central_des_dispositions_de_dernières_volontés",
-      "label": "ENREGISTRE AUPRES"
-    },
-    {
-      "source": "document_testament",
+      "label": "ENREGISTRE AUPRES"    },
+    {      "source": "document_testament",
       "target": "personne_légataire",
-      "label": "DESIGNE"
-    },
-    {
-      "source": "defunt_défunt",
+      "label": "DESIGNE"    },
+    {      "source": "defunt_défunt",
       "target": "contrat_contrat_d'assurance_vie",
-      "label": "A SOUSCRIT"
-    },
-    {
-      "source": "defunt_défunt",
+      "label": "A SOUSCRIT"    },
+    {      "source": "defunt_défunt",
       "target": "contrat_contrat_d'assurance_obsèques",
-      "label": "A SOUSCRIT"
-    },
-    {
-      "source": "patrimoine_placements_financiers",
+      "label": "A SOUSCRIT"    },
+    {      "source": "patrimoine_placements_financiers",
       "target": "actif_financier_dépôt_bancaire",
-      "label": "INCLUT"
-    },
-    {
-      "source": "personne_légataire",
+      "label": "INCLUT"    },
+    {      "source": "personne_légataire",
       "target": "patrimoine_biens_matériels",
-      "label": "HERITE"
-    },
-    {
-      "source": "patrimoine_placements_financiers",
+      "label": "HERITE"    },
+    {      "source": "patrimoine_placements_financiers",
       "target": "actif_financier_actions",
-      "label": "INCLUT"
-    },
-    {
-      "source": "patrimoine_placements_financiers",
+      "label": "INCLUT"    },
+    {      "source": "patrimoine_placements_financiers",
       "target": "actif_financier_cotisations_retraite",
-      "label": "INCLUT"
-    },
-    {
-      "source": "patrimoine_placements_financiers",
+      "label": "INCLUT"    },
+    {      "source": "patrimoine_placements_financiers",
       "target": "actif_financier_produits_d'épargne",
-      "label": "INCLUT"
-    },
-    {
-      "source": "patrimoine_placements_financiers",
+      "label": "INCLUT"    },
+    {      "source": "patrimoine_placements_financiers",
       "target": "actif_financier_parts_de_fonds_collectifs",
-      "label": "INCLUT"
-    },
-    {
-      "source": "patrimoine_foncier_et_immobilier",
+      "label": "INCLUT"    },
+    {"source": "patrimoine_foncier_et_immobilier",
       "target": "propriete_habitation",
-      "label": "INCLUT"
-    },
-    {
-      "source": "testament_mystique",
+      "label": "INCLUT"    },
+    {      "source": "testament_mystique",
       "target": "organisme_fichier_central_des_dispositions_de_dernières_volontés",
-      "label": "ENREGISTRE AUPRES"
-    },
-    {
-      "source": "contrat_contrat_d'assurance_obsèques",
+      "label": "ENREGISTRE AUPRES"    },
+    {      "source": "contrat_contrat_d'assurance_obsèques",
       "target": "depense_courriers_d'invitation_et_de_remerciements",
-      "label": "POUR FINANCER"
-    },
-    {
-      "source": "defunt_défunt",
-      "target": "document_testament",
-      "label": "A REDIGE"
-    },
-    {
-      "source": "patrimoine_foncier_et_immobilier",
-      "target": "propriete_terrain",
-      "label": "INCLUT"
-    },
-    {
-      "source": "entreprise_employeur",
+      "label": "POUR FINANCER"    },
+    {"source": "defunt_défunt","target": "document_testament","label": "A REDIGE"},
+    {"source": "patrimoine_foncier_et_immobilier","target": "propriete_terrain","label":"INCLUT" },
+    {"source": "entreprise_employeur",
       "target": "personne_collègue",
-      "label": "INFORMER"
-    },
-    {
-      "source": "formalite_établissement_du_certificat_de_décès",
+      "label": "INFORMER"    },
+    {"source": "formalite_établissement_du_certificat_de_décès",
       "target": "organisme_hôpital",
-      "label": "ETABLI PAR"
-    },
-    {
-      "source": "formalite_gérer_les_comptes_bancaires",
+      "label": "ETABLI PAR"    },
+    {"source": "formalite_gérer_les_comptes_bancaires",
       "target": "entreprise_etablissement_bancaire",
-      "label": "CONTACTER"
-    },
-    {
-      "source": "personne_conjoint",
+      "label": "CONTACTER"    },
+    {"source": "personne_conjoint",
       "target": "allocation_allocation_de_veuvage",
-      "label": "PEUT BENEFICIER"
-    },
-    {
-      "source": "personne_famille",
+      "label": "PEUT BENEFICIER"    },
+    {"source": "personne_famille",
       "target": "allocation_allocation_de_soutien_familial",
-      "label": "PEUT BENEFICIER"
-    },
-    {
-      "source": "formalite_résiliation_des_abonnements",
+      "label": "PEUT BENEFICIER"    },
+    {"source": "formalite_résiliation_des_abonnements",
       "target": "organisme_service_des_eaux_de_la_commune",
-      "label": "CONTACTER"
-    },
-    {
-      "source": "formalite_gérer_les_comptes_bancaires",
+      "label": "CONTACTER"    },
+    {"source": "formalite_gérer_les_comptes_bancaires",
       "target": "organisme_centre_national_de_traitement_fbfv",
-      "label": "ENREGISTRE AUPRES"
-    },
-    {
-      "source": "formalite_organisation_des_funérailles",
+      "label": "ENREGISTRE AUPRES"    },
+    {"source": "formalite_organisation_des_funérailles",
       "target": "entreprise_employeur",
-      "label": "INFORMER"
-    },
-    {
-      "source": "patrimoine_biens_matériels",
+      "label": "INFORMER"    },
+    {      "source": "patrimoine_biens_matériels",
       "target": "bien_véhicules",
-      "label": "INCLUT"
-    },
-    {
-      "source": "formalite_établissement_du_certificat_de_décès",
+      "label": "INCLUT"    },
+    {      "source": "formalite_établissement_du_certificat_de_décès",
       "target": "organisme_maison_de_retraite",
-      "label": "ETABLI PAR"
-    },
-    {
-      "source": "formalite_résiliation_des_abonnements",
+      "label": "ETABLI PAR"    },
+    {      "source": "formalite_résiliation_des_abonnements",
       "target": "entreprise_opérateur_téléphonique",
-      "label": "CONTACTER"
-    },
-    {
-      "source": "formalite_résiliation_des_abonnements",
+      "label": "CONTACTER"    },
+    {      "source": "formalite_résiliation_des_abonnements",
       "target": "entreprise_fournisseur_d'accès_internet",
-      "label": "CONTACTER"
-    },
-    {
-      "source": "formalite_résiliation_des_abonnements",
+      "label": "CONTACTER"    },
+    {      "source": "formalite_résiliation_des_abonnements",
       "target": "entreprise_assurance",
-      "label": "CONTACTER"
-    },
-    {
-      "source": "patrimoine_biens_matériels",
+      "label": "CONTACTER"    },
+    {      "source": "patrimoine_biens_matériels",
       "target": "bien_meubles",
-      "label": "INCLUT"
-    },
-    {
-      "source": "formalite_informer_les_organismes_payeurs",
+      "label": "INCLUT"    },
+    {      "source": "formalite_informer_les_organismes_payeurs",
       "target": "organisme_france_travail",
-      "label": "CONTACTER"
-    },
-    {
-      "source": "formalite_informer_les_organismes_payeurs",
+      "label": "CONTACTER"    },
+    {      "source": "formalite_informer_les_organismes_payeurs",
       "target": "entreprise_employeur",
-      "label": "CONTACTER"
-    },
-    {
-      "source": "formalite_informer_les_organismes_payeurs",
+      "label": "CONTACTER"    },
+    {      "source": "formalite_informer_les_organismes_payeurs",
       "target": "organisme_caisse_d'allocations_familliales",
-      "label": "CONTACTER"
-    },
-    {
-      "source": "contrat_contrat_d'assurance_obsèques",
+      "label": "CONTACTER"    },
+    {      "source": "contrat_contrat_d'assurance_obsèques",
       "target": "depense_avis_d'obsèques",
-      "label": "POUR FINANCER"
+      "label": "POUR FINANCER"    },
+    {"source": "personne_légataire","target": "patrimoine_foncier_et_immobilier","label": "HERITE"
     },
-    {
-      "source": "personne_légataire",
-      "target": "patrimoine_foncier_et_immobilier",
-      "label": "HERITE"
-    },
-    {
-      "source": "personne_légataire",
+    {      "source": "personne_légataire",
       "target": "patrimoine_placements_financiers",
-      "label": "HERITE"
-    },
-    {
-      "source": "formalite_établissement_de_l'acte_de_décès",
+      "label": "HERITE"    },
+    {"source": "formalite_établissement_de_l'acte_de_décès",
       "target": "entreprise_employeur",
-      "label": "ENVOYER A"
-    }
+      "label": "ENVOYER A"    }
   ]
 },
   {
@@ -1201,7 +849,7 @@ window.GRAPHS = [
 },
   {
   "id": "theme-ecologie-menage-naturel",
-  "title": "Le Graphe du Ménage Écologique",
+  "title": "Le Ménage Écologique",
   "category": "Maison & Écologie",
   "description": "Une cartographie des ingrédients naturels et de leurs actions pour chaque pièce.",
   "longDescription": "Entretenir sa maison sans produits toxiques est une science simple. Ce graphe connecte les ingrédients naturels indispensables aux différentes pièces de la maison, en mettant en lumière leurs propriétés chimiques spécifiques et les surfaces idéales à traiter.",
@@ -1371,7 +1019,7 @@ window.GRAPHS = [
 
 {
   "id": "theme-mode-entretien-textile",
-  "title": "Le Guide d'Entretien des Matières",
+  "title": "L'Entretien des Matières",
   "category": "Maison & Mode",
   "description": "Une cartographie pour laver, sécher et protéger vos vêtements selon leur fibre.",
   "longDescription": "Chaque textile a ses propres exigences chimiques et thermiques. Ce graphe connecte les matières les plus courantes de nos dressings aux températures maximales, aux modes de lavage recommandés et aux pièges à éviter pour faire durer vos vêtements.",
@@ -1434,7 +1082,7 @@ window.GRAPHS = [
 },
 {
   "id": "theme-geographie-fuseaux-horaires",
-  "title": "La Toile des Fuseaux Horaires",
+  "title": "Les Fuseaux Horaires",
   "category": "Géographie & Travail",
   "description": "Une cartographie des décalages horaires mondiaux et des fenêtres de travail partagées.",
   "longDescription": "La Terre tourne, et avec elle, nos horloges. Ce graphe connecte les grands fuseaux horaires de référence (UTC) à des métropoles mondiales, tout en mettant en lumière le phénomène de l'heure d'été et les fenêtres de chevauchement idéales pour les réunions internationales.",
@@ -1489,7 +1137,7 @@ window.GRAPHS = [
 },
 {
   "id": "theme-cybersecurite-particuliers",
-  "title": "Guide de Cybersécurité pour les Particuliers",
+  "title": "Cybersécurité pour les Particuliers",
   "category": "Technologie & Sécurité",
   "description": "Une cartographie des menaces en ligne et des réflexes pour s'en protéger.",
   "longDescription": "Les cyberattaques ne visent pas que les entreprises. Ce graphe structure les pièges les plus fréquents du quotidien numérique (phishing, rançongiciels, piratage de compte) et vous connecte directement aux meilleures pratiques pour sécuriser votre vie numérique.",
@@ -1543,7 +1191,7 @@ window.GRAPHS = [
 },
 {
   "id": "theme-survie-autonomie-blackout",
-  "title": "Guide d'Autonomie en cas de Blackout",
+  "title": "Autonomie en cas de Blackout",
   "category": "Sécurité & Prévoyance",
   "description": "Une cartographie des réflexes de survie et de l'organisation pour faire face à une panne générale.",
   "longDescription": "Une panne électrique majeure paralyse instantanément nos infrastructures modernes (eau courante, chauffage, réseaux mobiles). Ce graphe structure les priorités vitales de votre foyer pour les premières 72 heures, en associant chaque besoin aux solutions alternatives et aux consignes de sécurité.",
@@ -1654,7 +1302,7 @@ window.GRAPHS = [
 },
 {
   "id": "theme-administration-identite-numerique-gouv-officiel",
-  "title": "L'Identité Numérique Officielle France Identité",
+  "title": "L'Identité Numérique France Identité",
   "category": "Administration & Sécurité",
   "description": "Le parcours de création et de certification conforme aux étapes du site gouv.fr.",
   "longDescription": "L'application France Identité permet de générer une identité numérique régalienne. Ce graphe retrace les étapes officielles : de la configuration initiale avec le code PIN à 6 chiffres jusqu'à la certification en mairie par comparaison d'empreintes.",
@@ -1710,7 +1358,7 @@ window.GRAPHS = [
 },
 {
   "id": "theme-sante-bienfaits-plantes",
-  "title": "Le Guide des Plantes et de leurs Bienfaits",
+  "title": "Des Plantes et leurs Bienfaits",
   "category": "Nature & Bien-être",
   "description": "Une cartographie des plantes médicinales, de leurs propriétés et de leurs usages.",
   "longDescription": "La phytothérapie utilise les vertus naturelles des plantes pour soulager les maux du quotidien. Ce graphe structure les plantes phares de la pharmacopée naturelle en les reliant directement à leurs propriétés thérapeutiques et aux modes de préparation recommandés.",
@@ -1830,7 +1478,7 @@ window.GRAPHS = [
 
 {
   "id": "theme-sciences-cycle-lunaire-complet",
-  "title": "La Toile du Cycle Lunaire",
+  "title": "Le Cycle Lunaire",
   "category": "Astronomie & Sciences",
   "description": "Une cartographie chronologique et orbitale des phases de la Lune.",
   "longDescription": "La Lune tourne autour de la Terre en 29,5 jours, changeant d'aspect selon sa position face au Soleil. Ce graphe structure la lunaison étape par étape, de l'obscurité de la Nouvelle Lune à l'éclat de la Pleine Lune, en passant par les forces gravitationnelles qui régissent nos océans.",
@@ -1998,7 +1646,7 @@ window.GRAPHS = [
 },
 {
   "id": "theme-automobile-budget-entretien",
-  "title": "La Cartographie des Charges Automobiles",
+  "title": "Les Charges Automobiles",
   "category": "Budget & Pratique",
   "description": "Une ventilation complète des coûts fixes, variables et d'entretien d'un véhicule.",
   "longDescription": "Posséder une voiture implique de nombreux frais cachés au-delà de l'achat initial. Ce graphe structure les dépenses automobiles en distinguant l'entretien courant, les taxes obligatoires, les fluides et les réparations imprévues pour anticiper son budget annuel.",
@@ -2286,7 +1934,7 @@ window.GRAPHS = [
 },
 {
   "id": "theme-sante-physiologie-bienfaits-froid",
-  "title": "Les Effets Scientifiques du Froid sur le Corps",
+  "title": "Les Effets du Froid sur le Corps",
   "category": "Physiologie & Santé",
   "description": "Cartographie des mécanismes biologiques déclenchés par l'exposition au froid.",
   "longDescription": "L'exposition au froid (bain de glace, douche froide) déclenche des réponses hormonales et vasculaires immédiates. Ce graphe structure ses bienfaits validés par la science, du soulagement musculaire à la stimulation de la dopamine et du métabolisme.",
