@@ -1,4 +1,47 @@
+// ─────────────────────────────────────────────────────────────────────────────
+// normalizeGraph — accepte les deux formats :
+//   • Format blog natif  : nodes[].group, edges[].source/target/label
+//   • Export WynaGraph   : nodes[].category, relationships[].source/target/type,
+//                          properties en objet clé/valeur
+// Retourne toujours le format blog (nodes[].group, edges[].label tableau props)
+// ─────────────────────────────────────────────────────────────────────────────
+function normalizeGraph(graph) {
+  // Normaliser les nœuds
+  const nodes = (graph.nodes || []).map(n => ({
+    ...n,
+    label:      n.label && n.label !== n.id ? n.label : (n.label || n.id),
+    group:      n.group || n.category || "default",
+    size:       n.size || 18,
+    properties: normalizeProperties(n.properties),
+  }));
 
+  // Accepter "edges" ou "relationships"
+  const rawEdges = graph.edges || graph.relationships || [];
+
+  const edges = rawEdges.map(e => ({
+    source:     e.source || e.from,
+    target:     e.target || e.to,
+    // "type" (WynaGraph export) → label lisible ; "label" (format natif) conservé
+    label:      e.label || denormalize(e.type) || "",
+    properties: normalizeProperties(e.properties),
+  }));
+
+  return { ...graph, nodes, edges };
+}
+
+// Convertit un objet {clé: valeur} ou un tableau en tableau de strings
+function normalizeProperties(props) {
+  if (!props) return [];
+  if (Array.isArray(props)) return props.map(String);
+  // objet clé/valeur → ["clé: valeur", ...]
+  return Object.entries(props).map(([k, v]) => `${k}: ${v}`);
+}
+
+// "CONTROLE_QUALITE" → "Controle qualite"
+function denormalize(str) {
+  if (!str) return '';
+  return str.replace(/_/g, ' ').toLowerCase().replace(/^\w/, c => c.toUpperCase());
+}
 
 const CATEGORY_COLORS = {
   genre: "#42ebe2", auteur: "#0dbac1", livre: "#7dd3fc",
@@ -14,7 +57,8 @@ function colorFor(group) {
   return CATEGORY_COLORS[group] || CATEGORY_COLORS.default;
 }
 
-function buildNetwork(container, graph, opts = {}) {
+function buildNetwork(container, graphRaw, opts = {}) {
+  const graph = normalizeGraph(graphRaw);
   const interactive = opts.interactive !== false;
 
   const nodes = new vis.DataSet(
@@ -86,7 +130,6 @@ function buildNetwork(container, graph, opts = {}) {
     interaction: {
       hover: interactive,
       zoomView: interactive,
-      zoomSpeed: 0.5, 
       dragView: interactive,
       dragNodes: interactive,
       selectable: interactive,
@@ -105,5 +148,5 @@ function buildNetwork(container, graph, opts = {}) {
     network.fit({ animation: { duration: 600, easingFunction: "easeInOutQuad" } });
   });
 
-  return { network, nodes, edges };
+  return { network, nodes, edges, graph };
 }

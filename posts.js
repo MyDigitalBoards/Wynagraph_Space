@@ -1,7 +1,18 @@
+// ─────────────────────────────────────────────────────────────────────────────
+// POSTS.JS — Articles du blog WynaGraph Space
+// ─────────────────────────────────────────────────────────────────────────────
+// Pour ajouter un article :
+//   1. Copiez un bloc existant
+//   2. Donnez-lui un "id" unique (slug, sans espaces ni accents)
+//   3. Renseignez "graphId" avec l'id du graphe dans data.js (ou "" si aucun)
+//   4. Écrivez votre contenu dans "body" en HTML simple
+//   5. Sauvegardez — l'article apparaît automatiquement sur le site
+// ─────────────────────────────────────────────────────────────────────────────
+
 window.POSTS = [
   {
-    id: "cartographie-succession-complete",
-    title: "Pourquoi anticiper sa fin de vie numérique ?",
+    id: "cartographier-fin-de-vie-numerique",
+    title: "Pourquoi cartographier sa fin de vie numérique ?",
     date: "2026-05-10",
     category: "Droits & Démarches",
     excerpt: "Comptes bancaires, réseaux sociaux, photos cloud… À notre mort, nos données numériques survivent. Voici comment s'y préparer avec un graphe.",

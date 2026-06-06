@@ -229,24 +229,25 @@
 
           document.getElementById('graph-card-title').textContent =
             graph.title;
+          const frame = document.getElementById('graph-frame');
+          const { network, nodes, edges, graph: graphN } = buildNetwork(frame, graph, { interactive: true });
+          const g = graphN;
+
           document.getElementById('graph-card-sub').textContent =
-            `${graph.nodes.length} nœuds · ${graph.edges.length} liens`;
+            `${g.nodes.length} nœuds · ${g.edges.length} liens`;
           document.getElementById('graph-full-link').href =
             `graph.html?id=${encodeURIComponent(graph.id)}`;
-
-          const frame = document.getElementById('graph-frame');
-          const { network, nodes, edges } = buildNetwork(frame, graph, { interactive: true });
           const sel = document.getElementById('graph-selection');
 
           network.on('click', params => {
             if (params.nodes.length > 0) {
-              const node = graph.nodes.find(n => n.id === params.nodes[0]);
+              const node = g.nodes.find(n => n.id === params.nodes[0]);
               if (!node) return;
-              const connections = graph.edges
+              const connections = g.edges
                 .filter(e => e.source === node.id || e.target === node.id)
                 .map(e => ({
                   label: e.label || '',
-                  neighbor: graph.nodes.find(n => n.id === (e.source === node.id ? e.target : e.source))?.label || ''
+                  neighbor: g.nodes.find(n => n.id === (e.source === node.id ? e.target : e.source))?.label || ''
                 }));
               sel.innerHTML = `
                 <div class="graph-sel-cat">${esc(node.group || '')}</div>
@@ -260,8 +261,8 @@
             } else if (params.edges.length > 0) {
               const edge = edges.get(params.edges[0]);
               if (!edge) return;
-              const fromLabel = graph.nodes.find(n => n.id === edge.from)?.label || edge.from;
-              const toLabel   = graph.nodes.find(n => n.id === edge.to  )?.label || edge.to;
+              const fromLabel = g.nodes.find(n => n.id === edge.from)?.label || edge.from;
+              const toLabel   = g.nodes.find(n => n.id === edge.to  )?.label || edge.to;
               sel.innerHTML = `
                 <div class="graph-sel-cat">Relation</div>
                 <div class="graph-sel-title">${esc(edge.label || 'Lien')}</div>

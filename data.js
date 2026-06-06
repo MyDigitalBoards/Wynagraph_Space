@@ -1,4 +1,4 @@
-// Données des graphes — modifiez ce fichier pour ajouter vos propres modèles
+// Données des graphes — modifier ce fichier pour ajouter des modèles
 window.GRAPHS = [
   {
   "id": "cartographie-succession-complete",
@@ -13,10 +13,8 @@ window.GRAPHS = [
     {"id": "personne_médecin","label": "Médecin","group": "Personne","size": 18},
     {"id": "defunt_défunt","label": "Défunt","group": "Defunt","size": 24},
     {"id": "derniere_volonte_inhumation","label": "Inhumation","group": "Derniere_volonte","size": 18},
-    {      "id": "formalite_informer_les_organismes_payeurs",
-      "label": "Informer les organismes payeurs",
-      "group": "Formalite",
-      "size": 18
+    {"id": "formalite_informer_les_organismes_payeurs","label": "Informer les organismes payeurs",
+      "group": "Formalite","size": 18
     },
     {      "id": "organisme_bailleur",
       "label": "Bailleur",
