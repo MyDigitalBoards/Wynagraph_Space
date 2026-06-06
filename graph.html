@@ -79,6 +79,86 @@
       font-size: .88rem;
       line-height: 1.6;
     }
+
+    /* ── Plein écran ── */
+    body { overflow: hidden; }
+
+    #graph-topbar {
+      position: fixed;
+      top: 57px; /* hauteur du site-header */
+      left: 0; right: 0;
+      height: 44px;
+      background: rgba(4,32,66,0.92);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 0 1.25rem;
+      z-index: 40;
+    }
+    #graph-topbar-info {
+      display: flex;
+      align-items: center;
+      gap: .8rem;
+      flex: 1;
+      overflow: hidden;
+    }
+    #graph-topbar-title {
+      font-size: .9rem;
+      font-weight: 600;
+      color: #fff;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    #graph-topbar-stats {
+      font-size: .78rem;
+      color: var(--muted-foreground);
+      white-space: nowrap;
+    }
+
+    #fullscreen-layout {
+      position: fixed;
+      top: 101px; /* header 57px + topbar 44px */
+      left: 0; right: 0; bottom: 0;
+      display: flex;
+    }
+    #graph {
+      flex: 1;
+      height: 100%;
+      background: var(--background);
+    }
+    #graph-sidebar {
+      width: 300px;
+      min-width: 300px;
+      height: 100%;
+      background: var(--surface);
+      border-left: 1px solid var(--border);
+      padding: 1.2rem;
+      overflow-y: auto;
+      font-size: .92rem;
+    }
+    #graph-sidebar h3 {
+      font-size: 1rem;
+      margin-bottom: .8rem;
+      color: var(--cyan);
+    }
+    #graph-sidebar .stats {
+      display: flex;
+      gap: 1.5rem;
+      margin-top: 1rem;
+      color: var(--muted-foreground);
+      font-size: .88rem;
+    }
+    #graph-sidebar .stats strong {
+      color: var(--foreground);
+      display: block;
+      font-size: 1.4rem;
+    }
+    @media (max-width: 768px) {
+      #graph-sidebar { width: 240px; min-width: 240px; }
+    }
   </style>
 </head>
 <body>
@@ -92,25 +172,27 @@
     </div>
   </header>
 
-  <main>
-    <section class="section" id="detail">
-      <a href="index.html" class="back-link">← Retour à la galerie</a>
-      <div id="header"></div>
-      <div class="detail-grid" style="margin-top:1.5rem">
-        <div class="graph-frame" id="graph"></div>
-        <aside class="sidebar">
-          <h3 id="side-title" style="color:var(--cyan);margin-bottom:.8rem;">Sélection</h3>
-          <div id="selected">
-            <p class="sel-empty">Cliquez sur un <strong style="color:#fff">nœud</strong> pour voir ses connexions,
-            ou sur une <strong style="color:var(--cyan)">relation</strong> pour voir ses propriétés.</p>
-          </div>
-          <div class="stats" id="stats"></div>
-        </aside>
-      </div>
-    </section>
-  </main>
+  <!-- Barre titre sous le header -->
+  <div id="graph-topbar">
+    <a href="javascript:history.back()" class="back-link" style="margin:0">← Retour</a>
+    <div id="graph-topbar-info">
+      <span id="graph-topbar-title"></span>
+      <span id="graph-topbar-stats"></span>
+    </div>
+  </div>
 
-  <footer>© 2026 WynaGraph</footer>
+  <!-- Layout plein écran -->
+  <div id="fullscreen-layout">
+    <div id="graph"></div>
+    <aside id="graph-sidebar">
+      <h3 id="side-title">Sélection</h3>
+      <div id="selected">
+        <p class="sel-empty">Cliquez sur un <strong style="color:#fff">nœud</strong> pour voir ses connexions,
+        ou sur une <strong style="color:var(--cyan)">relation</strong> pour voir ses propriétés.</p>
+      </div>
+      <div class="stats" id="stats"></div>
+    </aside>
+  </div>
 
   <script src="data.js"></script>
   <script src="graph-render.js"></script>
@@ -127,30 +209,30 @@
     const params = new URLSearchParams(location.search);
     const id     = params.get("id");
     const graph  = GRAPHS.find((g) => g.id === id);
-    const header = document.getElementById("header");
     const sel    = document.getElementById("selected");
     const title  = document.getElementById("side-title");
     const stats  = document.getElementById("stats");
 
     if (!graph) {
-      header.innerHTML = `<h1>Graphe introuvable</h1><p class="lead">Ce modèle n'existe pas.</p>`;
+      document.getElementById('graph-topbar-title').textContent = 'Graphe introuvable';
     } else {
       document.title = `${graph.title} — WynaGraph`;
-      header.innerHTML = `
-        <span class="eyebrow">${esc(graph.category)}</span>
-        <h1 style="margin-top:.5rem">${esc(graph.title)}</h1>
-        <p class="lead" style="margin:1rem 0 0">${esc(graph.longDescription)}</p>`;
+      document.getElementById('graph-topbar-title').textContent = graph.title;
+      document.getElementById('graph-topbar-stats').textContent =
+        `${graph.nodes.length} nœuds · ${(graph.edges || graph.relationships || []).length} liens`;
 
-      const { network, nodes, edges } = buildNetwork(
+      const { network, nodes, edges, graph: graphN } = buildNetwork(
         document.getElementById("graph"),
         graph,
         { interactive: true }
       );
+      // Utiliser le graphe normalisé pour les clics
+      const g = graphN;
 
       // Stats
       stats.innerHTML = `
-        <div><strong>${graph.nodes.length}</strong> nœuds</div>
-        <div><strong>${graph.edges.length}</strong> liens</div>`;
+        <div><strong>${g.nodes.length}</strong> nœuds</div>
+        <div><strong>${g.edges.length}</strong> liens</div>`;
 
       // ── Réinitialiser la sidebar ──────────────────────────────────────────
       function resetSidebar() {
@@ -161,12 +243,12 @@
 
       // ── Clic sur un NŒUD ─────────────────────────────────────────────────
       function openNodePanel(nodeId) {
-        const node = graph.nodes.find((n) => n.id === nodeId);
+        const node = g.nodes.find((n) => n.id === nodeId);
         if (!node) return;
 
         title.textContent = node.label;
 
-        const connections = graph.edges
+        const connections = g.edges
           .filter((e) => e.source === nodeId || e.target === nodeId)
           .map((e) => ({
             neighbor: (e.source === nodeId ? e.target : e.source),
@@ -174,7 +256,7 @@
           }))
           .map((c) => ({
             ...c,
-            neighborLabel: (graph.nodes.find((n) => n.id === c.neighbor)?.label || c.neighbor),
+            neighborLabel: (g.nodes.find((n) => n.id === c.neighbor)?.label || c.neighbor),
           }));
 
         const catHtml = node.group
@@ -199,8 +281,8 @@
         if (!edge) return;
 
         // Retrouver les labels des nœuds source/cible
-        const fromLabel = graph.nodes.find(n => n.id === edge.from)?.label || edge.from;
-        const toLabel   = graph.nodes.find(n => n.id === edge.to  )?.label || edge.to;
+        const fromLabel = g.nodes.find(n => n.id === edge.from)?.label || edge.from;
+        const toLabel   = g.nodes.find(n => n.id === edge.to  )?.label || edge.to;
 
         title.textContent = "Relation";
 
