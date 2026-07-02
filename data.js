@@ -1,6 +1,374 @@
 // Données des graphes — modifier ce fichier pour ajouter des modèles
 window.GRAPHS = [
   {
+  "id": "Haircare",
+  "title": "Marques de soins capillaires",
+  "category": "Soins capillaires",
+  "description": "Une liste non exhaustive de marques de soins capillaire Black Owned",
+  "longDescription": "",
+  "nodes": [
+    {
+      "id": "Holy Melanin",
+      "label": "Holy Melanin",
+      "category": "Haircare",
+      "properties": {}
+    },
+    {
+      "id": "NoireÔnaturel",
+      "label": "NoireÔnaturel",
+      "category": "Haircare",
+      "properties": {}
+    },
+    {
+      "id": "Niir",
+      "label": "Niir",
+      "category": "Haircare",
+      "properties": {}
+    },
+    {
+      "id": "Olafro",
+      "label": "Olafro",
+      "category": "Haircare",
+      "properties": {}
+    },
+    {
+      "id": "Amewat",
+      "label": "Amewat",
+      "category": "Haircare",
+      "properties": {}
+    },
+    {
+      "id": "WAAM Cosmetics",
+      "label": "WAAM Cosmetics",
+      "category": "Haircare",
+      "properties": {}
+    },
+    {
+      "id": "PurePousse",
+      "label": "PurePousse",
+      "category": "Haircare",
+      "properties": {}
+    },
+    {
+      "id": "McFell Cosmetics",
+      "label": "McFell Cosmetics",
+      "category": "Haircare",
+      "properties": {}
+    },
+    {
+      "id": "Musoya",
+      "label": "Musoya",
+      "category": "Haircare",
+      "properties": {}
+    },
+    {
+      "id": "Memone Haircare",
+      "label": "Memone Haircare",
+      "category": "Haircare",
+      "properties": {}
+    },
+    {
+      "id": "Kréol Hair",
+      "label": "Kréol Hair",
+      "category": "Haircare",
+      "properties": {}
+    },
+    {
+      "id": "Kalia Nature",
+      "label": "Kalia Nature",
+      "category": "Haircare",
+      "properties": {}
+    },
+    {
+      "id": "Mango Butterful",
+      "label": "Mango Butterful",
+      "category": "Haircare",
+      "properties": {}
+    },
+    {
+      "id": "Hairsolite",
+      "label": "Hairsolite",
+      "category": "Haircare",
+      "properties": {}
+    },
+    {
+      "id": "Racine Natural Beauty",
+      "label": "Racine Natural Beauty",
+      "category": "Haircare",
+      "properties": {}
+    },
+    {
+      "id": "Apie Hair",
+      "label": "Apie Hair",
+      "category": "Haircare",
+      "properties": {}
+    },
+    {
+      "id": "Samha Tchad Cosmetics",
+      "label": "Samha Tchad Cosmetics",
+      "category": "Haircare",
+      "properties": {}
+    },
+    {
+      "id": "Beauté Insolente",
+      "label": "Beauté Insolente",
+      "category": "Haircare",
+      "properties": {}
+    },
+    {
+      "id": "Carol's Daughter",
+      "label": "Carol's Daughter",
+      "category": "Haircare",
+      "properties": {}
+    },
+    {
+      "id": "Melanin Haircare",
+      "label": "Melanin Haircare",
+      "category": "Haircare",
+      "properties": {}
+    },
+    {
+      "id": "Camille Rose",
+      "label": "Camille Rose",
+      "category": "Haircare",
+      "properties": {}
+    },
+    {
+      "id": "Pattern Beauty",
+      "label": "Pattern Beauty",
+      "category": "Haircare",
+      "properties": {}
+    },
+    {
+      "id": "Cécred",
+      "label": "Cécred",
+      "category": "Haircare",
+      "properties": {}
+    },
+    {
+      "id": "Haircare",
+      "label": "Haircare",
+      "category": "Haircare",
+      "properties": {}
+    },
+    {
+      "id": "Yana Farm",
+      "label": "Yana Farm",
+      "category": "Unassigned",
+      "properties": {}
+    },
+    {
+      "id": "Devance Cosmétiques",
+      "label": "Devance Cosmétiques",
+      "category": "Unassigned",
+      "properties": {}
+    },
+    {
+      "id": "Evashair",
+      "label": "Evashair",
+      "category": "Unassigned",
+      "properties": {}
+    },
+    {
+      "id": "Brownicone",
+      "label": "Brownicone",
+      "category": "Unassigned",
+      "properties": {}
+    }
+  ],
+  "relationships": [
+    {
+      "id": "e_24_zpb7",
+      "type": ".",
+      "source": "Haircare",
+      "target": "Holy Melanin",
+      "properties": {}
+    },
+    {
+      "id": "e_25_y9et",
+      "type": ".",
+      "source": "Haircare",
+      "target": "NoireÔnaturel",
+      "properties": {}
+    },
+    {
+      "id": "e_26_vleo",
+      "type": ".",
+      "source": "Haircare",
+      "target": "Niir",
+      "properties": {}
+    },
+    {
+      "id": "e_27_cftk",
+      "type": ".",
+      "source": "Haircare",
+      "target": "Olafro",
+      "properties": {}
+    },
+    {
+      "id": "e_28_z7rf",
+      "type": ".",
+      "source": "Haircare",
+      "target": "Amewat",
+      "properties": {}
+    },
+    {
+      "id": "e_29_3tmn",
+      "type": ".",
+      "source": "Haircare",
+      "target": "WAAM Cosmetics",
+      "properties": {}
+    },
+    {
+      "id": "e_30_6s97",
+      "type": ".",
+      "source": "Haircare",
+      "target": "PurePousse",
+      "properties": {}
+    },
+    {
+      "id": "e_31_152h",
+      "type": ".",
+      "source": "Haircare",
+      "target": "McFell Cosmetics",
+      "properties": {}
+    },
+    {
+      "id": "e_32_kywk",
+      "type": ".",
+      "source": "Haircare",
+      "target": "Musoya",
+      "properties": {}
+    },
+    {
+      "id": "e_33_cwyf",
+      "type": ".",
+      "source": "Haircare",
+      "target": "Memone Haircare",
+      "properties": {}
+    },
+    {
+      "id": "e_34_vtx0",
+      "type": ".",
+      "source": "Haircare",
+      "target": "Kréol Hair",
+      "properties": {}
+    },
+    {
+      "id": "e_35_gugp",
+      "type": ".",
+      "source": "Haircare",
+      "target": "Kalia Nature",
+      "properties": {}
+    },
+    {
+      "id": "e_36_7gr7",
+      "type": ".",
+      "source": "Haircare",
+      "target": "Mango Butterful",
+      "properties": {}
+    },
+    {
+      "id": "e_37_nfwp",
+      "type": ".",
+      "source": "Haircare",
+      "target": "Hairsolite",
+      "properties": {}
+    },
+    {
+      "id": "e_38_ver4",
+      "type": ".",
+      "source": "Haircare",
+      "target": "Racine Natural Beauty",
+      "properties": {}
+    },
+    {
+      "id": "e_39_m0kb",
+      "type": ".",
+      "source": "Haircare",
+      "target": "Apie Hair",
+      "properties": {}
+    },
+    {
+      "id": "e_40_z2vq",
+      "type": ".",
+      "source": "Haircare",
+      "target": "Samha Tchad Cosmetics",
+      "properties": {}
+    },
+    {
+      "id": "e_41_dast",
+      "type": ".",
+      "source": "Haircare",
+      "target": "Beauté Insolente",
+      "properties": {}
+    },
+    {
+      "id": "e_42_f50i",
+      "type": ".",
+      "source": "Haircare",
+      "target": "Carol's Daughter",
+      "properties": {}
+    },
+    {
+      "id": "e_43_lels",
+      "type": ".",
+      "source": "Haircare",
+      "target": "Melanin Haircare",
+      "properties": {}
+    },
+    {
+      "id": "e_44_iang",
+      "type": ".",
+      "source": "Haircare",
+      "target": "Camille Rose",
+      "properties": {}
+    },
+    {
+      "id": "e_45_28ar",
+      "type": ".",
+      "source": "Haircare",
+      "target": "Pattern Beauty",
+      "properties": {}
+    },
+    {
+      "id": "e_46_9kc7",
+      "type": ".",
+      "source": "Haircare",
+      "target": "Cécred",
+      "properties": {}
+    },
+    {
+      "id": "e_m_igof40",
+      "type": ".",
+      "source": "Haircare",
+      "target": "Yana Farm",
+      "properties": {}
+    },
+    {
+      "id": "e_m_q4f7jk",
+      "type": ".",
+      "source": "Haircare",
+      "target": "Devance Cosmétiques",
+      "properties": {}
+    },
+    {
+      "id": "e_m_6hcmew",
+      "type": ".",
+      "source": "Haircare",
+      "target": "Evashair",
+      "properties": {}
+    },
+    {
+      "id": "e_m_zy1s89",
+      "type": ".",
+      "source": "Haircare",
+      "target": "Brownicone",
+      "properties": {}
+    }
+  ]
+},
+  {
   "id": "cartographie-succession-complete",
   "title": "Succession et démarches après décès : un guide pour ne rien oublier",
   "category": "Droits & Démarches",
