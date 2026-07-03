@@ -101,8 +101,9 @@
       display: flex;
       align-items: center;
       gap: .8rem;
-      flex: 1;
+      flex: 0 1 auto;
       overflow: hidden;
+      min-width: 0;
     }
     #graph-topbar-title {
       font-size: .9rem;
@@ -116,6 +117,108 @@
       font-size: .78rem;
       color: var(--muted-foreground);
       white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    /* ── Recherche du graphe ── */
+    #graph-search-wrap {
+      position: relative;
+      flex: 1;
+      max-width: 320px;
+      margin-left: auto;
+    }
+    #graph-search-icon {
+      position: absolute;
+      left: 11px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--muted-foreground);
+      font-size: .82rem;
+      pointer-events: none;
+    }
+    #graph-search {
+      width: 100%;
+      background: rgba(255,255,255,.05);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      color: #fff;
+      font-size: .82rem;
+      font-family: inherit;
+      padding: 6px 30px 6px 30px;
+      outline: none;
+      transition: border-color .15s, background .15s;
+    }
+    #graph-search::placeholder { color: var(--muted-foreground); }
+    #graph-search:focus {
+      border-color: var(--cyan);
+      background: rgba(255,255,255,.08);
+    }
+    #graph-search-clear {
+      position: absolute;
+      right: 8px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      color: var(--muted-foreground);
+      font-size: .95rem;
+      line-height: 1;
+      cursor: pointer;
+      padding: 3px 4px;
+      display: none;
+    }
+    #graph-search-clear:hover { color: #fff; }
+    #graph-search-wrap.has-value #graph-search-clear { display: block; }
+
+    #graph-search-results {
+      position: absolute;
+      top: calc(100% + 6px);
+      left: 0; right: 0;
+      background: rgba(4,32,66,0.98);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      max-height: 260px;
+      overflow-y: auto;
+      box-shadow: 0 10px 24px rgba(0,0,0,.4);
+      display: none;
+      z-index: 50;
+    }
+    #graph-search-wrap.show-results #graph-search-results { display: block; }
+    .gs-result {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      padding: 8px 12px;
+      font-size: .82rem;
+      color: var(--foreground);
+      cursor: pointer;
+      border-bottom: 1px solid rgba(255,255,255,.06);
+    }
+    .gs-result:last-child { border-bottom: none; }
+    .gs-result:hover, .gs-result.active { background: rgba(66,235,226,.1); }
+    .gs-result-group {
+      font-size: .68rem;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      color: var(--cyan);
+      flex-shrink: 0;
+    }
+    .gs-result-empty {
+      padding: 10px 12px;
+      font-size: .8rem;
+      color: var(--muted-foreground);
+    }
+    .gs-match-count {
+      font-size: .72rem;
+      color: var(--cyan);
+      white-space: nowrap;
+      flex-shrink: 0;
+      margin-left: .5rem;
+    }
+    @media (max-width: 768px) {
+      #graph-topbar-info { display: none; }
+      #graph-search-wrap { max-width: none; }
     }
 
     #fullscreen-layout {
@@ -178,6 +281,12 @@
     <div id="graph-topbar-info">
       <span id="graph-topbar-title"></span>
       <span id="graph-topbar-stats"></span>
+    </div>
+    <div id="graph-search-wrap">
+      <span id="graph-search-icon">⌕</span>
+      <input type="text" id="graph-search" placeholder="Rechercher un nœud…" autocomplete="off" />
+      <button id="graph-search-clear" title="Effacer" aria-label="Effacer la recherche">✕</button>
+      <div id="graph-search-results"></div>
     </div>
   </div>
 
@@ -263,6 +372,13 @@
           ? `<div class="sel-node-category">${esc(node.group)}</div>`
           : "";
 
+        const propsHtml = (node.properties && node.properties.length)
+          ? `<div class="sel-section-label">Propriétés</div>
+             <ul class="sel-props-list">
+               ${node.properties.map(p => `<li>${esc(p)}</li>`).join("")}
+             </ul>`
+          : "";
+
         const connHtml = connections.length
           ? `<div class="sel-section-label">Connexions (${connections.length})</div>
              <ul class="sel-connections-list">
@@ -272,7 +388,7 @@
              </ul>`
           : `<p class="sel-empty" style="margin-top:8px">Aucune connexion directe.</p>`;
 
-        sel.innerHTML = catHtml + connHtml;
+        sel.innerHTML = catHtml + propsHtml + connHtml;
       }
 
       // ── Clic sur une ARÊTE ───────────────────────────────────────────────
@@ -315,6 +431,133 @@
           openEdgePanel(params.edges[0]);
         } else {
           resetSidebar();
+        }
+      });
+
+      // ── Recherche / filtre du graphe ────────────────────────────────────
+      const searchInput  = document.getElementById("graph-search");
+      const searchWrap   = document.getElementById("graph-search-wrap");
+      const searchClear  = document.getElementById("graph-search-clear");
+      const searchResults = document.getElementById("graph-search-results");
+
+      function normalizeText(str) {
+        return String(str || "")
+          .toLowerCase()
+          .normalize("NFD").replace(/[\u0300-\u036f]/g, ""); // retire les accents
+      }
+
+      const DIM_OPACITY = 0.1;
+      const BASE_EDGE_COLOR = { color: "rgba(255,255,255,0.18)", highlight: "#42ebe2", hover: "#42ebe2" };
+
+      function getMatches(query) {
+        const q = normalizeText(query);
+        if (!q) return null;
+        return g.nodes.filter(n =>
+          normalizeText(n.label).includes(q) ||
+          normalizeText(n.id).includes(q) ||
+          normalizeText(n.group).includes(q)
+        );
+      }
+
+      function applyFilter(query) {
+        const matches = getMatches(query);
+
+        if (matches === null) {
+          // Réinitialiser : tout redevient visible normalement
+          nodes.update(g.nodes.map(n => ({ id: n.id, opacity: 1 })));
+          edges.update(g.edges.map((e, i) => ({ id: i, color: { ...BASE_EDGE_COLOR, opacity: 1 } })));
+          return;
+        }
+
+        const matchedIds = new Set(matches.map(n => n.id));
+
+        nodes.update(g.nodes.map(n => ({
+          id: n.id,
+          opacity: matchedIds.has(n.id) ? 1 : DIM_OPACITY,
+        })));
+
+        edges.update(g.edges.map((e, i) => ({
+          id: i,
+          color: {
+            ...BASE_EDGE_COLOR,
+            opacity: (matchedIds.has(e.source) || matchedIds.has(e.target)) ? 1 : DIM_OPACITY * 0.6,
+          },
+        })));
+      }
+
+      function renderResultsList(query) {
+        const matches = getMatches(query);
+        if (matches === null || matches.length === 0) {
+          searchResults.innerHTML = matches !== null
+            ? `<div class="gs-result-empty">Aucun nœud trouvé.</div>`
+            : "";
+          return;
+        }
+        const shown = matches.slice(0, 25);
+        searchResults.innerHTML = shown.map(n => `
+          <div class="gs-result" data-id="${esc(n.id)}">
+            <span>${esc(n.label)}</span>
+            ${n.group ? `<span class="gs-result-group">${esc(n.group)}</span>` : ""}
+          </div>
+        `).join("") + (matches.length > shown.length
+          ? `<div class="gs-result-empty">+ ${matches.length - shown.length} autres résultats…</div>`
+          : "");
+      }
+
+      function focusOnNode(nodeId) {
+        network.selectNodes([nodeId]);
+        network.focus(nodeId, { scale: 1.3, animation: { duration: 500, easingFunction: "easeInOutQuad" } });
+        openNodePanel(nodeId);
+      }
+
+      let searchDebounce = null;
+      searchInput.addEventListener("input", () => {
+        const val = searchInput.value;
+        searchWrap.classList.toggle("has-value", val.length > 0);
+        searchWrap.classList.toggle("show-results", val.length > 0);
+
+        clearTimeout(searchDebounce);
+        searchDebounce = setTimeout(() => {
+          applyFilter(val);
+          renderResultsList(val);
+        }, 120);
+      });
+
+      searchInput.addEventListener("keydown", (e) => {
+        if (e.key === "Enter") {
+          const first = searchResults.querySelector(".gs-result");
+          if (first) {
+            focusOnNode(first.dataset.id);
+            searchWrap.classList.remove("show-results");
+          }
+        } else if (e.key === "Escape") {
+          clearSearch();
+        }
+      });
+
+      searchInput.addEventListener("focus", () => {
+        if (searchInput.value) searchWrap.classList.add("show-results");
+      });
+
+      searchResults.addEventListener("click", (e) => {
+        const item = e.target.closest(".gs-result");
+        if (!item) return;
+        focusOnNode(item.dataset.id);
+        searchWrap.classList.remove("show-results");
+      });
+
+      function clearSearch() {
+        searchInput.value = "";
+        searchWrap.classList.remove("has-value", "show-results");
+        applyFilter("");
+        searchResults.innerHTML = "";
+        searchInput.blur();
+      }
+      searchClear.addEventListener("click", clearSearch);
+
+      document.addEventListener("click", (e) => {
+        if (!searchWrap.contains(e.target)) {
+          searchWrap.classList.remove("show-results");
         }
       });
     }

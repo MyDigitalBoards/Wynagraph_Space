@@ -50,11 +50,12 @@ const CATEGORY_COLORS = {
   legume: "#34d399", herbe: "#86efac", laitier: "#fde68a",
   technique: "#fbbf24", fruit: "#fcd34d", proteine: "#fca5a5", saison: "#42ebe2",
   scene: "#42ebe2", artiste: "#a78bfa",
+  haircare: "#e879b9", pays: "#7dd3fc", personne: "#fbbf24", groupe: "#e05454",
   default: "#1D3655",
 };
 
 function colorFor(group) {
-  return CATEGORY_COLORS[group] || CATEGORY_COLORS.default;
+  return CATEGORY_COLORS[(group || "").toLowerCase()] || CATEGORY_COLORS.default;
 }
 
 function buildNetwork(container, graphRaw, opts = {}) {
