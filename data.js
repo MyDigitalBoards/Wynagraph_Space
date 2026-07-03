@@ -1,6 +1,543 @@
 // Données des graphes — modifier ce fichier pour ajouter des modèles
 window.GRAPHS = [
   {
+    "id": "Haircare",
+    "title": "Marques de soins capillaires Black Owned",
+    "category": "Soins capillaires",
+    "description": "Cartographie des marques de soins capillaires Black-owned : origine, fondateurs et appartenance à un groupe.",
+    "longDescription": "Une sélection de marques de soins capillaires Black-owned, avec leur pays d'implantation, leurs fondateurs et, le cas échéant, le groupe qui les détient.",
+    "nodes": [
+      {
+        "id": "Holy Melanin",
+        "label": "Holy Melanin",
+        "category": "Haircare",
+        "properties": {
+          "Description": "Produits naturels sans parfum ni huiles essentielles pour cheveux afros."
+        }
+      },
+      {
+        "id": "NoireÔnaturel",
+        "label": "NoireÔnaturel",
+        "category": "Haircare",
+        "properties": {
+          "Description": "Pionnière — 1ère marque française de cosmétiques BIO pour cheveux texturés. Certifiée Ecocert, ingrédients afro-caribéens. Made in France."
+        }
+      },
+      {
+        "id": "Niir",
+        "label": "Niir",
+        "category": "Haircare",
+        "properties": {
+          "Description": "Gamme volontairement courte, sans parfum ni huiles essentielles. Produits ultra-concentrés pour cheveux frisés et crépus. Dès 3 ans."
+        }
+      },
+      {
+        "id": "Olafro",
+        "label": "Olafro",
+        "category": "Haircare",
+        "properties": {
+          "Site web": "https://olafro.com/"
+        }
+      },
+      {
+        "id": "Amewat",
+        "label": "Amewat",
+        "category": "Haircare",
+        "properties": {}
+      },
+      {
+        "id": "WAAM Cosmetics",
+        "label": "WAAM Cosmetics",
+        "category": "Haircare",
+        "properties": {
+          "Description": "Marque française de beauté clean et inclusive pour corps, visage et cheveux. Formules naturelles hautement efficaces."
+        }
+      },
+      {
+        "id": "PurePousse",
+        "label": "PurePousse",
+        "category": "Haircare",
+        "properties": {
+          "Description": "Gamme minimaliste et bio, fabriquée en laboratoire. Produits artisanaux pour cheveux crépus, bouclés et frisés."
+        }
+      },
+      {
+        "id": "Musoya",
+        "label": "Musoya",
+        "category": "Haircare",
+        "properties": {
+          "Description": "Ingrédients africains (gombo, karité). Travaille avec une coopérative de 3 000 femmes en Côte d'Ivoire. Grand Prix Innovation 2024.",
+          "Site web": "https://musoya.co/"
+        }
+      },
+      {
+        "id": "Memone Haircare",
+        "label": "Memone Haircare",
+        "category": "Haircare",
+        "properties": {
+          "Site web": "https://memonehaircare.com/"
+        }
+      },
+      {
+        "id": "Kréol Hair",
+        "label": "Kréol Hair",
+        "category": "Haircare",
+        "properties": {
+          "Description": "Produits capillaires à base de Gombo.",
+          "Site web": "https://kreol-hair.fr/"
+        }
+      },
+      {
+        "id": "Kalia Nature",
+        "label": "Kalia Nature",
+        "category": "Haircare",
+        "properties": {
+          "Description": "Inspirée du savoir-faire caribéen, faite main. Jusqu'à 95% d'ingrédients naturels. Plus de 250 points de vente en France et DOM-TOM."
+        }
+      },
+      {
+        "id": "Mango Butterful",
+        "label": "Mango Butterful",
+        "category": "Haircare",
+        "properties": {
+          "Site web": "https://mangobutterfull.com/"
+        }
+      },
+      {
+        "id": "Hairsolite",
+        "label": "Hairsolite",
+        "category": "Haircare",
+        "properties": {
+          "Description": "Soins capillaires naturels et artisanaux pour tous types de cheveux."
+        }
+      },
+      {
+        "id": "Racine Natural Beauty",
+        "label": "Racine Natural Beauty",
+        "category": "Haircare",
+        "properties": {}
+      },
+      {
+        "id": "Apie Hair",
+        "label": "Apie Hair",
+        "category": "Haircare",
+        "properties": {}
+      },
+      {
+        "id": "Samha Tchad Cosmetics",
+        "label": "Samha Tchad Cosmetics",
+        "category": "Haircare",
+        "properties": {
+          "Site web": "https://samhatchad-cosmetique.fr/"
+        }
+      },
+      {
+        "id": "Beauté Insolente",
+        "label": "Beauté Insolente",
+        "category": "Haircare",
+        "properties": {}
+      },
+      {
+        "id": "Carol's Daughter",
+        "label": "Carol's Daughter",
+        "category": "Haircare",
+        "properties": {}
+      },
+      {
+        "id": "Melanin Haircare",
+        "label": "Melanin Haircare",
+        "category": "Haircare",
+        "properties": {
+          "Description": "Marque familiale Black-owned. Disponible chez Ulta, Sephora, Target."
+        }
+      },
+      {
+        "id": "Camille Rose",
+        "label": "Camille Rose",
+        "category": "Haircare",
+        "properties": {
+          "Description": "Fondée dans sa cuisine pour soigner les cheveux secs de ses enfants. Plus grande marque de haircare Black-owned et female-led aux USA. Vendue dans Target, Ulta, CVS."
+        }
+      },
+      {
+        "id": "Pattern Beauty",
+        "label": "Pattern Beauty",
+        "category": "Haircare",
+        "properties": {
+          "Description": "Fondée par l'actrice et icône Tracee Ellis Ross (fille de Diana Ross). Spécialisée cheveux bouclés à crépus."
+        }
+      },
+      {
+        "id": "Cécred",
+        "label": "Cécred",
+        "category": "Haircare",
+        "properties": {
+          "Description": "Lancée en février 2024, autofinancée. Inspirée des rituels capillaires de sa mère. Axée sur la solidité et la santé du cheveu."
+        }
+      },
+      {
+        "id": "Yana Farm",
+        "label": "Yana Farm",
+        "category": "Haircare",
+        "properties": {}
+      },
+      {
+        "id": "Devance Cosmétiques",
+        "label": "Devance Cosmétiques",
+        "category": "Haircare",
+        "properties": {}
+      },
+      {
+        "id": "Evashair",
+        "label": "Evashair",
+        "category": "Haircare",
+        "properties": {}
+      },
+      {
+        "id": "Brownicone",
+        "label": "Brownicone",
+        "category": "Haircare",
+        "properties": {}
+      },
+      {
+        "id": "France",
+        "label": "France",
+        "category": "Pays",
+        "properties": {}
+      },
+      {
+        "id": "Mali",
+        "label": "Mali",
+        "category": "Pays",
+        "properties": {}
+      },
+      {
+        "id": "United States",
+        "label": "United States",
+        "category": "Pays",
+        "properties": {}
+      },
+      {
+        "id": "Beyoncé Knowles",
+        "label": "Beyoncé Knowles",
+        "category": "Personne",
+        "properties": {}
+      },
+      {
+        "id": "Tracee Ellis Ross",
+        "label": "Tracee Ellis Ross",
+        "category": "Personne",
+        "properties": {}
+      },
+      {
+        "id": "Janell Stephens",
+        "label": "Janell Stephens",
+        "category": "Personne",
+        "properties": {}
+      },
+      {
+        "id": "Whitney White & Taffeta White",
+        "label": "Whitney White & Taffeta White",
+        "category": "Personne",
+        "properties": {}
+      },
+      {
+        "id": "Lisa Price",
+        "label": "Lisa Price",
+        "category": "Personne",
+        "properties": {}
+      },
+      {
+        "id": "L'Oréal",
+        "label": "L'Oréal",
+        "category": "Groupe",
+        "properties": {}
+      },
+      {
+        "id": "Les secrets de Loly",
+        "label": "Les secrets de Loly",
+        "category": "Haircare",
+        "properties": {}
+      },
+      {
+        "id": "Kelly Massol",
+        "label": "Kelly Massol",
+        "category": "Personne",
+        "properties": {}
+      },
+      {
+        "id": "Quadrivio",
+        "label": "Quadrivio",
+        "category": "Groupe",
+        "properties": {}
+      },
+      {
+        "id": "Italy",
+        "label": "Italy",
+        "category": "Pays",
+        "properties": {}
+      }
+    ],
+    "relationships": [
+      {
+        "id": "e_m_fvl3vr",
+        "type": "BASED_IN",
+        "label": "Basée en",
+        "source": "Holy Melanin",
+        "target": "France",
+        "properties": {}
+      },
+      {
+        "id": "e_m_pbuaag",
+        "type": "BASED_IN",
+        "label": "Basée en",
+        "source": "Niir",
+        "target": "France",
+        "properties": {
+          "Depuis": "2018"
+        }
+      },
+      {
+        "id": "e_m_lg6fjq",
+        "type": "BASED_IN",
+        "label": "Basée en",
+        "source": "Olafro",
+        "target": "France",
+        "properties": {
+          "Depuis": "2016"
+        }
+      },
+      {
+        "id": "e_m_rgwebs",
+        "type": "BASED_IN",
+        "label": "Basée en",
+        "source": "WAAM Cosmetics",
+        "target": "France",
+        "properties": {}
+      },
+      {
+        "id": "e_m_dwnfgz",
+        "type": "BASED_IN",
+        "label": "Basée en",
+        "source": "PurePousse",
+        "target": "France",
+        "properties": {}
+      },
+      {
+        "id": "e_m_kb6rjh",
+        "type": "BASED_IN",
+        "label": "Basée en",
+        "source": "Musoya",
+        "target": "France",
+        "properties": {
+          "Depuis": "2019"
+        }
+      },
+      {
+        "id": "e_m_cwbddn",
+        "type": "BASED_IN",
+        "label": "Basée en",
+        "source": "Memone Haircare",
+        "target": "Mali",
+        "properties": {}
+      },
+      {
+        "id": "e_m_wazkep",
+        "type": "BASED_IN",
+        "label": "Basée en",
+        "source": "Kréol Hair",
+        "target": "France",
+        "properties": {}
+      },
+      {
+        "id": "e_m_lifhf1",
+        "type": "BASED_IN",
+        "label": "Basée en",
+        "source": "NoireÔnaturel",
+        "target": "France",
+        "properties": {
+          "Depuis": "2011"
+        }
+      },
+      {
+        "id": "e_m_dyik7c",
+        "type": "BASED_IN",
+        "label": "Basée en",
+        "source": "Kalia Nature",
+        "target": "France",
+        "properties": {
+          "Depuis": "2015"
+        }
+      },
+      {
+        "id": "e_m_94f9dh",
+        "type": "BASED_IN",
+        "label": "Basée en",
+        "source": "Cécred",
+        "target": "United States",
+        "properties": {
+          "Depuis": "2024"
+        }
+      },
+      {
+        "id": "e_m_esusza",
+        "type": "BASED_IN",
+        "label": "Basée en",
+        "source": "Brownicone",
+        "target": "France",
+        "properties": {}
+      },
+      {
+        "id": "e_m_3v0ds6",
+        "type": "BASED_IN",
+        "label": "Basée en",
+        "source": "Evashair",
+        "target": "France",
+        "properties": {}
+      },
+      {
+        "id": "e_m_9hn9vs",
+        "type": "BASED_IN",
+        "label": "Basée en",
+        "source": "Pattern Beauty",
+        "target": "United States",
+        "properties": {}
+      },
+      {
+        "id": "e_m_mdfznh",
+        "type": "BASED_IN",
+        "label": "Basée en",
+        "source": "Camille Rose",
+        "target": "United States",
+        "properties": {}
+      },
+      {
+        "id": "e_m_dupg4n",
+        "type": "OWNED_BY",
+        "label": "Détenue par",
+        "source": "Cécred",
+        "target": "Beyoncé Knowles",
+        "properties": {}
+      },
+      {
+        "id": "e_m_wwru1g",
+        "type": "OWNED_BY",
+        "label": "Détenue par",
+        "source": "Pattern Beauty",
+        "target": "Tracee Ellis Ross",
+        "properties": {}
+      },
+      {
+        "id": "e_m_6webkn",
+        "type": "OWNED_BY",
+        "label": "Détenue par",
+        "source": "Camille Rose",
+        "target": "Janell Stephens",
+        "properties": {}
+      },
+      {
+        "id": "e_m_2tpup9",
+        "type": "OWNED_BY",
+        "label": "Détenue par",
+        "source": "Melanin Haircare",
+        "target": "Whitney White & Taffeta White",
+        "properties": {}
+      },
+      {
+        "id": "e_m_rfisv4",
+        "type": "CREATED_BY",
+        "label": "Créée par",
+        "source": "Carol's Daughter",
+        "target": "Lisa Price",
+        "properties": {}
+      },
+      {
+        "id": "e_m_w5xcfr",
+        "type": "BASED_IN",
+        "label": "Basée en",
+        "source": "Carol's Daughter",
+        "target": "United States",
+        "properties": {
+          "Depuis": "1993"
+        }
+      },
+      {
+        "id": "e_m_t881fc",
+        "type": "OWNED_BY",
+        "label": "Détenue par",
+        "source": "Carol's Daughter",
+        "target": "L'Oréal",
+        "properties": {
+          "Depuis": "2014"
+        }
+      },
+      {
+        "id": "e_m_yyc9v8",
+        "type": "CREATED_BY",
+        "label": "Créée par",
+        "source": "Les secrets de Loly",
+        "target": "Kelly Massol",
+        "properties": {
+          "Depuis": "2009"
+        }
+      },
+      {
+        "id": "e_m_l1yih8",
+        "type": "OWNED_BY",
+        "label": "Détenue par",
+        "source": "Les secrets de Loly",
+        "target": "Kelly Massol",
+        "properties": {}
+      },
+      {
+        "id": "e_m_p08x4l",
+        "type": "OWNED_BY",
+        "label": "Détenue par",
+        "source": "Les secrets de Loly",
+        "target": "Quadrivio",
+        "properties": {
+          "Depuis": "2026"
+        }
+      },
+      {
+        "id": "e_m_ou9svw",
+        "type": "BASED_IN",
+        "label": "Basée en",
+        "source": "Quadrivio",
+        "target": "Italy",
+        "properties": {}
+      },
+      {
+        "id": "e_m_fjlggp",
+        "type": "BASED_IN",
+        "label": "Basée en",
+        "source": "Melanin Haircare",
+        "target": "United States",
+        "properties": {
+          "Depuis": "2018"
+        }
+      },
+      {
+        "id": "e_m_zydtzm",
+        "type": "BASED_IN",
+        "label": "Basée en",
+        "source": "Samha Tchad Cosmetics",
+        "target": "France",
+        "properties": {}
+      },
+      {
+        "id": "e_m_xepukp",
+        "type": "BASED_IN",
+        "label": "Basée en",
+        "source": "Mango Butterful",
+        "target": "France",
+        "properties": {
+          "Depuis": "2016"
+        }
+      }
+    ]
+  },
+  {
   "id": "cartographie-succession-complete",
   "title": "Succession et démarches après décès : un guide pour ne rien oublier",
   "category": "Droits & Démarches",
