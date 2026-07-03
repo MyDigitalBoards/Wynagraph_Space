@@ -2,10 +2,10 @@
 window.GRAPHS = [
   {
     "id": "Haircare",
-    "title": "Marques de soins capillaires Black Owned",
+    "title": "Marques de soins capillaires",
     "category": "Soins capillaires",
-    "description": "Cartographie des marques de soins capillaires Black-owned : origine, fondateurs et appartenance à un groupe.",
-    "longDescription": "Une sélection de marques de soins capillaires Black-owned, avec leur pays d'implantation, leurs fondateurs et, le cas échéant, le groupe qui les détient.",
+    "description": "Cartographie des marques de soins capillaires pour cheveux texturés.",
+    "longDescription": "Une sélection de marques de soins capillaires avec leur pays d'implantation, leurs fondateurs et, le cas échéant, le groupe qui les détient.",
     "nodes": [
       {
         "id": "Holy Melanin",
