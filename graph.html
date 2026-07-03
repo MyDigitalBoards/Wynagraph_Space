@@ -262,6 +262,85 @@
     @media (max-width: 768px) {
       #graph-sidebar { width: 240px; min-width: 240px; }
     }
+
+    /* ── Panneau latéral repliable (mobile) ── */
+    #sidebar-close {
+      display: none;
+      background: none;
+      border: none;
+      color: var(--muted-foreground);
+      font-size: 1.1rem;
+      line-height: 1;
+      cursor: pointer;
+      padding: 4px 6px;
+      margin: -4px -6px -4px 0;
+    }
+    #sidebar-close:hover { color: #fff; }
+    #graph-sidebar-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    #sidebar-toggle-fab {
+      display: none;
+      position: fixed;
+      right: 16px;
+      bottom: 20px;
+      z-index: 46;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: var(--cyan);
+      color: #042042;
+      border: none;
+      font-size: 1.2rem;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 6px 18px rgba(0,0,0,.45);
+      cursor: pointer;
+    }
+
+    #sidebar-backdrop {
+      display: none;
+      position: fixed;
+      top: 101px; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,.45);
+      z-index: 44;
+      opacity: 0;
+      transition: opacity .2s ease;
+    }
+
+    @media (max-width: 768px) {
+      #sidebar-toggle-fab { display: flex; }
+      #sidebar-close { display: block; }
+
+      #graph-sidebar {
+        position: fixed;
+        top: 101px;
+        right: 0;
+        bottom: 0;
+        width: 84vw;
+        max-width: 320px;
+        min-width: 0;
+        z-index: 45;
+        transform: translateX(100%);
+        transition: transform .25s ease;
+        box-shadow: -10px 0 30px rgba(0,0,0,.5);
+      }
+      #fullscreen-layout.sidebar-open #graph-sidebar {
+        transform: translateX(0);
+      }
+      #fullscreen-layout.sidebar-open #sidebar-backdrop {
+        display: block;
+        opacity: 1;
+      }
+      #fullscreen-layout.sidebar-open #sidebar-toggle-fab {
+        background: rgba(255,255,255,.12);
+        color: #fff;
+      }
+      #graph { width: 100%; }
+    }
   </style>
 </head>
 <body>
@@ -293,8 +372,12 @@
   <!-- Layout plein écran -->
   <div id="fullscreen-layout">
     <div id="graph"></div>
+    <div id="sidebar-backdrop"></div>
     <aside id="graph-sidebar">
-      <h3 id="side-title">Sélection</h3>
+      <div id="graph-sidebar-header">
+        <h3 id="side-title">Sélection</h3>
+        <button id="sidebar-close" title="Fermer le panneau" aria-label="Fermer le panneau">✕</button>
+      </div>
       <div id="selected">
         <p class="sel-empty">Cliquez sur un <strong style="color:#fff">nœud</strong> pour voir ses connexions,
         ou sur une <strong style="color:var(--cyan)">relation</strong> pour voir ses propriétés.</p>
@@ -302,6 +385,7 @@
       <div class="stats" id="stats"></div>
     </aside>
   </div>
+  <button id="sidebar-toggle-fab" title="Afficher le panneau" aria-label="Afficher le panneau">☰</button>
 
   <script src="data.js"></script>
   <script src="graph-render.js"></script>
@@ -313,6 +397,29 @@
         ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;' }[m])
       );
     }
+
+    // ── Panneau latéral repliable (mobile) ──────────────────────────────────
+    const layoutEl   = document.getElementById('fullscreen-layout');
+    const sidebarFab = document.getElementById('sidebar-toggle-fab');
+    const sidebarClose = document.getElementById('sidebar-close');
+    const sidebarBackdrop = document.getElementById('sidebar-backdrop');
+    const isMobile = () => window.matchMedia('(max-width: 768px)').matches;
+
+    function setSidebarOpen(open) {
+      layoutEl.classList.toggle('sidebar-open', open);
+      sidebarFab.textContent = open ? '✕' : '☰';
+      sidebarFab.setAttribute('aria-label', open ? 'Masquer le panneau' : 'Afficher le panneau');
+      sidebarFab.title = open ? 'Masquer le panneau' : 'Afficher le panneau';
+    }
+
+    sidebarFab.addEventListener('click', () => {
+      setSidebarOpen(!layoutEl.classList.contains('sidebar-open'));
+    });
+    sidebarClose.addEventListener('click', () => setSidebarOpen(false));
+    sidebarBackdrop.addEventListener('click', () => setSidebarOpen(false));
+
+    // Sur mobile, le panneau est replié par défaut pour laisser toute la place au graphe.
+    setSidebarOpen(!isMobile());
 
     // ── Init ─────────────────────────────────────────────────────────────────
     const params = new URLSearchParams(location.search);
@@ -427,8 +534,10 @@
       network.on("click", (params) => {
         if (params.nodes.length > 0) {
           openNodePanel(params.nodes[0]);
+          if (isMobile()) setSidebarOpen(true);
         } else if (params.edges.length > 0) {
           openEdgePanel(params.edges[0]);
+          if (isMobile()) setSidebarOpen(true);
         } else {
           resetSidebar();
         }
@@ -508,6 +617,7 @@
         network.selectNodes([nodeId]);
         network.focus(nodeId, { scale: 1.3, animation: { duration: 500, easingFunction: "easeInOutQuad" } });
         openNodePanel(nodeId);
+        if (isMobile()) setSidebarOpen(true);
       }
 
       let searchDebounce = null;
