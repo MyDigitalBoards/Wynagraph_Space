@@ -9,341 +9,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
   <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
-
-  <style>
-    /* ── Sidebar sélection harmonisée Workspace ── */
-    .sel-relation-header {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      margin-bottom: 14px;
-      font-size: .84rem;
-      color: var(--muted-foreground);
-    }
-    .sel-relation-header b   { color: #fff; }
-    .sel-relation-arrow {
-      font-size: .75rem;
-      color: var(--cyan);
-    }
-
-    .sel-section-label {
-      font-size: .72rem;
-      text-transform: uppercase;
-      letter-spacing: .1em;
-      color: var(--cyan);
-      margin: 14px 0 6px;
-      border-bottom: 1px solid rgba(255,255,255,.08);
-      padding-bottom: 5px;
-    }
-
-    .sel-node-category {
-      font-size: .8rem;
-      color: var(--muted-foreground);
-      text-transform: uppercase;
-      letter-spacing: .1em;
-      margin-bottom: 10px;
-    }
-
-    .sel-props-list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-    .sel-props-list li {
-      background: rgba(255,255,255,.04);
-      border: 1px solid rgba(255,255,255,.1);
-      border-radius: 6px;
-      padding: 7px 11px;
-      font-size: .85rem;
-      line-height: 1.4;
-      color: var(--muted-foreground);
-      margin-bottom: 6px;
-    }
-    .sel-props-list li:last-child { margin-bottom: 0; }
-
-    .sel-connections-list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-    .sel-connections-list li {
-      padding: .45rem 0;
-      border-bottom: 1px solid var(--border);
-      color: var(--muted-foreground);
-      font-size: .88rem;
-    }
-    .sel-connections-list li:last-child { border-bottom: none; }
-
-    .sel-empty {
-      color: var(--muted-foreground);
-      font-size: .88rem;
-      line-height: 1.6;
-    }
-
-    /* ── Plein écran ── */
-    body { overflow: hidden; }
-
-    #graph-topbar {
-      position: fixed;
-      top: 57px; /* hauteur du site-header */
-      left: 0; right: 0;
-      height: 44px;
-      background: rgba(4,32,66,0.92);
-      backdrop-filter: blur(8px);
-      border-bottom: 1px solid var(--border);
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      padding: 0 1.25rem;
-      z-index: 40;
-    }
-    #graph-topbar-info {
-      display: flex;
-      align-items: center;
-      gap: .8rem;
-      flex: 0 1 auto;
-      overflow: hidden;
-      min-width: 0;
-    }
-    #graph-topbar-title {
-      font-size: .9rem;
-      font-weight: 600;
-      color: #fff;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-    #graph-topbar-stats {
-      font-size: .78rem;
-      color: var(--muted-foreground);
-      white-space: nowrap;
-      flex-shrink: 0;
-    }
-
-    /* ── Recherche du graphe ── */
-    #graph-search-wrap {
-      position: relative;
-      flex: 1;
-      max-width: 320px;
-      margin-left: auto;
-    }
-    #graph-search-icon {
-      position: absolute;
-      left: 11px;
-      top: 50%;
-      transform: translateY(-50%);
-      color: var(--muted-foreground);
-      font-size: .82rem;
-      pointer-events: none;
-    }
-    #graph-search {
-      width: 100%;
-      background: rgba(255,255,255,.05);
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      color: #fff;
-      font-size: .82rem;
-      font-family: inherit;
-      padding: 6px 30px 6px 30px;
-      outline: none;
-      transition: border-color .15s, background .15s;
-    }
-    #graph-search::placeholder { color: var(--muted-foreground); }
-    #graph-search:focus {
-      border-color: var(--cyan);
-      background: rgba(255,255,255,.08);
-    }
-    #graph-search-clear {
-      position: absolute;
-      right: 8px;
-      top: 50%;
-      transform: translateY(-50%);
-      background: none;
-      border: none;
-      color: var(--muted-foreground);
-      font-size: .95rem;
-      line-height: 1;
-      cursor: pointer;
-      padding: 3px 4px;
-      display: none;
-    }
-    #graph-search-clear:hover { color: #fff; }
-    #graph-search-wrap.has-value #graph-search-clear { display: block; }
-
-    #graph-search-results {
-      position: absolute;
-      top: calc(100% + 6px);
-      left: 0; right: 0;
-      background: rgba(4,32,66,0.98);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      max-height: 260px;
-      overflow-y: auto;
-      box-shadow: 0 10px 24px rgba(0,0,0,.4);
-      display: none;
-      z-index: 50;
-    }
-    #graph-search-wrap.show-results #graph-search-results { display: block; }
-    .gs-result {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 8px;
-      padding: 8px 12px;
-      font-size: .82rem;
-      color: var(--foreground);
-      cursor: pointer;
-      border-bottom: 1px solid rgba(255,255,255,.06);
-    }
-    .gs-result:last-child { border-bottom: none; }
-    .gs-result:hover, .gs-result.active { background: rgba(66,235,226,.1); }
-    .gs-result-group {
-      font-size: .68rem;
-      text-transform: uppercase;
-      letter-spacing: .08em;
-      color: var(--cyan);
-      flex-shrink: 0;
-    }
-    .gs-result-empty {
-      padding: 10px 12px;
-      font-size: .8rem;
-      color: var(--muted-foreground);
-    }
-    .gs-match-count {
-      font-size: .72rem;
-      color: var(--cyan);
-      white-space: nowrap;
-      flex-shrink: 0;
-      margin-left: .5rem;
-    }
-    @media (max-width: 768px) {
-      #graph-topbar-info { display: none; }
-      #graph-search-wrap { max-width: none; }
-    }
-
-    #fullscreen-layout {
-      position: fixed;
-      top: 101px; /* header 57px + topbar 44px */
-      left: 0; right: 0; bottom: 0;
-      display: flex;
-    }
-    #graph {
-      flex: 1;
-      height: 100%;
-      background: var(--background);
-    }
-    #graph-sidebar {
-      width: 300px;
-      min-width: 300px;
-      height: 100%;
-      background: var(--surface);
-      border-left: 1px solid var(--border);
-      padding: 1.2rem;
-      overflow-y: auto;
-      font-size: .92rem;
-    }
-    #graph-sidebar h3 {
-      font-size: 1rem;
-      margin-bottom: .8rem;
-      color: var(--cyan);
-    }
-    #graph-sidebar .stats {
-      display: flex;
-      gap: 1.5rem;
-      margin-top: 1rem;
-      color: var(--muted-foreground);
-      font-size: .88rem;
-    }
-    #graph-sidebar .stats strong {
-      color: var(--foreground);
-      display: block;
-      font-size: 1.4rem;
-    }
-    @media (max-width: 768px) {
-      #graph-sidebar { width: 240px; min-width: 240px; }
-    }
-
-    /* ── Panneau latéral repliable (mobile) ── */
-    #sidebar-close {
-      display: none;
-      background: none;
-      border: none;
-      color: var(--muted-foreground);
-      font-size: 1.1rem;
-      line-height: 1;
-      cursor: pointer;
-      padding: 4px 6px;
-      margin: -4px -6px -4px 0;
-    }
-    #sidebar-close:hover { color: #fff; }
-    #graph-sidebar-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    #sidebar-toggle-fab {
-      display: none;
-      position: fixed;
-      right: 16px;
-      bottom: 20px;
-      z-index: 46;
-      width: 48px;
-      height: 48px;
-      border-radius: 50%;
-      background: var(--cyan);
-      color: #042042;
-      border: none;
-      font-size: 1.2rem;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 6px 18px rgba(0,0,0,.45);
-      cursor: pointer;
-    }
-
-    #sidebar-backdrop {
-      display: none;
-      position: fixed;
-      top: 101px; left: 0; right: 0; bottom: 0;
-      background: rgba(0,0,0,.45);
-      z-index: 44;
-      opacity: 0;
-      transition: opacity .2s ease;
-    }
-
-    @media (max-width: 768px) {
-      #sidebar-toggle-fab { display: flex; }
-      #sidebar-close { display: block; }
-
-      #graph-sidebar {
-        position: fixed;
-        top: 101px;
-        right: 0;
-        bottom: 0;
-        width: 84vw;
-        max-width: 320px;
-        min-width: 0;
-        z-index: 45;
-        transform: translateX(100%);
-        transition: transform .25s ease;
-        box-shadow: -10px 0 30px rgba(0,0,0,.5);
-      }
-      #fullscreen-layout.sidebar-open #graph-sidebar {
-        transform: translateX(0);
-      }
-      #fullscreen-layout.sidebar-open #sidebar-backdrop {
-        display: block;
-        opacity: 1;
-      }
-      #fullscreen-layout.sidebar-open #sidebar-toggle-fab {
-        background: rgba(255,255,255,.12);
-        color: #fff;
-      }
-      #graph { width: 100%; }
-    }
-  </style>
+  
 </head>
-<body>
+<body class="page-graph">
   <header class="site-header">
     <div class="nav">
       <a href="index.html" class="brand">WYNAGRAPH<span class="dot"> SPACE</span></a>
@@ -367,11 +35,34 @@
       <button id="graph-search-clear" title="Effacer" aria-label="Effacer la recherche">✕</button>
       <div id="graph-search-results"></div>
     </div>
+    <button id="import-btn" title="Importer un graphe JSON exporté depuis WynaGraph Workspace">
+      📥 <span class="label">Importer JSON</span>
+    </button>
+    <button id="copy-data-btn" title="Copier ce graphe importé comme entrée prête à coller dans data.js">
+      📋 <span class="label">Copier pour data.js</span>
+    </button>
+    <input type="file" id="import-file" accept=".json,application/json" style="display:none" />
   </div>
 
   <!-- Layout plein écran -->
   <div id="fullscreen-layout">
     <div id="graph"></div>
+
+    <!-- Zone d'import affichée quand aucun graphe n'est chargé -->
+    <div id="graph-dropzone" hidden>
+      <div class="dz-inner">
+        <div class="dz-icon">⬡</div>
+        <h2>Importer un graphe JSON</h2>
+        <p>Déposez ici un fichier <b>.json</b> exporté depuis
+        WynaGraph Workspace (Export → JSON), ou choisissez-le manuellement.</p>
+        <button id="dropzone-pick">Choisir un fichier</button>
+        <p class="dz-hint">Le graphe reste local : rien n'est envoyé sur un serveur.</p>
+      </div>
+    </div>
+
+    <!-- Voile de glisser-déposer par-dessus un graphe déjà affiché -->
+    <div id="drag-overlay">Déposez le fichier .json pour l'importer</div>
+
     <div id="sidebar-backdrop"></div>
     <aside id="graph-sidebar">
       <div id="graph-sidebar-header">
@@ -387,7 +78,10 @@
   </div>
   <button id="sidebar-toggle-fab" title="Afficher le panneau" aria-label="Afficher le panneau">☰</button>
 
+  <div id="import-toast" role="status" aria-live="polite"></div>
+
   <script src="data.js"></script>
+  <script src="json-import.js"></script>
   <script src="graph-render.js"></script>
   <script>
     // ── Helpers ──────────────────────────────────────────────────────────────
@@ -421,17 +115,102 @@
     // Sur mobile, le panneau est replié par défaut pour laisser toute la place au graphe.
     setSidebarOpen(!isMobile());
 
+    // ── Import JSON (WynaGraph Workspace → Space) — mode auteur uniquement ──
+    const AUTHOR_MODE  = window.WynaImport && WynaImport.isAuthorMode();
+    if (AUTHOR_MODE) document.body.classList.add('author-mode');
+
+    const importBtn    = document.getElementById('import-btn');
+    const importFile   = document.getElementById('import-file');
+    const copyDataBtn  = document.getElementById('copy-data-btn');
+    const dropzone     = document.getElementById('graph-dropzone');
+    const dropzonePick = document.getElementById('dropzone-pick');
+    const toastEl      = document.getElementById('import-toast');
+    let toastTimer = null;
+
+    function showImportToast(msg, isError) {
+      toastEl.textContent = msg;
+      toastEl.classList.toggle('error', !!isError);
+      toastEl.classList.add('show');
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => toastEl.classList.remove('show'), 4500);
+    }
+
+    function importSelectedFile(file) {
+      // WynaImport (json-import.js) valide, stocke en sessionStorage puis
+      // recharge la page sur graph.html?id=import.
+      WynaImport.handleFile(file, msg => showImportToast(msg, true));
+    }
+
+    importBtn.addEventListener('click', () => importFile.click());
+    dropzonePick.addEventListener('click', () => importFile.click());
+    importFile.addEventListener('change', () => {
+      importSelectedFile(importFile.files && importFile.files[0]);
+      importFile.value = ''; // permet de réimporter le même fichier
+    });
+
+    // Glisser-déposer d'un fichier .json — uniquement en mode auteur
+    if (AUTHOR_MODE) {
+      let dragDepth = 0;
+      document.addEventListener('dragenter', e => {
+        e.preventDefault();
+        dragDepth++;
+        layoutEl.classList.add('drag-over');
+      });
+      document.addEventListener('dragover', e => e.preventDefault());
+      document.addEventListener('dragleave', () => {
+        dragDepth = Math.max(0, dragDepth - 1);
+        if (dragDepth === 0) layoutEl.classList.remove('drag-over');
+      });
+      document.addEventListener('drop', e => {
+        e.preventDefault();
+        dragDepth = 0;
+        layoutEl.classList.remove('drag-over');
+        const f = e.dataTransfer && e.dataTransfer.files && e.dataTransfer.files[0];
+        if (f) importSelectedFile(f);
+      });
+    }
+
     // ── Init ─────────────────────────────────────────────────────────────────
     const params = new URLSearchParams(location.search);
     const id     = params.get("id");
-    const graph  = GRAPHS.find((g) => g.id === id);
     const sel    = document.getElementById("selected");
     const title  = document.getElementById("side-title");
     const stats  = document.getElementById("stats");
 
+    // Résolution du graphe :
+    //  • ?id=import  → graphe importé (sessionStorage, via json-import.js)
+    //  • ?id=xxx     → graphe modèle défini dans data.js
+    let graph = null;
+    if (id === 'import') {
+      graph = (window.WynaImport && WynaImport.loadImportedGraph()) || null;
+    } else if (id) {
+      graph = GRAPHS.find((g) => g && g.id === id);
+    }
+
     if (!graph) {
-      document.getElementById('graph-topbar-title').textContent = 'Graphe introuvable';
+      if (AUTHOR_MODE) {
+        // Mode auteur : écran d'import
+        const notFound = id && id !== 'import';
+        document.getElementById('graph-topbar-title').textContent =
+          notFound ? 'Graphe introuvable' : 'Importer un graphe';
+        dropzone.hidden = false;
+        document.getElementById('graph-search-wrap').style.display = 'none';
+        sel.innerHTML = `<p class="sel-empty">Importez un fichier <strong style="color:var(--cyan)">.json</strong>
+          exporté depuis WynaGraph Workspace pour explorer votre graphe ici.</p>`;
+        if (notFound) {
+          showImportToast('Graphe introuvable — vous pouvez importer un fichier JSON à la place.', true);
+        }
+      } else {
+        // Visiteur : comportement d'origine, aucune interface d'import
+        document.getElementById('graph-topbar-title').textContent = 'Graphe introuvable';
+        document.getElementById('graph-search-wrap').style.display = 'none';
+      }
     } else {
+      renderGraph(graph);
+    }
+
+    function renderGraph(graph) {
+      dropzone.hidden = true;
       document.title = `${graph.title} — WynaGraph`;
       document.getElementById('graph-topbar-title').textContent = graph.title;
       document.getElementById('graph-topbar-stats').textContent =
@@ -449,6 +228,47 @@
       stats.innerHTML = `
         <div><strong>${g.nodes.length}</strong> nœuds</div>
         <div><strong>${g.edges.length}</strong> liens</div>`;
+
+      // Import : signaler les relations écartées (nœud source/cible inconnu)
+      if (graph.droppedEdges) {
+        showImportToast(`${graph.droppedEdges} relation(s) ignorée(s) : nœud source ou cible introuvable dans le fichier.`);
+      }
+
+      // ── Publication : copier le graphe importé comme entrée data.js ───────
+      // (bouton visible uniquement en mode auteur ET pour un graphe importé)
+      if (graph.id === 'import' && AUTHOR_MODE) {
+        document.body.classList.add('imported-graph');
+        copyDataBtn.addEventListener('click', async () => {
+          const suggested = (graph.title || 'mon-graphe')
+            .toLowerCase()
+            .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+            .replace(/[^a-z0-9]+/g, '-')
+            .replace(/^-+|-+$/g, '') || 'mon-graphe';
+          const newId = prompt('Identifiant du graphe (utilisé dans l’URL graph.html?id=…) :', suggested);
+          if (!newId || !newId.trim()) return;
+
+          const entry = {
+            id: newId.trim(),
+            title: graph.title || newId.trim(),
+            category: 'À classer',                       // ← à ajuster (sert au classement de la galerie)
+            description: 'Description courte à rédiger.',
+            longDescription: 'Description longue à rédiger.',
+            nodes: graph.nodes,
+            relationships: graph.relationships || [],
+          };
+          // Indentation alignée sur data.js + virgule finale, prêt à coller
+          // dans le tableau window.GRAPHS.
+          const snippet = '  ' + JSON.stringify(entry, null, 2).split('\n').join('\n  ') + ',';
+
+          try {
+            await navigator.clipboard.writeText(snippet);
+            showImportToast('Entrée copiée ! Collez-la dans le tableau window.GRAPHS de data.js, puis renseignez catégorie et descriptions.');
+          } catch (err) {
+            console.log(snippet);
+            showImportToast('Copie automatique impossible — l’entrée a été affichée dans la console du navigateur (F12).', true);
+          }
+        });
+      }
 
       // ── Réinitialiser la sidebar ──────────────────────────────────────────
       function resetSidebar() {
