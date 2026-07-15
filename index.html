@@ -9,97 +9,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
-  <style>
- 
-   .posts-grid {
-      display: grid;
-      gap: 1.25rem;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    }
-    .post-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 1.4rem 1.5rem 1.6rem;
-      display: flex;
-      flex-direction: column;
-      gap: .5rem;
-      transition: all .22s;
-      text-decoration: none;
-      color: inherit;
-    }
-    .post-card:hover {
-      border-color: rgba(66,235,226,.5);
-      box-shadow: var(--shadow-tile), var(--glow-cyan);
-      transform: translateY(-2px);
-    }
-    .post-cat {
-      font-size: .7rem;
-      text-transform: uppercase;
-      letter-spacing: .16em;
-      color: var(--cyan);
-      font-weight: 600;
-    }
-    .post-title {
-      font-size: 1.1rem;
-      font-weight: 600;
-      line-height: 1.35;
-      color: var(--foreground);
-    }
-    .post-excerpt {
-      font-size: .9rem;
-      color: var(--muted-foreground);
-      line-height: 1.55;
-      flex: 1;
-    }
-    .post-date {
-      font-size: .78rem;
-      color: var(--muted-foreground);
-      margin-top: .4rem;
-    }
-    .post-graph-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: .3rem;
-      font-size: .75rem;
-      color: var(--cyan);
-      background: rgba(66,235,226,.08);
-      border: 1px solid rgba(66,235,226,.2);
-      border-radius: 20px;
-      padding: 3px 10px;
-      width: fit-content;
-      margin-top: .3rem;
-    }
-
-    /* Bandeau Workspace */
-    .workspace-banner {
-      background: linear-gradient(135deg, rgba(13,186,193,.15), rgba(66,235,226,.07));
-      border: 1px solid rgba(66,235,226,.3);
-      border-radius: 16px;
-      padding: 2.5rem 2rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 2rem;
-      flex-wrap: wrap;
-    }
-    .workspace-banner-text h3 {
-      font-size: 1.3rem;
-      font-weight: 600;
-      margin-bottom: .5rem;
-    }
-    .workspace-banner-text p {
-      color: var(--muted-foreground);
-      font-size: .95rem;
-      max-width: 480px;
-      line-height: 1.6;
-    }
-    .workspace-banner-actions {
-      display: flex;
-      gap: .8rem;
-      flex-wrap: wrap;
-    }
-  </style>
 </head>
 <body>
   <header class="site-header">
@@ -142,11 +51,11 @@
       <div class="workspace-banner">
         <div class="workspace-banner-text">
           <h3>Créez vos propres graphes</h3>
-          <p>WynaGraph Workspace est un outil 100% local. Créez votre graphe directement depuis le Workspace, visualisez vos connexions, exportez en PNG ou JSON. Vos données ne quittent jamais votre navigateur.</p>
+          <p>WynaGraph Workspace est un outil 100% local et gratuit. Importez un fichier CSV, visualisez vos connexions, exportez en PNG ou JSON. Vos données ne quittent jamais votre navigateur.</p>
         </div>
         <div class="workspace-banner-actions">
-          <a href="mailto:wynamail@protonmail.com" class="btn btn-primary">
-          Me contacter par email →
+          <a href="a-propos.html" class="btn btn-primary" target="_blank" rel="noopener">
+            Accéder au Workspace →
           </a>
           <a href="a-propos.html" class="btn btn-ghost">Comment ça marche</a>
         </div>

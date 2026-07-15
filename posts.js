@@ -58,7 +58,7 @@ window.POSTS = [
   date: "2026-06-10",
   category: "Finances & Patrimoine",
   excerpt: "Carte bancaire, mutuelle employeur, assurance habitation… Beaucoup de garanties se chevauchent. Voici les doublons les plus fréquents — et comment les repérer.",
-  graphId: "",
+  graphId: "assurances",
   body: `
     <p>Chaque année, des millions de personnes paient des assurances qu'elles ont déjà. Pas par négligence — mais parce que les garanties sont éparpillées dans des contrats qu'on ne (re)lit jamais, souscrits à des moments différents de la vie, auprès d'acteurs différents.</p>
  

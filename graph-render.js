@@ -54,8 +54,28 @@ const CATEGORY_COLORS = {
   default: "#1D3655",
 };
 
+// Palette de secours pour les catégories inconnues (graphes importés depuis
+// WynaGraph Workspace) : une couleur stable est attribuée par hachage du nom,
+// afin que chaque catégorie reste visuellement distincte d'une session à l'autre.
+const FALLBACK_PALETTE = [
+  "#42ebe2", "#0dbac1", "#7dd3fc", "#a78bfa", "#fbbf24", "#34d399",
+  "#e879b9", "#fca5a5", "#fcd34d", "#86efac", "#e05454", "#fde68a",
+];
+
+function hashString(str) {
+  let h = 0;
+  for (let i = 0; i < str.length; i++) {
+    h = (h << 5) - h + str.charCodeAt(i);
+    h |= 0;
+  }
+  return Math.abs(h);
+}
+
 function colorFor(group) {
-  return CATEGORY_COLORS[(group || "").toLowerCase()] || CATEGORY_COLORS.default;
+  const key = (group || "").toLowerCase();
+  if (!key || key === "default" || key === "unassigned") return CATEGORY_COLORS.default;
+  if (CATEGORY_COLORS[key]) return CATEGORY_COLORS[key];
+  return FALLBACK_PALETTE[hashString(key) % FALLBACK_PALETTE.length];
 }
 
 function buildNetwork(container, graphRaw, opts = {}) {
