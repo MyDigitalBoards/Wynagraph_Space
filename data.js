@@ -2,10 +2,10 @@
 window.GRAPHS = [
   {
     "id": "Haircare",
-    "title": "Marques de soins capillaires",
+    "title": "Marques de soins capillaires Black Owned",
     "category": "Soins capillaires",
-    "description": "Cartographie des marques de soins capillaires pour cheveux texturés.",
-    "longDescription": "Une sélection de marques de soins capillaires avec leur pays d'implantation, leurs fondateurs et, le cas échéant, le groupe qui les détient.",
+    "description": "Cartographie des marques de soins capillaires Black-owned : origine, fondateurs et appartenance à un groupe.",
+    "longDescription": "Une sélection de marques de soins capillaires Black-owned, avec leur pays d'implantation, leurs fondateurs et, le cas échéant, le groupe qui les détient.",
     "nodes": [
       {
         "id": "Holy Melanin",
@@ -537,627 +537,1564 @@ window.GRAPHS = [
       }
     ]
   },
-  {
+   {
   "id": "cartographie-succession-complete",
   "title": "Succession et démarches après décès : un guide pour ne rien oublier",
   "category": "Droits & Démarches",
   "description": "Vue d'ensemble des formalités administratives et patrimoniales.",
   "longDescription": "Cette cartographie intègre les obligations légales, gestion des contrats, délais et organismes à contacter.",
   "nodes": [
-    {"id": "personne_conjoint","label": "Conjoint","group": "Personne","size": 18},
-    {"id": "allocation_pension_de_réversion","label": "Pension de réversion","group": "Allocation","size": 18},
-    {"id": "formalite_etablissement_du_certificat_de_décès","label": "Etablissement du certificat de décès","group": "Formalite",     "size": 18},
-    {"id": "personne_médecin","label": "Médecin","group": "Personne","size": 18},
-    {"id": "defunt_défunt","label": "Défunt","group": "Defunt","size": 24},
-    {"id": "derniere_volonte_inhumation","label": "Inhumation","group": "Derniere_volonte","size": 18},
-    {"id": "formalite_informer_les_organismes_payeurs","label": "Informer les organismes payeurs",
-      "group": "Formalite","size": 18
-    },
-    {      "id": "organisme_bailleur",
-      "label": "Bailleur",
-      "group": "Organisme",
-      "size": 18
-    },
-    {      "id": "patrimoine_biens_professionnels",
-      "label": "Biens professionnels",
-      "group": "Patrimoine",
-      "size": 18
-    },
-    {      "id": "bien_entreprise",
-      "label": "Entreprise",
-      "group": "Bien",
-      "size": 18    },
-    {      "id": "bien_fonds_de_commerce",
-      "label": "Fonds de commerce",
-      "group": "Bien",
-      "size": 18    },
-    {      "id": "patrimoine_biens_matériels",
-      "label": "Biens Matériels",
-      "group": "Patrimoine",
-      "size": 18    },
-    {      "id": "bien_objets_d'art_ou_de_collection",
-      "label": "Objets d'art ou de collection",
-      "group": "Bien",
-      "size": 18    },
-    {      "id": "formalite_déclarer_le_décès",
-      "label": "Déclarer le décès",
-      "group": "Formalite",
-      "size": 18    },
-    {      "id": "delais_dans_les_24_heures",
-      "label": "Dans les 24 heures",
-      "group": "Delais",
-      "size": 18    },
-    {      "id": "contrat_contrat_d'assurance_obsèques",
-      "label": "Contrat d'assurance obsèques",
-      "group": "Contrat",
-      "size": 18    },
-    {      "id": "depense_achat_d'une_concession",
-      "label": "Achat d'une concession",
-      "group": "Depense",
-      "size": 18    },
-    {      "id": "formalite_organisation_des_funérailles",
-      "label": "Organisation des funérailles",
-      "group": "Formalite",
-      "size": 18    },
-    {      "id": "personne_voisin",
-      "label": "Voisin",
-      "group": "Personne",
-      "size": 18    },
-    {      "id": "depense_transport_du_corps",
-      "label": "Transport du corps",
-      "group": "Depense",
-      "size": 18    },
-    {      "id": "personne_légataire",
-      "label": "Légataire",
-      "group": "Personne",
-      "size": 18    },
-    {      "id": "patrimoine_propriété_intellectuelle",
-      "label": "Propriété intellectuelle",
-      "group": "Patrimoine",
-      "size": 18    },
-    {      "id": "depense_inhumation_ou_crémation",
-      "label": "Inhumation ou Crémation",
-      "group": "Depense",
-      "size": 18    },
-    {      "id": "depense_cérémonie_d'accompagnement",
-      "label": "Cérémonie d'accompagnement",
-      "group": "Depense",
-      "size": 18    },
-    {      "id": "formalite_vérifier_l'existence_d'un_testament",
-      "label": "Vérifier l'existence d'un Testament",
-      "group": "Formalite",
-      "size": 18    },
-    {      "id": "organisme_fichier_central_des_dispositions_de_dernières_volontés",
-      "label": "Fichier central des dispositions de dernières volontés",
-      "group": "Organisme",
-      "size": 18    },
-    {      "id": "contrat_contrat_d'assurance_vie",
-      "label": "Contrat d'assurance Vie",
-      "group": "Contrat",
-      "size": 18    },
-    {      "id": "organisme_agira",
-      "label": "AGIRA",
-      "group": "Organisme",
-      "size": 18    },
-    {      "id": "dette_emprunt",
-      "label": "Emprunt",
-      "group": "Dette",
-      "size": 18    },
-    {      "id": "contrat_contrat_d'assurance_décès",
-      "label": "Contrat d'assurance décès",
-      "group": "Contrat",
-      "size": 18    },
-    {      "id": "document_testament",
-      "label": "Testament",
-      "group": "Document",
-      "size": 18    },
-    {      "id": "testament_olographe",
-      "label": "Olographe",
-      "group": "Testament",
-      "size": 18    },
-    {      "id": "formalite_recherche_d'une_assurance_obsèques",
-      "label": "Recherche d'une assurance obsèques",
-      "group": "Formalite",
-      "size": 18    },
-    {      "id": "delais_dans_les_48_heures",
-      "label": "Dans les 48 heures",
-      "group": "Delais",
-      "size": 18    },
-    {      "id": "organisme_caisse_de_retraite",
-      "label": "Caisse de retraite",
-      "group": "Organisme",
-      "size": 18    },
-    {      "id": "delais_dans_les_6_jours",
-      "label": "Dans les 6 jours",
-      "group": "Delais",
-      "size": 18    },
-    {      "id": "allocation_capital_décès_de_la_cpam",
-      "label": "Capital décès de la CPAM",
-      "group": "Allocation",
-      "size": 18    },
-    {      "id": "formalite_organiser_la_succession",
-      "label": "Organiser la succession",
-      "group": "Formalite",
-      "size": 18    },
-    {      "id": "organisme_maison_de_retraite",
-      "label": "Maison de retraite",
-      "group": "Organisme",
-      "size": 18    },
-    {      "id": "entreprise_pompes_funèbres",
-      "label": "Pompes funèbres",
-      "group": "Entreprise",
-      "size": 18    },
-    {      "id": "depense_achat_et_pose_d'un_emblème_sur_la_sépulture",
-      "label": "Achat et pose d'un emblème sur la sépulture",
-      "group": "Depense",
-      "size": 18    },
-    {      "id": "depense_achat_de_fleurs",
-      "label": "Achat de fleurs",
-      "group": "Depense",
-      "size": 18    },
-    {      "id": "dette_impôts",
-      "label": "Impôts",
-      "group": "Dette",
-      "size": 18    },
-    {      "id": "organisme_centre_des_impôts",
-      "label": "Centre des impôts",
-      "group": "Organisme",
-      "size": 18    },
-    {      "id": "entreprise_office_notarial",
-      "label": "Office Notarial",
-      "group": "Entreprise",
-      "size": 18    },
-    {      "id": "delais_dans_le_mois",
-      "label": "Dans le mois",
-      "group": "Delais",
-      "size": 18    },
-    {      "id": "derniere_volonte_crémation",
-      "label": "Crémation",
-      "group": "Derniere_volonte",
-      "size": 18    },
-    {      "id": "formalite_gérer_les_comptes_bancaires",
-      "label": "Gérer les comptes bancaires",
-      "group": "Formalite",
-      "size": 18    },
-    {      "id": "delais_dans_les_10_jours",
-      "label": "Dans les 10 jours",
-      "group": "Delais",
-      "size": 18    },
-    {      "id": "formalite_déclaration_de_revenus",
-      "label": "Déclaration de revenus",
-      "group": "Formalite",
-      "size": 18    },
-    {      "id": "entreprise_etablissement_bancaire",
-      "label": "Etablissement bancaire",
-      "group": "Entreprise",
-      "size": 18    },
-    {      "id": "formalite_résiliation_des_abonnements",
-      "label": "Résiliation des abonnements",
-      "group": "Formalite",
-      "size": 18    },
-    {      "id": "formalite_déclaration_de_succession",
-      "label": "Déclaration de succession",
-      "group": "Formalite",
-      "size": 18    },
-    {      "id": "actif_financier_produits_d'épargne",
-      "label": "Produits d'épargne",
-      "group": "Actif_financier",
-      "size": 18    },
-    {      "id": "contret_contrat_d'assurance_vie",
-      "label": "Contrat d'assurance Vie",
-      "group": "Contret",
-      "size": 18    },
-    {      "id": "bien_equipements",
-      "label": "Equipements",
-      "group": "Bien",
-      "size": 18    },
-    {      "id": "bien_brevet",
-      "label": "Brevet",
-      "group": "Bien",
-      "size": 18    },
-    {      "id": "bien_droits_d'auteur",
-      "label": "Droits d'auteur",
-      "group": "Bien",
-      "size": 18    },
-    {      "id": "organisme_mairie",
-      "label": "Mairie",
-      "group": "Organisme",
-      "size": 18    },
-    {      "id": "organisme_hôpital",
-      "label": "Hôpital",
-      "group": "Organisme",
-      "size": 18    },
-    {      "id": "delais_dans_les_6_mois",
-      "label": "Dans les 6 mois",
-      "group": "Delais",
-      "size": 18    },
-    {      "id": "personne_amis",
-      "label": "Amis",
-      "group": "Personne",
-      "size": 18    },
-    {      "id": "testament_authentique",
-      "label": "Authentique",
-      "group": "Testament",
-      "size": 18    },
-    {      "id": "formalite_établissement_de_l'acte_de_décès",
-      "label": "Etablissement de l'acte de décès",
-      "group": "Formalite",
-      "size": 18    },
-    {      "id": "testament_mystique",
-      "label": "Mystique",
-      "group": "Testament",
-      "size": 18    },
-    {      "id": "patrimoine_placements_financiers",
-      "label": "Placements financiers",
-      "group": "Patrimoine",
-      "size": 18    },
-    {      "id": "actif_financier_dépôt_bancaire",
-      "label": "Dépôt bancaire",
-      "group": "Actif_financier",
-      "size": 18    },
-    {      "id": "actif_financier_actions",
-      "label": "Actions",
-      "group": "Actif_financier",
-      "size": 18    },
-    {      "id": "actif_financier_cotisations_retraite",
-      "label": "Cotisations retraite",
-      "group": "Actif_financier",
-      "size": 18    },
-    {      "id": "actif_financier_parts_de_fonds_collectifs",
-      "label": "Parts de fonds collectifs",
-      "group": "Actif_financier",
-      "size": 18    },
-    {      "id": "patrimoine_foncier_et_immobilier",
-      "label": "Foncier et Immobilier",
-      "group": "Patrimoine",
-      "size": 18    },
-    {      "id": "propriete_habitation",
-      "label": "Habitation",
-      "group": "Propriete",
-      "size": 18    },
-    {      "id": "depense_courriers_d'invitation_et_de_remerciements",
-      "label": "Courriers d'invitation et de remerciements",
-      "group": "Depense",
-      "size": 18    },
-    {      "id": "propriete_terrain",
-      "label": "Terrain",
-      "group": "Propriete",
-      "size": 18    },
-    {      "id": "entreprise_employeur",
-      "label": "Employeur",
-      "group": "Entreprise",
-      "size": 18    },
-    {      "id": "personne_collègue",
-      "label": "Collègue",
-      "group": "Personne",
-      "size": 18    },
-    {      "id": "allocation_allocation_de_veuvage",
-      "label": "Allocation de veuvage",
-      "group": "Allocation",
-      "size": 18    },
-    {      "id": "personne_famille",
-      "label": "Famille",
-      "group": "Personne",
-      "size": 18    },
-    {"id": "allocation_allocation_de_soutien_familial",
-      "label": "Allocation de soutien familial",
-      "group": "Allocation",
-      "size": 18},
-    {"id": "organisme_service_des_eaux_de_la_commune",
-      "label": "Service des eaux de la commune",
-      "group": "Organisme",
-      "size": 18    },
-    {      "id": "organisme_centre_national_de_traitement_fbfv",
-      "label": "Centre national de traitement FBFV",
-      "group": "Organisme",
-      "size": 18    },
-    {      "id": "bien_véhicules",
-      "label": "Véhicules",
-      "group": "Bien",
-      "size": 18    },
-    {      "id": "entreprise_opérateur_téléphonique",
-      "label": "Opérateur téléphonique",
-      "group": "Entreprise",
-      "size": 18    },
-    {      "id": "entreprise_fournisseur_d'accès_internet",
-      "label": "Fournisseur d'accès Internet",
-      "group": "Entreprise",
-      "size": 18    },
-    {      "id": "entreprise_assurance",
-      "label": "Assurance",
-      "group": "Entreprise",
-      "size": 18    },
-    {      "id": "bien_meubles",
-      "label": "Meubles",
-      "group": "Bien",
-      "size": 18    },
-    { "id": "organisme_france_travail",
-      "label": "France travail",
-      "group": "Organisme",
-      "size": 18    },
-    { "id": "organisme_caisse_d'allocations_familliales",
-      "label": "Caisse d'allocations familliales",
-      "group": "Organisme",
-      "size": 18    },
-    {      "id": "depense_avis_d'obsèques",
-      "label": "Avis d'obsèques",
-      "group": "Depense",
-      "size": 18    }
-  ],
-  "edges": [
-    {      "source": "personne_conjoint",
-      "target": "allocation_pension_de_réversion",
-      "label": "PEUT BENEFICIER"    },
-    {      "source": "formalite_etablissement_du_certificat_de_décès",
-      "target": "personne_médecin",
-      "label": "ETABLI PAR"    },
-    {      "source": "defunt_défunt",
-      "target": "derniere_volonte_inhumation",
-      "label": "A EXPRIME"    },
-    {      "source": "formalite_informer_les_organismes_payeurs",
-      "target": "organisme_bailleur",
-      "label": "CONTACTER"    },
-    {      "source": "patrimoine_biens_professionnels",
-      "target": "bien_entreprise",
-      "label": "INCLUT"    },
-    {      "source": "patrimoine_biens_professionnels",
-      "target": "bien_fonds_de_commerce",
-      "label": "INCLUT"    },
-    {      "source": "patrimoine_biens_matériels",
-      "target": "bien_objets_d'art_ou_de_collection",
-      "label": "INCLUT"    },
-    {      "source": "formalite_déclarer_le_décès",
-      "target": "delais_dans_les_24_heures",
-      "label": "A EFFECTUER"    },
-    {      "source": "contrat_contrat_d'assurance_obsèques",
-      "target": "depense_achat_d'une_concession",
-      "label": "POUR FINANCER"    },
-    {      "source": "formalite_organisation_des_funérailles",
-      "target": "personne_voisin",
-      "label": "INFORMER"    },
-    {      "source": "contrat_contrat_d'assurance_obsèques",
-      "target": "depense_transport_du_corps",
-      "label": "POUR FINANCER"    },
-    {      "source": "personne_légataire",
-      "target": "patrimoine_biens_professionnels",
-      "label": "HERITE"    },
-    {      "source": "personne_légataire",
-      "target": "patrimoine_propriété_intellectuelle",
-      "label": "HERITE"    },
-    {      "source": "contrat_contrat_d'assurance_obsèques",
-      "target": "depense_inhumation_ou_crémation",
-      "label": "POUR FINANCER"    },
-    {      "source": "contrat_contrat_d'assurance_obsèques",
-      "target": "depense_cérémonie_d'accompagnement",
-      "label": "POUR FINANCER"    },
-    {      "source": "formalite_vérifier_l'existence_d'un_testament",
-      "target": "organisme_fichier_central_des_dispositions_de_dernières_volontés",
-      "label": "CONSULTER"    },
-    {      "source": "contrat_contrat_d'assurance_vie",
-      "target": "organisme_agira",
-      "label": "CONSULTER"    },
-    {      "source": "defunt_défunt",
-      "target": "personne_conjoint",
-      "label": "ETAIT MARIE"    },
-    {      "source": "dette_emprunt",
-      "target": "contrat_contrat_d'assurance_décès",
-      "label": "COUVERT PAR"    },
-    {      "source": "document_testament",
-      "target": "testament_olographe",
-      "label": "PEUT ÊTRE"    },
-    {      "source": "contrat_contrat_d'assurance_décès",
-      "target": "organisme_agira",
-      "label": "ENREGISTRE AUPRES"    },
-    {      "source": "formalite_recherche_d'une_assurance_obsèques",
-      "target": "delais_dans_les_48_heures",
-      "label": "A EFFECTUER"    },
-    {      "source": "formalite_informer_les_organismes_payeurs",
-      "target": "organisme_caisse_de_retraite",
-      "label": "CONTACTER"    },
-    {      "source": "formalite_organisation_des_funérailles",
-      "target": "delais_dans_les_6_jours",
-      "label": "A EFFECTUER"    },
-    {      "source": "formalite_organisation_des_funérailles",
-      "target": "allocation_capital_décès_de_la_cpam",
-      "label": "SOLLICITER"    },
-    {      "source": "formalite_organiser_la_succession",
-      "target": "organisme_fichier_central_des_dispositions_de_dernières_volontés",
-      "label": "CONSULTER"    },
-    { "source": "formalite_déclarer_le_décès",
-      "target": "organisme_maison_de_retraite",
-      "label": "DECLARE PAR"    },
-    {      "source": "formalite_organisation_des_funérailles",
-      "target": "entreprise_pompes_funèbres",
-      "label": "CONTACTER"    },
-    {      "source": "contrat_contrat_d'assurance_obsèques",
-      "target": "depense_achat_et_pose_d'un_emblème_sur_la_sépulture",
-      "label": "POUR FINANCER"    },
-    {      "source": "contrat_contrat_d'assurance_obsèques",
-      "target": "depense_achat_de_fleurs",
-      "label": "POUR FINANCER"    },
-    {      "source": "defunt_défunt",
-      "target": "dette_impôts",
-      "label": "DOIT PAYER"    },
-    {      "source": "defunt_défunt",
-      "target": "dette_emprunt",
-      "label": "DOIT REMBOURSER"    },
-    {      "source": "dette_impôts",
-      "target": "organisme_centre_des_impôts",
-      "label": "ENREGISTRE AUPRES"    },
-    {      "source": "formalite_organiser_la_succession",
-      "target": "entreprise_office_notarial",
-      "label": "CONTACTER"    },
-    {      "source": "formalite_organiser_la_succession",
-      "target": "delais_dans_le_mois",
-      "label": "A EFFECTUER"    },
-    {      "source": "defunt_défunt",
-      "target": "derniere_volonte_crémation",
-      "label": "A EXPRIME"    },
-    {      "source": "formalite_gérer_les_comptes_bancaires",
-      "target": "delais_dans_le_mois",
-      "label": "A EFFECTUER"    },
-    {      "source": "formalite_informer_les_organismes_payeurs",
-      "target": "delais_dans_les_10_jours",
-      "label": "A EFFECTUER"    },
-    {      "source": "formalite_déclaration_de_revenus",
-      "target": "organisme_centre_des_impôts",
-      "label": "DECLARER A"    },
-    {      "source": "dette_emprunt",
-      "target": "entreprise_etablissement_bancaire",
-      "label": "ENREGISTRE AUPRES"    },
-    {      "source": "formalite_résiliation_des_abonnements",
-      "target": "delais_dans_le_mois",
-      "label": "A EFFECTUER"    },
-    {      "source": "formalite_déclaration_de_succession",
-      "target": "organisme_centre_des_impôts",
-      "label": "DECLARER A"    },
-    {      "source": "actif_financier_produits_d'épargne",
-      "target": "contret_contrat_d'assurance_vie",
-      "label": "CONSTITUE"    },
-    {      "source": "patrimoine_biens_matériels",
-      "target": "bien_equipements",
-      "label": "INCLUT"    },
-    {      "source": "formalite_recherche_d'une_assurance_obsèques",
-      "target": "organisme_agira",
-      "label": "CONSULTER"    },
-    {      "source": "patrimoine_propriété_intellectuelle",
-      "target": "bien_brevet",
-      "label": "INCLUT"    },
-    {      "source": "patrimoine_propriété_intellectuelle",
-      "target": "bien_droits_d'auteur",
-      "label": "INCLUT"    },
-    {      "source": "formalite_déclarer_le_décès",
-      "target": "organisme_mairie",
-      "label": "DECLARER A"    },
-    {      "source": "formalite_déclarer_le_décès",
-      "target": "organisme_hôpital",
-      "label": "DECLARE PAR"    },
-    {      "source": "formalite_déclaration_de_revenus",
-      "target": "delais_dans_les_6_mois",
-      "label": "A EFFECTUER"    },
-    {      "source": "formalite_organisation_des_funérailles",
-      "target": "personne_amis",
-      "label": "INFORMER"    },
-    {      "source": "formalite_déclaration_de_succession",
-      "target": "delais_dans_les_6_mois",
-      "label": "A EFFECTUER"    },
-    {      "source": "document_testament",
-      "target": "testament_authentique",
-      "label": "PEUT ÊTRE"    },
-    {      "source": "formalite_établissement_de_l'acte_de_décès",
-      "target": "organisme_mairie",
-      "label": "ETABLI PAR"    },
-    {      "source": "formalite_établissement_du_certificat_de_décès",
-      "target": "delais_dans_les_24_heures",
-      "label": "A EFFECTUER"    },
-    {      "source": "document_testament",
-      "target": "testament_mystique",
-      "label": "PEUT ÊTRE"    },
-    {      "source": "testament_authentique",
-      "target": "organisme_fichier_central_des_dispositions_de_dernières_volontés",
-      "label": "ENREGISTRE AUPRES"    },
-    {      "source": "document_testament",
-      "target": "personne_légataire",
-      "label": "DESIGNE"    },
-    {      "source": "defunt_défunt",
-      "target": "contrat_contrat_d'assurance_vie",
-      "label": "A SOUSCRIT"    },
-    {      "source": "defunt_défunt",
-      "target": "contrat_contrat_d'assurance_obsèques",
-      "label": "A SOUSCRIT"    },
-    {      "source": "patrimoine_placements_financiers",
-      "target": "actif_financier_dépôt_bancaire",
-      "label": "INCLUT"    },
-    {      "source": "personne_légataire",
-      "target": "patrimoine_biens_matériels",
-      "label": "HERITE"    },
-    {      "source": "patrimoine_placements_financiers",
-      "target": "actif_financier_actions",
-      "label": "INCLUT"    },
-    {      "source": "patrimoine_placements_financiers",
-      "target": "actif_financier_cotisations_retraite",
-      "label": "INCLUT"    },
-    {      "source": "patrimoine_placements_financiers",
-      "target": "actif_financier_produits_d'épargne",
-      "label": "INCLUT"    },
-    {      "source": "patrimoine_placements_financiers",
-      "target": "actif_financier_parts_de_fonds_collectifs",
-      "label": "INCLUT"    },
-    {"source": "patrimoine_foncier_et_immobilier",
-      "target": "propriete_habitation",
-      "label": "INCLUT"    },
-    {      "source": "testament_mystique",
-      "target": "organisme_fichier_central_des_dispositions_de_dernières_volontés",
-      "label": "ENREGISTRE AUPRES"    },
-    {      "source": "contrat_contrat_d'assurance_obsèques",
-      "target": "depense_courriers_d'invitation_et_de_remerciements",
-      "label": "POUR FINANCER"    },
-    {"source": "defunt_défunt","target": "document_testament","label": "A REDIGE"},
-    {"source": "patrimoine_foncier_et_immobilier","target": "propriete_terrain","label":"INCLUT" },
-    {"source": "entreprise_employeur",
-      "target": "personne_collègue",
-      "label": "INFORMER"    },
-    {"source": "formalite_établissement_du_certificat_de_décès",
-      "target": "organisme_hôpital",
-      "label": "ETABLI PAR"    },
-    {"source": "formalite_gérer_les_comptes_bancaires",
-      "target": "entreprise_etablissement_bancaire",
-      "label": "CONTACTER"    },
-    {"source": "personne_conjoint",
-      "target": "allocation_allocation_de_veuvage",
-      "label": "PEUT BENEFICIER"    },
-    {"source": "personne_famille",
-      "target": "allocation_allocation_de_soutien_familial",
-      "label": "PEUT BENEFICIER"    },
-    {"source": "formalite_résiliation_des_abonnements",
-      "target": "organisme_service_des_eaux_de_la_commune",
-      "label": "CONTACTER"    },
-    {"source": "formalite_gérer_les_comptes_bancaires",
-      "target": "organisme_centre_national_de_traitement_fbfv",
-      "label": "ENREGISTRE AUPRES"    },
-    {"source": "formalite_organisation_des_funérailles",
-      "target": "entreprise_employeur",
-      "label": "INFORMER"    },
-    {      "source": "patrimoine_biens_matériels",
-      "target": "bien_véhicules",
-      "label": "INCLUT"    },
-    {      "source": "formalite_établissement_du_certificat_de_décès",
-      "target": "organisme_maison_de_retraite",
-      "label": "ETABLI PAR"    },
-    {      "source": "formalite_résiliation_des_abonnements",
-      "target": "entreprise_opérateur_téléphonique",
-      "label": "CONTACTER"    },
-    {      "source": "formalite_résiliation_des_abonnements",
-      "target": "entreprise_fournisseur_d'accès_internet",
-      "label": "CONTACTER"    },
-    {      "source": "formalite_résiliation_des_abonnements",
-      "target": "entreprise_assurance",
-      "label": "CONTACTER"    },
-    {      "source": "patrimoine_biens_matériels",
-      "target": "bien_meubles",
-      "label": "INCLUT"    },
-    {      "source": "formalite_informer_les_organismes_payeurs",
-      "target": "organisme_france_travail",
-      "label": "CONTACTER"    },
-    {      "source": "formalite_informer_les_organismes_payeurs",
-      "target": "entreprise_employeur",
-      "label": "CONTACTER"    },
-    {      "source": "formalite_informer_les_organismes_payeurs",
-      "target": "organisme_caisse_d'allocations_familliales",
-      "label": "CONTACTER"    },
-    {      "source": "contrat_contrat_d'assurance_obsèques",
-      "target": "depense_avis_d'obsèques",
-      "label": "POUR FINANCER"    },
-    {"source": "personne_légataire","target": "patrimoine_foncier_et_immobilier","label": "HERITE"
-    },
-    {      "source": "personne_légataire",
-      "target": "patrimoine_placements_financiers",
-      "label": "HERITE"    },
-    {"source": "formalite_établissement_de_l'acte_de_décès",
-      "target": "entreprise_employeur",
-      "label": "ENVOYER A"    }
-  ]
-},
+      {
+        "id": "5ec52308-46fd-41c4-9d13-fb1e51b31544",
+        "label": "Conjoint",
+        "category": "Personne",
+        "properties": {
+          "Nom": "à renseigner",
+          "Régime matrimonial": "à préciser"
+        }
+      },
+      {
+        "id": "83c53c55-9bde-4d11-aa08-010cce5111ad",
+        "label": "Pension de réversion",
+        "category": "Allocation",
+        "properties": {
+          "prop_1": "Sous conditions d'âge et de ressources",
+          "prop_2": "Demande auprès de chaque caisse de retraite"
+        }
+      },
+      {
+        "id": "aa5989da-cc5e-4bf6-b141-46ea3c9e05a3",
+        "label": "Etablissement du certificat de décès",
+        "category": "Formalite",
+        "properties": {
+          "prop_1": "Document indispensable à toutes les démarches"
+        }
+      },
+      {
+        "id": "f10a99b7-cd50-4267-9277-bd085a8b570d",
+        "label": "Médecin",
+        "category": "Personne",
+        "properties": {
+          "Nom": "à renseigner",
+          "Coordonnées": "à renseigner"
+        }
+      },
+      {
+        "id": "a108a847-c8e6-45fe-8f99-586661b24577",
+        "label": "Défunt",
+        "category": "Defunt",
+        "properties": {
+          "Nom et prénoms": "à renseigner",
+          "Date du décès": "à renseigner",
+          "Lieu du décès": "à renseigner"
+        }
+      },
+      {
+        "id": "590c6c3d-4a68-457f-a542-d7d7b6bc8966",
+        "label": "Inhumation",
+        "category": "Derniere_volonte",
+        "properties": {
+          "Volonté écrite ou témoignage": "à vérifier"
+        }
+      },
+      {
+        "id": "33fb92f7-200b-4bee-8cb9-09298745c68c",
+        "label": "Informer les organismes payeurs",
+        "category": "Formalite",
+        "properties": {
+          "prop_1": "Joindre un acte de décès à chaque courrier"
+        }
+      },
+      {
+        "id": "a1f6f262-a3b2-4ca6-abe9-b71744b84217",
+        "label": "Bailleur",
+        "category": "Organisme",
+        "properties": {
+          "Coordonnées": "à renseigner",
+          "Référence du bail": "à renseigner"
+        }
+      },
+      {
+        "id": "2628f5eb-ed14-4fcb-b262-a11aa38e971f",
+        "label": "Biens professionnels",
+        "category": "Patrimoine",
+        "properties": {
+          "prop_1": "Inventaire à établir"
+        }
+      },
+      {
+        "id": "523b5a16-143c-47c1-bfe7-d692e0d27704",
+        "label": "Entreprise",
+        "category": "Bien",
+        "properties": {
+          "Forme juridique": "à préciser",
+          "Parts ou actions détenues": "à renseigner"
+        }
+      },
+      {
+        "id": "af25e11d-4b6b-4313-b3b8-85bd042543c8",
+        "label": "Fonds de commerce",
+        "category": "Bien",
+        "properties": {
+          "Valeur estimée": "à renseigner"
+        }
+      },
+      {
+        "id": "024b1b23-f96f-4660-9d53-225456b77fd8",
+        "label": "Biens Matériels",
+        "category": "Patrimoine",
+        "properties": {
+          "prop_1": "Inventaire à établir"
+        }
+      },
+      {
+        "id": "ea8e4c15-c16d-4ef5-978d-695970094363",
+        "label": "Objets d'art ou de collection",
+        "category": "Bien",
+        "properties": {
+          "prop_1": "Expertise éventuelle à prévoir"
+        }
+      },
+      {
+        "id": "dce19039-dfca-4554-99b0-fde87f4602a8",
+        "label": "Déclarer le décès",
+        "category": "Formalite",
+        "properties": {
+          "prop_1": "Gratuit",
+          "prop_2": "Pièce d'identité du déclarant requise"
+        }
+      },
+      {
+        "id": "f40fea49-8760-4f68-accb-892f9a4d60b7",
+        "label": "Dans les 24 heures",
+        "category": "Delais",
+        "properties": {
+          "prop_1": "Délai légal à compter du constat du décès"
+        }
+      },
+      {
+        "id": "bf7bc49f-9b91-4ec6-9304-b791d3e0d569",
+        "label": "Contrat d'assurance obsèques",
+        "category": "Contrat",
+        "properties": {
+          "N° de contrat": "à renseigner",
+          "Capital prévu": "à renseigner"
+        }
+      },
+      {
+        "id": "7a6dcf1e-51c0-47a6-95b2-3dcf02e1d178",
+        "label": "Achat d'une concession",
+        "category": "Depense",
+        "properties": {
+          "Durée": "15/30/50 ans ou perpétuelle"
+        }
+      },
+      {
+        "id": "68c601ca-6649-4a79-9e48-a478d3be4261",
+        "label": "Organisation des funérailles",
+        "category": "Formalite",
+        "properties": {
+          "prop_1": "Respecter les volontés du défunt"
+        }
+      },
+      {
+        "id": "8ebc8806-8cc0-421e-9f4f-71803b4b7b45",
+        "label": "Voisin",
+        "category": "Personne",
+        "properties": {
+          "Nom": "à renseigner"
+        }
+      },
+      {
+        "id": "0f45475a-0112-49a3-802c-d838a71cfad8",
+        "label": "Transport du corps",
+        "category": "Depense",
+        "properties": {
+          "prop_1": "Autorisation nécessaire hors commune"
+        }
+      },
+      {
+        "id": "0dda3f88-b860-409c-841f-17afb4b5ccde",
+        "label": "Légataire",
+        "category": "Personne",
+        "properties": {
+          "Nom": "à renseigner",
+          "Lien avec le défunt": "à préciser"
+        }
+      },
+      {
+        "id": "4e17d08a-5050-476f-a991-154f24659bb4",
+        "label": "Propriété intellectuelle",
+        "category": "Patrimoine",
+        "properties": {
+          "Titres et contrats": "à réunir"
+        }
+      },
+      {
+        "id": "27ad8527-aad9-426a-8d62-451152b1fe2b",
+        "label": "Inhumation ou Crémation",
+        "category": "Depense",
+        "properties": {
+          "prop_1": "Selon les volontés du défunt"
+        }
+      },
+      {
+        "id": "488e9d8f-f6dd-4647-91cd-d66a2e793170",
+        "label": "Cérémonie d'accompagnement",
+        "category": "Depense",
+        "properties": {
+          "Civile ou religieuse": "à préciser"
+        }
+      },
+      {
+        "id": "a9718d5a-63f3-4404-9eb2-13e2a88eb805",
+        "label": "Vérifier l'existence d'un Testament",
+        "category": "Formalite",
+        "properties": {
+          "prop_1": "Interrogation du FCDDV"
+        }
+      },
+      {
+        "id": "24e57cd9-16c1-45c8-a078-fb2fea84e348",
+        "label": "Fichier central des dispositions de dernières volontés",
+        "category": "Organisme",
+        "properties": {
+          "prop_1": "FCDDV",
+          "prop_2": "Interrogation en ligne ou via un notaire"
+        }
+      },
+      {
+        "id": "b755582e-5910-433f-921d-b4437ed349fd",
+        "label": "Contrat d'assurance Vie",
+        "category": "Contrat",
+        "properties": {
+          "prop_1": "Hors succession en principe",
+          "Bénéficiaires désignés": "à vérifier"
+        }
+      },
+      {
+        "id": "a04deb94-8c40-4aa5-8a1b-565458358377",
+        "label": "AGIRA",
+        "category": "Organisme",
+        "properties": {
+          "prop_1": "Recherche gratuite des contrats d'assurance",
+          "prop_2": "Réponse sous 15 jours environ"
+        }
+      },
+      {
+        "id": "5702e50e-58dc-4713-b172-fd6574358cfc",
+        "label": "Emprunt",
+        "category": "Dette",
+        "properties": {
+          "Capital restant dû": "à renseigner"
+        }
+      },
+      {
+        "id": "b7929996-ab8a-47b5-ac9e-ed51b9295922",
+        "label": "Contrat d'assurance décès",
+        "category": "Contrat",
+        "properties": {
+          "N° de contrat": "à renseigner",
+          "Assureur": "à renseigner"
+        }
+      },
+      {
+        "id": "ac8badf1-d6f3-4beb-a847-c38965a33bb2",
+        "label": "Testament",
+        "category": "Document",
+        "properties": {
+          "Date de rédaction": "à renseigner"
+        }
+      },
+      {
+        "id": "71da58db-6927-465b-b8b3-cbc8efad33cc",
+        "label": "Olographe",
+        "category": "Testament",
+        "properties": {
+          "prop_1": "Écrit daté et signé de la main du testateur"
+        }
+      },
+      {
+        "id": "bc3cde6e-5fa1-4ccd-becb-b62dd1d57e60",
+        "label": "Recherche d'une assurance obsèques",
+        "category": "Formalite",
+        "properties": {
+          "prop_1": "Vérifier les papiers du défunt et interroger l'AGIRA"
+        }
+      },
+      {
+        "id": "3fd35a90-68b4-490f-bc64-bd62db91371e",
+        "label": "Dans les 48 heures",
+        "category": "Delais",
+        "properties": {
+          "prop_1": "Délai recommandé"
+        }
+      },
+      {
+        "id": "2b2fb7dd-a17e-477a-8c7c-9a95fc41459c",
+        "label": "Caisse de retraite",
+        "category": "Organisme",
+        "properties": {
+          "Nom de la caisse": "à renseigner",
+          "N° de pensionné": "à renseigner"
+        }
+      },
+      {
+        "id": "f8a51800-3ae7-4fab-84a9-364deb230bdf",
+        "label": "Dans les 6 jours",
+        "category": "Delais",
+        "properties": {
+          "Délai légal": "6 jours ouvrables après le décès"
+        }
+      },
+      {
+        "id": "3e3750c1-745c-4974-898b-70438f5a8f3a",
+        "label": "Capital décès de la CPAM",
+        "category": "Allocation",
+        "properties": {
+          "prop_1": "Montant forfaitaire",
+          "prop_2": "Sous conditions d'activité du défunt"
+        }
+      },
+      {
+        "id": "1efe2bf5-2149-497e-b8d9-93f199905bf7",
+        "label": "Organiser la succession",
+        "category": "Formalite",
+        "properties": {
+          "prop_1": "Réunir livret de famille et actes de propriété"
+        }
+      },
+      {
+        "id": "df8f7aa9-67d2-4ae4-a9e4-cc71b9b24813",
+        "label": "Maison de retraite",
+        "category": "Organisme",
+        "properties": {
+          "Établissement": "à renseigner"
+        }
+      },
+      {
+        "id": "76e9ce6f-d912-44b8-bfe4-06f80192b971",
+        "label": "Pompes funèbres",
+        "category": "Entreprise",
+        "properties": {
+          "Coordonnées": "à renseigner",
+          "prop_2": "Comparer plusieurs devis"
+        }
+      },
+      {
+        "id": "1ce11da3-c6e4-41eb-950c-0469f81eb364",
+        "label": "Achat et pose d'un emblème sur la sépulture",
+        "category": "Depense",
+        "properties": {
+          "Devis": "à renseigner"
+        }
+      },
+      {
+        "id": "4311d8c3-90f6-4439-a3cc-30131efe179c",
+        "label": "Achat de fleurs",
+        "category": "Depense",
+        "properties": {
+          "Budget": "à renseigner"
+        }
+      },
+      {
+        "id": "6af21ab1-048b-4776-85d7-f34f435594aa",
+        "label": "Impôts",
+        "category": "Dette",
+        "properties": {
+          "prop_1": "Dettes fiscales déductibles de l'actif successoral"
+        }
+      },
+      {
+        "id": "d871da4d-5bf3-4799-962e-99cf5b62390d",
+        "label": "Centre des impôts",
+        "category": "Organisme",
+        "properties": {
+          "prop_1": "Service des impôts du domicile du défunt"
+        }
+      },
+      {
+        "id": "252ab1e4-bc47-44eb-b448-7997d31782ca",
+        "label": "Office Notarial",
+        "category": "Entreprise",
+        "properties": {
+          "Notaire": "à renseigner",
+          "prop_2": "Obligatoire si bien immobilier ou testament"
+        }
+      },
+      {
+        "id": "631375a4-0c0f-4656-9cbd-1807a2510c5c",
+        "label": "Dans le mois",
+        "category": "Delais",
+        "properties": {
+          "prop_1": "Délai recommandé"
+        }
+      },
+      {
+        "id": "dc47759c-2b09-4854-bd71-40fc2b795c80",
+        "label": "Crémation",
+        "category": "Derniere_volonte",
+        "properties": {
+          "Volonté écrite ou témoignage": "à vérifier"
+        }
+      },
+      {
+        "id": "e8d39491-0d4d-41b1-9bc7-50675b6f941c",
+        "label": "Gérer les comptes bancaires",
+        "category": "Formalite",
+        "properties": {
+          "prop_1": "Comptes individuels bloqués au décès"
+        }
+      },
+      {
+        "id": "0050494a-c05c-459b-b497-713a03e3c288",
+        "label": "Dans les 10 jours",
+        "category": "Delais",
+        "properties": {
+          "prop_1": "Délai recommandé"
+        }
+      },
+      {
+        "id": "a1536efb-329d-4a13-ab2e-f0f3ec898942",
+        "label": "Déclaration de revenus",
+        "category": "Formalite",
+        "properties": {
+          "prop_1": "Revenus du 1er janvier à la date du décès"
+        }
+      },
+      {
+        "id": "a0ba2779-af5f-436c-8eb5-6a0e4413ec0f",
+        "label": "Etablissement bancaire",
+        "category": "Entreprise",
+        "properties": {
+          "Banque": "à renseigner",
+          "N° de compte": "à renseigner"
+        }
+      },
+      {
+        "id": "725d1b53-7984-44ef-92f7-a31bd15bac3d",
+        "label": "Résiliation des abonnements",
+        "category": "Formalite",
+        "properties": {
+          "prop_1": "Joindre un acte de décès à chaque demande"
+        }
+      },
+      {
+        "id": "5c8d064b-21df-400e-b1a9-2aa5061a4785",
+        "label": "Déclaration de succession",
+        "category": "Formalite",
+        "properties": {
+          "prop_1": "Formulaire 2705",
+          "prop_2": "Dispense possible pour les petites successions"
+        }
+      },
+      {
+        "id": "c8dfaff0-09d3-4829-b8d7-84b53905deb2",
+        "label": "Produits d'épargne",
+        "category": "Actif_financier",
+        "properties": {
+          "Livrets et plans": "à lister"
+        }
+      },
+      {
+        "id": "f38608a2-f448-44e0-906c-381e8b0880c7",
+        "label": "Equipements",
+        "category": "Bien",
+        "properties": {
+          "Liste": "à établir"
+        }
+      },
+      {
+        "id": "ff8d4453-0d62-4816-854a-f7f879dc8310",
+        "label": "Brevet",
+        "category": "Bien",
+        "properties": {
+          "N° INPI": "à renseigner"
+        }
+      },
+      {
+        "id": "27afd14c-4a9a-4b40-adaa-7ec5803fd57a",
+        "label": "Droits d'auteur",
+        "category": "Bien",
+        "properties": {
+          "prop_1": "Protégés 70 ans après le décès"
+        }
+      },
+      {
+        "id": "227b008d-5d19-4c23-bee1-0a6baa1e4103",
+        "label": "Mairie",
+        "category": "Organisme",
+        "properties": {
+          "prop_1": "Mairie du lieu de décès",
+          "prop_2": "Service état civil"
+        }
+      },
+      {
+        "id": "2ae44539-3098-412d-8ed8-7561f791a760",
+        "label": "Hôpital",
+        "category": "Organisme",
+        "properties": {
+          "Établissement": "à renseigner"
+        }
+      },
+      {
+        "id": "9a500cdd-c009-40e2-9332-6fc3190433fe",
+        "label": "Dans les 6 mois",
+        "category": "Delais",
+        "properties": {
+          "prop_1": "Délai légal si décès en France",
+          "prop_2": "12 mois si décès à l'étranger"
+        }
+      },
+      {
+        "id": "fea1c170-b1dd-4fd3-a569-70350e57fd58",
+        "label": "Amis",
+        "category": "Personne",
+        "properties": {
+          "Liste des personnes à prévenir": "à établir"
+        }
+      },
+      {
+        "id": "c20f7561-caec-4c4e-81c1-67260ba3e845",
+        "label": "Authentique",
+        "category": "Testament",
+        "properties": {
+          "prop_1": "Reçu par notaire en présence de témoins"
+        }
+      },
+      {
+        "id": "16e067e2-a815-4891-9634-fc0747c997ea",
+        "label": "Etablissement de l'acte de décès",
+        "category": "Formalite",
+        "properties": {
+          "prop_1": "Demander plusieurs copies (gratuites)"
+        }
+      },
+      {
+        "id": "2e95b26e-ef13-4607-b3e4-8b6b7fa6f219",
+        "label": "Mystique",
+        "category": "Testament",
+        "properties": {
+          "prop_1": "Remis clos et scellé à un notaire"
+        }
+      },
+      {
+        "id": "e70184e3-9f9a-438e-841a-80e5830814dc",
+        "label": "Placements financiers",
+        "category": "Patrimoine",
+        "properties": {
+          "Relevés et contrats": "à réunir"
+        }
+      },
+      {
+        "id": "92e1b44c-d9e4-4d7d-9fe0-5c8185459b53",
+        "label": "Dépôt bancaire",
+        "category": "Actif_financier",
+        "properties": {
+          "Établissement et solde": "à renseigner"
+        }
+      },
+      {
+        "id": "ed94337d-eb18-4c5e-9863-b89b340ebca2",
+        "label": "Actions",
+        "category": "Actif_financier",
+        "properties": {
+          "Établissement teneur de compte": "à renseigner"
+        }
+      },
+      {
+        "id": "8448eb30-78ab-457d-84ba-c13b7dced5a5",
+        "label": "Cotisations retraite",
+        "category": "Actif_financier",
+        "properties": {
+          "Caisses concernées": "à renseigner"
+        }
+      },
+      {
+        "id": "bed6ae9b-3665-4912-a46d-bb9d2e1aa4ca",
+        "label": "Parts de fonds collectifs",
+        "category": "Actif_financier",
+        "properties": {
+          "OPC détenus": "à lister"
+        }
+      },
+      {
+        "id": "58299f55-3e93-41d0-b89d-279e14f96eb5",
+        "label": "Foncier et Immobilier",
+        "category": "Patrimoine",
+        "properties": {
+          "Titres de propriété": "à réunir"
+        }
+      },
+      {
+        "id": "38f7902f-ed6f-4e73-a144-15bb4a64d808",
+        "label": "Habitation",
+        "category": "Propriete",
+        "properties": {
+          "Adresse": "à renseigner",
+          "Résidence principale ou secondaire": "à préciser"
+        }
+      },
+      {
+        "id": "5d346e33-e36f-4797-a4c5-e3bec16da6c4",
+        "label": "Courriers d'invitation et de remerciements",
+        "category": "Depense",
+        "properties": {
+          "Liste des destinataires": "à établir"
+        }
+      },
+      {
+        "id": "20f30fb3-e5b3-4089-96ed-1c0b8b6a0cf8",
+        "label": "Terrain",
+        "category": "Propriete",
+        "properties": {
+          "Références cadastrales": "à renseigner"
+        }
+      },
+      {
+        "id": "dbbf672c-296b-4965-8445-72c9538c7adf",
+        "label": "Employeur",
+        "category": "Entreprise",
+        "properties": {
+          "Raison sociale": "à renseigner",
+          "Contact RH": "à renseigner"
+        }
+      },
+      {
+        "id": "1502c490-9760-4388-be77-8e3e366c717c",
+        "label": "Collègue",
+        "category": "Personne",
+        "properties": {
+          "prop_1": "Prévenus via l'employeur"
+        }
+      },
+      {
+        "id": "bdfc2600-551e-41e7-912e-55033b9633c5",
+        "label": "Allocation de veuvage",
+        "category": "Allocation",
+        "properties": {
+          "prop_1": "Sous conditions de ressources",
+          "prop_2": "Versée par la caisse de retraite (CNAV)"
+        }
+      },
+      {
+        "id": "20da5ce7-1ddc-441e-9470-24b395bbcce0",
+        "label": "Famille",
+        "category": "Personne",
+        "properties": {
+          "Membres concernés": "à lister"
+        }
+      },
+      {
+        "id": "19a7b99b-398b-4694-b59e-267f65ded529",
+        "label": "Allocation de soutien familial",
+        "category": "Allocation",
+        "properties": {
+          "prop_1": "Versée par la CAF",
+          "prop_2": "Pour les enfants orphelins"
+        }
+      },
+      {
+        "id": "51edb783-f5f3-47d0-9359-c13c57ce3005",
+        "label": "Service des eaux de la commune",
+        "category": "Organisme",
+        "properties": {
+          "N° de contrat": "à renseigner"
+        }
+      },
+      {
+        "id": "0aac1452-3ddf-48e7-9495-ce1f0132bd0e",
+        "label": "Centre national de traitement FBFV",
+        "category": "Organisme",
+        "properties": {
+          "Coordonnées": "à renseigner"
+        }
+      },
+      {
+        "id": "bb2e6e44-c4f3-46d7-8646-6acb51c98244",
+        "label": "Véhicules",
+        "category": "Bien",
+        "properties": {
+          "prop_1": "Carte grise à mettre à jour",
+          "Valeur Argus": "à renseigner"
+        }
+      },
+      {
+        "id": "67546a31-fbda-4631-b70c-24002d40f3cc",
+        "label": "Opérateur téléphonique",
+        "category": "Entreprise",
+        "properties": {
+          "Opérateur": "à renseigner",
+          "N° de contrat": "à renseigner"
+        }
+      },
+      {
+        "id": "ea8ea9cc-36a1-4575-a2de-d2c45762cc98",
+        "label": "Fournisseur d'accès Internet",
+        "category": "Entreprise",
+        "properties": {
+          "Fournisseur": "à renseigner",
+          "N° de contrat": "à renseigner"
+        }
+      },
+      {
+        "id": "45e0ff89-a0aa-4d51-a73c-c267fd3bf668",
+        "label": "Assurance",
+        "category": "Entreprise",
+        "properties": {
+          "Assureur": "à renseigner",
+          "N° de contrat": "à renseigner"
+        }
+      },
+      {
+        "id": "f5385c68-438e-4a01-a690-d89e032e0c3f",
+        "label": "Meubles",
+        "category": "Bien",
+        "properties": {
+          "prop_1": "Forfait mobilier de 5 % possible pour la déclaration"
+        }
+      },
+      {
+        "id": "a69bc169-976d-4ef8-b690-da0f3e69257e",
+        "label": "France travail",
+        "category": "Organisme",
+        "properties": {
+          "prop_1": "Si le défunt était inscrit",
+          "N° identifiant": "à renseigner"
+        }
+      },
+      {
+        "id": "1f1e3b61-4322-45c9-a3d4-0f8a2ddd30ca",
+        "label": "Caisse d'allocations familliales",
+        "category": "Organisme",
+        "properties": {
+          "N° allocataire": "à renseigner"
+        }
+      },
+      {
+        "id": "55c321c5-54fb-414f-a1c3-42ebf51adb9c",
+        "label": "Avis d'obsèques",
+        "category": "Depense",
+        "properties": {
+          "Journal et date de parution": "à renseigner"
+        }
+      }
+    ],
+    "relationships": [
+      {
+        "id": "e_1_tqvm",
+        "type": "PEUT_BENEFICIER",
+        "source": "5ec52308-46fd-41c4-9d13-fb1e51b31544",
+        "target": "83c53c55-9bde-4d11-aa08-010cce5111ad",
+        "properties": {
+          "prop_1": "À partir de 55 ans en général",
+          "Non automatique": "demande à déposer"
+        }
+      },
+      {
+        "id": "e_2_oiua",
+        "type": "ETABLI_PAR",
+        "source": "aa5989da-cc5e-4bf6-b141-46ea3c9e05a3",
+        "target": "f10a99b7-cd50-4267-9277-bd085a8b570d",
+        "properties": {
+          "prop_1": "Constat effectué sur place"
+        }
+      },
+      {
+        "id": "e_3_dsps",
+        "type": "A_EXPRIME",
+        "source": "a108a847-c8e6-45fe-8f99-586661b24577",
+        "target": "590c6c3d-4a68-457f-a542-d7d7b6bc8966",
+        "properties": {
+          "prop_1": "Volonté à respecter obligatoirement"
+        }
+      },
+      {
+        "id": "e_4_w2d6",
+        "type": "CONTACTER",
+        "source": "33fb92f7-200b-4bee-8cb9-09298745c68c",
+        "target": "a1f6f262-a3b2-4ca6-abe9-b71744b84217",
+        "properties": {
+          "prop_1": "Courrier recommandé avec acte de décès"
+        }
+      },
+      {
+        "id": "e_5_p5hm",
+        "type": "INCLUT",
+        "source": "2628f5eb-ed14-4fcb-b262-a11aa38e971f",
+        "target": "523b5a16-143c-47c1-bfe7-d692e0d27704",
+        "properties": {
+          "prop_1": "À inventorier pour la succession"
+        }
+      },
+      {
+        "id": "e_6_d7sz",
+        "type": "INCLUT",
+        "source": "2628f5eb-ed14-4fcb-b262-a11aa38e971f",
+        "target": "af25e11d-4b6b-4313-b3b8-85bd042543c8",
+        "properties": {
+          "prop_1": "À inventorier pour la succession"
+        }
+      },
+      {
+        "id": "e_7_oun7",
+        "type": "INCLUT",
+        "source": "024b1b23-f96f-4660-9d53-225456b77fd8",
+        "target": "ea8e4c15-c16d-4ef5-978d-695970094363",
+        "properties": {
+          "prop_1": "À inventorier pour la succession"
+        }
+      },
+      {
+        "id": "e_8_r4ht",
+        "type": "A_EFFECTUER",
+        "source": "dce19039-dfca-4554-99b0-fde87f4602a8",
+        "target": "f40fea49-8760-4f68-accb-892f9a4d60b7",
+        "properties": {
+          "prop_1": "Délai légal"
+        }
+      },
+      {
+        "id": "e_9_neiu",
+        "type": "POUR_FINANCER",
+        "source": "bf7bc49f-9b91-4ec6-9304-b791d3e0d569",
+        "target": "7a6dcf1e-51c0-47a6-95b2-3dcf02e1d178",
+        "properties": {
+          "prop_1": "Selon le capital prévu au contrat"
+        }
+      },
+      {
+        "id": "e_10_wk6i",
+        "type": "INFORMER",
+        "source": "68c601ca-6649-4a79-9e48-a478d3be4261",
+        "target": "8ebc8806-8cc0-421e-9f4f-71803b4b7b45",
+        "properties": {
+          "prop_1": "Selon la proximité"
+        }
+      },
+      {
+        "id": "e_11_rc1x",
+        "type": "POUR_FINANCER",
+        "source": "bf7bc49f-9b91-4ec6-9304-b791d3e0d569",
+        "target": "0f45475a-0112-49a3-802c-d838a71cfad8",
+        "properties": {
+          "prop_1": "Selon le capital prévu au contrat"
+        }
+      },
+      {
+        "id": "e_12_qmdy",
+        "type": "HERITE",
+        "source": "0dda3f88-b860-409c-841f-17afb4b5ccde",
+        "target": "2628f5eb-ed14-4fcb-b262-a11aa38e971f",
+        "properties": {
+          "prop_1": "Selon testament et ordre des héritiers",
+          "Part": "à préciser"
+        }
+      },
+      {
+        "id": "e_13_3m3t",
+        "type": "HERITE",
+        "source": "0dda3f88-b860-409c-841f-17afb4b5ccde",
+        "target": "4e17d08a-5050-476f-a991-154f24659bb4",
+        "properties": {
+          "prop_1": "Selon testament et ordre des héritiers",
+          "Part": "à préciser"
+        }
+      },
+      {
+        "id": "e_14_uqz6",
+        "type": "POUR_FINANCER",
+        "source": "bf7bc49f-9b91-4ec6-9304-b791d3e0d569",
+        "target": "27ad8527-aad9-426a-8d62-451152b1fe2b",
+        "properties": {
+          "prop_1": "Selon le capital prévu au contrat"
+        }
+      },
+      {
+        "id": "e_15_548y",
+        "type": "POUR_FINANCER",
+        "source": "bf7bc49f-9b91-4ec6-9304-b791d3e0d569",
+        "target": "488e9d8f-f6dd-4647-91cd-d66a2e793170",
+        "properties": {
+          "prop_1": "Selon le capital prévu au contrat"
+        }
+      },
+      {
+        "id": "e_16_g977",
+        "type": "CONSULTER",
+        "source": "a9718d5a-63f3-4404-9eb2-13e2a88eb805",
+        "target": "24e57cd9-16c1-45c8-a078-fb2fea84e348",
+        "properties": {
+          "prop_1": "Acte de décès requis"
+        }
+      },
+      {
+        "id": "e_17_q4e8",
+        "type": "CONSULTER",
+        "source": "b755582e-5910-433f-921d-b4437ed349fd",
+        "target": "a04deb94-8c40-4aa5-8a1b-565458358377",
+        "properties": {
+          "prop_1": "Recherche des bénéficiaires",
+          "prop_2": "Demande gratuite"
+        }
+      },
+      {
+        "id": "e_18_ppga",
+        "type": "ETAIT_MARIE",
+        "source": "a108a847-c8e6-45fe-8f99-586661b24577",
+        "target": "5ec52308-46fd-41c4-9d13-fb1e51b31544",
+        "properties": {
+          "Date et régime du mariage": "à renseigner"
+        }
+      },
+      {
+        "id": "e_19_d0vd",
+        "type": "COUVERT_PAR",
+        "source": "5702e50e-58dc-4713-b172-fd6574358cfc",
+        "target": "b7929996-ab8a-47b5-ac9e-ed51b9295922",
+        "properties": {
+          "prop_1": "Vérifier les garanties et exclusions"
+        }
+      },
+      {
+        "id": "e_20_tljn",
+        "type": "PEUT_ETRE",
+        "source": "ac8badf1-d6f3-4beb-a847-c38965a33bb2",
+        "target": "71da58db-6927-465b-b8b3-cbc8efad33cc",
+        "properties": {
+          "prop_1": "Forme la plus courante"
+        }
+      },
+      {
+        "id": "e_21_y31x",
+        "type": "ENREGISTRE_AUPRES",
+        "source": "b7929996-ab8a-47b5-ac9e-ed51b9295922",
+        "target": "a04deb94-8c40-4aa5-8a1b-565458358377",
+        "properties": {
+          "prop_1": "Recherche possible par les bénéficiaires"
+        }
+      },
+      {
+        "id": "e_22_cf9d",
+        "type": "A_EFFECTUER",
+        "source": "bc3cde6e-5fa1-4ccd-becb-b62dd1d57e60",
+        "target": "3fd35a90-68b4-490f-bc64-bd62db91371e",
+        "properties": {
+          "prop_1": "Avant d'engager des frais"
+        }
+      },
+      {
+        "id": "e_23_kjll",
+        "type": "CONTACTER",
+        "source": "33fb92f7-200b-4bee-8cb9-09298745c68c",
+        "target": "2b2fb7dd-a17e-477a-8c7c-9a95fc41459c",
+        "properties": {
+          "prop_1": "Stopper les versements et demander la réversion"
+        }
+      },
+      {
+        "id": "e_24_g1sx",
+        "type": "A_EFFECTUER",
+        "source": "68c601ca-6649-4a79-9e48-a478d3be4261",
+        "target": "f8a51800-3ae7-4fab-84a9-364deb230bdf",
+        "properties": {
+          "prop_1": "Délai légal (hors dimanches et jours fériés)"
+        }
+      },
+      {
+        "id": "e_25_ys3z",
+        "type": "SOLLICITER",
+        "source": "68c601ca-6649-4a79-9e48-a478d3be4261",
+        "target": "3e3750c1-745c-4974-898b-70438f5a8f3a",
+        "properties": {
+          "prop_1": "Demande dans les 2 ans",
+          "prop_2": "Priorité dans le mois"
+        }
+      },
+      {
+        "id": "e_26_9hql",
+        "type": "CONSULTER",
+        "source": "1efe2bf5-2149-497e-b8d9-93f199905bf7",
+        "target": "24e57cd9-16c1-45c8-a078-fb2fea84e348",
+        "properties": {
+          "prop_1": "Généralement via le notaire"
+        }
+      },
+      {
+        "id": "e_27_4huf",
+        "type": "DECLARE_PAR",
+        "source": "dce19039-dfca-4554-99b0-fde87f4602a8",
+        "target": "df8f7aa9-67d2-4ae4-a9e4-cc71b9b24813",
+        "properties": {
+          "prop_1": "Si décès dans l'établissement"
+        }
+      },
+      {
+        "id": "e_28_0jy8",
+        "type": "CONTACTER",
+        "source": "68c601ca-6649-4a79-9e48-a478d3be4261",
+        "target": "76e9ce6f-d912-44b8-bfe4-06f80192b971",
+        "properties": {
+          "prop_1": "Devis écrit obligatoire"
+        }
+      },
+      {
+        "id": "e_29_ov72",
+        "type": "POUR_FINANCER",
+        "source": "bf7bc49f-9b91-4ec6-9304-b791d3e0d569",
+        "target": "1ce11da3-c6e4-41eb-950c-0469f81eb364",
+        "properties": {
+          "prop_1": "Selon le capital prévu au contrat"
+        }
+      },
+      {
+        "id": "e_30_mmpi",
+        "type": "POUR_FINANCER",
+        "source": "bf7bc49f-9b91-4ec6-9304-b791d3e0d569",
+        "target": "4311d8c3-90f6-4439-a3cc-30131efe179c",
+        "properties": {
+          "prop_1": "Selon le capital prévu au contrat"
+        }
+      },
+      {
+        "id": "e_31_92pq",
+        "type": "DOIT_PAYER",
+        "source": "a108a847-c8e6-45fe-8f99-586661b24577",
+        "target": "6af21ab1-048b-4776-85d7-f34f435594aa",
+        "properties": {
+          "prop_1": "Passif transmis à la succession"
+        }
+      },
+      {
+        "id": "e_32_tsbc",
+        "type": "DOIT_REMBOURSER",
+        "source": "a108a847-c8e6-45fe-8f99-586661b24577",
+        "target": "5702e50e-58dc-4713-b172-fd6574358cfc",
+        "properties": {
+          "prop_1": "Vérifier l'assurance emprunteur"
+        }
+      },
+      {
+        "id": "e_33_4gva",
+        "type": "ENREGISTRE_AUPRES",
+        "source": "6af21ab1-048b-4776-85d7-f34f435594aa",
+        "target": "d871da4d-5bf3-4799-962e-99cf5b62390d",
+        "properties": {
+          "prop_1": "Solde à régulariser"
+        }
+      },
+      {
+        "id": "e_34_lm4w",
+        "type": "CONTACTER",
+        "source": "1efe2bf5-2149-497e-b8d9-93f199905bf7",
+        "target": "252ab1e4-bc47-44eb-b448-7997d31782ca",
+        "properties": {
+          "prop_1": "Premier rendez-vous à prendre rapidement"
+        }
+      },
+      {
+        "id": "e_35_l9j3",
+        "type": "A_EFFECTUER",
+        "source": "1efe2bf5-2149-497e-b8d9-93f199905bf7",
+        "target": "631375a4-0c0f-4656-9cbd-1807a2510c5c",
+        "properties": {
+          "prop_1": "Prise de contact recommandée"
+        }
+      },
+      {
+        "id": "e_36_cyx3",
+        "type": "A_EXPRIME",
+        "source": "a108a847-c8e6-45fe-8f99-586661b24577",
+        "target": "dc47759c-2b09-4854-bd71-40fc2b795c80",
+        "properties": {
+          "prop_1": "Volonté à respecter obligatoirement"
+        }
+      },
+      {
+        "id": "e_37_6310",
+        "type": "A_EFFECTUER",
+        "source": "e8d39491-0d4d-41b1-9bc7-50675b6f941c",
+        "target": "631375a4-0c0f-4656-9cbd-1807a2510c5c",
+        "properties": {
+          "prop_1": "Avant tout prélèvement indu"
+        }
+      },
+      {
+        "id": "e_38_rdsf",
+        "type": "A_EFFECTUER",
+        "source": "33fb92f7-200b-4bee-8cb9-09298745c68c",
+        "target": "0050494a-c05c-459b-b497-713a03e3c288",
+        "properties": {
+          "prop_1": "Au plus tôt pour éviter les trop-perçus"
+        }
+      },
+      {
+        "id": "e_39_8an5",
+        "type": "DECLARER_A",
+        "source": "a1536efb-329d-4a13-ab2e-f0f3ec898942",
+        "target": "d871da4d-5bf3-4799-962e-99cf5b62390d",
+        "properties": {
+          "prop_1": "Déclaration au nom du défunt"
+        }
+      },
+      {
+        "id": "e_40_1cph",
+        "type": "ENREGISTRE_AUPRES",
+        "source": "5702e50e-58dc-4713-b172-fd6574358cfc",
+        "target": "a0ba2779-af5f-436c-8eb5-6a0e4413ec0f",
+        "properties": {
+          "prop_1": "Demander le tableau d'amortissement"
+        }
+      },
+      {
+        "id": "e_41_1knz",
+        "type": "A_EFFECTUER",
+        "source": "725d1b53-7984-44ef-92f7-a31bd15bac3d",
+        "target": "631375a4-0c0f-4656-9cbd-1807a2510c5c",
+        "properties": {
+          "prop_1": "Pour limiter les frais"
+        }
+      },
+      {
+        "id": "e_42_7ujq",
+        "type": "DECLARER_A",
+        "source": "5c8d064b-21df-400e-b1a9-2aa5061a4785",
+        "target": "d871da4d-5bf3-4799-962e-99cf5b62390d",
+        "properties": {
+          "prop_1": "Dépôt avec paiement des droits éventuels"
+        }
+      },
+      {
+        "id": "e_43_2twx",
+        "type": "CONSTITUE",
+        "source": "c8dfaff0-09d3-4829-b8d7-84b53905deb2",
+        "target": "b755582e-5910-433f-921d-b4437ed349fd",
+        "properties": {
+          "prop_1": "Traitement hors succession en principe"
+        }
+      },
+      {
+        "id": "e_44_uapm",
+        "type": "INCLUT",
+        "source": "024b1b23-f96f-4660-9d53-225456b77fd8",
+        "target": "f38608a2-f448-44e0-906c-381e8b0880c7",
+        "properties": {
+          "prop_1": "À inventorier pour la succession"
+        }
+      },
+      {
+        "id": "e_45_l4b3",
+        "type": "CONSULTER",
+        "source": "bc3cde6e-5fa1-4ccd-becb-b62dd1d57e60",
+        "target": "a04deb94-8c40-4aa5-8a1b-565458358377",
+        "properties": {
+          "prop_1": "Demande écrite avec acte de décès"
+        }
+      },
+      {
+        "id": "e_46_dwcw",
+        "type": "INCLUT",
+        "source": "4e17d08a-5050-476f-a991-154f24659bb4",
+        "target": "ff8d4453-0d62-4816-854a-f7f879dc8310",
+        "properties": {
+          "prop_1": "À inventorier pour la succession"
+        }
+      },
+      {
+        "id": "e_47_e46v",
+        "type": "INCLUT",
+        "source": "4e17d08a-5050-476f-a991-154f24659bb4",
+        "target": "27afd14c-4a9a-4b40-adaa-7ec5803fd57a",
+        "properties": {
+          "prop_1": "À inventorier pour la succession"
+        }
+      },
+      {
+        "id": "e_48_1cqm",
+        "type": "DECLARER_A",
+        "source": "dce19039-dfca-4554-99b0-fde87f4602a8",
+        "target": "227b008d-5d19-4c23-bee1-0a6baa1e4103",
+        "properties": {
+          "prop_1": "Mairie du lieu de décès"
+        }
+      },
+      {
+        "id": "e_49_rqjd",
+        "type": "DECLARE_PAR",
+        "source": "dce19039-dfca-4554-99b0-fde87f4602a8",
+        "target": "2ae44539-3098-412d-8ed8-7561f791a760",
+        "properties": {
+          "prop_1": "Si décès dans l'établissement"
+        }
+      },
+      {
+        "id": "e_50_eblh",
+        "type": "A_EFFECTUER",
+        "source": "a1536efb-329d-4a13-ab2e-f0f3ec898942",
+        "target": "9a500cdd-c009-40e2-9332-6fc3190433fe",
+        "properties": {
+          "prop_1": "L'année suivant le décès selon le calendrier fiscal"
+        }
+      },
+      {
+        "id": "e_51_q2qg",
+        "type": "INFORMER",
+        "source": "68c601ca-6649-4a79-9e48-a478d3be4261",
+        "target": "fea1c170-b1dd-4fd3-a569-70350e57fd58",
+        "properties": {
+          "prop_1": "Par téléphone ou avis d'obsèques"
+        }
+      },
+      {
+        "id": "e_52_tz2q",
+        "type": "A_EFFECTUER",
+        "source": "5c8d064b-21df-400e-b1a9-2aa5061a4785",
+        "target": "9a500cdd-c009-40e2-9332-6fc3190433fe",
+        "properties": {
+          "prop_1": "Délai légal",
+          "prop_2": "Intérêts de retard au-delà"
+        }
+      },
+      {
+        "id": "e_53_wd29",
+        "type": "PEUT_ETRE",
+        "source": "ac8badf1-d6f3-4beb-a847-c38965a33bb2",
+        "target": "c20f7561-caec-4c4e-81c1-67260ba3e845",
+        "properties": {
+          "prop_1": "Force probante maximale"
+        }
+      },
+      {
+        "id": "e_54_qkbo",
+        "type": "ETABLI_PAR",
+        "source": "16e067e2-a815-4891-9634-fc0747c997ea",
+        "target": "227b008d-5d19-4c23-bee1-0a6baa1e4103",
+        "properties": {
+          "prop_1": "Sur présentation du certificat de décès"
+        }
+      },
+      {
+        "id": "e_55_o9tl",
+        "type": "PEUT_ETRE",
+        "source": "ac8badf1-d6f3-4beb-a847-c38965a33bb2",
+        "target": "2e95b26e-ef13-4607-b3e4-8b6b7fa6f219",
+        "properties": {
+          "prop_1": "Forme rare"
+        }
+      },
+      {
+        "id": "e_56_d78y",
+        "type": "ENREGISTRE_AUPRES",
+        "source": "c20f7561-caec-4c4e-81c1-67260ba3e845",
+        "target": "24e57cd9-16c1-45c8-a078-fb2fea84e348",
+        "properties": {
+          "prop_1": "Inscription systématique par le notaire"
+        }
+      },
+      {
+        "id": "e_57_md68",
+        "type": "DESIGNE",
+        "source": "ac8badf1-d6f3-4beb-a847-c38965a33bb2",
+        "target": "0dda3f88-b860-409c-841f-17afb4b5ccde",
+        "properties": {
+          "Universel ou à titre particulier": "à préciser"
+        }
+      },
+      {
+        "id": "e_58_7iss",
+        "type": "A_SOUSCRIT",
+        "source": "a108a847-c8e6-45fe-8f99-586661b24577",
+        "target": "b755582e-5910-433f-921d-b4437ed349fd",
+        "properties": {
+          "Date de souscription": "à renseigner"
+        }
+      },
+      {
+        "id": "e_59_zcgn",
+        "type": "A_SOUSCRIT",
+        "source": "a108a847-c8e6-45fe-8f99-586661b24577",
+        "target": "bf7bc49f-9b91-4ec6-9304-b791d3e0d569",
+        "properties": {
+          "Date de souscription": "à renseigner"
+        }
+      },
+      {
+        "id": "e_60_7vp2",
+        "type": "INCLUT",
+        "source": "e70184e3-9f9a-438e-841a-80e5830814dc",
+        "target": "92e1b44c-d9e4-4d7d-9fe0-5c8185459b53",
+        "properties": {
+          "prop_1": "À inventorier pour la succession"
+        }
+      },
+      {
+        "id": "e_61_dz5e",
+        "type": "HERITE",
+        "source": "0dda3f88-b860-409c-841f-17afb4b5ccde",
+        "target": "024b1b23-f96f-4660-9d53-225456b77fd8",
+        "properties": {
+          "prop_1": "Selon testament et ordre des héritiers",
+          "Part": "à préciser"
+        }
+      },
+      {
+        "id": "e_62_ldhj",
+        "type": "INCLUT",
+        "source": "e70184e3-9f9a-438e-841a-80e5830814dc",
+        "target": "ed94337d-eb18-4c5e-9863-b89b340ebca2",
+        "properties": {
+          "prop_1": "À inventorier pour la succession"
+        }
+      },
+      {
+        "id": "e_63_j7br",
+        "type": "INCLUT",
+        "source": "e70184e3-9f9a-438e-841a-80e5830814dc",
+        "target": "8448eb30-78ab-457d-84ba-c13b7dced5a5",
+        "properties": {
+          "prop_1": "À inventorier pour la succession"
+        }
+      },
+      {
+        "id": "e_64_29n9",
+        "type": "INCLUT",
+        "source": "e70184e3-9f9a-438e-841a-80e5830814dc",
+        "target": "c8dfaff0-09d3-4829-b8d7-84b53905deb2",
+        "properties": {
+          "prop_1": "À inventorier pour la succession"
+        }
+      },
+      {
+        "id": "e_65_bren",
+        "type": "INCLUT",
+        "source": "e70184e3-9f9a-438e-841a-80e5830814dc",
+        "target": "bed6ae9b-3665-4912-a46d-bb9d2e1aa4ca",
+        "properties": {
+          "prop_1": "À inventorier pour la succession"
+        }
+      },
+      {
+        "id": "e_66_sj62",
+        "type": "INCLUT",
+        "source": "58299f55-3e93-41d0-b89d-279e14f96eb5",
+        "target": "38f7902f-ed6f-4e73-a144-15bb4a64d808",
+        "properties": {
+          "prop_1": "À inventorier pour la succession"
+        }
+      },
+      {
+        "id": "e_67_dfuy",
+        "type": "ENREGISTRE_AUPRES",
+        "source": "2e95b26e-ef13-4607-b3e4-8b6b7fa6f219",
+        "target": "24e57cd9-16c1-45c8-a078-fb2fea84e348",
+        "properties": {
+          "prop_1": "Inscription par le notaire dépositaire"
+        }
+      },
+      {
+        "id": "e_68_lz6l",
+        "type": "POUR_FINANCER",
+        "source": "bf7bc49f-9b91-4ec6-9304-b791d3e0d569",
+        "target": "5d346e33-e36f-4797-a4c5-e3bec16da6c4",
+        "properties": {
+          "prop_1": "Selon le capital prévu au contrat"
+        }
+      },
+      {
+        "id": "e_69_oodx",
+        "type": "A_REDIGE",
+        "source": "a108a847-c8e6-45fe-8f99-586661b24577",
+        "target": "ac8badf1-d6f3-4beb-a847-c38965a33bb2",
+        "properties": {
+          "prop_1": "Existence à vérifier auprès du FCDDV"
+        }
+      },
+      {
+        "id": "e_70_8tjt",
+        "type": "INCLUT",
+        "source": "58299f55-3e93-41d0-b89d-279e14f96eb5",
+        "target": "20f30fb3-e5b3-4089-96ed-1c0b8b6a0cf8",
+        "properties": {
+          "prop_1": "À inventorier pour la succession"
+        }
+      },
+      {
+        "id": "e_71_4b1q",
+        "type": "INFORMER",
+        "source": "dbbf672c-296b-4965-8445-72c9538c7adf",
+        "target": "1502c490-9760-4388-be77-8e3e366c717c",
+        "properties": {
+          "prop_1": "Communication interne"
+        }
+      },
+      {
+        "id": "e_72_o4zm",
+        "type": "CONTACTER",
+        "source": "e8d39491-0d4d-41b1-9bc7-50675b6f941c",
+        "target": "a0ba2779-af5f-436c-8eb5-6a0e4413ec0f",
+        "properties": {
+          "prop_1": "Envoyer l'acte de décès",
+          "prop_2": "Blocage des comptes individuels"
+        }
+      },
+      {
+        "id": "e_73_hbc3",
+        "type": "PEUT_BENEFICIER",
+        "source": "5ec52308-46fd-41c4-9d13-fb1e51b31544",
+        "target": "bdfc2600-551e-41e7-912e-55033b9633c5",
+        "properties": {
+          "prop_1": "Si moins de 55 ans",
+          "prop_2": "Demande dans les 2 ans"
+        }
+      },
+      {
+        "id": "e_74_pn2r",
+        "type": "PEUT_BENEFICIER",
+        "source": "20da5ce7-1ddc-441e-9470-24b395bbcce0",
+        "target": "19a7b99b-398b-4694-b59e-267f65ded529",
+        "properties": {
+          "prop_1": "Demande auprès de la CAF"
+        }
+      },
+      {
+        "id": "e_75_xvf2",
+        "type": "CONTACTER",
+        "source": "725d1b53-7984-44ef-92f7-a31bd15bac3d",
+        "target": "51edb783-f5f3-47d0-9359-c13c57ce3005",
+        "properties": {
+          "prop_1": "Résiliation ou transfert du contrat"
+        }
+      },
+      {
+        "id": "e_76_pje3",
+        "type": "ENREGISTRE_AUPRES",
+        "source": "e8d39491-0d4d-41b1-9bc7-50675b6f941c",
+        "target": "0aac1452-3ddf-48e7-9495-ce1f0132bd0e",
+        "properties": {
+          "prop_1": "Signalement du décès"
+        }
+      },
+      {
+        "id": "e_77_zepe",
+        "type": "INFORMER",
+        "source": "68c601ca-6649-4a79-9e48-a478d3be4261",
+        "target": "dbbf672c-296b-4965-8445-72c9538c7adf",
+        "properties": {
+          "prop_1": "Congé pour décès possible pour les proches salariés"
+        }
+      },
+      {
+        "id": "e_78_per9",
+        "type": "INCLUT",
+        "source": "024b1b23-f96f-4660-9d53-225456b77fd8",
+        "target": "bb2e6e44-c4f3-46d7-8646-6acb51c98244",
+        "properties": {
+          "prop_1": "À inventorier pour la succession"
+        }
+      },
+      {
+        "id": "e_79_m7h5",
+        "type": "CONTACTER",
+        "source": "725d1b53-7984-44ef-92f7-a31bd15bac3d",
+        "target": "67546a31-fbda-4631-b70c-24002d40f3cc",
+        "properties": {
+          "prop_1": "Résiliation sans frais sur justificatif"
+        }
+      },
+      {
+        "id": "e_80_93qi",
+        "type": "CONTACTER",
+        "source": "725d1b53-7984-44ef-92f7-a31bd15bac3d",
+        "target": "ea8ea9cc-36a1-4575-a2de-d2c45762cc98",
+        "properties": {
+          "prop_1": "Résiliation sans frais sur justificatif"
+        }
+      },
+      {
+        "id": "e_81_a44q",
+        "type": "CONTACTER",
+        "source": "725d1b53-7984-44ef-92f7-a31bd15bac3d",
+        "target": "45e0ff89-a0aa-4d51-a73c-c267fd3bf668",
+        "properties": {
+          "prop_1": "Résiliation ou transfert selon les contrats"
+        }
+      },
+      {
+        "id": "e_82_x9u7",
+        "type": "INCLUT",
+        "source": "024b1b23-f96f-4660-9d53-225456b77fd8",
+        "target": "f5385c68-438e-4a01-a690-d89e032e0c3f",
+        "properties": {
+          "prop_1": "À inventorier pour la succession"
+        }
+      },
+      {
+        "id": "e_83_8jh3",
+        "type": "CONTACTER",
+        "source": "33fb92f7-200b-4bee-8cb9-09298745c68c",
+        "target": "a69bc169-976d-4ef8-b690-da0f3e69257e",
+        "properties": {
+          "prop_1": "Si allocations en cours"
+        }
+      },
+      {
+        "id": "e_84_9l99",
+        "type": "CONTACTER",
+        "source": "33fb92f7-200b-4bee-8cb9-09298745c68c",
+        "target": "dbbf672c-296b-4965-8445-72c9538c7adf",
+        "properties": {
+          "prop_1": "Solde de tout compte et capital décès éventuel"
+        }
+      },
+      {
+        "id": "e_85_fk5y",
+        "type": "CONTACTER",
+        "source": "33fb92f7-200b-4bee-8cb9-09298745c68c",
+        "target": "1f1e3b61-4322-45c9-a3d4-0f8a2ddd30ca",
+        "properties": {
+          "prop_1": "Mise à jour des droits du foyer"
+        }
+      },
+      {
+        "id": "e_86_ph52",
+        "type": "POUR_FINANCER",
+        "source": "bf7bc49f-9b91-4ec6-9304-b791d3e0d569",
+        "target": "55c321c5-54fb-414f-a1c3-42ebf51adb9c",
+        "properties": {
+          "prop_1": "Selon le capital prévu au contrat"
+        }
+      },
+      {
+        "id": "e_87_71p9",
+        "type": "HERITE",
+        "source": "0dda3f88-b860-409c-841f-17afb4b5ccde",
+        "target": "58299f55-3e93-41d0-b89d-279e14f96eb5",
+        "properties": {
+          "prop_1": "Selon testament et ordre des héritiers",
+          "Part": "à préciser"
+        }
+      },
+      {
+        "id": "e_88_huqq",
+        "type": "HERITE",
+        "source": "0dda3f88-b860-409c-841f-17afb4b5ccde",
+        "target": "e70184e3-9f9a-438e-841a-80e5830814dc",
+        "properties": {
+          "prop_1": "Selon testament et ordre des héritiers",
+          "Part": "à préciser"
+        }
+      },
+      {
+        "id": "e_89_i1md",
+        "type": "ENVOYER_A",
+        "source": "16e067e2-a815-4891-9634-fc0747c997ea",
+        "target": "dbbf672c-296b-4965-8445-72c9538c7adf",
+        "properties": {
+          "prop_1": "Copie à joindre au courrier"
+        }
+      }
+    ]
+  },
   {
   "id": "theme-legal-fin-de-vie-numerique",
   "title": "Données Personnelles & Fin de Vie",
@@ -2583,7 +3520,7 @@ window.GRAPHS = [
     { "source": "jeu_cartes_pokemon", "target": "jeu_tamagotchi", "label": "Se disputaient le titre de roi de la récré en 1999" }
   ]
 },
-,
+
 {
   "id": "theme-services-urgence-france-europe",
   "title": "Répertoire des Numéros d'Urgence",
@@ -2713,4 +3650,526 @@ window.GRAPHS = [
     { "source": "e_urgence", "target": "e_desc", "label": "Sans hésiter :" }
   ]
 },
+// Les assurances et garanties liées aux cartes bancaires et aux contrats d'habitation
+   {
+    "id": "assurances",
+    "title": "Assurances",
+    "category": "Finances et Patrimoine",
+    "description": "Les assurances et leur couverture",
+    "longDescription": "Les assurances sont des contrats qui permettent de se protéger contre certains risques financiers ou matériels. Elles peuvent être liées à des cartes bancaires, des contrats d'habitation, ou d'autres types de polices d'assurance.",
+    "nodes": [
+      {
+        "id": "9d414934-3d1d-48b3-ae6f-e104f3b3603a",
+        "label": "Carte Bancaire Gold",
+        "category": "Assurance",
+        "properties": {
+          "Type": "Visa Premier",
+          "prop_2": "Garanties automatiques"
+        }
+      },
+      {
+        "id": "d6875154-b319-4e9e-b208-502b91241069",
+        "label": "Assurance Voyage",
+        "category": "Unassigned",
+        "properties": {
+          "prop_1": "Inclus automatiquement",
+          "prop_2": "Si payé par carte Gold"
+        }
+      },
+      {
+        "id": "0fca31f2-fbe9-4bfd-8b02-cbd6294fec8a",
+        "label": "Location Voiture",
+        "category": "Unassigned",
+        "properties": {
+          "prop_1": "Inclus automatiquement",
+          "prop_2": "Si couverte par carte Gold"
+        }
+      },
+      {
+        "id": "cd0b1174-cf9b-44b8-8cc2-77f62ed2e50a",
+        "label": "Casse & Achat",
+        "category": "Unassigned",
+        "properties": {
+          "prop_1": "Inclus automatiquement",
+          "prop_2": "Si couverte par carte ou MRH"
+        }
+      },
+      {
+        "id": "b9a5372c-6877-4e40-ac5c-d937cdafedf8",
+        "label": "Téléphone Mobile",
+        "category": "Unassigned",
+        "properties": {
+          "prop_1": "Inclus automatiquement",
+          "prop_2": "Option souvent activée",
+          "prop_3": "Si couverte par carte ou MRH"
+        }
+      },
+      {
+        "id": "1a68940d-4703-4fb4-ba03-2fe9197998f0",
+        "label": "Assurance Habitation",
+        "category": "Assurance",
+        "properties": {
+          "Type": "MRH",
+          "prop_2": "Garanties déjà incluses"
+        }
+      },
+      {
+        "id": "542d40f4-c65b-44d7-93ba-07702a2b2a9b",
+        "label": "RC Vie Privée Famille",
+        "category": "Unassigned",
+        "properties": {
+          "prop_1": "Inclus de base",
+          "prop_2": "RC famille incluse MRH"
+        }
+      },
+      {
+        "id": "da89c88b-ad30-416f-b2e0-f590b62682b2",
+        "label": "Protection Juridique",
+        "category": "Unassigned",
+        "properties": {
+          "prop_1": "Inclus de base",
+          "prop_2": "Si incluse dans MRH"
+        }
+      },
+      {
+        "id": "6dc8ae12-6517-4b09-800b-0f1997e6a057",
+        "label": "Appareils Électroménager",
+        "category": "Unassigned",
+        "properties": {
+          "prop_1": "Option souvent activée"
+        }
+      },
+      {
+        "id": "d12a1422-f142-4ef6-bf89-e03b90391c5b",
+        "label": "Mutuelle Employeur",
+        "category": "Assurance",
+        "properties": {
+          "prop_1": "Obligatoire depuis 2016"
+        }
+      },
+      {
+        "id": "e0abaa57-1119-4865-be16-60c843783a09",
+        "label": "Soins de Santé",
+        "category": "Unassigned",
+        "properties": {
+          "prop_1": "Prise en charge partielle",
+          "prop_2": "Mutuelle collective obligatoire"
+        }
+      },
+      {
+        "id": "ce20ef39-3b12-4c49-8642-636f8f6ca260",
+        "label": "Rapatriement Sanitaire",
+        "category": "Unassigned",
+        "properties": {
+          "prop_1": "Inclus selon contrat"
+        }
+      },
+      {
+        "id": "eff62cb2-11e5-4571-9664-ff374368fbbe",
+        "label": "Prévoyance Collective",
+        "category": "Assurance",
+        "properties": {
+          "prop_1": "Contrat employeur",
+          "prop_2": "Avant toute souscription"
+        }
+      },
+      {
+        "id": "e0d57603-d50c-4cc6-867c-18f7492df9ae",
+        "label": "Arrêt Maladie",
+        "category": "Unassigned",
+        "properties": {
+          "prop_1": "Selon convention collective",
+          "prop_2": "Si prévoyance employeur suffisante"
+        }
+      },
+      {
+        "id": "ac1eeba5-3c08-4945-ab99-96ac12188248",
+        "label": "Invalidité",
+        "category": "Unassigned",
+        "properties": {
+          "prop_1": "Selon convention collective",
+          "prop_2": "Obligatoire crédit immo",
+          "prop_3": "Si prévoyance employeur suffisante"
+        }
+      },
+      {
+        "id": "3e1e27ca-cf87-4658-8ada-bc5e1f04c081",
+        "label": "Décès",
+        "category": "Unassigned",
+        "properties": {
+          "prop_1": "Capital versé aux proches",
+          "prop_2": "Obligatoire crédit immo"
+        }
+      },
+      {
+        "id": "927dd001-6853-471c-a994-bc63df61dd29",
+        "label": "Assurance Emprunteur Banque",
+        "category": "Assurance",
+        "properties": {
+          "prop_1": "Souscrite à la signature",
+          "prop_2": "Résiliation possible à tout moment"
+        }
+      },
+      {
+        "id": "b0ce9433-cd80-4251-bf22-f6e7317d50a2",
+        "label": "Délégation Assurance",
+        "category": "Action",
+        "properties": {
+          "prop_1": "Loi Lemoine 2022",
+          "prop_2": "2 à 3x moins cher"
+        }
+      },
+      {
+        "id": "d1c97dc3-87bf-41b5-8fed-b73187a26d6d",
+        "label": "Assurance Voyage Séparée",
+        "category": "Doublon",
+        "properties": {
+          "prop_1": "Souscrite à chaque départ"
+        }
+      },
+      {
+        "id": "2e077d57-c658-4f4e-b621-325f1ec153a6",
+        "label": "Assurance Scolaire",
+        "category": "Doublon",
+        "properties": {
+          "prop_1": "Souscrite chaque rentrée"
+        }
+      },
+      {
+        "id": "840c82a8-ba38-41bd-ad26-213131972a48",
+        "label": "Protection Juridique Séparée",
+        "category": "Doublon",
+        "properties": {
+          "prop_1": "Contrat individuel"
+        }
+      },
+      {
+        "id": "d62c2d4b-e151-45b8-83bb-4daaafe1712e",
+        "label": "Mutuelle Individuelle",
+        "category": "Doublon",
+        "properties": {
+          "prop_1": "Ancienne mutuelle maintenue"
+        }
+      },
+      {
+        "id": "bf610ed0-158f-4e6c-a8ab-2d64b6a85482",
+        "label": "Prévoyance Individuelle",
+        "category": "Doublon",
+        "properties": {
+          "prop_1": "Contrat personnel"
+        }
+      },
+      {
+        "id": "dc703d5f-3ca5-4912-aaca-44f8064085af",
+        "label": "Garantie Étendue Magasin",
+        "category": "Doublon",
+        "properties": {
+          "prop_1": "Souscrite à l'achat"
+        }
+      },
+      {
+        "id": "fa74b04d-8029-4ea4-af55-c738d8bed74f",
+        "label": "Option Zéro Franchise Loueur",
+        "category": "Doublon",
+        "properties": {
+          "prop_1": "Payée au comptoir"
+        }
+      },
+      {
+        "id": "9f8956c1-5b47-46a0-8b5c-f229d088c630",
+        "label": "Assurance Téléphone Opérateur",
+        "category": "Doublon",
+        "properties": {
+          "prop_1": "Mensualité opérateur"
+        }
+      },
+      {
+        "id": "ee9e0a64-e121-48c2-b80b-2f9aa309e36e",
+        "label": "Mail RH",
+        "category": "Action",
+        "properties": {
+          "prop_1": "Demande détail prévoyance"
+        }
+      },
+      {
+        "id": "420c664f-2397-429e-befc-ac7f58ec3d4f",
+        "label": "Relecture Contrat MRH",
+        "category": "Action",
+        "properties": {
+          "prop_1": "1 heure suffisante"
+        }
+      },
+      {
+        "id": "2c8c742c-ad8f-4bbb-933b-743619ab905c",
+        "label": "Relecture CGU Carte Bancaire",
+        "category": "Action",
+        "properties": {
+          "prop_1": "Conditions générales"
+        }
+      }
+    ],
+    "relationships": [
+      {
+        "id": "e_1_nzip",
+        "type": "COUVRE",
+        "source": "9d414934-3d1d-48b3-ae6f-e104f3b3603a",
+        "target": "d6875154-b319-4e9e-b208-502b91241069",
+        "properties": {
+          "prop_1": "Inclus automatiquement"
+        }
+      },
+      {
+        "id": "e_2_xgw8",
+        "type": "COUVRE",
+        "source": "9d414934-3d1d-48b3-ae6f-e104f3b3603a",
+        "target": "0fca31f2-fbe9-4bfd-8b02-cbd6294fec8a",
+        "properties": {
+          "prop_1": "Inclus automatiquement"
+        }
+      },
+      {
+        "id": "e_3_oo44",
+        "type": "COUVRE",
+        "source": "9d414934-3d1d-48b3-ae6f-e104f3b3603a",
+        "target": "cd0b1174-cf9b-44b8-8cc2-77f62ed2e50a",
+        "properties": {
+          "prop_1": "Inclus automatiquement"
+        }
+      },
+      {
+        "id": "e_4_huny",
+        "type": "COUVRE",
+        "source": "9d414934-3d1d-48b3-ae6f-e104f3b3603a",
+        "target": "b9a5372c-6877-4e40-ac5c-d937cdafedf8",
+        "properties": {
+          "prop_1": "Inclus automatiquement"
+        }
+      },
+      {
+        "id": "e_5_586j",
+        "type": "COUVRE",
+        "source": "1a68940d-4703-4fb4-ba03-2fe9197998f0",
+        "target": "542d40f4-c65b-44d7-93ba-07702a2b2a9b",
+        "properties": {
+          "prop_1": "Inclus de base"
+        }
+      },
+      {
+        "id": "e_6_nss8",
+        "type": "COUVRE",
+        "source": "1a68940d-4703-4fb4-ba03-2fe9197998f0",
+        "target": "da89c88b-ad30-416f-b2e0-f590b62682b2",
+        "properties": {
+          "prop_1": "Inclus de base"
+        }
+      },
+      {
+        "id": "e_7_nbco",
+        "type": "COUVRE",
+        "source": "1a68940d-4703-4fb4-ba03-2fe9197998f0",
+        "target": "b9a5372c-6877-4e40-ac5c-d937cdafedf8",
+        "properties": {
+          "prop_1": "Option souvent activée"
+        }
+      },
+      {
+        "id": "e_8_jraz",
+        "type": "COUVRE",
+        "source": "1a68940d-4703-4fb4-ba03-2fe9197998f0",
+        "target": "6dc8ae12-6517-4b09-800b-0f1997e6a057",
+        "properties": {
+          "prop_1": "Option souvent activée"
+        }
+      },
+      {
+        "id": "e_9_nkjp",
+        "type": "COUVRE",
+        "source": "d12a1422-f142-4ef6-bf89-e03b90391c5b",
+        "target": "e0abaa57-1119-4865-be16-60c843783a09",
+        "properties": {
+          "prop_1": "Prise en charge partielle"
+        }
+      },
+      {
+        "id": "e_10_g9di",
+        "type": "COUVRE",
+        "source": "d12a1422-f142-4ef6-bf89-e03b90391c5b",
+        "target": "ce20ef39-3b12-4c49-8642-636f8f6ca260",
+        "properties": {
+          "prop_1": "Inclus selon contrat"
+        }
+      },
+      {
+        "id": "e_11_a4vx",
+        "type": "COUVRE",
+        "source": "eff62cb2-11e5-4571-9664-ff374368fbbe",
+        "target": "e0d57603-d50c-4cc6-867c-18f7492df9ae",
+        "properties": {
+          "prop_1": "Selon convention collective"
+        }
+      },
+      {
+        "id": "e_12_kbu8",
+        "type": "COUVRE",
+        "source": "eff62cb2-11e5-4571-9664-ff374368fbbe",
+        "target": "ac1eeba5-3c08-4945-ab99-96ac12188248",
+        "properties": {
+          "prop_1": "Selon convention collective"
+        }
+      },
+      {
+        "id": "e_13_48hx",
+        "type": "COUVRE",
+        "source": "eff62cb2-11e5-4571-9664-ff374368fbbe",
+        "target": "3e1e27ca-cf87-4658-8ada-bc5e1f04c081",
+        "properties": {
+          "prop_1": "Capital versé aux proches"
+        }
+      },
+      {
+        "id": "e_14_hfop",
+        "type": "COUVRE",
+        "source": "927dd001-6853-471c-a994-bc63df61dd29",
+        "target": "3e1e27ca-cf87-4658-8ada-bc5e1f04c081",
+        "properties": {
+          "prop_1": "Obligatoire crédit immo"
+        }
+      },
+      {
+        "id": "e_15_40fa",
+        "type": "COUVRE",
+        "source": "927dd001-6853-471c-a994-bc63df61dd29",
+        "target": "ac1eeba5-3c08-4945-ab99-96ac12188248",
+        "properties": {
+          "prop_1": "Obligatoire crédit immo"
+        }
+      },
+      {
+        "id": "e_16_7c7t",
+        "type": "PEUT_ETRE_REMPLACEE_PAR",
+        "source": "927dd001-6853-471c-a994-bc63df61dd29",
+        "target": "b0ce9433-cd80-4251-bf22-f6e7317d50a2",
+        "properties": {
+          "prop_1": "Loi Lemoine 2022"
+        }
+      },
+      {
+        "id": "e_17_dutp",
+        "type": "FAIT_DOUBLON_AVEC",
+        "source": "d1c97dc3-87bf-41b5-8fed-b73187a26d6d",
+        "target": "d6875154-b319-4e9e-b208-502b91241069",
+        "properties": {
+          "prop_1": "Si payé par carte Gold"
+        }
+      },
+      {
+        "id": "e_18_6j9w",
+        "type": "FAIT_DOUBLON_AVEC",
+        "source": "2e077d57-c658-4f4e-b621-325f1ec153a6",
+        "target": "542d40f4-c65b-44d7-93ba-07702a2b2a9b",
+        "properties": {
+          "prop_1": "RC famille incluse MRH"
+        }
+      },
+      {
+        "id": "e_19_qcsn",
+        "type": "FAIT_DOUBLON_AVEC",
+        "source": "840c82a8-ba38-41bd-ad26-213131972a48",
+        "target": "da89c88b-ad30-416f-b2e0-f590b62682b2",
+        "properties": {
+          "prop_1": "Si incluse dans MRH"
+        }
+      },
+      {
+        "id": "e_20_4iv2",
+        "type": "FAIT_DOUBLON_AVEC",
+        "source": "d62c2d4b-e151-45b8-83bb-4daaafe1712e",
+        "target": "e0abaa57-1119-4865-be16-60c843783a09",
+        "properties": {
+          "prop_1": "Mutuelle collective obligatoire"
+        }
+      },
+      {
+        "id": "e_21_aj04",
+        "type": "FAIT_DOUBLON_AVEC",
+        "source": "bf610ed0-158f-4e6c-a8ab-2d64b6a85482",
+        "target": "e0d57603-d50c-4cc6-867c-18f7492df9ae",
+        "properties": {
+          "prop_1": "Si prévoyance employeur suffisante"
+        }
+      },
+      {
+        "id": "e_22_7pwt",
+        "type": "FAIT_DOUBLON_AVEC",
+        "source": "bf610ed0-158f-4e6c-a8ab-2d64b6a85482",
+        "target": "ac1eeba5-3c08-4945-ab99-96ac12188248",
+        "properties": {
+          "prop_1": "Si prévoyance employeur suffisante"
+        }
+      },
+      {
+        "id": "e_23_fiuu",
+        "type": "FAIT_DOUBLON_AVEC",
+        "source": "dc703d5f-3ca5-4912-aaca-44f8064085af",
+        "target": "cd0b1174-cf9b-44b8-8cc2-77f62ed2e50a",
+        "properties": {
+          "prop_1": "Si couverte par carte ou MRH"
+        }
+      },
+      {
+        "id": "e_24_0h54",
+        "type": "FAIT_DOUBLON_AVEC",
+        "source": "fa74b04d-8029-4ea4-af55-c738d8bed74f",
+        "target": "0fca31f2-fbe9-4bfd-8b02-cbd6294fec8a",
+        "properties": {
+          "prop_1": "Si couverte par carte Gold"
+        }
+      },
+      {
+        "id": "e_25_le5x",
+        "type": "FAIT_DOUBLON_AVEC",
+        "source": "9f8956c1-5b47-46a0-8b5c-f229d088c630",
+        "target": "b9a5372c-6877-4e40-ac5c-d937cdafedf8",
+        "properties": {
+          "prop_1": "Si couverte par carte ou MRH"
+        }
+      },
+      {
+        "id": "e_26_jlrp",
+        "type": "REMPLACE",
+        "source": "b0ce9433-cd80-4251-bf22-f6e7317d50a2",
+        "target": "927dd001-6853-471c-a994-bc63df61dd29",
+        "properties": {
+          "prop_1": "Résiliation possible à tout moment"
+        }
+      },
+      {
+        "id": "e_27_tt2q",
+        "type": "PERMET_DE_VERIFIER",
+        "source": "ee9e0a64-e121-48c2-b80b-2f9aa309e36e",
+        "target": "eff62cb2-11e5-4571-9664-ff374368fbbe",
+        "properties": {
+          "prop_1": "Avant toute souscription"
+        }
+      },
+      {
+        "id": "e_28_yl5p",
+        "type": "PERMET_D'IDENTIFIER",
+        "source": "420c664f-2397-429e-befc-ac7f58ec3d4f",
+        "target": "1a68940d-4703-4fb4-ba03-2fe9197998f0",
+        "properties": {
+          "prop_1": "Garanties déjà incluses"
+        }
+      },
+      {
+        "id": "e_29_4kv5",
+        "type": "PERMET_D'IDENTIFIER",
+        "source": "2c8c742c-ad8f-4bbb-933b-743619ab905c",
+        "target": "9d414934-3d1d-48b3-ae6f-e104f3b3603a",
+        "properties": {
+          "prop_1": "Garanties automatiques"
+        }
+      }
+    ]
+  },
 ];
