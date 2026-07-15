@@ -10,63 +10,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
   <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
-  <style>
-    .gallery-nav {
-      display: flex;
-      align-items: center;
-      gap: .5rem;
-      margin-bottom: 2rem;
-      font-size: .9rem;
-      color: var(--muted-foreground);
-      flex-wrap: wrap;
-    }
-    .gallery-nav a, .gallery-nav button {
-      background: none; border: none; padding: 0;
-      color: var(--cyan); cursor: pointer;
-      font-size: .9rem; font-family: inherit; text-decoration: none;
-    }
-    .gallery-nav a:hover, .gallery-nav button:hover { text-decoration: underline; }
-    .gallery-nav .sep { color: var(--muted-foreground); }
-    .gallery-nav .current { color: var(--foreground); font-weight: 600; }
-
-    .group-grid {
-      display: grid;
-      gap: 1.1rem;
-      grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
-    }
-    .group-tile {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 1.5rem 1.4rem;
-      cursor: pointer;
-      transition: all .22s;
-      display: flex; flex-direction: column; gap: .5rem;
-    }
-    .group-tile:hover {
-      border-color: rgba(66,235,226,.55);
-      box-shadow: var(--shadow-tile), var(--glow-cyan);
-      transform: translateY(-3px);
-    }
-    .group-tile-icon  { font-size: 1.5rem; line-height: 1; }
-    .group-tile-name  { font-size: 1rem; font-weight: 600; color: var(--foreground); }
-    .group-tile-count { font-size: .8rem; color: var(--muted-foreground); }
-    .group-tile-cats  {
-      font-size: .75rem; color: var(--muted-foreground);
-      line-height: 1.5; border-top: 1px solid var(--border);
-      padding-top: .5rem; margin-top: .2rem;
-    }
-
-    #graphs-view { display: none; }
-
-    .cat-group-header {
-      display: flex; align-items: center; gap: .7rem;
-      margin: 2rem 0 1rem; grid-column: 1 / -1;
-    }
-    .cat-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--cyan); flex-shrink: 0; }
-    .cat-group-label { font-size: .7rem; text-transform: uppercase; letter-spacing: .18em; color: var(--cyan); font-weight: 600; }
-    .cat-group-line  { flex: 1; height: 1px; background: var(--border); }
-  </style>
 </head>
 <body>
   <header class="site-header">
@@ -96,11 +39,37 @@
       <h2 class="section-title" id="gallery-title">Les thèmes</h2>
       <p class="section-sub" id="gallery-sub">Choisissez un thème pour découvrir les graphes disponibles.</p>
 
+      <!-- Recherche : graphes (titre, catégorie, thème) et articles (titre) -->
+      <div id="gallery-search-wrap">
+        <span id="gallery-search-icon">⌕</span>
+        <input type="text" id="gallery-search"
+               placeholder="Rechercher un graphe, un thème ou un article…"
+               autocomplete="off" aria-label="Rechercher dans la galerie" />
+        <button id="gallery-search-clear" title="Effacer la recherche" aria-label="Effacer la recherche">✕</button>
+      </div>
+
+      <!-- Import d'un graphe créé sur WynaGraph Workspace (mode auteur uniquement) -->
+      <div class="import-banner" id="import-banner" hidden>
+        <div class="import-banner-text">
+          <b>Mode auteur — importer un graphe du Workspace</b>
+          <p>Importez un export JSON pour le prévisualiser exactement comme il apparaîtra publié :
+          nœuds, relations et propriétés dans le panneau de détail. L'import reste local ;
+          pour publier, utilisez ensuite « Copier pour data.js ».</p>
+        </div>
+        <div>
+          <button id="gallery-import-btn">📥 Importer un JSON</button>
+          <input type="file" id="gallery-import-file" accept=".json,application/json" style="display:none" />
+        </div>
+      </div>
+
       <div id="groups-view">
         <div id="group-grid" class="group-grid"></div>
       </div>
       <div id="graphs-view">
         <div id="graph-grid" class="grid"></div>
+      </div>
+      <div id="search-view">
+        <div id="search-results"></div>
       </div>
     </section>
   </main>
@@ -111,8 +80,40 @@
     <a href="a-propos.html" style="color:var(--cyan)">À propos</a>
   </footer>
 
+  <div id="import-toast" role="status" aria-live="polite"></div>
+
   <script src="data.js"></script>
+  <script src="posts.js"></script>
+  <script src="json-import.js"></script>
   <script src="graph-render.js"></script>
+  <script>
+  // ── Import d'un graphe JSON — visible uniquement en mode auteur ────────────
+  // Activation : visiter la galerie avec ?studio=1 (mémorisé). Désactivation : ?studio=0.
+  (function () {
+    if (!(window.WynaImport && WynaImport.isAuthorMode())) return;
+
+    document.getElementById('import-banner').hidden = false;
+
+    const btn   = document.getElementById('gallery-import-btn');
+    const input = document.getElementById('gallery-import-file');
+    const toast = document.getElementById('import-toast');
+    let timer = null;
+
+    function showError(msg) {
+      toast.textContent = msg;
+      toast.classList.add('show', 'error');
+      clearTimeout(timer);
+      timer = setTimeout(() => toast.classList.remove('show'), 4500);
+    }
+
+    btn.addEventListener('click', () => input.click());
+    input.addEventListener('change', () => {
+      // En cas de succès, json-import.js redirige vers graph.html?id=import
+      WynaImport.handleFile(input.files && input.files[0], showError);
+      input.value = '';
+    });
+  })();
+  </script>
   <script>
   const THEME_GROUPS = [
     { id: "sante-bien-etre",  name: "Santé & Bien-être",      icon: "🧬", keywords: ["santé","sport","nature","bien-être","physiologie","psychologie","nutrition","biologie","écologie"] },
@@ -149,6 +150,7 @@
   }
 
   function renderGroups() {
+    exitSearchView();
     const index = buildIndex();
     const grid  = document.getElementById('group-grid');
     grid.innerHTML = '';
@@ -181,6 +183,7 @@
   }
 
   function showGroup(groupId) {
+    exitSearchView();
     const index = buildIndex();
     const entry = index[groupId];
     if (!entry) return;
@@ -227,6 +230,129 @@
       <span class="current">${entry.group.name}</span>`;
     document.getElementById('galerie').scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
+
+  // ── Recherche dans la galerie ─────────────────────────────────────────────
+  // Filtre les graphes (titre, catégorie, thème) et les articles (titre,
+  // catégorie). La croix ✕ réinitialise la vue des tuiles de thèmes.
+  const searchInput   = document.getElementById('gallery-search');
+  const searchWrap    = document.getElementById('gallery-search-wrap');
+  const searchClear   = document.getElementById('gallery-search-clear');
+  const searchView    = document.getElementById('search-view');
+  const searchResults = document.getElementById('search-results');
+
+  function escHtml(s) {
+    return String(s == null ? '' : s).replace(/[&<>"']/g, m =>
+      ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;' }[m]));
+  }
+
+  // Minuscules + suppression des accents, pour une recherche tolérante
+  function normText(s) {
+    return String(s || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+  }
+
+  function themeNameFor(category) {
+    const gid = findGroup(category);
+    return (THEME_GROUPS.find(t => t.id === gid) || GROUP_DIVERS).name;
+  }
+
+  // Quitte la vue recherche SANS re-rendre les thèmes (appelée par
+  // renderGroups / showGroup, qui gèrent eux-mêmes leur affichage).
+  function exitSearchView() {
+    searchView.classList.remove('active');
+    if (searchInput.value) searchInput.value = '';
+    searchWrap.classList.remove('has-value');
+  }
+
+  function runSearch(raw) {
+    const q = normText(raw.trim());
+    if (!q) { renderGroups(); return; }
+
+    const graphMatches = GRAPHS.filter(g =>
+      normText(g.title).includes(q) ||
+      normText(g.category || '').includes(q) ||
+      normText(themeNameFor(g.category)).includes(q)
+    );
+    const postMatches = (window.POSTS || []).filter(p =>
+      normText(p.title).includes(q) ||
+      normText(p.category || '').includes(q)
+    );
+
+    // Basculer l'affichage sur la vue résultats
+    document.getElementById('groups-view').style.display = 'none';
+    document.getElementById('graphs-view').style.display = 'none';
+    searchView.classList.add('active');
+
+    const total = graphMatches.length + postMatches.length;
+    document.getElementById('gallery-title').textContent = 'Résultats de recherche';
+    document.getElementById('gallery-sub').textContent = total
+      ? `${graphMatches.length} graphe${graphMatches.length > 1 ? 's' : ''} et ${postMatches.length} article${postMatches.length > 1 ? 's' : ''} correspondent à votre recherche.`
+      : 'Aucun résultat — essayez un autre mot-clé.';
+    document.getElementById('breadcrumb').innerHTML = `
+      <button onclick="renderGroups()">Tous les thèmes</button>
+      <span class="sep">›</span>
+      <span class="current">Recherche : « ${escHtml(raw.trim())} »</span>`;
+
+    let html = '';
+
+    if (graphMatches.length) {
+      html += `<div class="cat-group-header"><div class="cat-dot"></div>
+        <span class="cat-group-label">Graphes (${graphMatches.length})</span>
+        <div class="cat-group-line"></div></div>`;
+      html += `<div class="grid">` + graphMatches.map(g => `
+        <a class="card" href="graph.html?id=${encodeURIComponent(g.id)}">
+          <div class="card-thumb"></div>
+          <div class="card-body">
+            <div class="card-cat">${escHtml(g.category)} · ${escHtml(themeNameFor(g.category))}</div>
+            <div class="card-title">${escHtml(g.title)}</div>
+            <p class="card-desc">${escHtml(g.description)}</p>
+          </div>
+        </a>`).join('') + `</div>`;
+    }
+
+    if (postMatches.length) {
+      html += `<div class="cat-group-header" style="margin-top:2.5rem"><div class="cat-dot"></div>
+        <span class="cat-group-label">Articles (${postMatches.length})</span>
+        <div class="cat-group-line"></div></div>`;
+      html += `<div class="post-results">` + postMatches.map(p => `
+        <a class="post-result" href="article.html?id=${encodeURIComponent(p.id)}">
+          <span class="post-result-cat">${escHtml(p.category)}</span>
+          <span class="post-result-title">${escHtml(p.title)}</span>
+          <span class="post-result-excerpt">${escHtml(p.excerpt || '')}</span>
+        </a>`).join('') + `</div>`;
+    }
+
+    if (!html) {
+      html = `<p class="search-empty">Aucun graphe ni article ne correspond à
+        <b>« ${escHtml(raw.trim())} »</b>. Essayez un mot-clé plus court, un thème
+        (santé, finance, culture…) ou le nom d'un graphe.</p>`;
+    }
+
+    searchResults.innerHTML = html;
+
+    // Miniatures des graphes trouvés (mêmes vignettes que dans les thèmes)
+    const thumbs = searchResults.querySelectorAll('.card-thumb');
+    graphMatches.forEach((g, i) => {
+      if (thumbs[i]) buildNetwork(thumbs[i], g, { interactive: false });
+    });
+  }
+
+  function clearGallerySearch() {
+    renderGroups(); // renderGroups appelle exitSearchView (vide le champ)
+    searchInput.blur();
+  }
+
+  let searchDebounce = null;
+  searchInput.addEventListener('input', () => {
+    const val = searchInput.value;
+    searchWrap.classList.toggle('has-value', val.length > 0);
+    clearTimeout(searchDebounce);
+    // Débounce : évite de reconstruire les miniatures à chaque frappe
+    searchDebounce = setTimeout(() => runSearch(val), 250);
+  });
+  searchInput.addEventListener('keydown', e => {
+    if (e.key === 'Escape') clearGallerySearch();
+  });
+  searchClear.addEventListener('click', clearGallerySearch);
 
   renderGroups();
   </script>

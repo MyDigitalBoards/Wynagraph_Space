@@ -2,10 +2,10 @@
 window.GRAPHS = [
   {
     "id": "Haircare",
-    "title": "Marques de soins capillaires",
+    "title": "Marques de soins capillaires Black Owned",
     "category": "Soins capillaires",
-    "description": "Cartographie des marques de soins capillaires pour cheveux texturés.",
-    "longDescription": "Une sélection de marques de soins capillaires avec leur pays d'implantation, leurs fondateurs et, le cas échéant, le groupe qui les détient.",
+    "description": "Cartographie des marques de soins capillaires Black-owned : origine, fondateurs et appartenance à un groupe.",
+    "longDescription": "Une sélection de marques de soins capillaires Black-owned, avec leur pays d'implantation, leurs fondateurs et, le cas échéant, le groupe qui les détient.",
     "nodes": [
       {
         "id": "Holy Melanin",
@@ -743,9 +743,9 @@ window.GRAPHS = [
       "label": "Produits d'épargne",
       "group": "Actif_financier",
       "size": 18    },
-    {      "id": "contret_contrat_d'assurance_vie",
+    {      "id": "contrat_d'assurance_vie",
       "label": "Contrat d'assurance Vie",
-      "group": "Contret",
+      "group": "Contrat",
       "size": 18    },
     {      "id": "bien_equipements",
       "label": "Equipements",
@@ -1012,7 +1012,7 @@ window.GRAPHS = [
       "target": "organisme_centre_des_impôts",
       "label": "DECLARER A"    },
     {      "source": "actif_financier_produits_d'épargne",
-      "target": "contret_contrat_d'assurance_vie",
+      "target": "contrat_d'assurance_vie",
       "label": "CONSTITUE"    },
     {      "source": "patrimoine_biens_matériels",
       "target": "bien_equipements",
@@ -2583,7 +2583,7 @@ window.GRAPHS = [
     { "source": "jeu_cartes_pokemon", "target": "jeu_tamagotchi", "label": "Se disputaient le titre de roi de la récré en 1999" }
   ]
 },
-,
+
 {
   "id": "theme-services-urgence-france-europe",
   "title": "Répertoire des Numéros d'Urgence",
@@ -2713,4 +2713,526 @@ window.GRAPHS = [
     { "source": "e_urgence", "target": "e_desc", "label": "Sans hésiter :" }
   ]
 },
+// Les assurances et garanties liées aux cartes bancaires et aux contrats d'habitation
+   {
+    "id": "assurances",
+    "title": "Assurances",
+    "category": "Finances et Patrimoine",
+    "description": "Les assurances et leur couverture",
+    "longDescription": "Les assurances sont des contrats qui permettent de se protéger contre certains risques financiers ou matériels. Elles peuvent être liées à des cartes bancaires, des contrats d'habitation, ou d'autres types de polices d'assurance.",
+    "nodes": [
+      {
+        "id": "9d414934-3d1d-48b3-ae6f-e104f3b3603a",
+        "label": "Carte Bancaire Gold",
+        "category": "Assurance",
+        "properties": {
+          "Type": "Visa Premier",
+          "prop_2": "Garanties automatiques"
+        }
+      },
+      {
+        "id": "d6875154-b319-4e9e-b208-502b91241069",
+        "label": "Assurance Voyage",
+        "category": "Unassigned",
+        "properties": {
+          "prop_1": "Inclus automatiquement",
+          "prop_2": "Si payé par carte Gold"
+        }
+      },
+      {
+        "id": "0fca31f2-fbe9-4bfd-8b02-cbd6294fec8a",
+        "label": "Location Voiture",
+        "category": "Unassigned",
+        "properties": {
+          "prop_1": "Inclus automatiquement",
+          "prop_2": "Si couverte par carte Gold"
+        }
+      },
+      {
+        "id": "cd0b1174-cf9b-44b8-8cc2-77f62ed2e50a",
+        "label": "Casse & Achat",
+        "category": "Unassigned",
+        "properties": {
+          "prop_1": "Inclus automatiquement",
+          "prop_2": "Si couverte par carte ou MRH"
+        }
+      },
+      {
+        "id": "b9a5372c-6877-4e40-ac5c-d937cdafedf8",
+        "label": "Téléphone Mobile",
+        "category": "Unassigned",
+        "properties": {
+          "prop_1": "Inclus automatiquement",
+          "prop_2": "Option souvent activée",
+          "prop_3": "Si couverte par carte ou MRH"
+        }
+      },
+      {
+        "id": "1a68940d-4703-4fb4-ba03-2fe9197998f0",
+        "label": "Assurance Habitation",
+        "category": "Assurance",
+        "properties": {
+          "Type": "MRH",
+          "prop_2": "Garanties déjà incluses"
+        }
+      },
+      {
+        "id": "542d40f4-c65b-44d7-93ba-07702a2b2a9b",
+        "label": "RC Vie Privée Famille",
+        "category": "Unassigned",
+        "properties": {
+          "prop_1": "Inclus de base",
+          "prop_2": "RC famille incluse MRH"
+        }
+      },
+      {
+        "id": "da89c88b-ad30-416f-b2e0-f590b62682b2",
+        "label": "Protection Juridique",
+        "category": "Unassigned",
+        "properties": {
+          "prop_1": "Inclus de base",
+          "prop_2": "Si incluse dans MRH"
+        }
+      },
+      {
+        "id": "6dc8ae12-6517-4b09-800b-0f1997e6a057",
+        "label": "Appareils Électroménager",
+        "category": "Unassigned",
+        "properties": {
+          "prop_1": "Option souvent activée"
+        }
+      },
+      {
+        "id": "d12a1422-f142-4ef6-bf89-e03b90391c5b",
+        "label": "Mutuelle Employeur",
+        "category": "Assurance",
+        "properties": {
+          "prop_1": "Obligatoire depuis 2016"
+        }
+      },
+      {
+        "id": "e0abaa57-1119-4865-be16-60c843783a09",
+        "label": "Soins de Santé",
+        "category": "Unassigned",
+        "properties": {
+          "prop_1": "Prise en charge partielle",
+          "prop_2": "Mutuelle collective obligatoire"
+        }
+      },
+      {
+        "id": "ce20ef39-3b12-4c49-8642-636f8f6ca260",
+        "label": "Rapatriement Sanitaire",
+        "category": "Unassigned",
+        "properties": {
+          "prop_1": "Inclus selon contrat"
+        }
+      },
+      {
+        "id": "eff62cb2-11e5-4571-9664-ff374368fbbe",
+        "label": "Prévoyance Collective",
+        "category": "Assurance",
+        "properties": {
+          "prop_1": "Contrat employeur",
+          "prop_2": "Avant toute souscription"
+        }
+      },
+      {
+        "id": "e0d57603-d50c-4cc6-867c-18f7492df9ae",
+        "label": "Arrêt Maladie",
+        "category": "Unassigned",
+        "properties": {
+          "prop_1": "Selon convention collective",
+          "prop_2": "Si prévoyance employeur suffisante"
+        }
+      },
+      {
+        "id": "ac1eeba5-3c08-4945-ab99-96ac12188248",
+        "label": "Invalidité",
+        "category": "Unassigned",
+        "properties": {
+          "prop_1": "Selon convention collective",
+          "prop_2": "Obligatoire crédit immo",
+          "prop_3": "Si prévoyance employeur suffisante"
+        }
+      },
+      {
+        "id": "3e1e27ca-cf87-4658-8ada-bc5e1f04c081",
+        "label": "Décès",
+        "category": "Unassigned",
+        "properties": {
+          "prop_1": "Capital versé aux proches",
+          "prop_2": "Obligatoire crédit immo"
+        }
+      },
+      {
+        "id": "927dd001-6853-471c-a994-bc63df61dd29",
+        "label": "Assurance Emprunteur Banque",
+        "category": "Assurance",
+        "properties": {
+          "prop_1": "Souscrite à la signature",
+          "prop_2": "Résiliation possible à tout moment"
+        }
+      },
+      {
+        "id": "b0ce9433-cd80-4251-bf22-f6e7317d50a2",
+        "label": "Délégation Assurance",
+        "category": "Action",
+        "properties": {
+          "prop_1": "Loi Lemoine 2022",
+          "prop_2": "2 à 3x moins cher"
+        }
+      },
+      {
+        "id": "d1c97dc3-87bf-41b5-8fed-b73187a26d6d",
+        "label": "Assurance Voyage Séparée",
+        "category": "Doublon",
+        "properties": {
+          "prop_1": "Souscrite à chaque départ"
+        }
+      },
+      {
+        "id": "2e077d57-c658-4f4e-b621-325f1ec153a6",
+        "label": "Assurance Scolaire",
+        "category": "Doublon",
+        "properties": {
+          "prop_1": "Souscrite chaque rentrée"
+        }
+      },
+      {
+        "id": "840c82a8-ba38-41bd-ad26-213131972a48",
+        "label": "Protection Juridique Séparée",
+        "category": "Doublon",
+        "properties": {
+          "prop_1": "Contrat individuel"
+        }
+      },
+      {
+        "id": "d62c2d4b-e151-45b8-83bb-4daaafe1712e",
+        "label": "Mutuelle Individuelle",
+        "category": "Doublon",
+        "properties": {
+          "prop_1": "Ancienne mutuelle maintenue"
+        }
+      },
+      {
+        "id": "bf610ed0-158f-4e6c-a8ab-2d64b6a85482",
+        "label": "Prévoyance Individuelle",
+        "category": "Doublon",
+        "properties": {
+          "prop_1": "Contrat personnel"
+        }
+      },
+      {
+        "id": "dc703d5f-3ca5-4912-aaca-44f8064085af",
+        "label": "Garantie Étendue Magasin",
+        "category": "Doublon",
+        "properties": {
+          "prop_1": "Souscrite à l'achat"
+        }
+      },
+      {
+        "id": "fa74b04d-8029-4ea4-af55-c738d8bed74f",
+        "label": "Option Zéro Franchise Loueur",
+        "category": "Doublon",
+        "properties": {
+          "prop_1": "Payée au comptoir"
+        }
+      },
+      {
+        "id": "9f8956c1-5b47-46a0-8b5c-f229d088c630",
+        "label": "Assurance Téléphone Opérateur",
+        "category": "Doublon",
+        "properties": {
+          "prop_1": "Mensualité opérateur"
+        }
+      },
+      {
+        "id": "ee9e0a64-e121-48c2-b80b-2f9aa309e36e",
+        "label": "Mail RH",
+        "category": "Action",
+        "properties": {
+          "prop_1": "Demande détail prévoyance"
+        }
+      },
+      {
+        "id": "420c664f-2397-429e-befc-ac7f58ec3d4f",
+        "label": "Relecture Contrat MRH",
+        "category": "Action",
+        "properties": {
+          "prop_1": "1 heure suffisante"
+        }
+      },
+      {
+        "id": "2c8c742c-ad8f-4bbb-933b-743619ab905c",
+        "label": "Relecture CGU Carte Bancaire",
+        "category": "Action",
+        "properties": {
+          "prop_1": "Conditions générales"
+        }
+      }
+    ],
+    "relationships": [
+      {
+        "id": "e_1_nzip",
+        "type": "COUVRE",
+        "source": "9d414934-3d1d-48b3-ae6f-e104f3b3603a",
+        "target": "d6875154-b319-4e9e-b208-502b91241069",
+        "properties": {
+          "prop_1": "Inclus automatiquement"
+        }
+      },
+      {
+        "id": "e_2_xgw8",
+        "type": "COUVRE",
+        "source": "9d414934-3d1d-48b3-ae6f-e104f3b3603a",
+        "target": "0fca31f2-fbe9-4bfd-8b02-cbd6294fec8a",
+        "properties": {
+          "prop_1": "Inclus automatiquement"
+        }
+      },
+      {
+        "id": "e_3_oo44",
+        "type": "COUVRE",
+        "source": "9d414934-3d1d-48b3-ae6f-e104f3b3603a",
+        "target": "cd0b1174-cf9b-44b8-8cc2-77f62ed2e50a",
+        "properties": {
+          "prop_1": "Inclus automatiquement"
+        }
+      },
+      {
+        "id": "e_4_huny",
+        "type": "COUVRE",
+        "source": "9d414934-3d1d-48b3-ae6f-e104f3b3603a",
+        "target": "b9a5372c-6877-4e40-ac5c-d937cdafedf8",
+        "properties": {
+          "prop_1": "Inclus automatiquement"
+        }
+      },
+      {
+        "id": "e_5_586j",
+        "type": "COUVRE",
+        "source": "1a68940d-4703-4fb4-ba03-2fe9197998f0",
+        "target": "542d40f4-c65b-44d7-93ba-07702a2b2a9b",
+        "properties": {
+          "prop_1": "Inclus de base"
+        }
+      },
+      {
+        "id": "e_6_nss8",
+        "type": "COUVRE",
+        "source": "1a68940d-4703-4fb4-ba03-2fe9197998f0",
+        "target": "da89c88b-ad30-416f-b2e0-f590b62682b2",
+        "properties": {
+          "prop_1": "Inclus de base"
+        }
+      },
+      {
+        "id": "e_7_nbco",
+        "type": "COUVRE",
+        "source": "1a68940d-4703-4fb4-ba03-2fe9197998f0",
+        "target": "b9a5372c-6877-4e40-ac5c-d937cdafedf8",
+        "properties": {
+          "prop_1": "Option souvent activée"
+        }
+      },
+      {
+        "id": "e_8_jraz",
+        "type": "COUVRE",
+        "source": "1a68940d-4703-4fb4-ba03-2fe9197998f0",
+        "target": "6dc8ae12-6517-4b09-800b-0f1997e6a057",
+        "properties": {
+          "prop_1": "Option souvent activée"
+        }
+      },
+      {
+        "id": "e_9_nkjp",
+        "type": "COUVRE",
+        "source": "d12a1422-f142-4ef6-bf89-e03b90391c5b",
+        "target": "e0abaa57-1119-4865-be16-60c843783a09",
+        "properties": {
+          "prop_1": "Prise en charge partielle"
+        }
+      },
+      {
+        "id": "e_10_g9di",
+        "type": "COUVRE",
+        "source": "d12a1422-f142-4ef6-bf89-e03b90391c5b",
+        "target": "ce20ef39-3b12-4c49-8642-636f8f6ca260",
+        "properties": {
+          "prop_1": "Inclus selon contrat"
+        }
+      },
+      {
+        "id": "e_11_a4vx",
+        "type": "COUVRE",
+        "source": "eff62cb2-11e5-4571-9664-ff374368fbbe",
+        "target": "e0d57603-d50c-4cc6-867c-18f7492df9ae",
+        "properties": {
+          "prop_1": "Selon convention collective"
+        }
+      },
+      {
+        "id": "e_12_kbu8",
+        "type": "COUVRE",
+        "source": "eff62cb2-11e5-4571-9664-ff374368fbbe",
+        "target": "ac1eeba5-3c08-4945-ab99-96ac12188248",
+        "properties": {
+          "prop_1": "Selon convention collective"
+        }
+      },
+      {
+        "id": "e_13_48hx",
+        "type": "COUVRE",
+        "source": "eff62cb2-11e5-4571-9664-ff374368fbbe",
+        "target": "3e1e27ca-cf87-4658-8ada-bc5e1f04c081",
+        "properties": {
+          "prop_1": "Capital versé aux proches"
+        }
+      },
+      {
+        "id": "e_14_hfop",
+        "type": "COUVRE",
+        "source": "927dd001-6853-471c-a994-bc63df61dd29",
+        "target": "3e1e27ca-cf87-4658-8ada-bc5e1f04c081",
+        "properties": {
+          "prop_1": "Obligatoire crédit immo"
+        }
+      },
+      {
+        "id": "e_15_40fa",
+        "type": "COUVRE",
+        "source": "927dd001-6853-471c-a994-bc63df61dd29",
+        "target": "ac1eeba5-3c08-4945-ab99-96ac12188248",
+        "properties": {
+          "prop_1": "Obligatoire crédit immo"
+        }
+      },
+      {
+        "id": "e_16_7c7t",
+        "type": "PEUT_ETRE_REMPLACEE_PAR",
+        "source": "927dd001-6853-471c-a994-bc63df61dd29",
+        "target": "b0ce9433-cd80-4251-bf22-f6e7317d50a2",
+        "properties": {
+          "prop_1": "Loi Lemoine 2022"
+        }
+      },
+      {
+        "id": "e_17_dutp",
+        "type": "FAIT_DOUBLON_AVEC",
+        "source": "d1c97dc3-87bf-41b5-8fed-b73187a26d6d",
+        "target": "d6875154-b319-4e9e-b208-502b91241069",
+        "properties": {
+          "prop_1": "Si payé par carte Gold"
+        }
+      },
+      {
+        "id": "e_18_6j9w",
+        "type": "FAIT_DOUBLON_AVEC",
+        "source": "2e077d57-c658-4f4e-b621-325f1ec153a6",
+        "target": "542d40f4-c65b-44d7-93ba-07702a2b2a9b",
+        "properties": {
+          "prop_1": "RC famille incluse MRH"
+        }
+      },
+      {
+        "id": "e_19_qcsn",
+        "type": "FAIT_DOUBLON_AVEC",
+        "source": "840c82a8-ba38-41bd-ad26-213131972a48",
+        "target": "da89c88b-ad30-416f-b2e0-f590b62682b2",
+        "properties": {
+          "prop_1": "Si incluse dans MRH"
+        }
+      },
+      {
+        "id": "e_20_4iv2",
+        "type": "FAIT_DOUBLON_AVEC",
+        "source": "d62c2d4b-e151-45b8-83bb-4daaafe1712e",
+        "target": "e0abaa57-1119-4865-be16-60c843783a09",
+        "properties": {
+          "prop_1": "Mutuelle collective obligatoire"
+        }
+      },
+      {
+        "id": "e_21_aj04",
+        "type": "FAIT_DOUBLON_AVEC",
+        "source": "bf610ed0-158f-4e6c-a8ab-2d64b6a85482",
+        "target": "e0d57603-d50c-4cc6-867c-18f7492df9ae",
+        "properties": {
+          "prop_1": "Si prévoyance employeur suffisante"
+        }
+      },
+      {
+        "id": "e_22_7pwt",
+        "type": "FAIT_DOUBLON_AVEC",
+        "source": "bf610ed0-158f-4e6c-a8ab-2d64b6a85482",
+        "target": "ac1eeba5-3c08-4945-ab99-96ac12188248",
+        "properties": {
+          "prop_1": "Si prévoyance employeur suffisante"
+        }
+      },
+      {
+        "id": "e_23_fiuu",
+        "type": "FAIT_DOUBLON_AVEC",
+        "source": "dc703d5f-3ca5-4912-aaca-44f8064085af",
+        "target": "cd0b1174-cf9b-44b8-8cc2-77f62ed2e50a",
+        "properties": {
+          "prop_1": "Si couverte par carte ou MRH"
+        }
+      },
+      {
+        "id": "e_24_0h54",
+        "type": "FAIT_DOUBLON_AVEC",
+        "source": "fa74b04d-8029-4ea4-af55-c738d8bed74f",
+        "target": "0fca31f2-fbe9-4bfd-8b02-cbd6294fec8a",
+        "properties": {
+          "prop_1": "Si couverte par carte Gold"
+        }
+      },
+      {
+        "id": "e_25_le5x",
+        "type": "FAIT_DOUBLON_AVEC",
+        "source": "9f8956c1-5b47-46a0-8b5c-f229d088c630",
+        "target": "b9a5372c-6877-4e40-ac5c-d937cdafedf8",
+        "properties": {
+          "prop_1": "Si couverte par carte ou MRH"
+        }
+      },
+      {
+        "id": "e_26_jlrp",
+        "type": "REMPLACE",
+        "source": "b0ce9433-cd80-4251-bf22-f6e7317d50a2",
+        "target": "927dd001-6853-471c-a994-bc63df61dd29",
+        "properties": {
+          "prop_1": "Résiliation possible à tout moment"
+        }
+      },
+      {
+        "id": "e_27_tt2q",
+        "type": "PERMET_DE_VERIFIER",
+        "source": "ee9e0a64-e121-48c2-b80b-2f9aa309e36e",
+        "target": "eff62cb2-11e5-4571-9664-ff374368fbbe",
+        "properties": {
+          "prop_1": "Avant toute souscription"
+        }
+      },
+      {
+        "id": "e_28_yl5p",
+        "type": "PERMET_D'IDENTIFIER",
+        "source": "420c664f-2397-429e-befc-ac7f58ec3d4f",
+        "target": "1a68940d-4703-4fb4-ba03-2fe9197998f0",
+        "properties": {
+          "prop_1": "Garanties déjà incluses"
+        }
+      },
+      {
+        "id": "e_29_4kv5",
+        "type": "PERMET_D'IDENTIFIER",
+        "source": "2c8c742c-ad8f-4bbb-933b-743619ab905c",
+        "target": "9d414934-3d1d-48b3-ae6f-e104f3b3603a",
+        "properties": {
+          "prop_1": "Garanties automatiques"
+        }
+      }
+    ]
+  },
 ];

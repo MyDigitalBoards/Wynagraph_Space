@@ -9,114 +9,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
   <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
-  <style>
-    /* ── Layout article ── */
-    .article-layout {
-      display: grid;
-      grid-template-columns: 1fr 420px;
-      gap: 2rem;
-      align-items: start;
-    }
-    @media (max-width: 960px) {
-      .article-layout { grid-template-columns: 1fr; }
-      .article-graph-col { order: -1; }
-    }
-
-    /* Colonne texte */
-    .article-header { margin-bottom: 2rem; }
-    .article-header .eyebrow { margin-bottom: .8rem; }
-    .article-header h1 { font-size: clamp(1.6rem, 4vw, 2.4rem); line-height: 1.2; margin-bottom: 1rem; }
-    .article-meta {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      font-size: .85rem;
-      color: var(--muted-foreground);
-      flex-wrap: wrap;
-    }
-    .article-meta .sep { opacity: .4; }
-
-    .article-body { font-size: 1rem; line-height: 1.75; color: #d0dbe8; }
-    .article-body h3 {
-      font-size: 1.15rem;
-      font-weight: 600;
-      color: var(--foreground);
-      margin: 2rem 0 .7rem;
-    }
-    .article-body p { margin-bottom: 1.1rem; }
-    .article-body ul {
-      margin: 0 0 1.1rem 1.4rem;
-      color: var(--muted-foreground);
-      line-height: 1.8;
-    }
-    .article-body strong { color: var(--foreground); }
-
-    /* Colonne graphe */
-    .article-graph-col { position: sticky; top: 5.5rem; }
-    .graph-card {
-      background: var(--tile);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      overflow: hidden;
-    }
-    .graph-card-frame {
-      height: 360px;
-      position: relative;
-    }
-    .graph-card-footer {
-      padding: 1rem 1.2rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      border-top: 1px solid var(--border);
-      gap: .8rem;
-      flex-wrap: wrap;
-    }
-    .graph-card-title {
-      font-size: .9rem;
-      font-weight: 600;
-      color: var(--foreground);
-    }
-    .graph-card-sub {
-      font-size: .78rem;
-      color: var(--muted-foreground);
-    }
-
-    /* Sidebar sélection (dans la carte graphe) */
-    .graph-selection {
-      padding: .9rem 1.2rem;
-      border-top: 1px solid var(--border);
-      min-height: 60px;
-    }
-    .graph-selection p { font-size: .84rem; color: var(--muted-foreground); margin: 0; }
-    .graph-sel-title { font-size: .82rem; font-weight: 600; color: var(--foreground); margin-bottom: .4rem; }
-    .graph-sel-cat { font-size: .72rem; text-transform: uppercase; letter-spacing: .1em; color: var(--cyan); margin-bottom: .5rem; }
-    .graph-sel-list { list-style: none; padding: 0; margin: 0; }
-    .graph-sel-list li {
-      font-size: .82rem;
-      padding: .3rem 0;
-      border-bottom: 1px solid var(--border);
-      color: var(--muted-foreground);
-    }
-    .graph-sel-list li:last-child { border-bottom: none; }
-    .graph-rel-label { font-size: .72rem; color: var(--cyan); display: block; }
-
-    /* Bandeau workspace bas d'article */
-    .article-cta {
-      margin-top: 3rem;
-      background: rgba(66,235,226,.06);
-      border: 1px solid rgba(66,235,226,.25);
-      border-radius: 12px;
-      padding: 1.4rem 1.6rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
-      flex-wrap: wrap;
-    }
-    .article-cta p { margin: 0; color: var(--muted-foreground); font-size: .92rem; }
-    .article-cta strong { color: var(--foreground); }
-  </style>
 </head>
 <body>
   <header class="site-header">
@@ -154,10 +46,10 @@
 
             <!-- CTA Workspace -->
             <div class="article-cta">
-              <p><strong>Envie de créer votre propre graphe ?</strong><br>
-              WynaGraph Workspace est gratuit, 100% local — vos données ne quittent jamais votre navigateur.</p>
-              <a href="mailto:wynamail@protonmail.com" class="btn btn-primary">
-              Me contacter par email →
+              <p><strong>Envie de créer vos propres graphes de connaissances ?</strong><br>
+              WynaGraph Workspace est une application de bureau, 100% locale — vos données ne quittent jamais votre ordinateur.</p>
+              <a href="https://mydigitalboards.github.io/Wynagraph/" class="btn btn-primary" target="_blank" rel="noopener">
+                Accéder au Workspace →
               </a>
             </div>
           </div>
