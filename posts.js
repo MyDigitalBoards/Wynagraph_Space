@@ -98,4 +98,40 @@ window.POSTS = [
     <p>Une heure suffit pour identifier les principaux doublons. L'économie potentielle se chiffre parfois en centaines d'euros par an.</p>
   `
 },
+// ─────────────────────────────────────────────────────────────────────────────
+// Bloc à copier dans window.POSTS (posts.js)
+// ⚠️ "graphId" doit correspondre à l'identifiant choisi lors de la publication
+//    du graphe dans data.js (suggestion : "reconversion-professionnelle")
+// ─────────────────────────────────────────────────────────────────────────────
+
+{
+  id: "reconversion-professionnelle-carte",
+  title: "Reconversion : pourquoi tant de projets échouent avant même la formation",
+  date: "2026-07-19",
+  category: "Travail",
+  excerpt: "CPF, CEP, PTP, ARE… La reconversion est un labyrinthe d'acronymes où l'ordre des démarches compte plus que les démarches elles-mêmes. Une carte pour ne pas se tromper de porte d'entrée.",
+  graphId: "reconversion-professionnelle",
+  body: `
+    <p>Un tiers des actifs français déclarent envisager une reconversion. Beaucoup commencent par chercher une formation. C'est précisément l'erreur la plus coûteuse : se former avant d'avoir validé son projet, c'est risquer de dépenser ses droits CPF pour un métier qu'on n'a jamais testé.</p>
+
+    <h3>L'ordre des démarches est contre-intuitif</h3>
+    <p>Le graphe ci-contre le montre : la reconversion suit une colonne vertébrale en quatre phases — réflexion, validation, formation, transition. Chaque phase a ses outils, et certains sont gratuits. Le Conseil en Évolution Professionnelle (CEP), par exemple, ne coûte rien et n'entame pas vos droits. Pourtant, la plupart des gens ignorent son existence… alors qu'il est <strong>obligatoire avant de démissionner</strong> si vous voulez toucher le chômage.</p>
+
+    <h3>Le nœud que tout le monde rate</h3>
+    <p>C'est la révélation de cette cartographie : la démission-reconversion — ce dispositif qui permet de quitter un CDI en conservant ses droits à l'allocation chômage — exige que le CEP soit engagé <em>avant</em> la démission, et que le projet soit validé par Transitions Pro. Démissionnez d'abord, et la porte se referme définitivement. Sur le graphe, un seul lien porte cette information. Dans la vraie vie, il vaut plusieurs mois d'allocations.</p>
+
+    <h3>Trois portes d'entrée selon votre statut</h3>
+    <p>Salarié en CDI, demandeur d'emploi ou indépendant : les chemins de financement ne sont pas les mêmes. Le salarié peut mobiliser le Projet de Transition Professionnelle pour se former en conservant sa rémunération. Le demandeur d'emploi cumule CPF et Aide Individuelle à la Formation, sans reste à charge sur le CPF. L'indépendant cotise via la CFP et dispose de son fonds d'assurance formation. Une liste vous donnerait les dispositifs ; le graphe vous montre lesquels vous concernent.</p>
+
+    <h3>Par où commencer ?</h3>
+    <ul>
+      <li>Consulter vos droits sur moncompteformation.gouv.fr — sans rien acheter pour l'instant</li>
+      <li>Prendre rendez-vous avec un conseiller CEP (gratuit, quel que soit votre statut)</li>
+      <li>Tester le métier visé via une immersion professionnelle (PMSMP) de quelques jours</li>
+      <li>Seulement ensuite : choisir une formation certifiante RNCP dans un organisme Qualiopi</li>
+    </ul>
+
+    <p>Explorez le graphe en cliquant sur chaque nœud : les conditions, plafonds et montants sont dans le panneau de détail. Les chiffres correspondent aux dispositifs en vigueur en 2026 — vérifiez toujours les montants exacts au moment de vos démarches.</p>
+  `
+},
 ];

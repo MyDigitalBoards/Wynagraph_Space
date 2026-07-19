@@ -1604,8 +1604,7 @@ window.GRAPHS = [
     { "source": "cnil", "target": "comptes_sociaux", "label": "Permet aux héritiers d'exiger la clôture de" }
   ]
 },
-
-  {
+{
   "id": "theme-sport-entrainement-physique",
   "title": "La Science de l'Entraînement Physique",
   "category": "Sport & Santé",
@@ -1658,7 +1657,6 @@ window.GRAPHS = [
     { "source": "preparation_physique", "target": "obj_endurance", "label": "Option" }
   ]
 },
-
 {
   "id": "theme-finance-private-equity-criteria",
   "title": "Due Diligence en Private Equity",
@@ -3040,4 +3038,102 @@ window.GRAPHS = [
       }
     ]
   },
+
+  {
+    "id": "reconversion-professionnelle",
+    "title": "La Reconversion Professionnelle en France",
+    "category": "Travail",
+    "description": "Cartographie des étapes, dispositifs, financements et acteurs de la reconversion professionnelle.",
+    "longDescription": "CPF, CEP, PTP, ARE… La reconversion est un labyrinthe d'acronymes où l'ordre des démarches compte plus que les démarches elles-mêmes. Une carte pour ne pas se tromper de porte d'entrée.",
+  "nodes": [
+    { "id": "reconversion", "label": "Reconversion Professionnelle", "category": "racine", "size": 30, "properties": { "definition": "Changer de métier ou de secteur d'activité", "public": "Salariés, demandeurs d'emploi, indépendants", "duree_moyenne": "6 mois à 2 ans selon le projet" } },
+
+    { "id": "phase_reflexion", "label": "1. Phase de Réflexion", "category": "etape", "size": 24, "properties": { "objectif": "Clarifier le projet avant tout engagement", "erreur_frequente": "Se former avant d'avoir validé le projet" } },
+    { "id": "phase_validation", "label": "2. Validation du Projet", "category": "etape", "size": 24, "properties": { "objectif": "Confronter le projet à la réalité du marché", "conseil": "Rencontrer des professionnels du métier visé" } },
+    { "id": "phase_formation", "label": "3. Formation & Certification", "category": "etape", "size": 24, "properties": { "objectif": "Acquérir les compétences du nouveau métier", "point_cle": "Choisir une formation certifiante (RNCP)" } },
+    { "id": "phase_transition", "label": "4. Transition & Lancement", "category": "etape", "size": 24, "properties": { "objectif": "Quitter l'ancien poste et démarrer le nouveau", "risque_principal": "La sécurisation financière de la période" } },
+
+    { "id": "cep", "label": "Conseil en Évolution Professionnelle (CEP)", "category": "dispositif", "size": 20, "properties": { "cout": "Gratuit", "operateurs": "France Travail, APEC, Cap Emploi, opérateurs régionaux", "role_cle": "Obligatoire AVANT une démission-reconversion" } },
+    { "id": "bilan_competences", "label": "Bilan de Compétences", "category": "dispositif", "size": 20, "properties": { "duree": "24 heures maximum, réparties sur plusieurs semaines", "financement": "Mobilisable via le CPF", "livrable": "Document de synthèse confidentiel" } },
+    { "id": "pmsmp", "label": "Immersion Professionnelle (PMSMP)", "category": "dispositif", "size": 17, "properties": { "principe": "Stage d'observation en entreprise, non rémunéré", "duree": "Quelques jours à 1 mois", "interet": "Tester le métier avant de s'engager" } },
+    { "id": "vae", "label": "Validation des Acquis de l'Expérience (VAE)", "category": "dispositif", "size": 19, "properties": { "condition": "1 an d'expérience en lien avec la certification visée", "portail": "France VAE", "avantage": "Obtenir un diplôme sans repasser par la formation complète" } },
+    { "id": "ptp", "label": "Projet de Transition Professionnelle (PTP)", "category": "dispositif", "size": 20, "properties": { "ex_nom": "Ancien CIF", "avantage": "Congé avec maintien de rémunération pendant la formation", "condition": "24 mois d'ancienneté salariée dont 12 dans l'entreprise" } },
+
+    { "id": "statut_salarie", "label": "Salarié en CDI", "category": "statut", "size": 18, "properties": { "atout": "Revenu stable pendant la préparation du projet", "options_depart": "Démission-reconversion, rupture conventionnelle, PTP" } },
+    { "id": "statut_demandeur", "label": "Demandeur d'Emploi", "category": "statut", "size": 18, "properties": { "atout": "Accès facilité aux financements France Travail", "reste_a_charge_cpf": "Exonéré de la participation forfaitaire CPF" } },
+    { "id": "statut_independant", "label": "Indépendant / Micro-entrepreneur", "category": "statut", "size": 18, "properties": { "cpf": "Alimenté via la contribution à la formation professionnelle (CFP)", "particularite": "Fonds d'assurance formation selon l'activité (FAF)" } },
+
+    { "id": "cpf", "label": "Compte Personnel de Formation (CPF)", "category": "financement", "size": 22, "properties": { "alimentation": "500 €/an (800 €/an pour les moins qualifiés)", "plafond": "5 000 € (8 000 € pour les moins qualifiés)", "reste_a_charge": "Participation forfaitaire d'environ 100 €, sauf demandeurs d'emploi ou abondement employeur", "acces": "moncompteformation.gouv.fr" } },
+    { "id": "transitions_pro", "label": "Transitions Pro (ATpro)", "category": "acteur", "size": 20, "properties": { "role": "Valide et finance les PTP et les projets de démission-reconversion", "organisation": "Une association paritaire par région" } },
+    { "id": "aif", "label": "Aide Individuelle à la Formation (AIF)", "category": "financement", "size": 17, "properties": { "financeur": "France Travail", "condition": "Formation validée dans le cadre du projet de retour à l'emploi", "cumul": "Peut compléter le CPF" } },
+    { "id": "region", "label": "Financements Régionaux", "category": "financement", "size": 16, "properties": { "cible": "Prioritairement les demandeurs d'emploi et métiers en tension", "exemple": "Programmes régionaux de formation" } },
+    { "id": "abondement_employeur", "label": "Abondement Employeur", "category": "financement", "size": 15, "properties": { "principe": "L'employeur complète les droits CPF du salarié", "effet": "Peut couvrir le reste à charge CPF" } },
+
+    { "id": "demission_reconversion", "label": "Démission-Reconversion", "category": "securisation", "size": 21, "properties": { "cadre": "Dispositif démissionnaire (loi Avenir professionnel, 2018)", "condition_1": "5 ans d'activité salariée continue", "condition_2": "CEP engagé AVANT la démission", "condition_3": "Projet validé « réel et sérieux » par Transitions Pro", "avantage": "Ouvre droit au chômage (ARE) malgré la démission" } },
+    { "id": "rupture_conventionnelle", "label": "Rupture Conventionnelle", "category": "securisation", "size": 19, "properties": { "principe": "Départ négocié d'un commun accord avec l'employeur", "avantages": "Indemnité de rupture + droit à l'ARE", "limite": "L'employeur peut refuser" } },
+    { "id": "are", "label": "Allocation Chômage (ARE)", "category": "securisation", "size": 20, "properties": { "role": "Revenu de remplacement pendant la reconversion", "versement": "France Travail", "compatibilite": "Maintien partiel possible en cas de création d'entreprise" } },
+    { "id": "temps_partiel", "label": "Reconversion en Parallèle du Poste", "category": "securisation", "size": 16, "properties": { "formes": "Formation le soir/week-end, congé sans solde, temps partiel", "avantage": "Aucune perte de revenu", "limite": "Charge mentale et durée allongée" } },
+
+    { "id": "france_travail", "label": "France Travail", "category": "acteur", "size": 20, "properties": { "ex_nom": "Ancien Pôle Emploi", "roles": "Indemnisation ARE, financement AIF, accompagnement CEP" } },
+    { "id": "organisme_formation", "label": "Organisme de Formation", "category": "acteur", "size": 18, "properties": { "certification_requise": "Qualiopi (obligatoire pour les financements publics)", "verification": "Vérifier le taux d'insertion et les avis" } },
+    { "id": "rncp", "label": "Certification RNCP", "category": "acteur", "size": 16, "properties": { "definition": "Répertoire National des Certifications Professionnelles", "interet": "Garantit la reconnaissance du titre par l'État et les employeurs" } },
+
+    { "id": "salariat_nouveau", "label": "Salariat dans le Nouveau Métier", "category": "debouche", "size": 19, "properties": { "levier": "Valoriser les compétences transférables", "outil": "Réseau professionnel et immersions réalisées" } },
+    { "id": "creation_entreprise", "label": "Création d'Entreprise", "category": "debouche", "size": 19, "properties": { "statuts_frequents": "Micro-entreprise, EURL, SASU", "accompagnement": "CCI, CMA, BGE, incubateurs" } },
+    { "id": "acre", "label": "ACRE", "category": "aide", "size": 16, "properties": { "principe": "Exonération partielle de cotisations sociales la 1re année", "public": "Créateurs et repreneurs d'entreprise" } },
+    { "id": "arce", "label": "ARCE", "category": "aide", "size": 16, "properties": { "principe": "Versement de 60 % des droits ARE restants en capital", "condition": "Avoir obtenu l'ACRE", "alternative": "Maintien mensuel partiel de l'ARE" } },
+    { "id": "portage_salarial", "label": "Portage Salarial", "category": "debouche", "size": 16, "properties": { "principe": "Indépendance commerciale avec statut de salarié", "interet": "Tester une activité sans créer de structure" } }
+  ],
+  "relationships": [
+    { "id": "r1", "type": "COMMENCE_PAR", "source": "reconversion", "target": "phase_reflexion" },
+    { "id": "r2", "type": "SE_POURSUIT_PAR", "source": "phase_reflexion", "target": "phase_validation" },
+    { "id": "r3", "type": "DEBOUCHE_SUR", "source": "phase_validation", "target": "phase_formation" },
+    { "id": "r4", "type": "ABOUTIT_A", "source": "phase_formation", "target": "phase_transition" },
+
+    { "id": "r5", "type": "S_APPUIE_SUR", "source": "phase_reflexion", "target": "cep" },
+    { "id": "r6", "type": "S_APPUIE_SUR", "source": "phase_reflexion", "target": "bilan_competences" },
+    { "id": "r7", "type": "SE_TESTE_AVEC", "source": "phase_validation", "target": "pmsmp" },
+    { "id": "r8", "type": "PEUT_EVITER_LA_FORMATION_VIA", "source": "phase_formation", "target": "vae" },
+    { "id": "r9", "type": "PEUT_SE_FAIRE_VIA", "source": "phase_formation", "target": "ptp" },
+
+    { "id": "r10", "type": "CONCERNE", "source": "reconversion", "target": "statut_salarie" },
+    { "id": "r11", "type": "CONCERNE", "source": "reconversion", "target": "statut_demandeur" },
+    { "id": "r12", "type": "CONCERNE", "source": "reconversion", "target": "statut_independant" },
+
+    { "id": "r13", "type": "FINANCE", "source": "cpf", "target": "bilan_competences" },
+    { "id": "r14", "type": "FINANCE", "source": "cpf", "target": "phase_formation" },
+    { "id": "r15", "type": "FINANCE", "source": "cpf", "target": "vae" },
+    { "id": "r16", "type": "FINANCE_ET_VALIDE", "source": "transitions_pro", "target": "ptp" },
+    { "id": "r17", "type": "COMPLETE_LE_CPF_VIA", "source": "france_travail", "target": "aif" },
+    { "id": "r18", "type": "FINANCE", "source": "aif", "target": "phase_formation" },
+    { "id": "r19", "type": "FINANCE", "source": "region", "target": "phase_formation" },
+    { "id": "r20", "type": "PEUT_COUVRIR_LE_RESTE_A_CHARGE", "source": "abondement_employeur", "target": "cpf" },
+
+    { "id": "r21", "type": "PEUT_QUITTER_SON_POSTE_VIA", "source": "statut_salarie", "target": "demission_reconversion" },
+    { "id": "r22", "type": "PEUT_QUITTER_SON_POSTE_VIA", "source": "statut_salarie", "target": "rupture_conventionnelle" },
+    { "id": "r23", "type": "PEUT_SE_FORMER_SANS_DEMISSIONNER_VIA", "source": "statut_salarie", "target": "temps_partiel" },
+    { "id": "r24", "type": "PEUT_SE_FORMER_SANS_DEMISSIONNER_VIA", "source": "statut_salarie", "target": "ptp" },
+    { "id": "r25", "type": "EXIGE_AU_PREALABLE", "source": "demission_reconversion", "target": "cep" },
+    { "id": "r26", "type": "EST_VALIDEE_PAR", "source": "demission_reconversion", "target": "transitions_pro" },
+    { "id": "r27", "type": "OUVRE_DROIT_A", "source": "demission_reconversion", "target": "are" },
+    { "id": "r28", "type": "OUVRE_DROIT_A", "source": "rupture_conventionnelle", "target": "are" },
+    { "id": "r29", "type": "EST_VERSEE_PAR", "source": "are", "target": "france_travail" },
+    { "id": "r30", "type": "SECURISE", "source": "are", "target": "phase_transition" },
+
+    { "id": "r31", "type": "MOBILISE_SES_DROITS_VIA", "source": "statut_demandeur", "target": "aif" },
+    { "id": "r32", "type": "EST_ACCOMPAGNE_PAR", "source": "statut_demandeur", "target": "france_travail" },
+    { "id": "r33", "type": "COTISE_AU_CPF_VIA_LA_CFP", "source": "statut_independant", "target": "cpf" },
+
+    { "id": "r34", "type": "DOIT_ETRE_CERTIFIE", "source": "organisme_formation", "target": "rncp" },
+    { "id": "r35", "type": "EST_DISPENSEE_PAR", "source": "phase_formation", "target": "organisme_formation" },
+
+    { "id": "r36", "type": "PEUT_MENER_AU", "source": "phase_transition", "target": "salariat_nouveau" },
+    { "id": "r37", "type": "PEUT_MENER_A_LA", "source": "phase_transition", "target": "creation_entreprise" },
+    { "id": "r38", "type": "PEUT_MENER_AU", "source": "phase_transition", "target": "portage_salarial" },
+    { "id": "r39", "type": "BENEFICIE_DE_L", "source": "creation_entreprise", "target": "acre" },
+    { "id": "r40", "type": "PEUT_ACTIVER_L", "source": "creation_entreprise", "target": "arce" },
+    { "id": "r41", "type": "CONVERTIT_UNE_PARTIE_DE_L", "source": "arce", "target": "are" },
+    { "id": "r42", "type": "FACILITE_L_ACCES_AU", "source": "pmsmp", "target": "salariat_nouveau" }
+  ]
+},
 ];
