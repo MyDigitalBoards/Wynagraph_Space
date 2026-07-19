@@ -132,6 +132,8 @@ window.POSTS = [
     </ul>
 
     <p>Explorez le graphe en cliquant sur chaque nœud : les conditions, plafonds et montants sont dans le panneau de détail. Les chiffres correspondent aux dispositifs en vigueur en 2026 — vérifiez toujours les montants exacts au moment de vos démarches.</p>
+
+    <p class="sources"><em>Sources : Baromètre de la formation et de l'emploi 2025, Centre Inffo · France Travail, 2026.</em></p>
   `
 },
 ];
