@@ -1,6 +1,1221 @@
 // Données des graphes — modifier ce fichier pour ajouter des modèles
 window.GRAPHS = [
-
+{
+    "id": "wurecosmetics",
+    "title": "Où trouver les produits Wuré Cosmetics ?",
+    "category": "Beauty",
+    "description": "Points de ventes de la marque",
+    "longDescription": "En plus de la boutique en ligne de la marque sur son site,les produits Skincare de Wuré Cosmétics sont disponibles à l'international et principalement revendus en pharmacie ",
+    "nodes": [
+      {
+        "id": "3f67811a-70f8-46da-a12b-7add725e5746",
+        "label": "WURÉ COMETICS",
+        "category": "Brand",
+        "properties": {
+          "prop_1": "www.wurecosmetics.com"
+        }
+      },
+      {
+        "id": "55a74e8e-b5ca-459f-a501-41cc879545cc",
+        "label": "FRANCE",
+        "category": "Country",
+        "properties": {}
+      },
+      {
+        "id": "0f648d02-ec02-47c5-a936-65e2abfcf519",
+        "label": "GUADELOUPE",
+        "category": "Country",
+        "properties": {}
+      },
+      {
+        "id": "49c4d30f-ee24-49b4-abd9-9bd97c77786d",
+        "label": "MARTINIQUE",
+        "category": "Country",
+        "properties": {}
+      },
+      {
+        "id": "c2bd471b-7444-4fd0-87c4-5acf89b5b837",
+        "label": "GUYANE",
+        "category": "Country",
+        "properties": {}
+      },
+      {
+        "id": "833e647d-abd2-46a5-b5f5-365345ad4fe4",
+        "label": "SAINT MARTIN",
+        "category": "Country",
+        "properties": {}
+      },
+      {
+        "id": "a0fde39e-5d3b-4d56-87df-0777a3679f26",
+        "label": "Ivoire & Ben",
+        "category": "Shop",
+        "properties": {}
+      },
+      {
+        "id": "4dac35d6-33db-4f92-a242-c990dfa05137",
+        "label": "Mix Beauty",
+        "category": "Shop",
+        "properties": {}
+      },
+      {
+        "id": "c9f16642-2d7d-44e1-8a8a-74eb47f99531",
+        "label": "Paris",
+        "category": "Ville",
+        "properties": {}
+      },
+      {
+        "id": "7239f3b5-e997-4fca-ad39-b4e93b1a74a8",
+        "label": "Caspesterre-Belle-Eau",
+        "category": "Ville",
+        "properties": {}
+      },
+      {
+        "id": "a9a8a1c9-8701-4cfa-a910-84bfeb0bc8c1",
+        "label": "Basse-Terre",
+        "category": "Ville",
+        "properties": {}
+      },
+      {
+        "id": "1fa00a11-c8df-4e94-a04a-6956dfd0109c",
+        "label": "Damencourt Moule",
+        "category": "Ville",
+        "properties": {}
+      },
+      {
+        "id": "0ef2371e-de47-4820-b977-d2dc5e46c976",
+        "label": "Baie-Mahault",
+        "category": "Ville",
+        "properties": {}
+      },
+      {
+        "id": "2051a1d3-2d33-47aa-9d89-03cb8cd8f22f",
+        "label": "Pharmacie Betil",
+        "category": "Pharmacie",
+        "properties": {}
+      },
+      {
+        "id": "8234237b-7a0e-471c-8dd1-f8b5d8716ebe",
+        "label": "Pharmacie Renaison",
+        "category": "Pharmacie",
+        "properties": {}
+      },
+      {
+        "id": "2347d4a1-23f6-4a09-9016-7d02da721e21",
+        "label": "Le Moule",
+        "category": "Ville",
+        "properties": {}
+      },
+      {
+        "id": "8dc12a83-2f90-4796-b09f-1674c750e491",
+        "label": "Le Gosier",
+        "category": "Ville",
+        "properties": {}
+      },
+      {
+        "id": "4bb9b136-d131-4a7c-b67e-a445208b3a85",
+        "label": "Gourbeyre",
+        "category": "Ville",
+        "properties": {}
+      },
+      {
+        "id": "1625c5ec-df57-429f-a21c-f075acc17679",
+        "label": "Saint-François",
+        "category": "Ville",
+        "properties": {}
+      },
+      {
+        "id": "cd5a931f-1a19-47df-986f-c63fcfd2b2c2",
+        "label": "Le Lamentin(G)",
+        "category": "Ville",
+        "properties": {}
+      },
+      {
+        "id": "fe4ac5af-1fea-48f3-b32a-f03b719c2042",
+        "label": "Fort-de-France",
+        "category": "Ville",
+        "properties": {}
+      },
+      {
+        "id": "fafd0106-8571-440a-afc8-86e8b2427974",
+        "label": "Saint-Esprit",
+        "category": "Ville",
+        "properties": {}
+      },
+      {
+        "id": "8881c273-d62d-4c66-89bd-dc9243440930",
+        "label": "Le Robert",
+        "category": "Ville",
+        "properties": {}
+      },
+      {
+        "id": "bde3e02d-2dcb-46a7-a170-f983f50bbff5",
+        "label": "Gros-Morne",
+        "category": "Ville",
+        "properties": {}
+      },
+      {
+        "id": "af32f1af-22c9-40d4-9d56-57b5ff59b0c9",
+        "label": "Le Lamentin(M)",
+        "category": "Ville",
+        "properties": {}
+      },
+      {
+        "id": "ae650f01-81a6-439e-a792-de0b2293b8f3",
+        "label": "Pharmacie la Galleria",
+        "category": "Pharmacie",
+        "properties": {}
+      },
+      {
+        "id": "d3f13409-3f16-488e-8054-d2cad3300eb7",
+        "label": "Pharmacie Harmony",
+        "category": "Pharmacie",
+        "properties": {}
+      },
+      {
+        "id": "35d8e927-93ba-4abf-b0c6-f6d7becd5427",
+        "label": "Pharmacie la Rosière",
+        "category": "Pharmacie",
+        "properties": {}
+      },
+      {
+        "id": "2633a567-790b-44fb-a778-1901c7422f0c",
+        "label": "Pharmacie de l'Impératrice",
+        "category": "Pharmacie",
+        "properties": {}
+      },
+      {
+        "id": "4531b43b-5fce-413c-8c97-8cd886bbfa2f",
+        "label": "Pharmacie du Soleil",
+        "category": "Pharmacie",
+        "properties": {}
+      },
+      {
+        "id": "b3858537-5f8a-423d-a283-d7144c44b69b",
+        "label": "Pharmacie de la Cité",
+        "category": "Pharmacie",
+        "properties": {}
+      },
+      {
+        "id": "59904c5a-5b52-4849-abad-b31c217b4de4",
+        "label": "Pharmacie Bellevue",
+        "category": "Pharmacie",
+        "properties": {}
+      },
+      {
+        "id": "3a80d6cb-0f0b-413c-8cf7-1742b1da49d1",
+        "label": "Ducos",
+        "category": "Ville",
+        "properties": {}
+      },
+      {
+        "id": "15b86496-a265-4f96-87de-189445682536",
+        "label": "Pharmacie Soléa",
+        "category": "Pharmacie",
+        "properties": {}
+      },
+      {
+        "id": "ba56823b-25dc-4ce5-82bd-db73764f6d05",
+        "label": "Pharmacie Eclat De Santé",
+        "category": "Pharmacie",
+        "properties": {}
+      },
+      {
+        "id": "1dcb1304-cfe8-4ba9-969a-01b1e8531d57",
+        "label": "Pharmacie du Balisier",
+        "category": "Pharmacie",
+        "properties": {}
+      },
+      {
+        "id": "78716a02-6392-4e3f-8468-4395829bc889",
+        "label": "Pharmacie du Courbaril",
+        "category": "Pharmacie",
+        "properties": {}
+      },
+      {
+        "id": "659e5c8b-c8b1-4ce9-ab5b-bf91e529d060",
+        "label": "Le Carbet",
+        "category": "Ville",
+        "properties": {}
+      },
+      {
+        "id": "a77e9460-a390-4d68-8d22-a7959cc15ad9",
+        "label": "Pharmacie du Rond Point",
+        "category": "Pharmacie",
+        "properties": {}
+      },
+      {
+        "id": "5fde4138-6539-41a9-80b2-1fd0b9beb8ea",
+        "label": "Rivière-Salée",
+        "category": "Ville",
+        "properties": {}
+      },
+      {
+        "id": "9998fc09-b531-45b3-a9ec-b0eab8564219",
+        "label": "Centre Commercial Espace 92",
+        "category": "Centre commercial",
+        "properties": {}
+      },
+      {
+        "id": "33b418d1-25a4-4e6e-8e71-3c55b6194922",
+        "label": "Pharmacie de Didier",
+        "category": "Pharmacie",
+        "properties": {}
+      },
+      {
+        "id": "df3ebb3a-892a-4f7e-a938-67d8c8bf8dc1",
+        "label": "Pharmacie de l'Anse",
+        "category": "Pharmacie",
+        "properties": {}
+      },
+      {
+        "id": "c0fd6b17-a31e-498b-8089-33d026ac4e5f",
+        "label": "Kourou",
+        "category": "Ville",
+        "properties": {}
+      },
+      {
+        "id": "14e5c492-993f-4a89-9bff-d9a5d09c7d99",
+        "label": "Cayenne",
+        "category": "Ville",
+        "properties": {}
+      },
+      {
+        "id": "29e6f1a5-9fb5-4e0f-8d88-7a50d9a435a1",
+        "label": "Pharmacie de Baduel 2",
+        "category": "Pharmacie",
+        "properties": {}
+      },
+      {
+        "id": "70b2b774-8b1e-4211-a7af-b5609672c404",
+        "label": "Centre commercial Montjoly 2",
+        "category": "Centre commercial",
+        "properties": {}
+      },
+      {
+        "id": "353d7e2a-cf7d-40c1-aeeb-ee708f93e16d",
+        "label": "Montjoly",
+        "category": "Ville",
+        "properties": {}
+      },
+      {
+        "id": "7f57b8fe-3b58-4cde-a938-6e499d9fedfb",
+        "label": "Remire-Montjoly",
+        "category": "Ville",
+        "properties": {}
+      },
+      {
+        "id": "4c190e89-c57c-4fe2-a38b-644130d77c0b",
+        "label": "Pharmacie Pauillac",
+        "category": "Pharmacie",
+        "properties": {}
+      },
+      {
+        "id": "53758367-090f-4ea6-91d0-85ad2bf40aac",
+        "label": "Matoury",
+        "category": "Ville",
+        "properties": {}
+      },
+      {
+        "id": "9f856183-48fd-48a4-930c-bff8164f0e8f",
+        "label": "Pharmacie Plaza",
+        "category": "Pharmacie",
+        "properties": {}
+      },
+      {
+        "id": "1bc4b10a-ed3c-46c1-84ee-e669c4c72881",
+        "label": "Pharmacie Bellevue SXM",
+        "category": "Pharmacie",
+        "properties": {}
+      },
+      {
+        "id": "80e6f2f7-f5ee-4c1b-a177-5a4e7fbc2c06",
+        "label": "SENEGAL",
+        "category": "Country",
+        "properties": {}
+      },
+      {
+        "id": "9e01fc57-8e49-4bee-8628-2a2e9aadb349",
+        "label": "Dakar",
+        "category": "Ville",
+        "properties": {}
+      },
+      {
+        "id": "5e1c92fc-4b31-4621-ae88-e43d2ba284c4",
+        "label": "Pharmacie Guigon",
+        "category": "Pharmacie",
+        "properties": {
+          "prop_1": "103 Avenue du Président Lamine Gueye"
+        }
+      },
+      {
+        "id": "358c9d0e-bb6b-47c5-8fa8-64cd98a52ef4",
+        "label": "Pharmacie de la République",
+        "category": "Pharmacie",
+        "properties": {
+          "prop_1": "15 rue de la République"
+        }
+      },
+      {
+        "id": "8cad2a61-0d9a-444d-ae57-36f8d1c0999b",
+        "label": "Pharmacie Stella Mermoz",
+        "category": "Pharmacie",
+        "properties": {
+          "prop_1": "Stèle de Blaise Diagne"
+        }
+      },
+      {
+        "id": "d7d0ca41-ba1d-4053-b57d-585abaa435df",
+        "label": "Pharmacie Medina",
+        "category": "Pharmacie",
+        "properties": {
+          "prop_1": "Rue 29 X Blaise Diagne"
+        }
+      },
+      {
+        "id": "f5587a59-d941-4027-963f-2aaa2ed0c019",
+        "label": "Jaxaay-Parcelle-Niakoul Rap",
+        "category": "Ville",
+        "properties": {
+          "prop_1": "Pharmacie Lotty"
+        }
+      },
+      {
+        "id": "bc10f63c-dedf-47db-8c3a-5935dfb4155b",
+        "label": "Pharmacie Lotty",
+        "category": "Pharmacie",
+        "properties": {}
+      },
+      {
+        "id": "f791d065-367b-4313-b975-445f63e86eeb",
+        "label": "Pharmacie Lat Dior",
+        "category": "Pharmacie",
+        "properties": {
+          "prop_1": "Allée Papa Gueye Fall"
+        }
+      },
+      {
+        "id": "fae27b96-9d4a-45b0-b119-a88431a1c219",
+        "label": "Pharmacie Atlantique",
+        "category": "Pharmacie",
+        "properties": {}
+      },
+      {
+        "id": "c1a756b3-883a-43d0-b792-f1ebdf2f7bf9",
+        "label": "Pharmacie de l'Emmanuel",
+        "category": "Pharmacie",
+        "properties": {}
+      },
+      {
+        "id": "82fbfce6-691a-4a00-8193-d1703f7d901c",
+        "label": "Jardin de la Parfumerie",
+        "category": "Parfumerie",
+        "properties": {
+          "prop_1": "10 rue PE 43"
+        }
+      },
+      {
+        "id": "ee92ccc8-1965-4ddd-8197-e9135bb781c9",
+        "label": "Pikine",
+        "category": "Ville",
+        "properties": {}
+      },
+      {
+        "id": "2335ba7d-c737-4da5-8794-14bfcd298169",
+        "label": "Pharmacie Omar",
+        "category": "Pharmacie",
+        "properties": {
+          "prop_1": "Hamo Grand-Yoff"
+        }
+      },
+      {
+        "id": "971fd290-24d5-494c-a44e-f20b68f9e611",
+        "label": "Sweli Care",
+        "category": "Shop",
+        "properties": {}
+      },
+      {
+        "id": "b8ad1405-be74-4ee9-ab5c-311939eda2c1",
+        "label": "Thiès",
+        "category": "Ville",
+        "properties": {}
+      },
+      {
+        "id": "1b812150-04ff-489a-8d4b-908f8719723e",
+        "label": "Pharmacie Papa Faye",
+        "category": "Pharmacie",
+        "properties": {}
+      },
+      {
+        "id": "ec24d0a0-76ac-4eba-9869-13330ff5c9b7",
+        "label": "Pharmacie Rahmane",
+        "category": "Pharmacie",
+        "properties": {}
+      },
+      {
+        "id": "56095b6d-cf1c-4b36-ac73-ec24d455eda7",
+        "label": "Pharmacie Cheikh Ahmadou Bamba",
+        "category": "Pharmacie",
+        "properties": {}
+      },
+      {
+        "id": "75e8b50d-f351-4ca0-888a-c3d5f7748820",
+        "label": "Pharmacie Aimé Césaire",
+        "category": "Pharmacie",
+        "properties": {}
+      },
+      {
+        "id": "39c69422-06af-43fc-b0d9-a85c670b8de9",
+        "label": "Côte d'Ivoire",
+        "category": "Country",
+        "properties": {}
+      },
+      {
+        "id": "e207ffbb-e71f-4ff5-ba78-41afb5dfcfba",
+        "label": "Ht Beauty supply",
+        "category": "Shop",
+        "properties": {
+          "prop_1": "Boulevard de Marseille, Bietry",
+          "prop_2": "Mbadon G 11"
+        }
+      },
+      {
+        "id": "8a95ff15-5bf4-4f0c-8cea-fe926422ed0e",
+        "label": "Abidjan",
+        "category": "Ville",
+        "properties": {}
+      },
+      {
+        "id": "ef5d0ca7-56e6-4c2c-be75-0b91afe04d25",
+        "label": "Korhogo",
+        "category": "Ville",
+        "properties": {}
+      },
+      {
+        "id": "92105363-7add-473f-84f7-1476b337fafb",
+        "label": "Pharmacie Chigata",
+        "category": "Pharmacie",
+        "properties": {
+          "prop_1": "F95G+QH6"
+        }
+      },
+      {
+        "id": "fddae506-b1a9-4bb9-9d46-bd43494252d5",
+        "label": "Nature et Traditions",
+        "category": "Shop",
+        "properties": {
+          "prop_1": "Rue 140 Cocody-II"
+        }
+      },
+      {
+        "id": "33c5baf4-25c4-4b07-bbae-18b7eca819ed",
+        "label": "Pharmacie du Palm Club",
+        "category": "Pharmacie",
+        "properties": {
+          "prop_1": "Rue du Lycée Technique"
+        }
+      },
+      {
+        "id": "a9aa78f2-d629-40ba-83a6-cffbaf3a7dfb",
+        "label": "CAMEROUN",
+        "category": "Country",
+        "properties": {}
+      },
+      {
+        "id": "fa84cc53-5ddd-4883-9f10-73f969a0b461",
+        "label": "Douala",
+        "category": "Ville",
+        "properties": {}
+      },
+      {
+        "id": "3f54dbe4-9433-4e3b-821e-410ffc4d0cbb",
+        "label": "Stena Care",
+        "category": "Shop",
+        "properties": {
+          "prop_1": "Bonapriso, Rue Dominique Savio Primaire"
+        }
+      },
+      {
+        "id": "97e68420-cf05-43ca-b3a6-1d02b56980df",
+        "label": "CONGO",
+        "category": "Country",
+        "properties": {}
+      },
+      {
+        "id": "7e1702a2-be9a-41c2-83bc-246c23382376",
+        "label": "Itina Beauty",
+        "category": "Shop",
+        "properties": {
+          "prop_1": "Congo Brazzaville"
+        }
+      },
+      {
+        "id": "c0567f8f-f80c-4162-a8a3-49a1f7803b8e",
+        "label": "Natirel fwi",
+        "category": "Shop",
+        "properties": {}
+      },
+      {
+        "id": "1b0a22ac-7e16-4822-9651-b81f4fb1a099",
+        "label": "Pharmacie Centrale",
+        "category": "Unassigned",
+        "properties": {}
+      },
+      {
+        "id": "0894de66-1b29-432c-aa4c-60399e0c51e5",
+        "label": "Pharmacie de Laugier",
+        "category": "Pharmacie",
+        "properties": {}
+      }
+    ],
+    "relationships": [
+      {
+        "id": "75ff6319-54ba-4bc8-a68f-14721df9df6e",
+        "type": "EN",
+        "source": "3f67811a-70f8-46da-a12b-7add725e5746",
+        "target": "55a74e8e-b5ca-459f-a501-41cc879545cc",
+        "properties": {}
+      },
+      {
+        "id": "95de3d27-dd20-4231-ba8e-0e7f60655422",
+        "type": "EN",
+        "source": "3f67811a-70f8-46da-a12b-7add725e5746",
+        "target": "0f648d02-ec02-47c5-a936-65e2abfcf519",
+        "properties": {}
+      },
+      {
+        "id": "21e59742-cc4e-4343-978e-721a55379c2a",
+        "type": "EN",
+        "source": "3f67811a-70f8-46da-a12b-7add725e5746",
+        "target": "49c4d30f-ee24-49b4-abd9-9bd97c77786d",
+        "properties": {}
+      },
+      {
+        "id": "2b58a0b7-c9fb-4748-8b3d-8569bbb8d15e",
+        "type": "EN",
+        "source": "3f67811a-70f8-46da-a12b-7add725e5746",
+        "target": "c2bd471b-7444-4fd0-87c4-5acf89b5b837",
+        "properties": {}
+      },
+      {
+        "id": "a4b9fe06-ce3c-41f0-a6f6-6bd7162e4064",
+        "type": "A",
+        "source": "3f67811a-70f8-46da-a12b-7add725e5746",
+        "target": "833e647d-abd2-46a5-b5f5-365345ad4fe4",
+        "properties": {}
+      },
+      {
+        "id": "231b7ec1-0794-4017-ba32-eb987cbcdf9b",
+        "type": "A",
+        "source": "55a74e8e-b5ca-459f-a501-41cc879545cc",
+        "target": "c9f16642-2d7d-44e1-8a8a-74eb47f99531",
+        "properties": {}
+      },
+      {
+        "id": "73737e64-7b95-428f-aa0b-a638c707cdcf",
+        "type": "CHEZ",
+        "source": "c9f16642-2d7d-44e1-8a8a-74eb47f99531",
+        "target": "a0fde39e-5d3b-4d56-87df-0777a3679f26",
+        "properties": {
+          "prop_1": "169 rue du Faubourg Saint Antoine 75011 Paris"
+        }
+      },
+      {
+        "id": "03cdbc78-7102-478e-8b81-38bf448db701",
+        "type": "CHEZ",
+        "source": "c9f16642-2d7d-44e1-8a8a-74eb47f99531",
+        "target": "4dac35d6-33db-4f92-a242-c990dfa05137",
+        "properties": {
+          "prop_1": "9 rue des Lavandières Sainte-Opportune 75011 Paris"
+        }
+      },
+      {
+        "id": "5c20061a-c648-45bf-b5b6-5051da7df26d",
+        "type": "A",
+        "source": "0f648d02-ec02-47c5-a936-65e2abfcf519",
+        "target": "7239f3b5-e997-4fca-ad39-b4e93b1a74a8",
+        "properties": {
+          "prop_1": "Pharmacie Leducq"
+        }
+      },
+      {
+        "id": "44980d1d-3e35-4eeb-aa84-5d7b086dfca4",
+        "type": "A",
+        "source": "0f648d02-ec02-47c5-a936-65e2abfcf519",
+        "target": "a9a8a1c9-8701-4cfa-a910-84bfeb0bc8c1",
+        "properties": {}
+      },
+      {
+        "id": "42df4b4a-795f-4bcd-a8d5-3b28ff47fdb3",
+        "type": "A",
+        "source": "0f648d02-ec02-47c5-a936-65e2abfcf519",
+        "target": "1fa00a11-c8df-4e94-a04a-6956dfd0109c",
+        "properties": {}
+      },
+      {
+        "id": "2ab74050-8e9c-4961-89f5-5ac16c3c8f45",
+        "type": "A",
+        "source": "0f648d02-ec02-47c5-a936-65e2abfcf519",
+        "target": "0ef2371e-de47-4820-b977-d2dc5e46c976",
+        "properties": {
+          "prop_1": "Parapharmacie Saphyr Wellness"
+        }
+      },
+      {
+        "id": "7e01b23c-b5a6-4ac9-983a-0333c30a3b23",
+        "type": "A_LA",
+        "source": "a9a8a1c9-8701-4cfa-a910-84bfeb0bc8c1",
+        "target": "2051a1d3-2d33-47aa-9d89-03cb8cd8f22f",
+        "properties": {}
+      },
+      {
+        "id": "1bc6e415-18c5-4ec0-bba2-1dc622bd020f",
+        "type": "A_LA",
+        "source": "a9a8a1c9-8701-4cfa-a910-84bfeb0bc8c1",
+        "target": "8234237b-7a0e-471c-8dd1-f8b5d8716ebe",
+        "properties": {}
+      },
+      {
+        "id": "53ddef7a-030c-4b00-b5e0-876ead9e55c9",
+        "type": "A",
+        "source": "0f648d02-ec02-47c5-a936-65e2abfcf519",
+        "target": "2347d4a1-23f6-4a09-9016-7d02da721e21",
+        "properties": {
+          "prop_1": "Pharmacie Damencourt"
+        }
+      },
+      {
+        "id": "298d99a5-cbe3-47bf-bb6c-6b16ccb1da2b",
+        "type": "A",
+        "source": "0f648d02-ec02-47c5-a936-65e2abfcf519",
+        "target": "8dc12a83-2f90-4796-b09f-1674c750e491",
+        "properties": {
+          "prop_1": "Pharmacie Petit"
+        }
+      },
+      {
+        "id": "d5c1fdda-1747-4cb3-9c21-a2c73f10ef3b",
+        "type": "A",
+        "source": "0f648d02-ec02-47c5-a936-65e2abfcf519",
+        "target": "4bb9b136-d131-4a7c-b67e-a445208b3a85",
+        "properties": {}
+      },
+      {
+        "id": "933e881b-b104-44d8-b8a3-16cc97b1f1b5",
+        "type": "A",
+        "source": "0f648d02-ec02-47c5-a936-65e2abfcf519",
+        "target": "1625c5ec-df57-429f-a21c-f075acc17679",
+        "properties": {
+          "prop_1": "Pharmacie du Marché"
+        }
+      },
+      {
+        "id": "8fccd87b-8b88-44a2-9038-0d935af860da",
+        "type": "A",
+        "source": "0f648d02-ec02-47c5-a936-65e2abfcf519",
+        "target": "cd5a931f-1a19-47df-986f-c63fcfd2b2c2",
+        "properties": {}
+      },
+      {
+        "id": "8118e5bf-883e-4404-b77d-7ae697911394",
+        "type": "IN",
+        "source": "49c4d30f-ee24-49b4-abd9-9bd97c77786d",
+        "target": "fe4ac5af-1fea-48f3-b32a-f03b719c2042",
+        "properties": {}
+      },
+      {
+        "id": "8e36c22e-bcde-4357-9c95-756d4d358ccb",
+        "type": "A",
+        "source": "49c4d30f-ee24-49b4-abd9-9bd97c77786d",
+        "target": "fafd0106-8571-440a-afc8-86e8b2427974",
+        "properties": {
+          "prop_1": "Pharmacie de l'Eglise"
+        }
+      },
+      {
+        "id": "b716561a-8cbd-41e5-a889-ae99c82b51ec",
+        "type": "A",
+        "source": "49c4d30f-ee24-49b4-abd9-9bd97c77786d",
+        "target": "8881c273-d62d-4c66-89bd-dc9243440930",
+        "properties": {}
+      },
+      {
+        "id": "9e8499af-b260-4e44-918c-875814849211",
+        "type": "A",
+        "source": "49c4d30f-ee24-49b4-abd9-9bd97c77786d",
+        "target": "bde3e02d-2dcb-46a7-a170-f983f50bbff5",
+        "properties": {
+          "prop_1": "Pharmacie Bravo"
+        }
+      },
+      {
+        "id": "a05b2e61-c0da-4f4e-b4de-5d7b92546c69",
+        "type": "IN",
+        "source": "49c4d30f-ee24-49b4-abd9-9bd97c77786d",
+        "target": "af32f1af-22c9-40d4-9d56-57b5ff59b0c9",
+        "properties": {}
+      },
+      {
+        "id": "51d07743-1ebd-4e77-a1cf-e28a651e901b",
+        "type": "A_LA",
+        "source": "af32f1af-22c9-40d4-9d56-57b5ff59b0c9",
+        "target": "ae650f01-81a6-439e-a792-de0b2293b8f3",
+        "properties": {}
+      },
+      {
+        "id": "e2b2f81e-517b-4b24-973e-4e27a4d9f55a",
+        "type": "A_LA",
+        "source": "af32f1af-22c9-40d4-9d56-57b5ff59b0c9",
+        "target": "d3f13409-3f16-488e-8054-d2cad3300eb7",
+        "properties": {}
+      },
+      {
+        "id": "30ebb2a0-f917-4751-961e-aa35bfaac178",
+        "type": "A_LA",
+        "source": "cd5a931f-1a19-47df-986f-c63fcfd2b2c2",
+        "target": "35d8e927-93ba-4abf-b0c6-f6d7becd5427",
+        "properties": {}
+      },
+      {
+        "id": "1e32e121-38ae-4b1d-bafe-c0c40c07ca0e",
+        "type": "A_LA",
+        "source": "fe4ac5af-1fea-48f3-b32a-f03b719c2042",
+        "target": "2633a567-790b-44fb-a778-1901c7422f0c",
+        "properties": {}
+      },
+      {
+        "id": "ca71110e-570d-4b7e-bd9f-8758e33dcfe0",
+        "type": "A_LA",
+        "source": "fe4ac5af-1fea-48f3-b32a-f03b719c2042",
+        "target": "4531b43b-5fce-413c-8c97-8cd886bbfa2f",
+        "properties": {}
+      },
+      {
+        "id": "41472f9f-f818-4481-bfad-741caa140f58",
+        "type": "A_LA",
+        "source": "fe4ac5af-1fea-48f3-b32a-f03b719c2042",
+        "target": "b3858537-5f8a-423d-a283-d7144c44b69b",
+        "properties": {}
+      },
+      {
+        "id": "4f68ca41-30fd-4c87-a7f9-5039697dcc69",
+        "type": "A_LA",
+        "source": "fe4ac5af-1fea-48f3-b32a-f03b719c2042",
+        "target": "59904c5a-5b52-4849-abad-b31c217b4de4",
+        "properties": {}
+      },
+      {
+        "id": "30a048f2-cc06-431c-a538-7ff2f02f2bb6",
+        "type": "A",
+        "source": "49c4d30f-ee24-49b4-abd9-9bd97c77786d",
+        "target": "3a80d6cb-0f0b-413c-8cf7-1742b1da49d1",
+        "properties": {}
+      },
+      {
+        "id": "847abdc1-486a-455e-a801-078383aa049d",
+        "type": "A_LA",
+        "source": "3a80d6cb-0f0b-413c-8cf7-1742b1da49d1",
+        "target": "15b86496-a265-4f96-87de-189445682536",
+        "properties": {}
+      },
+      {
+        "id": "b0a16637-65f5-45ca-8677-0ae4bb1bdf49",
+        "type": "A_LA",
+        "source": "3a80d6cb-0f0b-413c-8cf7-1742b1da49d1",
+        "target": "ba56823b-25dc-4ce5-82bd-db73764f6d05",
+        "properties": {}
+      },
+      {
+        "id": "d18a56d1-55ff-4d32-bcd2-013795c8f235",
+        "type": "A_LA",
+        "source": "8881c273-d62d-4c66-89bd-dc9243440930",
+        "target": "1dcb1304-cfe8-4ba9-969a-01b1e8531d57",
+        "properties": {}
+      },
+      {
+        "id": "6c089d4a-7097-4daa-befc-58c38eca8944",
+        "type": "A_LA",
+        "source": "8881c273-d62d-4c66-89bd-dc9243440930",
+        "target": "78716a02-6392-4e3f-8468-4395829bc889",
+        "properties": {}
+      },
+      {
+        "id": "7523e8c3-252d-4bd1-8896-d0cfeeed3ca7",
+        "type": "A",
+        "source": "49c4d30f-ee24-49b4-abd9-9bd97c77786d",
+        "target": "659e5c8b-c8b1-4ce9-ab5b-bf91e529d060",
+        "properties": {
+          "prop_1": "Parmacie du Carbet"
+        }
+      },
+      {
+        "id": "b5f34f80-a287-40da-b554-454a1770ec9e",
+        "type": "A_LA",
+        "source": "fe4ac5af-1fea-48f3-b32a-f03b719c2042",
+        "target": "a77e9460-a390-4d68-8d22-a7959cc15ad9",
+        "properties": {
+          "prop_1": "Centre commercial Le Rond Point"
+        }
+      },
+      {
+        "id": "b178c18f-2989-4282-a64e-2217cb620b8c",
+        "type": "A",
+        "source": "49c4d30f-ee24-49b4-abd9-9bd97c77786d",
+        "target": "5fde4138-6539-41a9-80b2-1fd0b9beb8ea",
+        "properties": {}
+      },
+      {
+        "id": "5e8d0d0c-dbf1-4476-b5c3-053795f1f99b",
+        "type": "AU",
+        "source": "49c4d30f-ee24-49b4-abd9-9bd97c77786d",
+        "target": "9998fc09-b531-45b3-a9ec-b0eab8564219",
+        "properties": {
+          "prop_1": "Pharmacie ROCADE SUD"
+        }
+      },
+      {
+        "id": "f1388ee6-a369-4b6c-a16b-251a2eefcae2",
+        "type": "A_LA",
+        "source": "fe4ac5af-1fea-48f3-b32a-f03b719c2042",
+        "target": "33b418d1-25a4-4e6e-8e71-3c55b6194922",
+        "properties": {}
+      },
+      {
+        "id": "30008bf7-2347-4f0a-b3b9-c79e66caccf7",
+        "type": "A",
+        "source": "c2bd471b-7444-4fd0-87c4-5acf89b5b837",
+        "target": "c0fd6b17-a31e-498b-8089-33d026ac4e5f",
+        "properties": {}
+      },
+      {
+        "id": "6df49b12-a966-475d-a915-f2487536c3bf",
+        "type": "A_LA",
+        "source": "c0fd6b17-a31e-498b-8089-33d026ac4e5f",
+        "target": "df3ebb3a-892a-4f7e-a938-67d8c8bf8dc1",
+        "properties": {
+          "prop_1": "97310 Avenue Gaston Monnerville BP 48 Kourou"
+        }
+      },
+      {
+        "id": "169c4156-a2f6-40f3-a3b4-98724a609963",
+        "type": "A",
+        "source": "c2bd471b-7444-4fd0-87c4-5acf89b5b837",
+        "target": "14e5c492-993f-4a89-9bff-d9a5d09c7d99",
+        "properties": {}
+      },
+      {
+        "id": "bdf86976-6cee-4262-84ba-a810028febae",
+        "type": "A_LA",
+        "source": "14e5c492-993f-4a89-9bff-d9a5d09c7d99",
+        "target": "29e6f1a5-9fb5-4e0f-8d88-7a50d9a435a1",
+        "properties": {
+          "prop_1": "1361 Route de Baduel"
+        }
+      },
+      {
+        "id": "d1ac2629-f3bb-47ab-8f78-9bf78d464f40",
+        "type": "A",
+        "source": "c2bd471b-7444-4fd0-87c4-5acf89b5b837",
+        "target": "353d7e2a-cf7d-40c1-aeeb-ee708f93e16d",
+        "properties": {}
+      },
+      {
+        "id": "97a5054b-cee7-47d7-8add-652be9de52f2",
+        "type": "AU",
+        "source": "353d7e2a-cf7d-40c1-aeeb-ee708f93e16d",
+        "target": "70b2b774-8b1e-4211-a7af-b5609672c404",
+        "properties": {
+          "prop_1": "Pharmacie les Orchidées",
+          "prop_2": "2261 Route de Montjoly RD1"
+        }
+      },
+      {
+        "id": "d8b3666c-27b5-40d4-a097-049a58ef1f3e",
+        "type": "A",
+        "source": "c2bd471b-7444-4fd0-87c4-5acf89b5b837",
+        "target": "7f57b8fe-3b58-4cde-a938-6e499d9fedfb",
+        "properties": {}
+      },
+      {
+        "id": "3ce87b77-d7b4-49a6-b3c2-7b1445a1b019",
+        "type": "A_LA",
+        "source": "7f57b8fe-3b58-4cde-a938-6e499d9fedfb",
+        "target": "4c190e89-c57c-4fe2-a38b-644130d77c0b",
+        "properties": {
+          "prop_1": "950 Avenue Gaston Monnerville"
+        }
+      },
+      {
+        "id": "7b0f33b0-4269-4dd5-875c-d3008d2131dc",
+        "type": "A",
+        "source": "c2bd471b-7444-4fd0-87c4-5acf89b5b837",
+        "target": "53758367-090f-4ea6-91d0-85ad2bf40aac",
+        "properties": {}
+      },
+      {
+        "id": "3add3a40-07eb-42ae-af11-c5163a2f94d8",
+        "type": "A_LA",
+        "source": "53758367-090f-4ea6-91d0-85ad2bf40aac",
+        "target": "9f856183-48fd-48a4-930c-bff8164f0e8f",
+        "properties": {
+          "prop_1": "Zone terca cc family plaza"
+        }
+      },
+      {
+        "id": "ec072036-0b1a-49c1-9f8a-adc3a0e7941b",
+        "type": "A_LA",
+        "source": "833e647d-abd2-46a5-b5f5-365345ad4fe4",
+        "target": "1bc4b10a-ed3c-46c1-84ee-e669c4c72881",
+        "properties": {
+          "prop_1": "Résidence le Madison"
+        }
+      },
+      {
+        "id": "bd3c0af0-0976-4b2c-9545-ceecd858ee48",
+        "type": "IN",
+        "source": "3f67811a-70f8-46da-a12b-7add725e5746",
+        "target": "80e6f2f7-f5ee-4c1b-a177-5a4e7fbc2c06",
+        "properties": {}
+      },
+      {
+        "id": "0f9b50d1-d89f-41f7-b3b7-7e18a43b4db6",
+        "type": "A",
+        "source": "80e6f2f7-f5ee-4c1b-a177-5a4e7fbc2c06",
+        "target": "9e01fc57-8e49-4bee-8628-2a2e9aadb349",
+        "properties": {}
+      },
+      {
+        "id": "4bfb1bef-fb88-4052-bbb6-d75b8f3bae1c",
+        "type": "A_LA",
+        "source": "9e01fc57-8e49-4bee-8628-2a2e9aadb349",
+        "target": "5e1c92fc-4b31-4621-ae88-e43d2ba284c4",
+        "properties": {}
+      },
+      {
+        "id": "9bc9cb5a-dad7-49a8-9376-58702ea2d71a",
+        "type": "A_LA",
+        "source": "9e01fc57-8e49-4bee-8628-2a2e9aadb349",
+        "target": "358c9d0e-bb6b-47c5-8fa8-64cd98a52ef4",
+        "properties": {}
+      },
+      {
+        "id": "c27f48db-1a91-4a8f-9782-549ca4e262ee",
+        "type": "A_LA",
+        "source": "9e01fc57-8e49-4bee-8628-2a2e9aadb349",
+        "target": "8cad2a61-0d9a-444d-ae57-36f8d1c0999b",
+        "properties": {}
+      },
+      {
+        "id": "16e6445b-15a8-4470-a503-04aed3b2251c",
+        "type": "A_LA",
+        "source": "9e01fc57-8e49-4bee-8628-2a2e9aadb349",
+        "target": "d7d0ca41-ba1d-4053-b57d-585abaa435df",
+        "properties": {}
+      },
+      {
+        "id": "0435df31-9f06-439a-9525-fab4ac35d7fb",
+        "type": "A",
+        "source": "80e6f2f7-f5ee-4c1b-a177-5a4e7fbc2c06",
+        "target": "f5587a59-d941-4027-963f-2aaa2ed0c019",
+        "properties": {}
+      },
+      {
+        "id": "5f4faf74-1adb-42c5-8222-00bbeb407a4c",
+        "type": "A_LA",
+        "source": "f5587a59-d941-4027-963f-2aaa2ed0c019",
+        "target": "bc10f63c-dedf-47db-8c3a-5935dfb4155b",
+        "properties": {}
+      },
+      {
+        "id": "fcedc90d-a4ec-4c43-8dad-279a01af5ebb",
+        "type": "A_LA",
+        "source": "9e01fc57-8e49-4bee-8628-2a2e9aadb349",
+        "target": "f791d065-367b-4313-b975-445f63e86eeb",
+        "properties": {}
+      },
+      {
+        "id": "bcb686a0-5951-43ba-b787-e3caeae1e139",
+        "type": "A_LA",
+        "source": "9e01fc57-8e49-4bee-8628-2a2e9aadb349",
+        "target": "fae27b96-9d4a-45b0-b119-a88431a1c219",
+        "properties": {}
+      },
+      {
+        "id": "ae0ebd0c-97df-4dd7-a863-68023407c29b",
+        "type": "A_LA",
+        "source": "9e01fc57-8e49-4bee-8628-2a2e9aadb349",
+        "target": "c1a756b3-883a-43d0-b792-f1ebdf2f7bf9",
+        "properties": {}
+      },
+      {
+        "id": "68d62f3c-9583-41f4-8a4c-94f70c2eaa10",
+        "type": "AU",
+        "source": "9e01fc57-8e49-4bee-8628-2a2e9aadb349",
+        "target": "82fbfce6-691a-4a00-8193-d1703f7d901c",
+        "properties": {}
+      },
+      {
+        "id": "346ae28f-cfc1-4124-98d5-7c9ea8f069e6",
+        "type": "A",
+        "source": "80e6f2f7-f5ee-4c1b-a177-5a4e7fbc2c06",
+        "target": "ee92ccc8-1965-4ddd-8197-e9135bb781c9",
+        "properties": {}
+      },
+      {
+        "id": "fc8c85da-8ed3-440e-af1e-74a9a523d980",
+        "type": "A_LA",
+        "source": "9e01fc57-8e49-4bee-8628-2a2e9aadb349",
+        "target": "2335ba7d-c737-4da5-8794-14bfcd298169",
+        "properties": {}
+      },
+      {
+        "id": "e6171cbe-515d-4dd7-bf73-1d63ecb22120",
+        "type": "CHEZ",
+        "source": "9e01fc57-8e49-4bee-8628-2a2e9aadb349",
+        "target": "971fd290-24d5-494c-a44e-f20b68f9e611",
+        "properties": {}
+      },
+      {
+        "id": "49ed7afd-3ddd-42ba-91be-3e3f28be5389",
+        "type": "A",
+        "source": "80e6f2f7-f5ee-4c1b-a177-5a4e7fbc2c06",
+        "target": "b8ad1405-be74-4ee9-ab5c-311939eda2c1",
+        "properties": {}
+      },
+      {
+        "id": "1cb58b92-3642-4d6f-a786-06edf6d592a2",
+        "type": "A_LA",
+        "source": "ee92ccc8-1965-4ddd-8197-e9135bb781c9",
+        "target": "1b812150-04ff-489a-8d4b-908f8719723e",
+        "properties": {}
+      },
+      {
+        "id": "7bf3bd59-e3f7-472e-a024-95badf4d9064",
+        "type": "A_LA",
+        "source": "b8ad1405-be74-4ee9-ab5c-311939eda2c1",
+        "target": "ec24d0a0-76ac-4eba-9869-13330ff5c9b7",
+        "properties": {}
+      },
+      {
+        "id": "f29f3aa4-0b31-4f04-b4ea-fdd35a7c7c9b",
+        "type": "A_LA",
+        "source": "9e01fc57-8e49-4bee-8628-2a2e9aadb349",
+        "target": "56095b6d-cf1c-4b36-ac73-ec24d455eda7",
+        "properties": {}
+      },
+      {
+        "id": "2e7e3842-5898-4d29-b908-db89e3feff82",
+        "type": "A_LA",
+        "source": "9e01fc57-8e49-4bee-8628-2a2e9aadb349",
+        "target": "75e8b50d-f351-4ca0-888a-c3d5f7748820",
+        "properties": {}
+      },
+      {
+        "id": "68fcee0c-0bca-4799-af91-eed2daa1b3d6",
+        "type": "EN",
+        "source": "3f67811a-70f8-46da-a12b-7add725e5746",
+        "target": "39c69422-06af-43fc-b0d9-a85c670b8de9",
+        "properties": {}
+      },
+      {
+        "id": "9093f341-4956-4885-83a6-8246d8f3a0b5",
+        "type": "IN",
+        "source": "39c69422-06af-43fc-b0d9-a85c670b8de9",
+        "target": "8a95ff15-5bf4-4f0c-8cea-fe926422ed0e",
+        "properties": {}
+      },
+      {
+        "id": "45a1963f-cbec-41f2-8af1-2cbf4e657bf5",
+        "type": "CHEZ",
+        "source": "8a95ff15-5bf4-4f0c-8cea-fe926422ed0e",
+        "target": "e207ffbb-e71f-4ff5-ba78-41afb5dfcfba",
+        "properties": {}
+      },
+      {
+        "id": "8f3eafc6-08f8-4b36-b8b8-17c42e011c1a",
+        "type": "IN",
+        "source": "39c69422-06af-43fc-b0d9-a85c670b8de9",
+        "target": "ef5d0ca7-56e6-4c2c-be75-0b91afe04d25",
+        "properties": {}
+      },
+      {
+        "id": "e0b7f516-7c1a-417d-afa3-b5480a36d74c",
+        "type": "A_LA",
+        "source": "ef5d0ca7-56e6-4c2c-be75-0b91afe04d25",
+        "target": "92105363-7add-473f-84f7-1476b337fafb",
+        "properties": {}
+      },
+      {
+        "id": "96283046-0f2e-47ac-a47a-6d3ecb7af0de",
+        "type": "CHEZ",
+        "source": "8a95ff15-5bf4-4f0c-8cea-fe926422ed0e",
+        "target": "fddae506-b1a9-4bb9-9d46-bd43494252d5",
+        "properties": {}
+      },
+      {
+        "id": "44b28a95-bbb1-4482-a4e0-7ce2b2a29274",
+        "type": "A_LA",
+        "source": "8a95ff15-5bf4-4f0c-8cea-fe926422ed0e",
+        "target": "33c5baf4-25c4-4b07-bbae-18b7eca819ed",
+        "properties": {}
+      },
+      {
+        "id": "3e62c5f5-b381-4236-9e88-1ff2da7abf87",
+        "type": "AU",
+        "source": "3f67811a-70f8-46da-a12b-7add725e5746",
+        "target": "a9aa78f2-d629-40ba-83a6-cffbaf3a7dfb",
+        "properties": {}
+      },
+      {
+        "id": "29226560-6675-4a2f-83a6-b020c2593a0b",
+        "type": "A",
+        "source": "a9aa78f2-d629-40ba-83a6-cffbaf3a7dfb",
+        "target": "fa84cc53-5ddd-4883-9f10-73f969a0b461",
+        "properties": {}
+      },
+      {
+        "id": "69f00c50-e447-4328-841a-894a1461b59a",
+        "type": "CHEZ",
+        "source": "fa84cc53-5ddd-4883-9f10-73f969a0b461",
+        "target": "3f54dbe4-9433-4e3b-821e-410ffc4d0cbb",
+        "properties": {}
+      },
+      {
+        "id": "cd97520a-19bd-43d7-a492-c00649d84d6e",
+        "type": "AU",
+        "source": "3f67811a-70f8-46da-a12b-7add725e5746",
+        "target": "97e68420-cf05-43ca-b3a6-1d02b56980df",
+        "properties": {}
+      },
+      {
+        "id": "76403754-2495-4318-8e77-723b5fca1a39",
+        "type": "CHEZ",
+        "source": "97e68420-cf05-43ca-b3a6-1d02b56980df",
+        "target": "7e1702a2-be9a-41c2-83bc-246c23382376",
+        "properties": {}
+      },
+      {
+        "id": "2d1a29ce-19e2-4bae-a70d-2e6c35fb6329",
+        "type": "CHEZ",
+        "source": "1fa00a11-c8df-4e94-a04a-6956dfd0109c",
+        "target": "c0567f8f-f80c-4162-a8a3-49a1f7803b8e",
+        "properties": {}
+      },
+      {
+        "id": "9475fa75-e5df-48f5-9d91-b30c88e2b730",
+        "type": "A_LA",
+        "source": "4bb9b136-d131-4a7c-b67e-a445208b3a85",
+        "target": "1b0a22ac-7e16-4822-9651-b81f4fb1a099",
+        "properties": {}
+      },
+      {
+        "id": "f5cd6f02-834b-48a8-9783-cc8957bcf524",
+        "type": "A_LA",
+        "source": "5fde4138-6539-41a9-80b2-1fd0b9beb8ea",
+        "target": "0894de66-1b29-432c-aa4c-60399e0c51e5",
+        "properties": {}
+      }
+    ]
+  },
    {
   "id": "cartographie-succession-complete",
   "title": "Succession et démarches après décès : un guide pour ne rien oublier",
