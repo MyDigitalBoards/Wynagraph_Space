@@ -17,7 +17,6 @@
       <a href="index.html" class="brand">WYNAGRAPH<span class="dot"> SPACE</span></a>
       <nav class="nav-links">
         <a href="index.html">Galerie</a>
-        <a href="index.html#articles">Articles</a>
         <a href="a-propos.html">À propos</a>
       </nav>
     </div>
@@ -36,6 +35,12 @@
       <button id="graph-search-clear" title="Effacer" aria-label="Effacer la recherche">✕</button>
       <div id="graph-search-results"></div>
     </div>
+    <div id="graph-tools">
+      <button id="btn-reset" type="button" title="Effacer recherche et filtres">Réinitialiser</button>
+      <button id="btn-view" type="button" title="Basculer entre le graphe et la vue tableau">Vue tableau</button>
+      <button id="btn-physics" type="button" title="Activer/désactiver la physique du graphe">Physique : ON</button>
+      <button id="btn-fit" type="button" title="Recadrer le graphe">Recadrer</button>
+    </div>
     <button id="import-btn" title="Importer un graphe JSON exporté depuis WynaGraph Workspace">
       📥 <span class="label">Importer JSON</span>
     </button>
@@ -48,6 +53,16 @@
   <!-- Layout plein écran -->
   <div id="fullscreen-layout">
     <div id="graph"></div>
+
+    <!-- Vue tableau (lecture seule) : une ligne par relation visible,
+         plus une ligne par élément visible sans relation. -->
+    <div id="graph-table-wrap" hidden></div>
+
+    <!-- Légende des catégories : pastille = filtre solo, œil = masquage cumulable -->
+    <div id="graph-legend" hidden>
+      <div class="legend-title" id="graph-legend-title"></div>
+      <div id="graph-legend-chips"></div>
+    </div>
 
     <!-- Zone d'import affichée quand aucun graphe n'est chargé -->
     <div id="graph-dropzone" hidden>
@@ -117,15 +132,13 @@
     setSidebarOpen(!isMobile());
 
     // ── Import JSON (WynaGraph Workspace → Space) — mode auteur uniquement ──
+    // Hors mode auteur, l'interface d'import n'est pas seulement masquée en
+    // CSS : ses éléments sont retirés du document et aucun gestionnaire
+    // d'événement n'est posé. Il n'y a donc rien à révéler via l'inspecteur.
     const AUTHOR_MODE  = window.WynaImport && WynaImport.isAuthorMode();
     if (AUTHOR_MODE) document.body.classList.add('author-mode');
 
-    const importBtn    = document.getElementById('import-btn');
-    const importFile   = document.getElementById('import-file');
-    const copyDataBtn  = document.getElementById('copy-data-btn');
-    const dropzone     = document.getElementById('graph-dropzone');
-    const dropzonePick = document.getElementById('dropzone-pick');
-    const toastEl      = document.getElementById('import-toast');
+    const toastEl = document.getElementById('import-toast');
     let toastTimer = null;
 
     function showImportToast(msg, isError) {
@@ -136,21 +149,36 @@
       toastTimer = setTimeout(() => toastEl.classList.remove('show'), 4500);
     }
 
-    function importSelectedFile(file) {
-      // WynaImport (json-import.js) valide, stocke en sessionStorage puis
-      // recharge la page sur graph.html?id=import.
-      WynaImport.handleFile(file, msg => showImportToast(msg, true));
-    }
+    let importBtn = null, importFile = null, copyDataBtn = null;
+    let dropzone = null, dropzonePick = null;
 
-    importBtn.addEventListener('click', () => importFile.click());
-    dropzonePick.addEventListener('click', () => importFile.click());
-    importFile.addEventListener('change', () => {
-      importSelectedFile(importFile.files && importFile.files[0]);
-      importFile.value = ''; // permet de réimporter le même fichier
-    });
+    if (!AUTHOR_MODE) {
+      ['import-btn', 'copy-data-btn', 'import-file', 'graph-dropzone', 'drag-overlay']
+        .forEach(elId => {
+          const el = document.getElementById(elId);
+          if (el && el.parentNode) el.parentNode.removeChild(el);
+        });
+    } else {
+      importBtn    = document.getElementById('import-btn');
+      importFile   = document.getElementById('import-file');
+      copyDataBtn  = document.getElementById('copy-data-btn');
+      dropzone     = document.getElementById('graph-dropzone');
+      dropzonePick = document.getElementById('dropzone-pick');
 
-    // Glisser-déposer d'un fichier .json — uniquement en mode auteur
-    if (AUTHOR_MODE) {
+      const importSelectedFile = (file) => {
+        // WynaImport (json-import.js) valide, stocke en sessionStorage puis
+        // recharge la page sur graph.html?id=import.
+        WynaImport.handleFile(file, msg => showImportToast(msg, true));
+      };
+
+      importBtn.addEventListener('click', () => importFile.click());
+      dropzonePick.addEventListener('click', () => importFile.click());
+      importFile.addEventListener('change', () => {
+        importSelectedFile(importFile.files && importFile.files[0]);
+        importFile.value = ''; // permet de réimporter le même fichier
+      });
+
+      // Glisser-déposer d'un fichier .json
       let dragDepth = 0;
       document.addEventListener('dragenter', e => {
         e.preventDefault();
@@ -185,7 +213,7 @@
     if (id === 'import') {
       graph = (window.WynaImport && WynaImport.loadImportedGraph()) || null;
     } else if (id) {
-      graph = GRAPHS.find((g) => g && g.id === id);
+      graph = GRAPHS.find((g) => g.id === id);
     }
 
     if (!graph) {
@@ -196,6 +224,7 @@
           notFound ? 'Graphe introuvable' : 'Importer un graphe';
         dropzone.hidden = false;
         document.getElementById('graph-search-wrap').style.display = 'none';
+        document.getElementById('graph-tools').style.display = 'none';
         sel.innerHTML = `<p class="sel-empty">Importez un fichier <strong style="color:var(--cyan)">.json</strong>
           exporté depuis WynaGraph Workspace pour explorer votre graphe ici.</p>`;
         if (notFound) {
@@ -205,25 +234,30 @@
         // Visiteur : comportement d'origine, aucune interface d'import
         document.getElementById('graph-topbar-title').textContent = 'Graphe introuvable';
         document.getElementById('graph-search-wrap').style.display = 'none';
+        document.getElementById('graph-tools').style.display = 'none';
       }
     } else {
       renderGraph(graph);
     }
 
     function renderGraph(graph) {
-      dropzone.hidden = true;
+      if (dropzone) dropzone.hidden = true;   // absente hors mode auteur
       document.title = `${graph.title} — WynaGraph`;
       document.getElementById('graph-topbar-title').textContent = graph.title;
       document.getElementById('graph-topbar-stats').textContent =
         `${graph.nodes.length} nœuds · ${(graph.edges || graph.relationships || []).length} liens`;
 
-      const { network, nodes, edges, graph: graphN } = buildNetwork(
+      const { network, nodes, edges, graph: graphN, hasPositions, stopAutoFit } = buildNetwork(
         document.getElementById("graph"),
         graph,
         { interactive: true }
       );
       // Utiliser le graphe normalisé pour les clics
       const g = graphN;
+      const graphEl = document.getElementById("graph");
+      const topbarStats = document.getElementById("graph-topbar-stats");
+      const statsTotal = `${g.nodes.length} nœuds · ${g.edges.length} liens`;
+      topbarStats.textContent = statsTotal;
 
       // Stats
       stats.innerHTML = `
@@ -364,11 +398,94 @@
         }
       });
 
-      // ── Recherche / filtre du graphe ────────────────────────────────────
-      const searchInput  = document.getElementById("graph-search");
-      const searchWrap   = document.getElementById("graph-search-wrap");
-      const searchClear  = document.getElementById("graph-search-clear");
+      // ── Boutons Physique / Recadrer ─────────────────────────────────────
+      // Même contrat que l'export HTML du Workspace : physique coupée par
+      // défaut (la mise en page est respectée, un nœud déplacé reste où on
+      // le pose), réactivable à la demande.
+      const btnFit = document.getElementById("btn-fit");
+      btnFit.addEventListener("click", () => {
+        // Recadre sur ce qui est réellement affiché (filtres compris).
+        fitVisible(Object.keys(computeVisible()));
+      });
+
+      // La physique est active à l'ouverture : le graphe se déploie sous
+      // les yeux du visiteur, qui choisit lui-même de la figer. Une fois
+      // coupée, un nœud déplacé reste où on le pose.
+      let physicsOn = !hasPositions;
+      const btnPhysics = document.getElementById("btn-physics");
+      btnPhysics.textContent = "Physique : " + (physicsOn ? "ON" : "OFF");
+      btnPhysics.classList.toggle("active", physicsOn);
+      btnPhysics.addEventListener("click", () => {
+        physicsOn = !physicsOn;
+        network.setOptions({ physics: { enabled: physicsOn } });
+        btnPhysics.textContent = "Physique : " + (physicsOn ? "ON" : "OFF");
+        btnPhysics.classList.toggle("active", physicsOn);
+      });
+
+      // ── Légende des catégories ──────────────────────────────────────────
+      // Pastille cliquée = filtre solo (re-clic pour annuler).
+      // Œil = masquage de la catégorie, cumulable sur plusieurs catégories.
+      const legendBox   = document.getElementById("graph-legend");
+      const legendTitle = document.getElementById("graph-legend-title");
+      const chipsEl     = document.getElementById("graph-legend-chips");
+      const categories  = [...new Set(
+        g.nodes.map(n => (n.group || "").trim()).filter(c => c && c.toLowerCase() !== "default")
+      )].sort((a, b) => a.localeCompare(b));
+
+      if (categories.length) {
+        legendBox.hidden = false;
+        legendTitle.textContent = "▾ Catégories";
+        legendTitle.addEventListener("click", () => {
+          const collapsed = legendBox.classList.toggle("collapsed");
+          legendTitle.textContent = (collapsed ? "▸ " : "▾ ") + "Catégories";
+        });
+        categories.forEach(cat => {
+          const color = colorFor(cat);
+          const chip = document.createElement("span");
+          chip.className = "chip";
+          chip.style.background = color;
+          chip.style.borderColor = color;
+          chip.style.color = textColorFor(color);
+          chip.dataset.cat = cat;
+
+          const label = document.createElement("span");
+          label.className = "chip-label";
+          label.textContent = cat;
+          chip.appendChild(label);
+
+          const eye = document.createElement("span");
+          eye.className = "chip-eye";
+          eye.textContent = "👁";
+          eye.title = "Masquer/afficher cette catégorie";
+          eye.addEventListener("click", ev => {
+            ev.stopPropagation();
+            if (filterState.hiddenCats[cat]) delete filterState.hiddenCats[cat];
+            else filterState.hiddenCats[cat] = true;
+            applyFilters();
+          });
+          chip.appendChild(eye);
+
+          chip.addEventListener("click", () => {
+            filterState.cat = (filterState.cat === cat) ? null : cat;
+            applyFilters();
+          });
+          chipsEl.appendChild(chip);
+        });
+      }
+
+      // ── Recherche et filtres (n'altèrent que l'affichage) ──────────────
+      // Un nœud est visible s'il passe les trois : recherche, filtre solo,
+      // et catégorie non masquée. La recherche porte sur le nom, la
+      // catégorie et les propriétés des nœuds, ainsi que sur les libellés
+      // et propriétés des relations (qui révèlent leurs deux extrémités).
+      const filterState = { q: "", cat: null, hiddenCats: {} };
+      const searchInput   = document.getElementById("graph-search");
+      const searchWrap    = document.getElementById("graph-search-wrap");
+      const searchClear   = document.getElementById("graph-search-clear");
       const searchResults = document.getElementById("graph-search-results");
+      const btnReset      = document.getElementById("btn-reset");
+      const nodeById = {};
+      g.nodes.forEach(n => { nodeById[n.id] = n; });
 
       function normalizeText(str) {
         return String(str || "")
@@ -376,43 +493,266 @@
           .normalize("NFD").replace(/[\u0300-\u036f]/g, ""); // retire les accents
       }
 
-      const DIM_OPACITY = 0.1;
-      const BASE_EDGE_COLOR = { color: "rgba(255,255,255,0.18)", highlight: "#42ebe2", hover: "#42ebe2" };
-
-      function getMatches(query) {
-        const q = normalizeText(query);
-        if (!q) return null;
-        return g.nodes.filter(n =>
-          normalizeText(n.label).includes(q) ||
-          normalizeText(n.id).includes(q) ||
-          normalizeText(n.group).includes(q)
-        );
+      function nodeHaystack(n) {
+        const props = Array.isArray(n.properties) ? n.properties.join(" ") : "";
+        return normalizeText(`${n.label || ""} ${n.id} ${n.group || ""} ${props}`);
       }
 
-      function applyFilter(query) {
-        const matches = getMatches(query);
+      function categoryAllowed(n) {
+        const c = (n.group || "").trim();
+        if (filterState.hiddenCats[c]) return false;
+        return !filterState.cat || c === filterState.cat;
+      }
 
-        if (matches === null) {
-          // Réinitialiser : tout redevient visible normalement
-          nodes.update(g.nodes.map(n => ({ id: n.id, opacity: 1 })));
-          edges.update(g.edges.map((e, i) => ({ id: i, color: { ...BASE_EDGE_COLOR, opacity: 1 } })));
+      function computeVisible() {
+        const q = normalizeText(filterState.q.trim());
+        const visible = {};
+        g.nodes.forEach(n => {
+          const matchQ = !q || nodeHaystack(n).includes(q);
+          if (matchQ && categoryAllowed(n)) visible[n.id] = true;
+        });
+        // La recherche porte aussi sur les relations : un libellé (ou une
+        // propriété) de relation qui correspond révèle ses deux extrémités.
+        if (q) {
+          g.edges.forEach(e => {
+            const hay = normalizeText(`${e.label || ""} ${(e.properties || []).join(" ")}`);
+            if (!hay.includes(q)) return;
+            [e.source, e.target].forEach(id => {
+              const n = nodeById[id];
+              if (n && categoryAllowed(n)) visible[id] = true;
+            });
+          });
+        }
+        return visible;
+      }
+
+      // Recadre la vue sur les nœuds encore visibles après filtrage.
+      // vis-network ignore l'argument `nodes` s'il est vide : dans ce cas
+      // (aucun résultat) on laisse la vue en place plutôt que de sauter.
+      function fitVisible(visibleIds) {
+        // Le filtrage pilote désormais la vue : le cadrage automatique du
+        // démarrage doit cesser, sinon il recadrerait sur tout le graphe.
+        stopAutoFit();
+        if (!visibleIds.length) return;
+        network.fit({
+          nodes: visibleIds,
+          animation: { duration: 400, easingFunction: "easeInOutQuad" }
+        });
+      }
+
+      function applyFilters(opts) {
+        const recenter = !opts || opts.recenter !== false;
+        const visible = computeVisible();
+
+        nodes.update(g.nodes.map(n => ({ id: n.id, hidden: !visible[n.id] })));
+        // Une liaison n'est visible que si ses deux extrémités le sont.
+        let visibleEdges = 0;
+        edges.update(g.edges.map((e, i) => {
+          const show = !!(visible[e.source] && visible[e.target]);
+          if (show) visibleEdges++;
+          return { id: i, hidden: !show };
+        }));
+
+        // Retour visuel : pastille active, autres atténuées, masquées
+        // barrées, compteur à jour.
+        chipsEl.classList.toggle("has-filter", !!filterState.cat);
+        let anyHidden = false;
+        chipsEl.querySelectorAll(".chip").forEach(ch => {
+          ch.classList.toggle("chip-active", ch.dataset.cat === filterState.cat);
+          const isHidden = !!filterState.hiddenCats[ch.dataset.cat];
+          ch.classList.toggle("chip-hidden", isHidden);
+          const eyeEl = ch.querySelector(".chip-eye");
+          if (eyeEl) eyeEl.textContent = isHidden ? "⊘" : "👁";
+          if (isHidden) anyHidden = true;
+        });
+
+        const filtered = filterState.q.trim() || filterState.cat || anyHidden;
+        const visibleCount = Object.keys(visible).length;
+        topbarStats.textContent = filtered
+          ? `${visibleCount} / ${g.nodes.length} nœuds · ${visibleEdges} / ${g.edges.length} liens`
+          : statsTotal;
+        stats.innerHTML = `
+          <div><strong>${filtered ? visibleCount + " / " : ""}${g.nodes.length}</strong> nœuds</div>
+          <div><strong>${filtered ? visibleEdges + " / " : ""}${g.edges.length}</strong> liens</div>`;
+
+        // La vue tableau reflète exactement ce qui est visible dans le
+        // graphe : on la redessine à chaque changement de filtre.
+        if (tableVisible) renderTable();
+
+        // Recadrage sur ce qui reste affiché : sans cela, filtrer une
+        // catégorie peut laisser la vue centrée sur une zone désormais vide.
+        // Inutile tant que le graphe est masqué par la vue tableau — le
+        // recadrage est alors fait au retour en vue graphe.
+        if (recenter && !tableVisible) fitVisible(Object.keys(visible));
+      }
+
+      btnReset.addEventListener("click", () => {
+        searchInput.value = "";
+        searchWrap.classList.remove("has-value", "show-results");
+        searchResults.innerHTML = "";
+        filterState.q = "";
+        filterState.cat = null;
+        filterState.hiddenCats = {};
+        // Volontairement sans recadrage : réinitialiser rétablit l'affichage
+        // complet, mais la vue reste où le visiteur l'avait laissée. Le
+        // bouton « Recadrer » est là pour ça.
+        applyFilters({ recenter: false });
+      });
+
+      // ── Vue tableau (lecture seule) ─────────────────────────────────────
+      // Mêmes règles que le Workspace : une ligne par relation visible
+      // (Catégorie du nœud source / Source / Relation / Cible), plus une
+      // ligne par élément visible sans relation visible. Tri par colonne au
+      // clic (croissant / décroissant / aucun).
+      const tableWrap = document.getElementById("graph-table-wrap");
+      const btnView   = document.getElementById("btn-view");
+      let tableVisible = false;
+      const tSort = { col: null, dir: 1 };
+      const COLS = [
+        { key: "cat",  label: "Catégorie" },
+        { key: "from", label: "Source" },
+        { key: "rel",  label: "Relation" },
+        { key: "to",   label: "Cible" }
+      ];
+
+      btnView.addEventListener("click", () => {
+        tableVisible = !tableVisible;
+        tableWrap.hidden = !tableVisible;
+        graphEl.style.visibility = tableVisible ? "hidden" : "visible";
+        btnView.textContent = tableVisible ? "Vue graphe" : "Vue tableau";
+        btnView.classList.toggle("active", tableVisible);
+        if (tableVisible) { resetSidebar(); renderTable(); }
+        // Retour au graphe : les filtres ont pu changer pendant que la vue
+        // tableau masquait le graphe, on recadre sur ce qui reste visible.
+        else fitVisible(Object.keys(computeVisible()));
+      });
+
+      function buildTableRows() {
+        const visible = computeVisible();
+        const usedIds = {};
+        const rows = [];
+
+        g.edges.forEach((e, i) => {
+          if (!visible[e.source] || !visible[e.target]) return;
+          const s = nodeById[e.source], tgt = nodeById[e.target];
+          if (!s || !tgt) return;
+          usedIds[s.id] = usedIds[tgt.id] = true;
+          rows.push({ type: "edge", edgeId: i, edge: e, fromNode: s, toNode: tgt });
+        });
+        // Éléments visibles sans relation visible : affichés quand même.
+        g.nodes.forEach(n => {
+          if (visible[n.id] && !usedIds[n.id]) rows.push({ type: "node", node: n });
+        });
+
+        if (tSort.col) {
+          rows.sort((a, b) => {
+            const va = sortValue(a, tSort.col), vb = sortValue(b, tSort.col);
+            return va < vb ? -tSort.dir : va > vb ? tSort.dir : 0;
+          });
+        }
+        return rows;
+      }
+
+      function sortValue(row, key) {
+        if (row.type === "edge") {
+          switch (key) {
+            case "cat":  return normalizeText(row.fromNode.group);
+            case "from": return normalizeText(row.fromNode.label);
+            case "rel":  return normalizeText(row.edge.label);
+            case "to":   return normalizeText(row.toNode.label);
+          }
+        }
+        if (key === "cat")  return normalizeText(row.node.group);
+        if (key === "from") return normalizeText(row.node.label);
+        return "";
+      }
+
+      // Cellule "nom + propriétés en sous-ligne" — tout en textContent.
+      function makeCell(main, props) {
+        const td = document.createElement("td");
+        const m = document.createElement("div");
+        m.className = "cell-main";
+        m.textContent = main || "";
+        td.appendChild(m);
+        if (Array.isArray(props) && props.length) {
+          const p = document.createElement("div");
+          p.className = "cell-props";
+          p.textContent = props.join(" | ");
+          td.appendChild(p);
+        }
+        return td;
+      }
+
+      function renderTable() {
+        while (tableWrap.firstChild) tableWrap.removeChild(tableWrap.firstChild);
+        const rows = buildTableRows();
+
+        if (!rows.length) {
+          const empty = document.createElement("div");
+          empty.className = "table-empty";
+          empty.textContent = "Aucun élément visible avec les filtres actuels.";
+          tableWrap.appendChild(empty);
           return;
         }
 
-        const matchedIds = new Set(matches.map(n => n.id));
+        const table = document.createElement("table");
+        const thead = document.createElement("thead");
+        const trh = document.createElement("tr");
+        COLS.forEach(col => {
+          const th = document.createElement("th");
+          th.textContent = col.label + " ";
+          const ind = document.createElement("span");
+          ind.className = "sort-ind" + (tSort.col === col.key ? "" : " idle");
+          ind.textContent = tSort.col !== col.key ? "↕" : (tSort.dir === 1 ? "▲" : "▼");
+          th.appendChild(ind);
+          th.addEventListener("click", () => {
+            if (tSort.col !== col.key) { tSort.col = col.key; tSort.dir = 1; }
+            else if (tSort.dir === 1) { tSort.dir = -1; }
+            else { tSort.col = null; tSort.dir = 1; }
+            renderTable();
+          });
+          trh.appendChild(th);
+        });
+        thead.appendChild(trh);
+        table.appendChild(thead);
 
-        nodes.update(g.nodes.map(n => ({
-          id: n.id,
-          opacity: matchedIds.has(n.id) ? 1 : DIM_OPACITY,
-        })));
+        const tbody = document.createElement("tbody");
+        rows.forEach(row => {
+          const tr = document.createElement("tr");
+          if (row.type === "edge") {
+            const catTd = document.createElement("td");
+            catTd.textContent = (row.fromNode.group || "").trim() || "—";
+            tr.appendChild(catTd);
+            tr.appendChild(makeCell(row.fromNode.label, row.fromNode.properties));
+            tr.appendChild(makeCell(row.edge.label, row.edge.properties));
+            tr.appendChild(makeCell(row.toNode.label, row.toNode.properties));
+            tr.addEventListener("click", () => {
+              openEdgePanel(row.edgeId);
+              if (isMobile()) setSidebarOpen(true);
+            });
+          } else {
+            const catTd = document.createElement("td");
+            catTd.textContent = (row.node.group || "").trim() || "—";
+            tr.appendChild(catTd);
+            tr.appendChild(makeCell(row.node.label, row.node.properties));
+            tr.appendChild(document.createElement("td"));
+            tr.appendChild(document.createElement("td"));
+            tr.addEventListener("click", () => {
+              openNodePanel(row.node.id);
+              if (isMobile()) setSidebarOpen(true);
+            });
+          }
+          tbody.appendChild(tr);
+        });
+        table.appendChild(tbody);
+        tableWrap.appendChild(table);
+      }
 
-        edges.update(g.edges.map((e, i) => ({
-          id: i,
-          color: {
-            ...BASE_EDGE_COLOR,
-            opacity: (matchedIds.has(e.source) || matchedIds.has(e.target)) ? 1 : DIM_OPACITY * 0.6,
-          },
-        })));
+      // ── Liste de résultats de recherche (focus sur un nœud) ─────────────
+      function getMatches(query) {
+        const q = normalizeText(query);
+        if (!q) return null;
+        return g.nodes.filter(n => nodeHaystack(n).includes(q) && categoryAllowed(n));
       }
 
       function renderResultsList(query) {
@@ -449,7 +789,8 @@
 
         clearTimeout(searchDebounce);
         searchDebounce = setTimeout(() => {
-          applyFilter(val);
+          filterState.q = val;
+          applyFilters();
           renderResultsList(val);
         }, 120);
       });
@@ -480,7 +821,9 @@
       function clearSearch() {
         searchInput.value = "";
         searchWrap.classList.remove("has-value", "show-results");
-        applyFilter("");
+        filterState.q = "";
+        // Comme « Réinitialiser » : lever un filtre ne déplace pas la vue.
+        applyFilters({ recenter: false });
         searchResults.innerHTML = "";
         searchInput.blur();
       }
@@ -493,11 +836,5 @@
       });
     }
   </script>
-    <footer>
-    © 2026 WynaGraph Space ·
-    <a href="index.html" style="color:var(--cyan)">Accueil</a> ·
-    <a href="a-propos.html" style="color:var(--cyan)">À propos</a> ·
-    <a href="mentions-legales.html" style="color:var(--cyan)">Mentions légales</a>
-  </footer>
 </body>
 </html>

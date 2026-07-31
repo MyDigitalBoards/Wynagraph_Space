@@ -1040,3 +1040,175 @@ footer {
       #graph { width: 100%; }
     }
   
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   Page graphe — outils, légende et vue tableau (parité avec l'export HTML
+   du WynaGraph Workspace)
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* ── Boutons d'outils de la topbar ── */
+#graph-tools {
+  display: flex;
+  align-items: center;
+  gap: .45rem;
+  flex-shrink: 0;
+}
+#graph-tools button {
+  background: #1D3655;
+  color: #fff;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 5px 11px;
+  font-size: .78rem;
+  font-family: inherit;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: border-color .15s, color .15s, background .15s;
+}
+#graph-tools button:hover {
+  border-color: var(--cyan);
+  color: var(--cyan);
+}
+#graph-tools button.active {
+  background: #0f1f33;
+  color: var(--cyan);
+  border-color: var(--cyan);
+}
+
+/* ── Légende des catégories ── */
+#graph-legend {
+  position: fixed;
+  left: 16px;
+  bottom: 16px;
+  z-index: 30;
+  max-width: min(420px, calc(100vw - 32px));
+  background: rgba(15, 31, 51, 0.96);
+  border: 1px solid rgba(66, 235, 226, 0.25);
+  border-radius: 10px;
+  padding: 10px 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+}
+#graph-legend .legend-title {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  color: var(--muted-foreground);
+  margin-bottom: 8px;
+  cursor: pointer;
+  user-select: none;
+}
+#graph-legend .legend-title:hover { color: var(--cyan); }
+#graph-legend.collapsed .legend-title { margin-bottom: 0; }
+#graph-legend.collapsed #graph-legend-chips { display: none; }
+#graph-legend-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+#graph-legend-chips .chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 10px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  background: rgba(4, 32, 66, 0.85);
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity .15s, box-shadow .15s;
+}
+#graph-legend-chips.has-filter .chip:not(.chip-active) { opacity: .35; }
+#graph-legend-chips .chip-active { box-shadow: 0 0 0 2px var(--cyan); }
+#graph-legend-chips .chip-hidden { opacity: .3; }
+#graph-legend-chips .chip-hidden .chip-label { text-decoration: line-through; }
+.chip-eye {
+  font-size: 11px;
+  line-height: 1;
+  opacity: .7;
+}
+.chip-eye:hover { opacity: 1; }
+
+/* ── Vue tableau (lecture seule) ── */
+#graph-table-wrap {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  bottom: 16px;
+  right: calc(300px + 16px); /* laisse la sidebar (300px) visible */
+  z-index: 25;
+  overflow: auto;
+  background: rgba(15, 31, 51, 0.96);
+  border: 1px solid rgba(66, 235, 226, 0.25);
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+}
+#graph-table-wrap table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+#graph-table-wrap thead th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: #0c1a2c;
+  color: var(--muted-foreground);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  text-align: left;
+  padding: 10px 14px;
+  cursor: pointer;
+  user-select: none;
+  border-bottom: 1px solid rgba(66, 235, 226, 0.2);
+  white-space: nowrap;
+}
+#graph-table-wrap thead th:hover { color: var(--cyan); }
+#graph-table-wrap thead th .sort-ind { margin-left: 6px; color: var(--cyan); }
+#graph-table-wrap thead th .sort-ind.idle { opacity: .25; }
+#graph-table-wrap tbody td {
+  padding: 9px 14px;
+  vertical-align: top;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+#graph-table-wrap tbody tr { cursor: pointer; }
+#graph-table-wrap tbody tr:hover td { background: rgba(66, 235, 226, 0.06); }
+#graph-table-wrap .cell-main {
+  color: #fff;
+  font-weight: 600;
+  word-break: break-word;
+}
+#graph-table-wrap .cell-props {
+  color: var(--muted-foreground);
+  font-size: 12px;
+  margin-top: 3px;
+  word-break: break-word;
+}
+#graph-table-wrap .table-empty {
+  padding: 24px;
+  text-align: center;
+  color: var(--muted-foreground);
+  font-style: italic;
+}
+
+/* ── Responsive : la topbar peut passer sur deux lignes avec les outils ── */
+@media (max-width: 900px) {
+  /* La topbar garde sa hauteur fixe (44px, cf. #fullscreen-layout) :
+     seule la barre d'outils défile horizontalement si la place manque,
+     pour ne pas rogner la liste déroulante des résultats de recherche. */
+  #graph-search-wrap { min-width: 130px; }
+  #graph-tools {
+    overflow-x: auto;
+    overflow-y: hidden;
+    max-width: 52vw;
+    scrollbar-width: none;
+  }
+  #graph-tools::-webkit-scrollbar { display: none; }
+  #graph-tools button { font-size: .72rem; padding: 4px 9px; }
+  #graph-legend { bottom: 12px; left: 12px; }
+}
+@media (max-width: 768px) {
+  /* La sidebar est hors-écran : le tableau occupe toute la largeur */
+  #graph-table-wrap { top: 12px; left: 12px; right: 12px; bottom: 12px; }
+}

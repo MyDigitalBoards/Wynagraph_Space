@@ -93,20 +93,62 @@
   }
 
   // ── Mode auteur ───────────────────────────────────────────────────────────
-  // L'interface d'import est réservée au propriétaire du site. Elle s'active
-  // en visitant n'importe quelle page avec ?studio=1 (mémorisé dans le
-  // navigateur via localStorage) et se désactive avec ?studio=0.
-  // Note : sur un site statique il n'existe pas de vraie authentification ;
-  // c'est une discrétion suffisante ici car l'import ne modifie jamais le
-  // site lui-même (tout reste dans le navigateur de la personne).
+  // L'interface d'import est réservée au propriétaire du site, et n'existe
+  // QUE lorsque le site tourne en local (fichier ouvert directement, ou
+  // serveur de développement sur localhost). Sur le site publié, ?studio=1
+  // n'a aucun effet : un visiteur qui devine ou lit le paramètre dans ce
+  // fichier — il est public, comme tout JavaScript de page — n'obtient rien.
+  //
+  // Sur un site statique il ne peut pas exister de véritable
+  // authentification : tout le code est livré au navigateur. Le verrou
+  // d'hôte est donc la seule barrière réellement fiable, et c'est celle-ci
+  // qui garantit qu'un visiteur ne verra jamais l'interface d'auteur.
+  //
+  // Pour publier depuis une préversion privée, ajouter son nom d'hôte ici —
+  // en gardant à l'esprit qu'un hôte public rouvre l'accès à quiconque
+  // connaît le paramètre.
+  const AUTHOR_HOSTS = ['localhost', '127.0.0.1', '::1', '[::1]'];
   const AUTHOR_KEY = 'wynagraph:author-mode';
+
+  // Le site tourne-t-il en local ? (fichier local, localhost, ou nom d'hôte
+  // de réseau local type "mon-mac.local")
+  function isLocalContext() {
+    try {
+      if (location.protocol === 'file:') return true;
+      const host = String(location.hostname || '').toLowerCase();
+      if (!host) return true;                       // file:// sans hostname
+      return AUTHOR_HOSTS.indexOf(host) !== -1 || /\.local$/.test(host);
+    } catch (err) {
+      return false;
+    }
+  }
 
   function isAuthorMode() {
     try {
+      if (!isLocalContext()) {
+        // Site publié : aucun mode auteur possible. On efface au passage un
+        // drapeau qui aurait pu être posé sur cette origine avant ce verrou.
+        try { localStorage.removeItem(AUTHOR_KEY); } catch (e) {}
+        return false;
+      }
       const p = new URLSearchParams(location.search);
-      if (p.get('studio') === '1') { localStorage.setItem(AUTHOR_KEY, '1'); return true; }
-      if (p.get('studio') === '0') { localStorage.removeItem(AUTHOR_KEY); return false; }
-      return localStorage.getItem(AUTHOR_KEY) === '1';
+      // La mémorisation est un confort, pas une condition : certains
+      // navigateurs bloquent localStorage sur file://. Le paramètre doit
+      // fonctionner même dans ce cas, quitte à devoir le remettre à chaque
+      // page ouverte.
+      if (p.get('studio') === '1') {
+        try { localStorage.setItem(AUTHOR_KEY, '1'); } catch (e) {}
+        return true;
+      }
+      if (p.get('studio') === '0') {
+        try { localStorage.removeItem(AUTHOR_KEY); } catch (e) {}
+        return false;
+      }
+      try {
+        return localStorage.getItem(AUTHOR_KEY) === '1';
+      } catch (e) {
+        return false;
+      }
     } catch (err) {
       return false;
     }
