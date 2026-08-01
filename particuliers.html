@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WynaGraph pour les particuliers — mettre à plat ce qui compte</title>
+  <meta name="description" content="Un logiciel de bureau 100 % hors ligne pour cartographier vos contrats, vos biens et votre succession — et transmettre une cartographie claire à vos proches. 59 €, une fois." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles-vente.css" />
+  <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav">
+      <a href="index.html" class="brand">WYNAGRAPH<span class="dot"> SPACE</span></a>
+      <nav class="nav-links">
+        <a href="galerie.html">Galerie</a>
+        <a href="index.html#articles">Articles</a>
+        <a href="particuliers.html">Particuliers</a>
+        <a href="professionnels.html">Professionnels</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ════════ HERO ════════ -->
+    <section class="hero">
+      <div class="hero-inner">
+        <span class="eyebrow">Pour les particuliers</span>
+        <h1>Laissez une cartographie,<br/><span class="accent">pas une pile de papiers</span></h1>
+        <p class="lead">
+          Contrats, comptes, biens, abonnements, démarches, projets : tout est quelque part, mais où ? WynaGraph vous permet de mettre en évidence ces liens, sans exposer votre vie privée.
+          Partagez ensuite vos graphes personnels avec qui vous voulez.
+        </p>
+        <div class="btns">
+          <a href="#demo" class="btn btn-ghost">Voir un exemple</a>
+          <a href="commander.html" class="btn btn-primary">Acheter la licence →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════ TROIS SITUATIONS ════════ -->
+    <section class="section">
+      <div class="pv-switch">
+        <a href="particuliers.html" aria-current="page">Pour les particuliers</a>
+        <a href="professionnels.html">Pour les professionnels</a>
+      </div>
+
+      <h2 class="section-title">Trois situations où un graphe change tout</h2>
+      <p class="section-sub">Le point commun : ce qui compte n'est pas la liste, c'est ce qui relie les éléments entre eux.</p>
+
+      <div class="grid">
+        <div class="card">
+          <div class="card-body">
+            <div class="card-cat">Transmission</div>
+            <div class="card-title">Préparer sa succession</div>
+            <p class="card-desc">
+              Assurance-vie, testament, comptes, biens immobiliers, bénéficiaires, organismes à
+              prévenir et délais à respecter. Un modèle prêt à l'emploi vous donne la trame ;
+              vous la remplissez avec votre situation. Vos proches n'auront plus à tout
+              reconstituer dans l'urgence.
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <div class="card-cat">Patrimoine</div>
+            <div class="card-title">Voir sa structure d'ensemble</div>
+            <p class="card-desc">
+              Qui possède quoi, avec qui, depuis quand, financé comment. Les propriétés se posent
+              aussi bien sur les éléments que sur les liens : date d'acquisition,
+              régime matrimonial, indivision.
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <div class="card-cat">Organisation</div>
+            <div class="card-title">Retrouver ses contrats et ses comptes</div>
+            <p class="card-desc">
+              Abonnements, assurances, garanties, échéances, documents et où ils se trouvent.
+              Des modèles thématiques existent pour démarrer : comptes en ligne, documents,
+              inventaire personnel, contacts.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════ DÉMO ════════ -->
+    <section class="section pv-demo" id="demo">
+      <h2 class="section-title">Un exemple, à explorer</h2>
+      <p class="section-sub">Cliquez sur un élément ou une relation pour en voir le détail.</p>
+
+      <div class="graph-card">
+        <div class="graph-card-frame" id="graph-frame"></div>
+        <div class="graph-selection" id="graph-selection">
+          <p>Cliquez sur un <strong style="color:#fff">élément</strong> ou une <strong style="color:var(--cyan)">relation</strong>.</p>
+        </div>
+        <div class="graph-card-footer">
+          <div>
+            <div class="graph-card-title" id="graph-card-title"></div>
+            <div class="graph-card-sub" id="graph-card-sub"></div>
+          </div>
+          <a id="graph-full-link" href="#" class="btn btn-ghost" style="font-size:.82rem">Voir en plein écran →</a>
+        </div>
+      </div>
+      <p class="pv-demo-hint">Accéder à la vue plein écran pour voir les catégories et filtres.</p>
+    </section>
+
+    <!-- ════════ COMMENT ÇA MARCHE ════════ -->
+    <section class="section readme">
+      <h2 class="section-title">Comment ça marche</h2>
+      <p class="section-sub">Pas de compte à créer, pas de syntaxe à apprendre.</p>
+
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <strong>Partez d'un modèle</strong>
+          <p>Vous remplacez les exemples par votre situation. Ou vous partez d'une page blanche.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <strong>Reliez vos éléments</strong>
+          <p>Vous ajoutez un élément, une relation, et les informations que vous voulez y attacher. Vous organisez le graphe selon votre propre logique.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <strong>Gardez-le, ou transmettez-le</strong>
+          <p>Il reste sur votre ordinateur. Et si vous voulez le partager, un fichier suffit.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════ PARTAGE ════════ -->
+    <section class="section readme">
+      <h2 class="section-title">Transmettre sans rien mettre en ligne</h2>
+      <p class="section-sub">C'est ce qui distingue WynaGraph d'un logiciel de schéma.</p>
+
+      <p>
+        Depuis n'importe quelle cartographie, vous produisez un fichier unique que vous envoyez par mail
+        ou remettez sur une clé USB. La personne qui le reçoit double-clique : la cartographie s'ouvre
+        dans son navigateur, telle que vous l'avez composée. Rien à installer, rien à
+        acheter, même pas besoin d'une connexion Internet.
+      </p>
+
+      <ul class="pv-check">
+        <li><strong>Explorer</strong> — recherche, filtres par catégorie, détail de chaque élément, vue tableau</li>
+        <li><strong>Sans rien modifier</strong> — le fichier est consultable, non éditable</li>
+      </ul>
+
+      <div class="pv-callout pv-callout--warn">
+        <p>
+          <strong>À savoir avant d'envoyer.</strong> Le fichier contient toutes les informations du graphe, lisibles par quiconque l'ouvre. Ce n'est pas un document protégé par mot de
+          passe. Ne l'envoyez qu'à des personnes de confiance — l'application vous le rappelle à
+          chaque fois.
+        </p>
+      </div>
+    </section>
+
+    <!-- ════════ CONFIDENTIALITÉ ════════ -->
+    <section class="section readme">
+      <h2 class="section-title">Vos données restent chez vous</h2>
+
+      <ul class="pv-check">
+        <li><strong>Aucun compte.</strong> Vous installez, vous ouvrez, vous travaillez. Il n'y a rien à créer et rien à activer.</li>
+        <li><strong>Aucune connexion nécessaire.</strong> Le logiciel fonctionne intégralement hors ligne, y compris au premier lancement.</li>
+        <li><strong>Aucun serveur.</strong> Vos données sont enregistrées dans un fichier sur votre ordinateur. Elles ne sont envoyées nulle part, à personne.</li>
+        <li><strong>Aucun abonnement.</strong> Vous payez une fois. </li>
+      </ul>
+
+      <div class="pv-callout">
+        <p>
+          <strong>A noter :</strong> comme rien n'est enregistré en ligne, personne
+          ne peut récupérer vos graphes à votre place. Pensez à exporter vos données régulièrement
+          et à conserver ces fichiers avec vos autres sauvegardes.
+        </p>
+      </div>
+    </section>
+
+    <!-- ════════ LIMITES ════════ -->
+    <section class="section readme">
+      <h2 class="section-title">Ce que WynaGraph ne fait pas</h2>
+      <p class="section-sub">Mieux vaut le savoir avant.</p>
+
+      <ul class="pv-limits">
+        <li><strong>Il ne transforme pas un tableur en graphe automatiquement.</strong> Vous pouvez néanmoins importer un fichier CSV, à condition qu'il décrive vos données sous forme de relations. Le plus simple est d'exporter un graphe existant depuis WynaGraph pour en récupérer le format, de le compléter dans un tableur, puis de le réimporter.</li>
+        <li><strong>Il ne calcule rien.</strong> Pas de total, pas de budget, pas de graphique chiffré.</li>
+        <li><strong>Il ne se synchronise pas</strong> entre plusieurs appareils.</li>
+        <li><strong>Windows uniquement</strong> pour l'instant.</li>
+      </ul>
+    </section>
+
+    <!-- ════════ PRIX ════════ -->
+    <section class="section" id="prix">
+      <h2 class="section-title" style="text-align:center">Un prix, une fois</h2>
+      <p class="section-sub" style="text-align:center">Pas d'abonnement, pas de renouvellement.</p>
+
+      <div class="pv-price">
+        <div class="pv-price-label">Licence particulier</div>
+        <div class="pv-price-amount">59 €<span class="pv-price-unit"> TTC</span></div>
+        <p class="pv-price-note">Licence perpétuelle, paiement unique</p>
+
+        <ul class="pv-check">
+          <li>Réservée à un usage strictement privé et non professionnel</li>
+          <li>Nombre de graphes personnels illimité</li>
+          <li>Les personnes à qui vous envoyez vos graphes n'ont rien à installer</li>
+          <li>Français, anglais et allemand</li>
+        </ul>
+
+        <!-- <div class="btns">
+          TODO : remplacer par l'URL de paiement (Paddle ou Digistore24) -->
+          <!-- <a href="#" class="btn btn-primary">Bientôt Disponible</a>
+        </div> -->
+
+        <div class="btns">
+          <a href="commander.html"class="btn btn-primary"> Acheter la licence →</a>
+        </div>
+
+        <!-- <p class="pv-legal">
+          Licence réservée à un usage privé : toute utilisation dans un cadre professionnel,
+          y compris par un entrepreneur individuel, une association ou une administration,
+          relève de la <a href="professionnels.html" style="color:var(--cyan)">licence professionnelle</a>.
+          Téléchargement immédiat après paiement. Paiement traité par notre revendeur, qui émet
+          la facture. En achetant, vous demandez l'accès immédiat au logiciel et renoncez de ce
+          fait à votre droit de rétractation de quatorze jours, conformément à l'article
+          L. 221-28 du Code de la consommation.
+        </p> -->
+
+        <p class="pv-legal">
+          Licence réservée à un usage privé : toute utilisation dans un cadre professionnel,
+          y compris par un entrepreneur individuel, une association ou une administration,
+          relève de la <a href="professionnels.html" style="color:var(--cyan)">licence professionnelle</a>.
+        </p>
+
+
+      </div>
+    </section>
+
+    <!-- ════════ FAQ ════════ -->
+    <section class="section">
+      <h2 class="section-title">Questions fréquentes</h2>
+      <div class="pv-faq">
+
+        <details>
+          <summary>Faut-il une connexion Internet ?</summary>
+          <div class="pv-faq-body">
+            <p>Seulement pour télécharger le logiciel après l'achat. Ensuite, plus jamais : WynaGraph fonctionne entièrement hors ligne, y compris au tout premier lancement.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Où sont enregistrées mes graphes ?</summary>
+          <div class="pv-faq-body">
+            <p>Dans un fichier sur votre ordinateur, dans le dossier de données de l'application. Pas dans votre navigateur, pas dans un cloud, pas sur un serveur.</p>
+            <p>Pensez à les exporter régulièrement : si votre ordinateur tombe en panne, personne d'autre n'en a de copie.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Que se passe-t-il si je change d'ordinateur ?</summary>
+          <div class="pv-faq-body">
+            <p>Vous réinstallez le logiciel avec le fichier d'installation que vous avez téléchargé — conservez-le — puis vous réimportez vos cartographies exportées. Votre licence reste valable : elle est perpétuelle et vous suit.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Est-ce que quelqu'un peut voir ce que je crée ?</summary>
+          <div class="pv-faq-body">
+            <p>Non. Le logiciel n'envoie rien nulle part et ne communique avec aucun serveur. La seule façon dont une cartographie peut sortir de votre ordinateur, c'est si vous l'exportez vous-même et que vous l'envoyez.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Puis-je m'en servir pour mon activité professionnelle ?</summary>
+          <div class="pv-faq-body">
+            <p>Non. Cette licence est réservée à un usage strictement privé. Tout usage dans un cadre professionnel — y compris en tant qu'entrepreneur individuel, association ou administration — relève de la <a href="professionnels.html" style="color:var(--cyan)">licence professionnelle</a>.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Faut-il s'y connaître en informatique ?</summary>
+          <div class="pv-faq-body">
+            <p>Non. Vous ajoutez un élément, vous le reliez à un autre, vous écrivez ce que vous voulez retenir. Il n'y a ni formule, ni langage, ni syntaxe. Les modèles fournis vous donnent la trame : vous remplacez les exemples par votre situation.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Est-ce que ça marche sur Mac ou sur téléphone ?</summary>
+          <div class="pv-faq-body">
+            <p>Pas encore. WynaGraph est aujourd'hui un logiciel de bureau Windows.</p>
+            <p>En revanche, les graphes que vous exportez s'ouvrent dans n'importe quel navigateur, y compris sur Mac ou sur téléphone.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Puis-je être remboursé ?</summary>
+          <div class="pv-faq-body">
+            <p>La livraison par email du logiciel ou le téléchargement immédiat ne permettant pas de récupérer le produit, vous renoncez au droit de rétractation de quatorze jours au moment de l'achat — c'est la règle pour les contenus numériques livrés sans délai. Si le logiciel ne fonctionne pas comme annoncé, écrivez-moi : la garantie légale de conformité s'applique.</p>
+          </div>
+        </details>
+
+      </div>
+    </section>
+
+    <!-- ════════ CTA FINAL ════════ -->
+    <section class="section" style="padding-top:0">
+      <div class="article-cta">
+        <p><strong>Vous avez des questions ?</strong><br>
+        Écrivez-nous</p>
+        <a href="mailto:mydigitalboards@protonmail.com?subject=WynaGraph%20%E2%80%94%20question" class="btn btn-ghost">
+          mydigitalboards@protonmail.com →
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    © 2026 WynaGraph Space ·
+    <a href="index.html" style="color:var(--cyan)">Accueil</a> ·
+    <a href="a-propos.html" style="color:var(--cyan)">À propos</a> ·
+    <a href="mentions-legales.html" style="color:var(--cyan)">Mentions légales</a> ·
+    <a href="confidentialite.html" style="color:var(--cyan)">Confidentialité</a> ·
+    <a href="cgv.html" style="color:var(--cyan)">CGV</a> . 
+    <a href="cluf.html" style="color:var(--cyan)">CLUF</a> 
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="graph-render.js"></script>
+  <script>
+  (function () {
+    // Graphe de démonstration : premier identifiant disponible dans data.js.
+    // Publiez « succession » depuis le Workspace pour coller à l'argumentaire.
+    var CANDIDATS = ['cartographie-succession-complete','theme-legal-fin-de-vie-numerique', 'assurances'];
+
+    function esc(s) {
+      if (s == null) return '';
+      return String(s).replace(/[&<>"']/g, function (m) {
+        return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;' }[m];
+      });
+    }
+
+    var graph = null;
+    for (var i = 0; i < CANDIDATS.length && !graph; i++) {
+      graph = (window.GRAPHS || []).find(function (g) { return g.id === CANDIDATS[i]; }) || null;
+    }
+
+    var section = document.getElementById('demo');
+    if (!graph) { if (section) section.hidden = true; return; }
+
+    var frame = document.getElementById('graph-frame');
+    var built = buildNetwork(frame, graph, { interactive: true });
+    var network = built.network, edges = built.edges, g = built.graph;
+    network.setOptions({ interaction: { zoomSpeed: 0.4 } });
+
+    document.getElementById('graph-card-title').textContent = graph.title;
+    document.getElementById('graph-card-sub').textContent =
+      g.nodes.length + ' éléments · ' + g.edges.length + ' relations';
+    document.getElementById('graph-full-link').href =
+      'graph.html?id=' + encodeURIComponent(graph.id);
+
+    var sel = document.getElementById('graph-selection');
+    var vide = '<p>Cliquez sur un <strong style="color:#fff">élément</strong> ou une <strong style="color:var(--cyan)">relation</strong>.</p>';
+
+    network.on('click', function (params) {
+      if (params.nodes.length) {
+        var node = g.nodes.find(function (n) { return n.id === params.nodes[0]; });
+        if (!node) return;
+        var liens = g.edges
+          .filter(function (e) { return e.source === node.id || e.target === node.id; })
+          .map(function (e) {
+            var autre = g.nodes.find(function (n) {
+              return n.id === (e.source === node.id ? e.target : e.source);
+            });
+            return { label: e.label || '', voisin: (autre && autre.label) || '' };
+          });
+        sel.innerHTML =
+          '<div class="graph-sel-cat">' + esc(node.group || '') + '</div>' +
+          '<div class="graph-sel-title">' + esc(node.label) + '</div>' +
+          '<ul class="graph-sel-list">' +
+          liens.map(function (c) {
+            return '<li>' + esc(c.voisin) +
+              (c.label ? '<span class="graph-rel-label">' + esc(c.label) + '</span>' : '') +
+              '</li>';
+          }).join('') + '</ul>';
+      } else if (params.edges.length) {
+        var edge = edges.get(params.edges[0]);
+        if (!edge) return;
+        var de = g.nodes.find(function (n) { return n.id === edge.from; });
+        var vers = g.nodes.find(function (n) { return n.id === edge.to; });
+        sel.innerHTML =
+          '<div class="graph-sel-cat">Relation</div>' +
+          '<div class="graph-sel-title">' + esc(edge.label || 'Lien') + '</div>' +
+          '<p style="font-size:.8rem;color:var(--muted-foreground);margin:.4rem 0 0">' +
+          esc((de && de.label) || edge.from) + ' → ' + esc((vers && vers.label) || edge.to) +
+          '</p>';
+      } else {
+        sel.innerHTML = vide;
+      }
+    });
+  })();
+  </script>
+</body>
+</html>
