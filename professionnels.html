@@ -38,8 +38,7 @@
         </p>
         <div class="btns">
           <a href="#demo" class="btn btn-ghost">Voir un exemple</a>
-          <a href="mailto:wynamail@protonmail.com?subject=WynaGraph%20%E2%80%94%20licence%20professionnelle"
-             class="btn btn-primary">Acheter une licence →</a>
+          <a href="#prix" class="btn btn-primary">Voir les tarifs →</a>
         </div>
       </div>
     </section>
@@ -169,7 +168,7 @@
     </section>
 
     <!-- ════════ PRIX ════════ -->
-    <section class="section">
+    <section class="section" id="prix" style="scroll-margin-top:90px">
       <h2 class="section-title" style="text-align:center">Licence professionnelle</h2>
       <p class="section-sub" style="text-align:center">Un paiement, une fois. Pas d'abonnement.</p>
 
@@ -210,8 +209,11 @@
 
         <p class="pv-legal">
           TVA non applicable, article 293 B du CGI. Réponse sous 48 h ouvrées.
-          Facture émise au nom de votre structure. Plusieurs utilisateurs ou formule
+          Facture émise au nom de votre structure. Pour plusieurs utilisateurs ou la formule
           Accompagnée : indiquez-le dans votre message pour recevoir un devis.
+          Vous pouvez également nous écrire à <a href="mailto:
+          <strong id="mail-addr">wynamail@protonmail.com</strong>
+  <button type="button" id="mail-copy" class="btn-copy">copier</button>
         </p>
       </div>
     </section>
@@ -310,6 +312,18 @@
   <script src="data.js"></script>
   <script src="graph-render.js"></script>
   <script>
+
+  document.getElementById('mail-copy').addEventListener('click', async (e) => {
+    const btn = e.currentTarget;
+    try {
+      await navigator.clipboard.writeText(document.getElementById('mail-addr').textContent.trim());
+      btn.textContent = 'copiée ✓';
+      setTimeout(() => (btn.textContent = 'copier'), 2000);
+    } catch {
+      btn.textContent = 'sélectionnez l\'adresse';
+    }
+  });
+
   (function () {
       var CANDIDATS = ['structure-patrimoniale', 'cartographie-succession-complete', 'assurances'];
 

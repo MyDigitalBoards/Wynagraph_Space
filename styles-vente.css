@@ -200,3 +200,25 @@
   opacity: .45;
   cursor: not-allowed;
 }
+
+.btn-copy {
+  appearance: none;
+  -webkit-appearance: none;
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0 0 0 .4rem;
+  font: inherit;
+  color: var(--cyan, #3ED9DE);
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.btn-copy:hover { color: var(--secondary-800, #0DBAC1); }
+
+.btn-copy:focus-visible {
+  outline: 2px solid var(--cyan, #3ED9DE);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
