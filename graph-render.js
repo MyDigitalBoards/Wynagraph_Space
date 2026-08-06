@@ -1,10 +1,4 @@
-// ─────────────────────────────────────────────────────────────────────────────
-// normalizeGraph — accepte les deux formats :
-//   • Format blog natif  : nodes[].group, edges[].source/target/label
-//   • Export WynaGraph   : nodes[].category, relationships[].source/target/type,
-//                          properties en objet clé/valeur
-// Retourne toujours le format blog (nodes[].group, edges[].label tableau props)
-// ─────────────────────────────────────────────────────────────────────────────
+
 function normalizeGraph(graph) {
   // Normaliser les nœuds
   const nodes = (graph.nodes || []).map(n => ({
@@ -29,12 +23,6 @@ function normalizeGraph(graph) {
   return { ...graph, nodes, edges };
 }
 
-// Clé "générique" = nom de remplissage automatique du Workspace pour une
-// propriété non nommée (prop_1, prop 2, propriete3, champ_1, attribut1…),
-// ou un simple indice numérique. Ces intitulés n'apportent rien à la
-// lecture : on n'affiche alors que la valeur.
-// Volontairement restrictif : un intitulé choisi par l'auteur (« Valeur »,
-// « Champ libre », « Propriétaire »…) doit rester affiché.
 const GENERIC_KEY_RE = /^(?:prop(?:riete|riété|erty)?|champ|attribut|attr)?[\s._-]*\d*$/i;
 
 function isGenericKey(key) {
@@ -42,7 +30,6 @@ function isGenericKey(key) {
   return k === '' || GENERIC_KEY_RE.test(k);
 }
 
-// Convertit un objet {clé: valeur} ou un tableau en tableau de strings
 function normalizeProperties(props) {
   if (!props) return [];
   if (Array.isArray(props)) {
@@ -59,7 +46,6 @@ function normalizeProperties(props) {
     .filter(Boolean);
 }
 
-// "CONTROLE_QUALITE" → "Controle qualite"
 function denormalize(str) {
   if (!str) return '';
   return str.replace(/_/g, ' ').toLowerCase().replace(/^\w/, c => c.toUpperCase());
@@ -76,9 +62,7 @@ const CATEGORY_COLORS = {
   default: "#1D3655",
 };
 
-// Palette de secours pour les catégories inconnues (graphes importés depuis
-// WynaGraph Workspace) : une couleur stable est attribuée par hachage du nom,
-// afin que chaque catégorie reste visuellement distincte d'une session à l'autre.
+
 const FALLBACK_PALETTE = [
   "#42ebe2", "#0dbac1", "#7dd3fc", "#a78bfa", "#fbbf24", "#34d399",
   "#e879b9", "#fca5a5", "#fcd34d", "#86efac", "#e05454", "#fde68a",
@@ -100,8 +84,6 @@ function colorFor(group) {
   return FALLBACK_PALETTE[hashString(key) % FALLBACK_PALETTE.length];
 }
 
-// Couleur de texte lisible sur un fond donné (équivalent de
-// getCategoryTextColor du Workspace) : sombre sur couleur claire, blanc sinon.
 function textColorFor(hex) {
   const m = /^#?([0-9a-f]{6})$/i.exec(String(hex || "").trim());
   if (!m) return "#ffffff";
@@ -115,8 +97,6 @@ function buildNetwork(container, graphRaw, opts = {}) {
   const graph = normalizeGraph(graphRaw);
   const interactive = opts.interactive !== false;
 
-  // Positions embarquées ? (export Workspace avec x/y : on respecte la mise
-  // en page telle qu'elle était dans le Workspace, physique coupée.)
   const hasPositions = graph.nodes.length > 0 &&
     graph.nodes.every(n => typeof n.x === 'number' && typeof n.y === 'number');
 
@@ -128,8 +108,6 @@ function buildNetwork(container, graphRaw, opts = {}) {
         label: interactive ? n.label : "",
         ...(hasPositions ? { x: n.x, y: n.y } : {}),
         value: n.size || 14,
-        // Même rendu que le Workspace : boîte remplie de la couleur de la
-        // catégorie (identique aux pastilles de la légende), texte contrasté.
         shape: "box",
         margin: interactive ? 10 : 4,
         color: {
@@ -153,11 +131,7 @@ function buildNetwork(container, graphRaw, opts = {}) {
     })
   );
 
-  // Une courbure n'a de raison d'être que si plusieurs liens relient la
-  // même paire de nœuds : sans elle, ils se superposeraient. Partout
-  // ailleurs, la ligne droite est plus lisible et sa longueur suit
-  // exactement la distance entre les deux nœuds. On repère donc les paires
-  // concernées avant de construire les liens.
+  
   const pairKey = (a, b) => [String(a), String(b)].sort().join("\u0000");
   const pairCount = {};
   graph.edges.forEach(e => {
@@ -166,12 +140,11 @@ function buildNetwork(container, graphRaw, opts = {}) {
   });
   const pairSeen = {};
 
-  // Courbure d'un lien : droite si la paire est unique ; sinon un arc de
-  // part et d'autre, écarté un peu plus à chaque lien supplémentaire.
+ 
   function smoothFor(e) {
-    if (String(e.source) === String(e.target)) return undefined; // boucle : vis gère
+    if (String(e.source) === String(e.target)) return undefined; 
     const k = pairKey(e.source, e.target);
-    if ((pairCount[k] || 0) < 2) return false;                   // ligne droite
+    if ((pairCount[k] || 0) < 2) return false;                   
     const rank = (pairSeen[k] = (pairSeen[k] || 0) + 1) - 1;
     return {
       enabled: true,
@@ -216,12 +189,7 @@ function buildNetwork(container, graphRaw, opts = {}) {
         springLength: interactive ? 142 : 90,
         springConstant: 0.04,
       },
-      // Pré-placement partiel, hors écran : le graphe apparaît déjà dégrossi
-      // et cadré, puis finit de se poser sous les yeux du visiteur. C'est ce
-      // dosage qui donne le mouvement sans l'explosion initiale — trop peu
-      // d'itérations et l'ouverture part d'un amas confus, trop et il ne
-      // reste plus rien à voir. `fit: true` : vis cadre une seule fois, à la
-      // fin de ce pré-placement.
+    
       stabilization: {
         enabled: true,
         iterations: interactive ? 90 : 60,
@@ -243,34 +211,19 @@ function buildNetwork(container, graphRaw, opts = {}) {
       font: { color: "#AAB4C0", size: 11, align: "middle", strokeWidth: 3, strokeColor: "#042042" },
       color: { color: "rgba(255,255,255,.18)", highlight: "#42ebe2", hover: "#42ebe2" },
       arrows: { to: { enabled: true, scaleFactor: 0.8 } },
-      // Réglage par défaut : lignes droites. Le mode « dynamic » de
-      // vis-network attache à chaque lien un point de contrôle invisible,
-      // lui-même soumis à la physique : il traîne derrière le mouvement et
-      // déforme les liens en arcs qui ne suivent plus la distance réelle
-      // entre les nœuds. Les rares liens multiples reçoivent une courbure
-      // explicite (voir smoothFor ci-dessus).
+     
       smooth: false,
     },
   };
 
   const network = new vis.Network(container, { nodes, edges }, options);
 
-  // Interrompt le cadrage automatique du démarrage. Appelé dès que le
-  // visiteur prend la main, et par l'appelant lorsqu'il pilote lui-même la
-  // vue (recadrage sur filtrage, par exemple).
   let stopAutoFit = () => {};
 
   if (hasPositions) {
-    // Graphe importé avec ses positions : mise en page respectée, rien à
-    // simuler. Le visiteur peut activer la physique s'il le souhaite.
-    network.once("afterDrawing", () => network.fit({ animation: false }));
+     network.once("afterDrawing", () => network.fit({ animation: false }));
   } else {
-    // Un seul recadrage, en douceur, une fois que le graphe a fini de se
-    // poser. Pas de suivi répété pendant l'animation : recadrer toutes les
-    // fractions de seconde pendant que les nœuds bougent produit des
-    // sursauts de la vue. Le cadrage initial est déjà assuré par
-    // `stabilization.fit`, celui-ci ne fait que rattraper la dérive
-    // résiduelle du dernier mouvement.
+   
     let pending = true;
     stopAutoFit = () => {
       if (!pending) return;
@@ -283,14 +236,10 @@ function buildNetwork(container, graphRaw, opts = {}) {
       network.fit({ animation: { duration: 700, easingFunction: "easeInOutQuad" } });
     }, 1600);
 
-    // Le visiteur a pris la main : la vue lui appartient, on n'y touche plus.
     if (interactive) {
       ["dragStart", "zoom", "click"].forEach(ev => network.on(ev, () => stopAutoFit()));
     }
   }
 
-  // La physique reste ACTIVE : le graphe respire, et un nœud déplacé
-  // entraîne ses voisins. En plein écran, le visiteur peut la couper via le
-  // bouton « Physique » s'il préfère figer la disposition.
   return { network, nodes, edges, graph, hasPositions, stopAutoFit: () => stopAutoFit() };
 }
