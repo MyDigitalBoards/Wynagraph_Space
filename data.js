@@ -2583,7 +2583,6 @@ window.GRAPHS = [
     { "source": "pas_proteger", "target": "action_zone", "label": "Implique de" },
     { "source": "pas_alerter", "target": "action_appel", "label": "Via" },
     { "source": "action_appel", "target": "info_alerte", "label": "Transmettre les" },
-    
     { "source": "pas_secourir", "target": "etat_inconscient", "label": "Si" },
     { "source": "etat_inconscient", "target": "geste_pls", "label": "Réaliser une" },
     
