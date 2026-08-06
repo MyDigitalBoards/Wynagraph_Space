@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WynaGraph, écran par écran — visite guidée de l'application</title>
+  <meta name="description" content="Visite guidée de WynaGraph : écran d'accueil, modèles, vue graphe, vue tableau, vue pastilles, import et export. Chaque écran tel qu'il apparaît sur votre poste de travail." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles-vente.css" />
+  <style>
+    /* ── Captures d'écran ─────────────────────────────────────────────────── */
+    .sc-shot {
+      margin: 0 0 1.2rem;
+      background: var(--tile);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .sc-shot img {
+      display: block;
+      width: 100%;
+      height: auto;
+      cursor: zoom-in;
+    }
+    .sc-shot figcaption {
+      padding: 1rem 1.2rem 1.2rem;
+      border-top: 1px solid var(--border);
+    }
+    .sc-shot-title {
+      color: var(--cyan);
+      font-weight: 600;
+      font-size: 1.02rem;
+      margin-bottom: .35rem;
+    }
+    .sc-shot figcaption p {
+      color: var(--muted-foreground);
+      line-height: 1.65;
+      font-size: .94rem;
+      margin: 0;
+    }
+
+    /* Deux captures côte à côte quand la place le permet */
+    .sc-pair {
+      display: grid;
+      gap: 1.2rem;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      align-items: start;
+    }
+    /* Panneau latéral étroit : capture à gauche, texte à droite */
+    .sc-split { display: grid; gap: 1.6rem; grid-template-columns: 300px 1fr; align-items: start; }
+    @media (max-width: 780px) { .sc-split { grid-template-columns: 1fr; } }
+
+    .sc-step-label {
+      font-size: .72rem; text-transform: uppercase; letter-spacing: .22em;
+      color: var(--cyan); margin-bottom: .5rem; display: block;
+    }
+
+    /* Bandeau des trois garanties */
+    .sc-facts {
+      display: grid; gap: 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      margin: 2rem 0 0;
+    }
+    .sc-fact {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: var(--surface);
+      padding: 1.1rem 1.2rem;
+      text-align: center;
+      font-weight: 600;
+    }
+    .sc-fact span { display: block; font-size: 1.5rem; margin-bottom: .4rem; }
+
+    /* Visionneuse plein écran */
+    #sc-viewer {
+      position: fixed; inset: 0; z-index: 100;
+      background: rgba(2, 12, 26, .93);
+      display: none; align-items: center; justify-content: center;
+      padding: 2rem 1rem;
+    }
+    #sc-viewer.open { display: flex; }
+    #sc-viewer img { max-width: 100%; max-height: 88vh; border-radius: 8px; cursor: zoom-out; }
+    #sc-viewer-close {
+      position: absolute; top: 1rem; right: 1.2rem;
+      background: none; border: 1px solid var(--border); color: var(--foreground);
+      border-radius: 8px; padding: .4rem .7rem; font-size: 1rem; cursor: pointer;
+    }
+    #sc-viewer-close:hover { border-color: var(--cyan); color: var(--cyan); }
+
+    @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav">
+      <a href="index.html" class="brand">WYNAGRAPH<span class="dot"> SPACE</span></a>
+      <nav class="nav-links">
+        <a href="galerie.html">Galerie</a>
+        <a href="index.html#articles">Articles</a>
+        <a href="particuliers.html">Particuliers</a>
+        <a href="professionnels.html">Professionnels</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <div class="hero-inner">
+        <span class="eyebrow">Présentation de l'application</span>
+        <h1>WynaGraph, <span class="accent">écran par écran</span></h1>
+        <p class="lead">
+          De l'accueil à l'export de vos données, chaque écran tel qu'il apparaît
+          sur votre poste de travail.
+        </p>
+      </div>
+    </section>
+
+    
+    <section class="section">
+      <a href="a-propos.html" class="back-link">← Retour </a>
+      <figure class="sc-shot">
+        <img src="ecrans/accueil.jpg" width="1623" height="684"
+             alt="Écran d'accueil de WynaGraph : titre « Cartographiez vos données en toute confidentialité » et bouton Explorer les modèles." />
+        <figcaption>
+          <div class="sc-shot-title">L'écran d'accueil</div>
+          <p>Le message d'ouverture résume l'esprit du logiciel : connecter ses idées
+          selon sa propre logique — simple, visuel, privé.</p>
+        </figcaption>
+      </figure>
+
+      <div class="sc-facts">
+        <div class="sc-fact"><span>🔒</span>0 donnée transmise</div>
+        <div class="sc-fact"><span>💾</span>100 % hors ligne</div>
+        <div class="sc-fact"><span>🗺️</span>Graphe + tableau</div>
+      </div>
+
+      <p class="section-sub" style="margin-top:1.5rem;text-align:center">
+        Interface présentée en français — également disponible en anglais et en allemand.
+      </p>
+    </section>
+
+    <!-- ════════ ÉTAPE 1 ════════ -->
+    <section class="section">
+      <span class="sc-step-label">Étape 1</span>
+      <h2 class="section-title">Démarrer en quelques minutes</h2>
+      <p class="section-sub">Partir d'une trame existante, ou retrouver un graphe commencé.</p>
+
+      <div class="sc-pair">
+        <figure class="sc-shot">
+          <img src="ecrans/modeles.jpg" width="1623" height="865" loading="lazy"
+               alt="Écran de sélection des modèles : tuiles Préparer sa succession, Inventaire personnel, Comptes en ligne, Applications, Livres, Centres d'intérêt." />
+          <figcaption>
+            <div class="sc-shot-title">Choisir un modèle</div>
+            <p>Des trames prêtes à l'emploi — préparation d'une succession, inventaire
+            personnel, comptes en ligne, applications, livres, centres d'intérêt.
+            Un clic charge le graphe associé, qu'il ne reste qu'à personnaliser.</p>
+          </figcaption>
+        </figure>
+
+        <figure class="sc-shot">
+          <img src="ecrans/mes-graphes.jpg" width="1623" height="834" loading="lazy"
+               alt="Écran Mes graphes personnels : champ de recherche et vignettes des graphes enregistrés, avec boutons renommer et supprimer." />
+          <figcaption>
+            <div class="sc-shot-title">Retrouver ses graphes</div>
+            <p>Chaque graphe enregistré est accessible depuis « Mes graphes personnels » :
+            recherche, renommage, suppression — l'ensemble de vos cartographies réunies
+            au même endroit.</p>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ════════ ÉTAPE 2 ════════ -->
+    <section class="section">
+      <span class="sc-step-label">Étape 2</span>
+      <h2 class="section-title">Construire et explorer le graphe</h2>
+      <p class="section-sub">Le cœur de l'application.</p>
+
+      <figure class="sc-shot">
+        <img src="ecrans/vue-graphe.jpg" width="1623" height="862" loading="lazy"
+             alt="Vue graphe du modèle Structure patrimoniale : éléments colorés par catégorie reliés entre eux, panneau latéral de recherche et filtres d'affichage." />
+        <figcaption>
+          <div class="sc-shot-title">La vue graphe</div>
+          <p>Les éléments et leurs relations, colorés par catégorie. Le panneau latéral
+          offre la recherche globale et des filtres d'affichage ; un clic sur un élément
+          en révèle les informations. Ici, le modèle « Structure patrimoniale ».</p>
+        </figcaption>
+      </figure>
+
+      <div class="sc-split">
+        <figure class="sc-shot">
+          <img src="ecrans/panneau-ajout.jpg" width="380" height="830" loading="lazy"
+               alt="Panneau latéral de saisie : champs Source, Relation, Propriété de la relation et Cible, puis bloc Ajouter un élément seul." />
+        </figure>
+        <div>
+          <h3 style="color:var(--cyan);font-size:1.15rem;margin:0 0 .8rem">Ajouter une relation ou un élément</h3>
+          <p style="color:var(--muted-foreground);line-height:1.7;margin-bottom:1rem">
+            La saisie repose sur un principe simple : une source, une relation, une cible.
+            Chaque relation peut porter ses propres propriétés au même titre que les
+            éléments eux-mêmes.
+          </p>
+          <p style="color:var(--muted-foreground);line-height:1.7">
+            Les éléments peuvent aussi être créés seuls, avec leur catégorie, puis reliés
+            plus tard : le graphe se construit au rythme de votre réflexion.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════ ÉTAPE 3 ════════ -->
+    <section class="section">
+      <span class="sc-step-label">Étape 3</span>
+      <h2 class="section-title">Lire les mêmes données sous plusieurs angles</h2>
+      <p class="section-sub">Un même graphe, trois manières de le parcourir.</p>
+
+      <figure class="sc-shot">
+        <img src="ecrans/vue-tableau.jpg" width="1623" height="863" loading="lazy"
+             alt="Vue tableau : colonnes Catégorie, Source, Propriétés source, Relation, Propriétés relation, Cible et Propriétés cible." />
+        <figcaption>
+          <div class="sc-shot-title">La vue tableau</div>
+          <p>Le contenu du graphe en lignes et colonnes triables : catégorie, source,
+          relation, cible et leurs propriétés respectives. Idéale pour vérifier, compléter
+          et parcourir les données de manière systématique.</p>
+        </figcaption>
+      </figure>
+
+      <figure class="sc-shot">
+        <img src="ecrans/vue-pastilles.jpg" width="1623" height="774" loading="lazy"
+             alt="Vue pastilles : chaque relation présentée sous forme de fiche avec sa source, sa cible et leurs propriétés." />
+        <figcaption>
+          <div class="sc-shot-title">La vue pastilles</div>
+          <p>Une lecture fiche par fiche : chaque relation est présentée avec sa source,
+          sa cible et leurs propriétés, dans un format adapté à la relecture attentive
+          d'un dossier.</p>
+        </figcaption>
+      </figure>
+    </section>
+
+    <!-- ════════ ÉTAPE 4 ════════ -->
+    <section class="section">
+      <span class="sc-step-label">Étape 4</span>
+      <h2 class="section-title">Vos données restent les vôtres</h2>
+      <p class="section-sub">Quatre formats ouverts, dans les deux sens.</p>
+
+      <div class="sc-pair">
+        <figure class="sc-shot">
+          <img src="ecrans/exporter.jpg" width="1213" height="644" loading="lazy"
+               alt="Fenêtre d'export proposant les formats CSV, JSON, PNG et HTML." />
+          <figcaption>
+            <div class="sc-shot-title">Exporter</div>
+            <p>Quatre formats ouverts : CSV, JSON, PNG et HTML. Le fichier est déposé
+            directement dans vos téléchargements. Vos données restent lisibles et
+            réutilisables en dehors de l'application.</p>
+          </figcaption>
+        </figure>
+
+        <figure class="sc-shot">
+          <img src="ecrans/importer.jpg" width="1213" height="645" loading="lazy"
+               alt="Écran d'import : zone de glisser-déposer pour charger un fichier CSV de configuration." />
+          <figcaption>
+            <div class="sc-shot-title">Importer</div>
+            <p>Un glisser-déposer suffit pour charger un fichier CSV — depuis un modèle
+            fourni ou l'un de vos exports précédents.</p>
+          </figcaption>
+        </figure>
+      </div>
+
+      <div class="pv-callout" style="margin-top:2rem">
+        <p><strong>Un cycle complet, entièrement local</strong></p>
+        <p>
+          De la création à l'export, chaque opération présentée sur cette page s'exécute
+          sur votre poste de travail, sans compte ni connexion. Les formats ouverts
+          (CSV, JSON, HTML) garantissent que vos données restent lisibles et réutilisables
+          à tout moment, y compris en dehors de l'application — un engagement formalisé au
+          contrat de licence (<a href="cluf.html" style="color:var(--cyan)">art. 4 du CLUF</a>).
+        </p>
+      </div>
+
+      <div class="btns" style="margin-top:2rem">
+        <a href="commander.html" class="btn btn-primary">Commander la licence →</a>
+        <a href="particuliers.html" class="btn btn-ghost">Revenir à la présentation</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    © 2026 WynaGraph Space ·
+    <a href="index.html" style="color:var(--cyan)">Accueil</a> ·
+    <a href="a-propos.html" style="color:var(--cyan)">À propos</a> ·
+    <a href="mentions-legales.html" style="color:var(--cyan)">Mentions légales</a> ·
+    <a href="cgv.html" style="color:var(--cyan)">CGV</a> ·
+    <a href="cluf.html" style="color:var(--cyan)">CLUF</a> ·
+    <a href="confidentialite.html" style="color:var(--cyan)">Confidentialité</a>
+  </footer>
+
+  <!-- Visionneuse : agrandit une capture au clic -->
+  <div id="sc-viewer" role="dialog" aria-modal="true" aria-label="Capture agrandie">
+    <button id="sc-viewer-close" aria-label="Fermer">✕</button>
+    <img id="sc-viewer-img" src="" alt="" />
+  </div>
+
+  <script>
+  (function () {
+    // Agrandissement des captures. Sans JavaScript, les images restent
+    // lisibles à leur taille normale : rien d'essentiel n'en dépend.
+    var viewer = document.getElementById('sc-viewer');
+    var vimg   = document.getElementById('sc-viewer-img');
+    var close  = document.getElementById('sc-viewer-close');
+    var last   = null;
+
+    function open(img) {
+      last = img;
+      vimg.src = img.currentSrc || img.src;
+      vimg.alt = img.alt;
+      viewer.classList.add('open');
+      document.body.style.overflow = 'hidden';
+      close.focus();
+    }
+    function shut() {
+      viewer.classList.remove('open');
+      vimg.src = '';
+      document.body.style.overflow = '';
+      if (last) last.focus();
+    }
+
+    document.querySelectorAll('.sc-shot img').forEach(function (img) {
+      img.tabIndex = 0;
+      img.addEventListener('click', function () { open(img); });
+      img.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(img); }
+      });
+    });
+
+    close.addEventListener('click', shut);
+    viewer.addEventListener('click', function (e) { if (e.target !== close) shut(); });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && viewer.classList.contains('open')) shut();
+    });
+  })();
+  </script>
+</body>
+</html>
