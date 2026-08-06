@@ -7,6 +7,16 @@
   <meta name="description" content="Des graphes pour mieux visualiser votre vie : finances, santé, droits, culture. Et un outil pour créer les vôtres." />
 
   <link rel="stylesheet" href="styles.css" />
+  <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+  <style>
+   
+    .card-thumb.is-pending::after {
+      content: "";
+      position: absolute; inset: 0;
+      background: radial-gradient(circle at 50% 45%, rgba(66,235,226,.10), transparent 65%);
+    }
+    .home-graphs-actions { margin-top: 2.5rem; display: flex; gap: .75rem; justify-content: center; flex-wrap: wrap; }
+  </style>
 </head>
 <body>
   <header class="site-header">
@@ -15,8 +25,7 @@
       <nav class="nav-links">
         <a href="galerie.html">Galerie</a>
         <a href="index.html#articles">Articles</a>
-        <a href="particuliers.html">Particuliers</a>
-        <a href="professionnels.html">Professionnels</a>
+        <a href="a-propos.html">À propos</a>
       </nav>
     </div>
   </header>
@@ -29,20 +38,27 @@
         <h1>Redonner du sens à ses données<br/><span class="accent"> grâce aux graphes</span></h1>
         <p class="lead">Des cartes interactives pour visualiser vos finances, vos droits, votre santé, votre culture — et un outil pour créer les vôtres.</p>
         <div class="btns">
-          <a href="galerie.html" class="btn btn-primary">Explorer la galerie</a>
-          <a href="#articles" class="btn btn-ghost">Lire les articles</a>
+          <a href="a-propos.html" class="btn btn-primary">En savoir plus</a>
+          <a href="commander.html" class="btn btn-ghost">Acheter une licence</a>
         </div>
       </div>
     </section>
 
+    <!-- VITRINE : TOUS LES GRAPHES -->
+    <section id="graphes" class="section">
+      <h2 class="section-title">Galerie</h2>
+      <p class="section-sub" id="graphes-sub">Cliquez sur une carte pour ouvrir le graphe en plein écran.</p>
+      <div class="grid" id="graph-grid"></div>
+      <div class="home-graphs-actions">
+        <a href="galerie.html" class="btn btn-ghost">Parcourir par thème →</a>
+      </div>
+    </section>
+
     <!-- DERNIERS ARTICLES -->
-    <section id="articles" class="section">
+    <section id="articles" class="section" style="padding-top:0">
       <h2 class="section-title">Derniers articles</h2>
       <p class="section-sub">Chaque article explore un graphe et explique pourquoi cette cartographie est utile.</p>
       <div class="posts-grid" id="posts-grid"></div>
-      <div style="margin-top:2rem;text-align:center">
-        <a href="galerie.html" class="btn btn-ghost">Voir tous les graphes →</a>
-      </div>
     </section>
 
     <!-- BANDEAU WORKSPACE -->
@@ -50,50 +66,101 @@
       <div class="workspace-banner">
         <div class="workspace-banner-text">
           <h3>Créez vos propres graphes</h3>
-          <p>WynaGraph est une application de bureau 100&nbsp;% locale et hors ligne. Vous construisez vos cartes sur votre ordinateur, sans compte ni connexion — puis vous les partagez sous forme d'un fichier que vos destinataires ouvrent sans rien installer.</p>
+          <p>WynaGraph Workspace est un outil 100% local. Créez des cartographies à partir de vos données ou importez un fichier CSV, visualisez les connexions, exportez pour partager. Vous gardez la maîtrise de vos données.</p>
         </div>
         <div class="workspace-banner-actions">
-          <a href="particuliers.html" class="btn btn-primary">Découvrir le logiciel →</a>
-          <a href="professionnels.html" class="btn btn-ghost">Pour les professionnels</a>
+          <a href="commander.html" class="btn btn-primary" rel="noopener">
+            Acheter la licence →
+          </a>
+          <a href="a-propos.html" class="btn btn-ghost">Comment ça marche</a>
         </div>
       </div>
     </section>
   </main>
 
-    <footer>
+  <footer>
     © 2026 WynaGraph Space ·
-    <a href="a-propos.html" style="color:var(--cyan)">À propos</a> ·
-    <a href="mentions-legales.html" style="color:var(--cyan)">Mentions légales</a> .
-    <a href="confidentialite.html" style="color:var(--cyan)">Confidentialité</a> .
-    <a href="cgv.html" style="color:var(--cyan)">CGV</a> . 
-    <a href="cluf.html" style="color:var(--cyan)">CLUF</a> 
+    <a href="galerie.html" style="color:var(--cyan)">Galerie</a> ·
+    <a href="a-propos.html" style="color:var(--cyan)">À propos</a>
   </footer>
 
+  <script src="data.js"></script>
   <script src="posts.js"></script>
+  <script src="graph-render.js"></script>
   <script>
-    // Formater la date
+  function escHtml(s) {
+    return String(s == null ? '' : s).replace(/[&<>"']/g, m =>
+      ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;' }[m]));
+  }
+
+  // ── Vitrine : toutes les miniatures, sans étape « thème » ──────────────────
+  (function renderAllGraphs() {
+    const grid   = document.getElementById('graph-grid');
+    const graphs = window.GRAPHS || [];
+
+    document.getElementById('graphes-sub').textContent =
+      `${graphs.length} graphe${graphs.length > 1 ? 's' : ''} à explorer. Cliquez sur une carte pour l'ouvrir en plein écran.`;
+
+    graphs.forEach(g => {
+      const card = document.createElement('a');
+      card.className = 'card';
+      card.href = `graph.html?id=${encodeURIComponent(g.id)}`;
+      card.innerHTML = `
+        <div class="card-thumb is-pending"></div>
+        <div class="card-body">
+          <div class="card-cat">${escHtml(g.category || '')}</div>
+          <div class="card-title">${escHtml(g.title)}</div>
+          <p class="card-desc">${escHtml(g.description || '')}</p>
+        </div>`;
+      grid.appendChild(card);
+
+     
+      const thumb = card.querySelector('.card-thumb');
+      thumb._graph = g;
+    });
+
+    const thumbs = grid.querySelectorAll('.card-thumb');
+
+    if (!('IntersectionObserver' in window)) {
+      thumbs.forEach(t => { t.classList.remove('is-pending'); buildNetwork(t, t._graph, { interactive: false }); });
+      return;
+    }
+
+    const io = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        const el = entry.target;
+        obs.unobserve(el);
+        el.classList.remove('is-pending');
+        buildNetwork(el, el._graph, { interactive: false });
+      });
+    }, { rootMargin: '300px 0px' });
+
+    thumbs.forEach(t => io.observe(t));
+  })();
+
+  // ── Derniers articles ─────────────────────────────────────────────────────
+  (function renderPosts() {
     function formatDate(iso) {
       return new Date(iso).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' });
     }
-
-    // Rendre les articles (les 6 plus récents)
     const grid = document.getElementById('posts-grid');
-    const sorted = [...POSTS].sort((a, b) => new Date(b.date) - new Date(a.date)).slice(0, 6);
+    const sorted = [...(window.POSTS || [])].sort((a, b) => new Date(b.date) - new Date(a.date)).slice(0, 6);
 
     sorted.forEach(post => {
       const card = document.createElement('a');
       card.className = 'post-card';
       card.href = `article.html?id=${encodeURIComponent(post.id)}`;
       card.innerHTML = `
-        <div class="post-cat">${post.category}</div>
-        <div class="post-title">${post.title}</div>
-        <p class="post-excerpt">${post.excerpt}</p>
+        <div class="post-cat">${escHtml(post.category)}</div>
+        <div class="post-title">${escHtml(post.title)}</div>
+        <p class="post-excerpt">${escHtml(post.excerpt)}</p>
         ${post.graphId ? `<span class="post-graph-badge">⬡ Graphe interactif inclus</span>` : ''}
         <div class="post-date">${formatDate(post.date)}</div>
       `;
       grid.appendChild(card);
     });
+  })();
   </script>
-
 </body>
 </html>
