@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ═══ RÉFÉRENCEMENT ═══ -->
+  <title>Cartographie complète d'une succession — qui prévenir, dans quel ordre, dans quels délais</title>
+  <meta name="description" content="Une carte interactive qui relie le défunt, les proches, les organismes, les documents et les délais légaux. À explorer librement, pour comprendre l'enchaînement des démarches d'une succession." />
+  <link rel="canonical" href="https://mydigitalboards.com/cartographies/succession-complete.html" />
+
+  <!-- ═══ APERÇU AU PARTAGE (email, LinkedIn, messagerie) ═══ -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Cartographie complète d'une succession" />
+  <meta property="og:description" content="Qui prévenir, dans quel ordre, dans quels délais. Une carte interactive à explorer." />
+  <meta property="og:image" content="https://mydigitalboards.com/img/apercu-succession.png" />
+  <meta property="og:url" content="https://mydigitalboards.com/cartographies/succession-complete.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="../styles-vente.css" />
+  <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="nav">
+      <a href="../index.html" class="brand">WYNAGRAPH<span class="dot"> SPACE</span></a>
+      <nav class="nav-links">
+        <a href="../galerie.html">Galerie</a>
+        <a href="../index.html#articles">Articles</a>
+        <a href="../particuliers.html">Particuliers</a>
+        <a href="../professionnels.html">Professionnels</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ════════ INTRODUCTION ════════ -->
+    <section class="hero">
+      <div class="hero-inner">
+        <span class="eyebrow">Cartographie · Succession</span>
+        <h1>Une succession,<br/><span class="accent">vue d'ensemble</span></h1>
+        <p class="lead">
+          Un décès déclenche une trentaine de démarches, auprès d'une quinzaine d'interlocuteurs,
+          avec des délais qui ne sont pas les mêmes. Les listes existent, et elles sont utiles —
+          mais une liste ne dit pas ce qui dépend de quoi.
+        </p>
+        <p class="lead">
+          Cette carte le montre. Elle relie le défunt, ses proches, les organismes à prévenir,
+          les documents à réunir, les contrats souscrits et les délais à respecter. Vous pouvez
+          l'explorer librement : cliquez sur un élément pour voir ce qui s'y rattache.
+        </p>
+      </div>
+    </section>
+
+    <!-- ════════ LE GRAPHE ════════ -->
+    <section class="section pv-demo" id="carte">
+      <div class="graph-card">
+        <div class="graph-card-frame" id="graph-frame"></div>
+        <div class="graph-selection" id="graph-selection">
+          <p>Cliquez sur un <strong style="color:#fff">élément</strong> ou une <strong style="color:var(--cyan)">relation</strong> pour en voir le détail.</p>
+        </div>
+        <div class="graph-card-footer">
+          <div>
+            <div class="graph-card-title" id="graph-card-title"></div>
+            <div class="graph-card-sub" id="graph-card-sub"></div>
+          </div>
+          <a id="graph-full-link" href="#" class="btn btn-ghost" style="font-size:.82rem">Voir en plein écran →</a>
+        </div>
+      </div>
+      <p class="pv-demo-hint">
+        Carte informative construite à partir des règles générales applicables en France.
+        Les noms, montants et dates sont à renseigner : rien ici ne concerne une personne réelle.
+      </p>
+    </section>
+
+    <!-- ════════ COMMENT LIRE ════════ -->
+    <section class="section readme">
+      <h2 class="section-title">Comment lire cette carte</h2>
+      <p class="section-sub">Deux minutes suffisent pour s'y retrouver.</p>
+
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <strong>Les couleurs sont des familles</strong>
+          <p>Personnes, organismes, documents, contrats, formalités, délais, biens. Chaque catégorie a sa teinte : on repère d'un coup d'œil de quoi on parle.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <strong>Les liens portent l'essentiel</strong>
+          <p>Ce n'est pas décoratif. « À prévenir dans les six jours », « hors succession en principe », « sur présentation de l'acte de décès » : l'information utile est sur le lien, pas seulement sur les éléments.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <strong>Un clic ouvre le détail</strong>
+          <p>Le panneau affiche les propriétés de l'élément ou de la relation sélectionnée. Le clic droit permet de n'afficher que les voisins d'un élément, pour isoler une branche.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════ CE QU'ELLE MONTRE ════════ -->
+    <section class="section readme">
+      <h2 class="section-title">Ce qu'une liste ne montre pas</h2>
+      <p class="section-sub">Quatre enchaînements que la carte rend immédiatement visibles.</p>
+
+      <ul class="pv-check">
+        <li><strong>L'acte de décès commande presque tout.</strong> Banque, employeur, caisse de retraite, notaire : la plupart des démarches en dépendent. D'où le conseil, visible sur la carte, d'en demander plusieurs copies dès le départ — elles sont gratuites.</li>
+        <li><strong>L'assurance-vie suit un chemin à part.</strong> Elle est en principe hors succession et va aux bénéficiaires désignés au contrat. La carte montre ce circuit séparé, ainsi que la recherche gratuite auprès de l'AGIRA lorsqu'on ignore si un contrat existe.</li>
+        <li><strong>Le testament conditionne la suite.</strong> Sa forme — olographe, authentique, mystique — détermine où le chercher. Le fichier central des dispositions de dernières volontés se consulte avec l'acte de décès, et cette consultation ouvre ou ferme des branches entières de la carte.</li>
+        <li><strong>Les délais ne courent pas ensemble.</strong> Certains se comptent en jours, d'autres en mois. Les voir reliés aux démarches qu'ils commandent évite de traiter dans le désordre ce qui aurait dû l'être en premier.</li>
+      </ul>
+    </section>
+
+    <!-- ════════ DEUX USAGES ════════ -->
+    <section class="section">
+      <h2 class="section-title">Deux moments où elle sert</h2>
+      <p class="section-sub">Ce ne sont pas les mêmes besoins.</p>
+
+      <div class="grid">
+        <div class="card">
+          <div class="card-body">
+            <div class="card-cat">Après</div>
+            <div class="card-title">Quand il faut avancer</div>
+            <p class="card-desc">
+              On agit dans un moment où l'on n'a ni la tête ni le temps de tout reconstituer.
+              Avoir sous les yeux ce qui dépend de quoi permet de traiter dans le bon ordre,
+              et de voir ce qui reste.
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <div class="card-cat">Avant</div>
+            <div class="card-title">Quand on veut préparer</div>
+            <p class="card-desc">
+              Remplir cette trame avec sa propre situation — ses contrats, ses comptes, ses
+              volontés, les personnes à prévenir — c'est épargner à ses proches un travail
+              d'enquête qu'ils feraient dans l'urgence.
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <div class="card-cat">Ensemble</div>
+            <div class="card-title">Quand il faut se parler</div>
+            <p class="card-desc">
+              Une carte partagée entre frères et sœurs, ou remise à la personne de confiance,
+              donne une base commune. On discute de la situation, pas de qui a compris quoi.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════ AVERTISSEMENT ════════ -->
+    <section class="section">
+      <div class="pv-callout">
+        <p>
+          <strong>Ce que cette carte n'est pas.</strong> Elle présente les règles générales
+          applicables en France à titre informatif. Elle ne constitue pas un conseil juridique
+          et ne remplace pas un notaire, dont l'intervention est notamment requise en présence
+          d'un bien immobilier ou d'un testament. Chaque situation comporte ses particularités —
+          régime matrimonial, donations antérieures, décès survenu à l'étranger — que seule
+          une analyse du dossier permet de trancher.
+        </p>
+      </div>
+    </section>
+
+    <!-- ════════ APPEL À L'ACTION ════════ -->
+    <section class="section" id="creer">
+      <h2 class="section-title">Faire la vôtre</h2>
+      <p class="section-sub">Cette carte est un modèle fourni avec le logiciel. Vous remplacez les exemples par votre situation.</p>
+
+      <div class="pv-price">
+        <div class="pv-price-label">Licence particulier</div>
+        <div class="pv-price-amount">59 €<span class="pv-price-unit"> TTC</span></div>
+        <p class="pv-price-note">Paiement unique, licence perpétuelle, aucun abonnement</p>
+
+        <ul class="pv-check">
+          <li>Le modèle « succession » est inclus, avec une dizaine d'autres trames</li>
+          <li>Tout reste sur votre ordinateur : ni compte, ni serveur, ni connexion Internet</li>
+          <li>Vous exportez un fichier que vos proches ouvrent d'un double-clic, sans rien installer</li>
+          <li>Nombre de cartes illimité · français, anglais, allemand</li>
+        </ul>
+
+        <div class="btns">
+          <a href="../commander.html" class="btn btn-primary">Obtenir la licence →</a>
+          <a href="../particuliers.html" class="btn btn-ghost">En savoir plus sur le logiciel</a>
+        </div>
+
+        <p class="pv-legal">
+          Logiciel de bureau Windows. Licence réservée à un usage privé : tout usage professionnel
+          relève de la <a href="../professionnels.html" style="color:var(--cyan)">licence professionnelle</a>.
+        </p>
+      </div>
+    </section>
+
+    <!-- ════════ PASSERELLE PROFESSIONNELS ════════ -->
+    <section class="section">
+      <div class="article-cta">
+        <p><strong>Vous accompagnez des familles à titre professionnel ?</strong><br>
+        Notaires, conseillers en gestion de patrimoine, généalogistes successoraux : je réalise
+        ces cartographies sur mesure, à partir de vos dossiers, et vous les remettez à vos clients
+        sous forme d'un fichier interactif.</p>
+        <a href="../professionnels.html" class="btn btn-ghost">Voir les prestations →</a>
+      </div>
+    </section>
+
+    <!-- ════════ QUESTIONS ════════ -->
+    <section class="section">
+      <h2 class="section-title">Questions fréquentes</h2>
+      <div class="pv-faq">
+
+        <details>
+          <summary>Puis-je utiliser cette carte telle quelle ?</summary>
+          <div class="pv-faq-body">
+            <p>Vous pouvez l'explorer librement sur cette page. Pour la remplir avec votre propre situation, la modifier et l'exporter, il faut le logiciel : la carte affichée ici est consultable, pas modifiable.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Mes informations partent-elles quelque part ?</summary>
+          <div class="pv-faq-body">
+            <p>Non. Cette page affiche un modèle générique, sans aucune donnée personnelle. Et si vous créez la vôtre avec le logiciel, elle reste sur votre ordinateur : l'application ne communique avec aucun serveur, y compris au premier lancement.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Les délais indiqués sont-ils à jour ?</summary>
+          <div class="pv-faq-body">
+            <p>Ils reprennent les règles générales en vigueur en France à la date de publication de cette carte. Les délais et les conditions évoluent, et certains dépendent de la situation — un décès survenu à l'étranger, par exemple, n'ouvre pas les mêmes durées. Vérifiez auprès de l'organisme concerné ou de votre notaire avant de vous en tenir à une date.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Faut-il s'y connaître en informatique pour créer la sienne ?</summary>
+          <div class="pv-faq-body">
+            <p>Non. Vous ajoutez un élément, vous le reliez à un autre, vous écrivez ce que vous voulez retenir. Il n'y a ni formule, ni langage, ni syntaxe. Le modèle vous donne la trame : vous remplacez les exemples par votre situation.</p>
+          </div>
+        </details>
+
+      </div>
+    </section>
+
+    <!-- ════════ AUTRES CARTES ════════ -->
+    <section class="section">
+      <h2 class="section-title">Autres cartographies</h2>
+      <p class="section-sub">À explorer dans la galerie.</p>
+      <div class="btns">
+        <a href="../galerie.html" class="btn btn-ghost">Voir toutes les cartes →</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    © 2026 WynaGraph Space ·
+    <a href="../index.html" style="color:var(--cyan)">Accueil</a> ·
+    <a href="../a-propos.html" style="color:var(--cyan)">À propos</a> ·
+    <a href="../mentions-legales.html" style="color:var(--cyan)">Mentions légales</a> ·
+    <a href="../confidentialite.html" style="color:var(--cyan)">Confidentialité</a> ·
+    <a href="../cgv.html" style="color:var(--cyan)">CGV</a>
+  </footer>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       À BRANCHER : le script d'initialisation du graphe.
+       Reprendre celui de graph.html en le pointant sur l'id
+       « cartographie-succession-complete », et en injectant le rendu
+       dans #graph-frame (mêmes identifiants que particuliers.html
+       et professionnels.html, le code de démonstration existant
+       fonctionne tel quel).
+       ═══════════════════════════════════════════════════════════ -->
+
+</body>
+</html>

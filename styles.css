@@ -15,6 +15,41 @@
     radial-gradient(ellipse at 80% 100%, rgba(13, 186, 193, 0.12), transparent 50%);
 }
 
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('assets/fonts/inter-400.woff2') format('woff2');
+}
+ 
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('assets/fonts/inter-500.woff2') format('woff2');
+}
+ 
+/* Graisse utilisée par les titres de section, titres de cartes et la marque.
+   Sans ce fichier, le navigateur substitue une graisse voisine. */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('assets/fonts/inter-600.woff2') format('woff2');
+}
+ 
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('assets/fonts/inter-700.woff2') format('woff2');
+}
+
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html, body {
   background: var(--background);
