@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>WynaGraph, écran par écran — visite guidée de l'application</title>
-  <meta name="description" content="Visite guidée de WynaGraph : écran d'accueil, modèles, vue graphe, vue tableau, vue pastilles, import et export. Chaque écran tel qu'il apparaît sur votre poste de travail." />
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="styles-vente.css" />
+  <meta name="description" content="Visite guidée de WynaGraph : écran d'accueil, modèles, vue graphe, vue tableau, vue pastilles, import et export. Chaque écran tel qu'il apparaît sur votre poste de travail.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles-vente.css">
   <style>
     /* ── Captures d'écran ─────────────────────────────────────────────────── */
     .sc-shot {
@@ -88,6 +88,7 @@
     #sc-viewer-close:hover { border-color: var(--cyan); color: var(--cyan); }
 
     @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }
+
   </style>
 </head>
 <body>
@@ -95,10 +96,11 @@
     <div class="nav">
       <a href="index.html" class="brand">WYNAGRAPH<span class="dot"> SPACE</span></a>
       <nav class="nav-links">
-        <a href="galerie.html">Galerie</a>
-        <a href="index.html#articles">Articles</a>
-        <a href="particuliers.html">Particuliers</a>
-        <a href="professionnels.html">Professionnels</a>
+        <a href="index.html"><span class="nav-icon"></span> Galerie</a>
+        <a href="index.html#articles"><span class="nav-icon"></span> Articles</a>
+        <a href="particuliers.html"><span class="nav-icon"></span> Particulier</a>
+        <a href="professionnels.html"><span class="nav-icon"></span> Professionnel</a>
+        <a href="a-propos.html"><span class="nav-icon"></span> À propos</a>
       </nav>
     </div>
   </header>
@@ -118,7 +120,10 @@
 
     
     <section class="section">
-      <a href="a-propos.html" class="back-link">← Retour </a>
+      <div class="page-nav">
+  <a href="javascript:history.back()" class="back-link" style="margin:0">← Retour</a>
+  <!-- <a href="" class="next-link">Commander la licence →</a> -->
+</div>
       <figure class="sc-shot">
         <img src="ecrans/accueil.jpg" width="1623" height="684"
              alt="Écran d'accueil de WynaGraph : titre « Cartographiez vos données en toute confidentialité » et bouton Explorer les modèles." />
@@ -278,8 +283,8 @@
       </div>
 
       <div class="btns" style="margin-top:2rem">
-        <a href="commander.html" class="btn btn-primary">Commander la licence →</a>
-        <a href="particuliers.html" class="btn btn-ghost">Revenir à la présentation</a>
+        <a href="particuliers.html" class="btn btn-primary">Commander la licence</a>
+        <a href="professionnels.html" class="btn btn-ghost">Demander un devis</a>
       </div>
     </section>
 

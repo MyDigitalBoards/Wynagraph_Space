@@ -1,24 +1,27 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8" >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" >
   <title>WynaGraph pour les particuliers — mettre à plat ce qui compte</title>
-  <meta name="description" content="Un logiciel de bureau 100 % hors ligne pour cartographier vos contrats, vos biens et votre succession — et transmettre une cartographie claire à vos proches. 59 €, une fois." />
+  <meta name="description" content="Un logiciel de bureau 100 % hors ligne pour cartographier vos contrats, vos biens et votre succession — et transmettre une cartographie claire à vos proches. 59 €, une fois." >
 
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="styles-vente.css" />
+  <link rel="stylesheet" href="styles.css" >
+  <link rel="stylesheet" href="styles-vente.css" >
   <script src="assets/vis-network.min.js"></script>
 </head>
 <body>
   <header class="site-header">
     <div class="nav">
+      
       <a href="index.html" class="brand">WYNAGRAPH<span class="dot"> SPACE</span></a>
+      
       <nav class="nav-links">
-        <a href="galerie.html">Galerie</a>
-        <a href="index.html#articles">Articles</a>
-        <a href="particuliers.html">Particuliers</a>
-        <a href="professionnels.html">Professionnels</a>
+        <a href="index.html"><span class="nav-icon"></span>Galerie</a>
+        <a href="index.html#articles"><span class="nav-icon"></span>Articles</a>
+        <a href="particuliers.html"><span class="nav-icon"></span>Particulier</a>
+        <a href="professionnels.html"><span class="nav-icon"></span>Professionnel</a>
+        <a href="a-propos.html"><span class="nav-icon"></span>À propos</a>
       </nav>
     </div>
   </header>
@@ -29,26 +32,67 @@
     <section class="hero">
       <div class="hero-inner">
         <span class="eyebrow">Pour les particuliers</span>
-        <h1>Laissez une cartographie,<br/><span class="accent">pas une pile de papiers</span></h1>
+        <h1>Laissez une cartographie,<br><span class="accent">pas une pile de papiers</span></h1>
         <p class="lead">
           Contrats, comptes, biens, abonnements, démarches, projets : tout est quelque part, mais où ? WynaGraph vous permet de mettre en évidence ces liens, sans exposer votre vie privée.
           Partagez ensuite vos graphes personnels avec qui vous voulez.
         </p>
         <div class="btns">
-          <a href="#demo" class="btn btn-ghost">Voir un exemple</a>
-          <a href="commander.html" class="btn btn-primary">Acheter la licence →</a>
+          <a href="ecrans.html" class="btn btn-ghost">Voir l'application</a>
         </div>
       </div>
     </section>
 
-    <!-- ════════ TROIS SITUATIONS ════════ -->
     <section class="section">
       <div class="pv-switch">
-        <a href="particuliers.html" aria-current="page">Pour les particuliers</a>
-        <a href="professionnels.html">Pour les professionnels</a>
+        <a href="particuliers.html" aria-current="page">Utilisateur particulier</a>
+        <a href="professionnels.html">Utilisateur professionnel</a>
+      </div>
+      <h2 class="section-title" style="text-align:center">Licence personnelle</h2>
+      <p class="section-sub" style="text-align:center">Pas d'abonnement. Un paiement, une fois. </p>
+           <!-- ════════ PRIX ════════ -->
+    
+      <div class="pv-price">
+        <div class="pv-price-label">Licence Personnelle</div>
+        <div class="pv-price-amount">59 €</div>
+        <p class="pv-price-note">Paiement unique — licence perpétuelle</p>
+<a href="ecrans.html" class="back-link">Voir l'application</a>
+        <ul class="pv-check">
+          <li>Réservée à un usage privé et non professionnel</li>
+          <li>Nombre de graphes et de fichiers partagés illimité</li>
+          <li>100 % local et hors ligne — aucune donnée collectée</li>
+        </ul>
+
+        <p class="pv-lu">
+          <label>
+            <input type="checkbox" id="lu" >
+            <span>J'ai pris connaissance des points ci-dessus, des <a href="cgv.html" style="color:var(--cyan)">conditions générales de vente</a>, du <a href="cluf.html" style="color:var(--cyan)">contrat de licence</a> et de la mention relative au <a href="particuliers.html#retractation" style="color:var(--cyan)">droit de rétractation.</a>
+           
+          </label>
+        </p>
+
+        <div class="btns">
+          <a id="btn-commande"
+             href="mailto:contact@wynagraph.com?subject=WynaGraph%20%E2%80%94%20commande%20licence%20Personnelle&body=Bonjour%2C%0A%0AJe%20souhaite%20commander%20une%20licence%20WynaGraph%2C%20%C3%A9dition%20Personnelle%20%2859%20%E2%82%AC%29%2C%20pour%20un%20usage%20strictement%20priv%C3%A9.%0A%0ANom%20et%20pr%C3%A9nom%20%3A%0AAdresse%20de%20facturation%20%3A%0A%0AJe%20demande%20l%27ex%C3%A9cution%20imm%C3%A9diate%20du%20contrat%20et%20je%20renonce%20express%C3%A9ment%20%C3%A0%20mon%20droit%20de%20r%C3%A9tractation%20de%20quatorze%20jours.%0A%0AMerci%20de%20m%27indiquer%20les%20modalit%C3%A9s%20de%20r%C3%A8glement.%0A%0ACordialement%2C"
+             class="btn btn-primary">Commander →</a>
+        </div>
+
+        <p class="pv-legal">
+          Vente directe par l'éditeur.
+          <strong>TVA non applicable, article 293 B du Code général des impôts.</strong>
+          Vente réservée aux clients résidant en France et dans l'Union européenne.
+          L'adresse électronique communiquée sert à traiter la commande et, le cas échéant,
+          à informer des évolutions du logiciel ; il est possible de s'y opposer à tout moment.
+          Voir la <a href="confidentialite.html" style="color:var(--cyan)">politique de confidentialité</a>.
+        </p>
       </div>
 
-      <h2 class="section-title">Trois situations où un graphe change tout</h2>
+      <p class="pv-demo-hint" style="margin-top:1.6rem">
+        Ecrire directement à
+        <a href="mailto:contact@wynagraph.com" style="color:var(--cyan)">contact@wynagraph.com</a>
+      </p>
+    <!-- </section> -->
+      <!-- <h2 class="section-title">Trois situations où un graphe change tout</h2>
       <p class="section-sub">Le point commun : ce qui compte n'est pas la liste, c'est ce qui relie les éléments entre eux.</p>
 
       <div class="grid">
@@ -86,30 +130,16 @@
             </p>
           </div>
         </div>
-      </div>
-    </section>
+      </div> -->
+    <!-- </section> -->
 
-    <!-- ════════ DÉMO ════════ -->
-    <section class="section pv-demo" id="demo">
-      <h2 class="section-title">Un exemple, à explorer</h2>
-      <p class="section-sub">Cliquez sur un élément ou une relation pour en voir le détail.</p>
 
-      <div class="graph-card">
-        <div class="graph-card-frame" id="graph-frame"></div>
-        <div class="graph-selection" id="graph-selection">
-          <p>Cliquez sur un <strong style="color:#fff">élément</strong> ou une <strong style="color:var(--cyan)">relation</strong>.</p>
-        </div>
-        <div class="graph-card-footer">
-          <div>
-            <div class="graph-card-title" id="graph-card-title"></div>
-            <div class="graph-card-sub" id="graph-card-sub"></div>
-          </div>
-          <a id="graph-full-link" href="#" class="btn btn-ghost" style="font-size:.82rem">Voir en plein écran →</a>
-        </div>
-      </div>
-      <p class="pv-demo-hint">Accéder à la vue plein écran pour voir les catégories et filtres.</p>
-    </section>
 
+
+
+
+      
+    
     <!-- ════════ COMMENT ÇA MARCHE ════════ -->
     <section class="section readme">
       <h2 class="section-title">Comment ça marche</h2>
@@ -136,32 +166,40 @@
 
     <!-- ════════ PARTAGE ════════ -->
     <section class="section readme">
-      <h2 class="section-title">Transmettre sans rien mettre en ligne</h2>
-      <p class="section-sub">C'est ce qui distingue WynaGraph d'un logiciel de schéma.</p>
-
+      <h2 class="section-title">Transmettre à vos proches</h2>
       <p>
-        Depuis n'importe quelle cartographie, vous produisez un fichier unique que vous envoyez par mail
-        ou remettez sur une clé USB. La personne qui le reçoit double-clique : la cartographie s'ouvre
-        dans son navigateur, telle que vous l'avez composée. Rien à installer, rien à
-        acheter, même pas besoin d'une connexion Internet.
+        A partir de n'importe quelle cartographie, vous pouvez exporter une version html consultable sans connexion Internet. 
+        la cartographie s'ouvre dans un navigateur, telle que vous l'avez composée. Rien à installer, ni même besoin d'une connexion Internet.
       </p>
-
       <ul class="pv-check">
         <li><strong>Explorer</strong> — recherche, filtres par catégorie, détail de chaque élément, vue tableau</li>
         <li><strong>Sans rien modifier</strong> — le fichier est consultable, non éditable</li>
       </ul>
-
-      <div class="pv-callout pv-callout--warn">
-        <p>
-          <strong>À savoir avant d'envoyer.</strong> Le fichier contient toutes les informations du graphe, lisibles par quiconque l'ouvre. Ce n'est pas un document protégé par mot de
-          passe. Ne l'envoyez qu'à des personnes de confiance — l'application vous le rappelle à
-          chaque fois.
-        </p>
-      </div>
     </section>
 
+    <!-- ════════ DÉMO ════════ -->
+    <!-- <section class="section pv-demo" id="demo">
+      <h2 class="section-title">Un exemple, à explorer</h2>
+      <p class="section-sub">Cliquez sur un élément ou une relation pour en voir le détail.</p>
+
+      <div class="graph-card">
+        <div class="graph-card-frame" id="graph-frame"></div>
+        <div class="graph-selection" id="graph-selection">
+          <p>Cliquez sur un <strong style="color:#fff">élément</strong> ou une <strong style="color:var(--cyan)">relation</strong>.</p>
+        </div>
+        <div class="graph-card-footer">
+          <div>
+            <div class="graph-card-title" id="graph-card-title"></div>
+            <div class="graph-card-sub" id="graph-card-sub"></div>
+          </div>
+          <a id="graph-full-link" href="#" class="btn btn-ghost" style="font-size:.82rem">Voir en plein écran →</a>
+        </div>
+      </div>
+      <p class="pv-demo-hint">Accéder à la vue plein écran pour voir les catégories et filtres.</p>
+    </section> -->
+
     <!-- ════════ CONFIDENTIALITÉ ════════ -->
-    <section class="section readme">
+    <!-- <section class="section readme">
       <h2 class="section-title">Vos données restent chez vous</h2>
 
       <ul class="pv-check">
@@ -178,55 +216,19 @@
           et à conserver ces fichiers avec vos autres sauvegardes.
         </p>
       </div>
-    </section>
+    </section> -->
 
     <!-- ════════ LIMITES ════════ -->
     <section class="section readme">
       <h2 class="section-title">Ce que WynaGraph ne fait pas</h2>
-      <p class="section-sub">Mieux vaut le savoir avant.</p>
-
       <ul class="pv-limits">
-        <li><strong>Il ne transforme pas un tableur en graphe automatiquement.</strong> Vous pouvez néanmoins importer un fichier CSV, à condition qu'il décrive vos données sous forme de relations. Le plus simple est d'exporter un graphe existant depuis WynaGraph pour en récupérer le format, de le compléter dans un tableur, puis de le réimporter.</li>
         <li><strong>Il ne calcule rien.</strong> Pas de total, pas de budget, pas de graphique chiffré.</li>
         <li><strong>Il ne se synchronise pas</strong> entre plusieurs appareils.</li>
         <li><strong>Windows uniquement</strong> pour l'instant.</li>
       </ul>
     </section>
 
-    <!-- ════════ PRIX ════════ -->
-    <section class="section" id="prix">
-      <h2 class="section-title" style="text-align:center">Un prix, une fois</h2>
-      <p class="section-sub" style="text-align:center">Pas d'abonnement, pas de renouvellement.</p>
-
-      <div class="pv-price">
-        <div class="pv-price-label">Licence particulier</div>
-        <div class="pv-price-amount">59 €<span class="pv-price-unit"> TTC</span></div>
-        <p class="pv-price-note">Licence perpétuelle, paiement unique</p>
-
-        <ul class="pv-check">
-          <li>Réservée à un usage strictement privé et non professionnel</li>
-          <li>Nombre de graphes personnels illimité</li>
-          <li>Les personnes à qui vous envoyez vos graphes n'ont rien à installer</li>
-          <li>Français, anglais et allemand</li>
-        </ul>
-
-        <div class="btns">
-          <a href="commander.html"class="btn btn-primary"> Acheter la licence →</a>
-        </div>
-
-        <p class="pv-legal">
-          Licence réservée à un usage privé : toute utilisation dans un cadre professionnel,
-          y compris par un entrepreneur individuel, une association ou une administration,
-          relève de la <a href="professionnels.html" style="color:var(--cyan)">licence professionnelle</a>.
-          Vente directe par l'éditeur, règlement par virement. Les
-          <a href="cgv.html" style="color:var(--cyan)">conditions générales de vente</a> et le
-          <a href="cluf.html" style="color:var(--cyan)">contrat de licence</a> sont à parcourir
-          avant toute commande.
-        </p>
-
-
-      </div>
-    </section>
+   
 
     <!-- ════════ FAQ ════════ -->
     <section class="section">
@@ -256,16 +258,9 @@
         </details>
 
         <details>
-          <summary>Est-ce que quelqu'un peut voir ce que je crée ?</summary>
-          <div class="pv-faq-body">
-            <p>Non. Le logiciel n'envoie rien nulle part et ne communique avec aucun serveur. La seule façon dont une cartographie peut sortir de votre ordinateur, c'est si vous l'exportez vous-même et que vous l'envoyez.</p>
-          </div>
-        </details>
-
-        <details>
           <summary>Puis-je m'en servir pour mon activité professionnelle ?</summary>
           <div class="pv-faq-body">
-            <p>Non. Cette licence est réservée à un usage strictement privé. Tout usage dans un cadre professionnel — y compris en tant qu'entrepreneur individuel, association ou administration — relève de la <a href="professionnels.html" style="color:var(--cyan)">licence professionnelle</a>.</p>
+            <p>Pour utiliser Wynagraph dans un cadre professionnel — y compris en tant qu'entrepreneur individuel, association ou administration — il convient de commander une <a href="professionnels.html" style="color:var(--cyan)">licence professionnelle</a>.</p>
           </div>
         </details>
 
@@ -279,16 +274,56 @@
         <details>
           <summary>Est-ce que ça marche sur Mac ou sur téléphone ?</summary>
           <div class="pv-faq-body">
-            <p>Pas encore. WynaGraph est aujourd'hui un logiciel de bureau Windows.</p>
+            <p>WynaGraph est aujourd'hui conçu pour fonctionner comme un logiciel de bureau Windows.</p>
             <p>En revanche, les graphes que vous exportez s'ouvrent dans n'importe quel navigateur, y compris sur Mac ou sur téléphone.</p>
           </div>
         </details>
 
         <details>
-          <summary>Puis-je être remboursé ?</summary>
-          <div class="pv-faq-body">
-            <p>Le logiciel est un contenu numérique téléchargeable. Pour qu'il puisse être livré dès réception du paiement, la loi permet de renoncer au droit de rétractation de quatorze jours — c'est une possibilité, pas une obligation. La <a href="commander.html" style="color:var(--cyan)">page de commande</a> vous laisse le choix : soit vous renoncez et vous êtes livré tout de suite, soit vous conservez vos quatorze jours et le lien de téléchargement vous est transmis à l'issue de ce délai.</p>
-            <p>Dans tous les cas, la garantie légale de conformité s'applique pendant deux ans : si le logiciel ne fonctionne pas comme annoncé, écrivez-moi.</p>
+          <summary>Puis-je me faire rembourser ?</summary>
+          <div class="pv-faq-body" id="retractation">
+            <section class="section readme">
+              <h3 class="section-title">Mention légale</h3>
+
+              <p>
+                WynaGraph est un contenu numérique téléchargeable. Pour que le lien puisse être transmis
+                dès réception du paiement, la loi exige l'accord exprès du client à une exécution
+                immédiate, ainsi que sa renonciation au droit de rétractation de quatorze jours
+                (article L. 221-28, 13° du Code de la consommation).
+              </p>
+
+              <div class="pv-callout">
+                <p><strong>Le message pré-rempli contient cette phrase :</strong></p>
+                <p style="font-style:italic;color:var(--foreground)">
+                  « Je demande l'exécution immédiate du contrat et je renonce expressément à mon
+                  droit de rétractation de quatorze jours. »
+                </p>
+                <p>
+                  L'envoi du message vaut accord. Une trace en est conservée de part et d'autre :
+                  dans vos messages envoyés, et dans le dossier de commande côté éditeur.
+                </p>
+              </div>
+
+      <p>
+        <strong>Cette renonciation n'est pas obligatoire.</strong> Il suffit de supprimer la
+        phrase du message et de le signaler : le délai de rétractation de quatorze jours est
+        alors conservé, et le lien de téléchargement est transmis à l'issue de ce délai.
+      </p>
+
+      <p>
+        Elle ne touche par ailleurs à aucun autre droit : la garantie légale de conformité
+        applicable aux contenus numériques s'applique pendant deux ans à compter de la
+        livraison — y compris pour les correctifs nécessaires au maintien de la conformité —
+        et la garantie des vices cachés s'applique en toute hypothèse.
+      </p>
+
+      <p>
+        En cas de rétractation, un
+        <a href="cgv.html#particuliers" style="color:var(--cyan)">formulaire type</a> figure en
+        annexe des conditions générales de vente. Son usage n'est pas obligatoire : un simple
+        message non équivoque suffit.
+      </p>
+    </section>
           </div>
         </details>
 
@@ -305,7 +340,6 @@
         </a>
       </div>
     </section>
-
   </main>
 
   <footer>

@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8" >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" >
   <title>WynaGraph pour les professionnels du patrimoine — cartographier et transmettre</title>
-  <meta name="description" content="Cartographiez une structure de détention ou un dossier successoral sur votre poste, sans aucune donnée en ligne, puis remettez à votre client une cartographie interactive qu'il explore lui-même." />
+  <meta name="description" content="Cartographiez une structure de détention ou un dossier successoral sur votre poste, sans aucune donnée en ligne, puis remettez à votre client une cartographie interactive qu'il explore lui-même." >
 
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="styles-vente.css" />
+  <link rel="stylesheet" href="styles.css" >
+  <link rel="stylesheet" href="styles-vente.css" >
   <script src="assets/vis-network.min.js"></script>
 </head>
 <body>
@@ -15,10 +15,11 @@
     <div class="nav">
       <a href="index.html" class="brand">WYNAGRAPH<span class="dot"> SPACE</span></a>
       <nav class="nav-links">
-        <a href="galerie.html">Galerie</a>
-        <a href="index.html#articles">Articles</a>
-        <a href="particuliers.html">Particuliers</a>
-        <a href="professionnels.html">Professionnels</a>
+        <a href="index.html"><span class="nav-icon"></span> Galerie</a>
+        <a href="index.html#articles"><span class="nav-icon"></span> Articles</a>
+        <a href="particuliers.html"><span class="nav-icon"></span> Particulier</a>
+        <a href="professionnels.html"><span class="nav-icon"></span> Professionnel</a>
+        <a href="a-propos.html"><span class="nav-icon"></span> À propos</a>
       </nav>
     </div>
   </header>
@@ -29,25 +30,75 @@
     <section class="hero">
       <div class="hero-inner">
         <span class="eyebrow">Notaires · CGP · Avocats · Généalogistes successoraux</span>
-        <h1>Cartographiez une structure<br/><span class="accent">Présentez une carte interactive</span></h1>
+        <h1>Cartographiez une structure<br><span class="accent">Présentez une carte interactive</span></h1>
         <p class="lead">
           WynaGraph vous permet de représenter visuellement qui détient quoi, via quelle structure et au bénéfice de qui, en toute confidentialité. <br>Envoyez à votre client
           une cartographie interactive à explorer.
         </p>
         <div class="btns">
-          <a href="#demo" class="btn btn-ghost">Voir un exemple</a>
-          <a href="#prix" class="btn btn-primary">Voir les tarifs →</a>
+          <a href="ecrans.html" class="btn btn-ghost">Voir l'application</a>
         </div>
       </div>
     </section>
 
-    <!-- ════════ LE PROBLÈME ════════ -->
-    <section class="section readme">
+ <!-- ════════ PRIX ════════ -->
+     
+    <section class="section" id="prix" style="scroll-margin-top:90px">
       <div class="pv-switch">
-        <a href="particuliers.html">Pour les particuliers</a>
-        <a href="professionnels.html" aria-current="page">Pour les professionnels</a>
+        <a href="particuliers.html" >Utilisateur particulier</a>
+        <a href="professionnels.html" aria-current="page">Utilisateur professionnel</a>
       </div>
+      <h2 class="section-title" style="text-align:center">Licence professionnelle</h2>
+      <p class="section-sub" style="text-align:center">Pas d'abonnement. Pas de renouvellement. </p>
 
+      <div class="pv-price">
+        <div class="pv-price-label">Par utilisateur</div>
+        <div class="pv-price-amount">à partir de 149 €<span class="pv-price-unit"> HT</span></div>
+        <p class="pv-price-note">Licence perpétuelle</p>
+
+        <ul class="pv-check">
+          <li>1 utilisateur professionnel</li>
+          <li>Assistance technique et mises à jour incluses pendant 12 mois</li>
+          <li>Nombre de graphes et d'exports illimité</li>
+          <li>Vos destinataires n'ont rien à installer</li>
+          <li>100 % local et hors ligne — aucune donnée collectée</li>
+        </ul>
+
+        <div class="pv-formules">
+          <div class="pv-formule">
+            <span class="pv-formule-nom">Essentielle</span>
+            <span class="pv-formule-prix">149 € HT</span>
+            <span class="pv-formule-desc">La licence seule, pour un utilisateur.</span>
+          </div>
+          <div class="pv-formule">
+            <span class="pv-formule-nom">Accompagnée</span>
+            <span class="pv-formule-prix">449 € HT</span>
+            <span class="pv-formule-desc">La licence, plus une heure de prise en main en visioconférence et un modèle de données spécifique à votre cas d'usage, livré prêt à importer.</span>
+          </div>
+          <div class="pv-formule">
+            <span class="pv-formule-nom">Utilisateur supplémentaire</span>
+            <span class="pv-formule-prix">109 € HT</span>
+            <span class="pv-formule-desc">Par utilisateur additionnel</span>
+          </div>
+        </div>
+
+        <div class="btns">
+          <a href="mailto:contact@wynagraph.com?subject=WynaGraph%20%E2%80%94%20licence%20professionnelle"
+             class="btn btn-primary">Demander un devis →</a>
+        </div>
+        <p class="pv-legal">
+          TVA non applicable, article 293 B du CGI. Réponse sous 48 h ouvrées.
+          Facture émise au nom de votre structure. Pour plusieurs utilisateurs ou la formule
+          Accompagnée : indiquez-le dans votre message pour recevoir un devis.
+          Vous pouvez également nous écrire à
+          <a href="mailto:contact@wynagraph.com"><strong id="mail-addr">contact@wynagraph.com</strong></a>
+          <button type="button" id="mail-copy" class="btn-copy">copier</button>
+        </p>
+      </div>
+    </section>
+
+    <!-- ════════ LE PROBLÈME ════════ -->
+    <!-- <section class="section readme">
       <h2 class="section-title">Un tableau ne montre pas qui détient quoi</h2>
       <p class="section-sub">Dans un dossier patrimonial, l'information n'est pas dans les cases. Elle est dans les liens entre elles.</p>
 
@@ -72,12 +123,48 @@
           </ul>
         </div>
       </div>
+    </section> -->
+
+
+
+    <!-- ════════ LE LIVRABLE ════════ -->
+    <section class="section readme">
+      <h2 class="section-title">Le livrable client</h2>
+
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <strong>Vous composez le graphe</strong>
+          <p>Éléments, relations, propriétés. Vous organisez la disposition pour qu'elle raconte quelque chose.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <strong>Vous exportez un fichier</strong>
+          <p>Un seul fichier <code>.html</code>, autonome, qui contient le graphe et tout ce qu'il faut pour l'afficher.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <strong>Votre client explore le graphe</strong>
+          <p>Le graphe s'ouvre dans son navigateur, telle que vous l'avez composé. Rien à installer, aucune licence de son côté.</p>
+        </div>
+      </div>
+
+      <p>Dans ce fichier, il est possible de :</p>
+      <ul class="pv-check">
+        <li><strong>Naviguer</strong> — zoom, déplacement, réactivation de la physique pour manipuler le graphe</li>
+        <li><strong>Rechercher</strong> — sur les noms, les catégories, les propriétés et les libellés de relations</li>
+        <li><strong>Filtrer</strong> — par catégorie depuis la légende, ou masquer les catégories une à une</li>
+        <li><strong>Consulter le détail</strong> — chaque élément et chaque relation, avec leurs propriétés</li>
+        <li><strong>Basculer en vue tableau</strong> — triable colonne par colonne, pour relire les mêmes données autrement</li>
+      </ul>
+      <p>La cartographie peut être consultée et reste non éditable.</p>
+
     </section>
 
-    <!-- ════════ DÉMO ════════ -->
+        <!-- ════════ DÉMO ════════ -->
     <section class="section pv-demo" id="demo">
       <h2 class="section-title">Un exemple, à explorer</h2>
-      <p class="section-sub">Cliquez sur un élément ou une relation pour en voir le détail. C'est exactement ce que reçoit votre client.</p>
+      <p class="section-sub">Cliquez sur un élément ou une relation pour en voir le détail.</p>
 
       <div class="graph-card">
         <div class="graph-card-frame" id="graph-frame"></div>
@@ -95,126 +182,31 @@
       <p class="pv-demo-hint"> Données fictives. Accéder à la vue plein écran pour voir les catégories et filtres.</p>
     </section>
 
-    <!-- ════════ LE LIVRABLE ════════ -->
-    <section class="section readme">
-      <h2 class="section-title">Le livrable client</h2>
-      <p class="section-sub">C'est ce qui distingue WynaGraph d'un outil de schéma.</p>
-
-      <div class="steps">
-        <div class="step">
-          <div class="step-num">1</div>
-          <strong>Vous composez le graphe</strong>
-          <p>Éléments, relations, propriétés. Vous organisez la disposition pour qu'elle raconte quelque chose.</p>
-        </div>
-        <div class="step">
-          <div class="step-num">2</div>
-          <strong>Vous exportez un fichier</strong>
-          <p>Un seul fichier <code>.html</code>, autonome, qui contient le graphe et tout ce qu'il faut pour l'afficher.</p>
-        </div>
-        <div class="step">
-          <div class="step-num">3</div>
-          <strong>Votre client l'ouvre</strong>
-          <p>Double-clic. Le graphe s'ouvre dans son navigateur, telle que vous l'avez composée. Rien à installer, aucune licence de son côté.</p>
-        </div>
-      </div>
-
-      <p>Dans ce fichier, votre client peut :</p>
-      <ul class="pv-check">
-        <li><strong>Naviguer</strong> — zoom, déplacement, réactivation de la physique pour manipuler le graphe</li>
-        <li><strong>Rechercher</strong> — sur les noms, les catégories, les propriétés et les libellés de relations</li>
-        <li><strong>Filtrer</strong> — par catégorie depuis la légende, ou masquer les catégories une à une</li>
-        <li><strong>Consulter le détail</strong> — chaque élément et chaque relation, avec leurs propriétés</li>
-        <li><strong>Basculer en vue tableau</strong> — triable colonne par colonne, pour relire les mêmes données autrement</li>
-      </ul>
-      <p>Il ne peut rien modifier : le fichier est consultable, non éditable.</p>
-
-      <div class="pv-callout pv-callout--warn">
-        <p>
-          <strong>À savoir avant de partager.</strong> Le fichier contient toutes les données du
-          graphe. Ce n'est ni un document protégé ni un contrôle d'accès : quiconque
-          l'ouvre lit tout. Il s'adresse à un destinataire identifié, pas à une diffusion large.
-          L'application vous le rappelle à chaque export.
-        </p>
-      </div>
-    </section>
-
     <!-- ════════ CONFIDENTIALITÉ ════════ -->
     <section class="section readme">
-      <h2 class="section-title">Aucune donnée en ligne, à aucun moment</h2>
-      <p class="section-sub">Pour un dossier nominatif, ce n'est pas un confort : c'est une condition.</p>
+      <h2 class="section-title">Engagement de confidentialité</h2>
 
       <ul class="pv-check">
-        <li><strong>Aucun sous-traitant.</strong> Pas de serveur, pas de base centrale, pas de compte. Il n'y a personne à qui vos données pourraient être confiées, puisqu'elles ne partent nulle part.</li>
+        <li><strong>Aucun sous-traitant.</strong> Pas de serveur, pas de base centrale, pas de compte. </li>
         <li><strong>Aucun transfert.</strong> L'application fonctionne sans connexion Internet, y compris au premier lancement : toutes les bibliothèques sont embarquées.</li>
-        <li><strong>Vos graphes restent sur votre machine</strong>, dans un fichier du dossier de données de l'application. Ni navigateur, ni cloud.</li>
-        <li><strong>Rien ne circule tant que vous n'exportez pas.</strong> Le partage est un geste explicite, que vous décidez, vers un destinataire que vous choisissez.</li>
+        <li><strong>Vos graphes sont stockés localement</strong>, dans un fichier du dossier de données de l'application.</li>
+        <li><strong>Vous partagez quand vous le décidez</strong>, à un destinataire que vous choisissez.</li>
       </ul>
     </section>
 
     <!-- ════════ LIMITES ════════ -->
     <section class="section readme">
       <h2 class="section-title">Ce que WynaGraph ne fait pas</h2>
-      <p class="section-sub">A savoir avant d'acheter.</p>
-
       <ul class="pv-limits">
         <li><strong>Aucun calcul.</strong> Pas de total, pas d'évaluation, pas de simulation fiscale. WynaGraph cartographie des relations, pas des chiffres.</li>
-        <li><strong>Aucune conversion automatique.</strong> Un fichier Excel ne devient pas une carte tout seul. L'import CSV existe, mais il remplace la carte affichée au lieu de la compléter.</li>
+        <li><strong>Aucune conversion automatique.</strong> La réimportation d'un modèle exporté et complété au format .csv est néanmoins possible.</li>
         <li><strong>Pas de synchronisation, ni de travail à plusieurs.</strong> C'est la contrainte du fonctionnement hors ligne.</li>
         <li><strong>Au-delà d'environ 500 éléments</strong>, l'affichage perd en fluidité. Plusieurs cartes ciblées valent mieux qu'une seule très dense.</li>
         <li><strong>Windows uniquement</strong> pour l'instant.</li>
       </ul>
     </section>
 
-    <!-- ════════ PRIX ════════ -->
-    <section class="section" id="prix" style="scroll-margin-top:90px">
-      <h2 class="section-title" style="text-align:center">Licence professionnelle</h2>
-      <p class="section-sub" style="text-align:center">Pas d'abonnement. Un paiement, une fois. </p>
-
-      <div class="pv-price">
-        <div class="pv-price-label">Par utilisateur</div>
-        <div class="pv-price-amount">à partir de 149 €<span class="pv-price-unit"> HT</span></div>
-        <p class="pv-price-note">Licence perpétuelle</p>
-
-        <ul class="pv-check">
-          <li>Un utilisateur nommé, modèles et fonctions d'export inclus</li>
-          <li>Nombre de cartes et de fichiers partagés illimité</li>
-          <li>Vos destinataires n'ont besoin d'aucune licence</li>
-          <li>Interface en français, anglais et allemand</li>
-        </ul>
-
-        <div class="pv-formules">
-          <div class="pv-formule">
-            <span class="pv-formule-nom">Essentielle</span>
-            <span class="pv-formule-prix">149 € HT</span>
-            <span class="pv-formule-desc">La licence seule, pour un utilisateur.</span>
-          </div>
-          <div class="pv-formule">
-            <span class="pv-formule-nom">Accompagnée</span>
-            <span class="pv-formule-prix">449 € HT</span>
-            <span class="pv-formule-desc">La licence, plus une heure de prise en main en visioconférence (jusqu'à quatre participants) et un modèle de données conçu à partir de votre cas d'usage, livré prêt à importer.</span>
-          </div>
-          <div class="pv-formule">
-            <span class="pv-formule-nom">Utilisateur supplémentaire</span>
-            <span class="pv-formule-prix">109 € HT</span>
-            <span class="pv-formule-desc">Par utilisateur additionnel, quelle que soit la formule.</span>
-          </div>
-        </div>
-
-        <div class="btns">
-          <a href="mailto:contact@wynagraph.com?subject=WynaGraph%20%E2%80%94%20licence%20professionnelle"
-             class="btn btn-primary">Demander un devis →</a>
-        </div>
-
-        <p class="pv-legal">
-          TVA non applicable, article 293 B du CGI. Réponse sous 48 h ouvrées.
-          Facture émise au nom de votre structure. Pour plusieurs utilisateurs ou la formule
-          Accompagnée : indiquez-le dans votre message pour recevoir un devis.
-          Vous pouvez également nous écrire à <a href="mailto:
-          <strong id="mail-addr">contact@wynagraph.com</strong>
-  <button type="button" id="mail-copy" class="btn-copy">copier</button>
-        </p>
-      </div>
-    </section>
+   
 
     <!-- ════════ FAQ ════════ -->
     <section class="section">
@@ -229,25 +221,17 @@
         </details>
 
         <details>
-          <summary>Mon service informatique va-t-il bloquer l'installation ?</summary>
-          <div class="pv-faq-body">
-            <p>WynaGraph s'installe comme n'importe quel logiciel de bureau Windows. À la première exécution, Windows peut afficher un écran « Windows a protégé votre ordinateur » : c'est le comportement normal pour un logiciel diffusé hors magasin d'applications.</p>
-            <p>Si votre poste est administré, votre service informatique devra autoriser l'installation. Écrivez-moi si vous avez besoin d'éléments à leur transmettre.</p>
-          </div>
-        </details>
-
-        <details>
           <summary>La licence est-elle liée à une personne ou à un poste ?</summary>
           <div class="pv-faq-body">
-            <p>À une personne. La licence est concédée par utilisateur nommé : l'usage par plusieurs personnes requiert autant de licences, quel que soit le nombre de postes. Les conditions de déploiement figurent au CLUF et aux CGV Professionnels.</p>
-            <p>Un utilisateur peut être remplacé par un autre en cours de vie de la licence, sur simple information écrite.</p>
+            <p>À une personne. La licence est concédée par utilisateur : l'usage par plusieurs personnes requiert autant de licences, quel que soit le nombre de postes. Les conditions de déploiement figurent au CLUF et aux CGV Professionnels.</p>
+            <p>Un utilisateur peut être remplacé par un autre en cours de vie de la licence.</p>
           </div>
         </details>
 
         <details>
-          <summary>Mes clients doivent-ils acheter quelque chose pour ouvrir le fichier ?</summary>
+          <summary>Mes clients doivent-ils acheter quelque chose pour consulter mes graphes ?</summary>
           <div class="pv-faq-body">
-            <p>Non. Le fichier exporté s'ouvre dans n'importe quel navigateur, sans compte, sans installation et sans licence. Il fonctionne même sans connexion Internet.</p>
+            <p>Non. Le fichier html exporté s'ouvre dans n'importe quel navigateur, sans compte, sans installation et sans licence. Il fonctionne même sans connexion Internet.</p>
             <p>Une précision utile : certaines messageries d'entreprise bloquent les pièces jointes <code>.html</code>. Dans ce cas, envoyez le fichier compressé en <code>.zip</code>.</p>
           </div>
         </details>
@@ -262,7 +246,7 @@
         <details>
           <summary>Y a-t-il des mises à jour ?</summary>
           <div class="pv-faq-body">
-            <p> Non, le logiciel est fourni en l'état, et la licence n'ouvre pas droit à un contrat de maintenance. Le développement se poursuit néanmoins. Pour des demandes spécifiques, écrivez-nous.</p>
+            <p> Oui, la licence professionnelle comprend la livraison des mises à jour mineures et les nouvelles versions de l'application pendant les 12 mois suivant l'achat. La version installée continue de fonctionner sans limite de durée : la licence est perpétuelle, il n'y a ni abonnement ni reconduction. Seules la livraison des nouvelles versions et l'assistance technique cessent d'être incluses.</p>
           </div>
         </details>
 
@@ -277,7 +261,7 @@
         <details>
           <summary>Puis-je essayer avant d'acheter ?</summary>
           <div class="pv-faq-body">
-            <p>La démonstration ci-dessus (en version plein écran) est le fichier que reçoit votre client, dans son état réel — Pour avoir une démonstration de l'application elle-même, contactez-nous.</p>
+            <p>L'outil ne propose pas de version d'essai gratuite. Les différents de l'application peuvent être consultés <a href="ecrans.html" style="color:var(--cyan)">sur ce site</a>. Pour avoir une démonstration complète, contactez-nous.</p>
           </div>
         </details>
 

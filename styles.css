@@ -216,6 +216,25 @@ footer {
 .back-link { color: var(--cyan); font-size: 0.9rem; display: inline-block; margin-bottom: 1rem; }
 .back-link:hover { text-decoration: underline; }
 
+.page-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+/* la marge est portée par .page-nav désormais */
+.page-nav .back-link { margin-bottom: 0; }
+
+.next-link {
+  color: var(--cyan);
+  font-size: 0.9rem;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.next-link:hover { text-decoration: underline; }
+
 /* ═══════════ Page : index.html (accueil — cartes d'articles, bandeau Workspace) ═══════════ */
 
  
