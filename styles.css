@@ -116,7 +116,7 @@ img { max-width: 100%; display: block; }
     bottom: 0;
     width: 72vw;
     max-width: 300px;
-    max-height: 260px;
+    max-height: 280px;
     margin: 0;
     padding: 1rem;
     background: var(--background);
