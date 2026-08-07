@@ -7,7 +7,7 @@
   <meta name="description" content="Des graphes pour mieux visualiser votre vie : finances, santé, droits, culture. Et un outil pour créer les vôtres." />
   <meta name="google-site-verification" content="OQQX-ICaWZ_LBdFspmU-Ag1M3Xhj5wY2WFmhcuH8PMQ" />
   <link rel="stylesheet" href="styles.css" />
-  <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+  <script src="assets/vis-network.min.js"></script>
   <style>
    
     .card-thumb.is-pending::after {
@@ -48,6 +48,19 @@
     <section id="graphes" class="section">
       <h2 class="section-title">Galerie</h2>
       <p class="section-sub" id="graphes-sub">Cliquez sur une carte pour ouvrir le graphe en plein écran.</p>
+
+      <!-- Filtre : titre, description et catégorie des graphes affichés -->
+      <div id="gallery-search-wrap">
+        <span id="gallery-search-icon">⌕</span>
+        <input type="text" id="gallery-search"
+               placeholder="Rechercher un graphe…"
+               autocomplete="off" aria-label="Rechercher un graphe" />
+        <button id="gallery-search-clear" title="Effacer la recherche" aria-label="Effacer la recherche">✕</button>
+      </div>
+
+      <p id="graphes-vide" style="display:none;color:var(--muted-foreground);text-align:center;padding:2rem 0">
+        Aucun graphe ne correspond à cette recherche.
+      </p>
       <div class="grid" id="graph-grid"></div>
       <div class="home-graphs-actions">
         <a href="galerie.html" class="btn btn-ghost">Parcourir par thème →</a>
@@ -118,6 +131,41 @@
       const thumb = card.querySelector('.card-thumb');
       thumb._graph = g;
     });
+
+    // ── Filtrage ────────────────────────────────────────────────────────────
+    const champ  = document.getElementById('gallery-search');
+    const wrap   = document.getElementById('gallery-search-wrap');
+    const effacer= document.getElementById('gallery-search-clear');
+    const vide   = document.getElementById('graphes-vide');
+    const sub    = document.getElementById('graphes-sub');
+    const cartes = [...grid.children].map((el, i) => ({
+      el,
+      texte: norm([graphs[i].title, graphs[i].description, graphs[i].category].join(' '))
+    }));
+
+    // Minuscules sans accents, pour une recherche tolérante
+    function norm(s) {
+      return String(s || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+    }
+
+    function filtrer() {
+      const q = norm(champ.value.trim());
+      wrap.classList.toggle('has-value', champ.value.length > 0);
+      let visibles = 0;
+      cartes.forEach(c => {
+        const ok = !q || c.texte.includes(q);
+        c.el.style.display = ok ? '' : 'none';
+        if (ok) visibles++;
+      });
+      vide.style.display = visibles ? 'none' : 'block';
+      sub.textContent = q
+        ? `${visibles} résultat${visibles > 1 ? 's' : ''} sur ${cartes.length}.`
+        : `${cartes.length} graphe${cartes.length > 1 ? 's' : ''} à explorer. Cliquez sur une carte pour l'ouvrir en plein écran.`;
+    }
+
+    champ.addEventListener('input', filtrer);
+    effacer.addEventListener('click', () => { champ.value = ''; filtrer(); champ.focus(); });
+    champ.addEventListener('keydown', e => { if (e.key === 'Escape') { champ.value = ''; filtrer(); } });
 
     const thumbs = grid.querySelectorAll('.card-thumb');
 
