@@ -102,6 +102,7 @@ img { max-width: 100%; display: block; }
     border-radius: 2px;
     transition: transform .25s, opacity .25s;
   }
+ .nav-burger span.sr-only { height: auto; background: none; }
 
 .nav-links {
     display: flex;
@@ -1341,4 +1342,13 @@ footer {
 @media (max-width: 768px) {
   /* La sidebar est hors-écran : le tableau occupe toute la largeur */
   #graph-table-wrap { top: 12px; left: 12px; right: 12px; bottom: 12px; }
+}
+.sr-only {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
 }
