@@ -12,6 +12,7 @@
 .pv-switch a {
   font-size: .82rem; padding: .45rem 1rem; border-radius: 999px;
   border: 1px solid var(--border); color: var(--muted-foreground);
+  text-align: center;
   transition: all .2s;
 }
 .pv-switch a:hover { border-color: var(--cyan); color: var(--cyan); }
