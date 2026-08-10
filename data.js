@@ -2585,10 +2585,9 @@ window.GRAPHS = [
     { "source": "action_appel", "target": "info_alerte", "label": "Transmettre les" },
     { "source": "pas_secourir", "target": "etat_inconscient", "label": "Si" },
     { "source": "etat_inconscient", "target": "geste_pls", "label": "Réaliser une" },
-    
     { "source": "pas_secourir", "target": "etat_arrete", "label": "Si" },
     { "source": "etat_arrete", "target": "geste_rcp", "label": "Réaliser une" },
-    
+
     { "source": "pas_secourir", "target": "etat_hemorragie", "label": "Si" },
     { "source": "etat_hemorragie", "target": "geste_compression", "label": "Réaliser une" }
   ]
