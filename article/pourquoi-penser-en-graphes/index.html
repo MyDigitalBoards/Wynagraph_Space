@@ -3,15 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Article — WynaGraph Space</title>
+  <title>Pourquoi penser en graphes change tout — WynaGraph Space</title>
+  <meta name="description" content="Les listes sont linéaires. La réalité ne l'est pas. Les graphes révèlent des connexions que les tableaux et bullet points cachent systématiquement." />
+  <link rel="canonical" href="https://www.wynagraph.com/article/pourquoi-penser-en-graphes" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="WynaGraph Space" />
+  <meta property="og:title" content="Pourquoi penser en graphes change tout — WynaGraph Space" />
+  <meta property="og:description" content="Les listes sont linéaires. La réalité ne l'est pas. Les graphes révèlent des connexions que les tableaux et bullet points cachent systématiquement." />
+  <meta property="og:url" content="https://www.wynagraph.com/article/pourquoi-penser-en-graphes" />
 
-  <link rel="stylesheet" href="styles.css">
-  <script src="assets/vis-network.min.js"></script>
+  <link rel="stylesheet" href="../../styles.css">
+  <script src="../../assets/vis-network.min.js"></script>
 </head>
 <body>
   <header class="site-header">
     <div class="nav">
-  <a href="index.html" class="brand">WYNAGRAPH<span class="dot"> SPACE</span></a>
+  <a href="../../index.html" class="brand">WYNAGRAPH<span class="dot"> SPACE</span></a>
 
   <input type="checkbox" id="nav-toggle" class="nav-toggle" />
 <label for="nav-toggle" class="nav-burger">
@@ -20,18 +27,18 @@
 </label>
 
   <nav class="nav-links">
-    <a href="index.html">Galerie</a>
-    <a href="index.html#articles">Articles</a>
-    <a href="particuliers.html">Particuliers</a>
-    <a href="professionnels.html">Professionnels</a>
-    <a href="a-propos.html">À propos</a>
+    <a href="../../index.html">Galerie</a>
+    <a href="../../index.html#articles">Articles</a>
+    <a href="../../particuliers.html">Particuliers</a>
+    <a href="../../professionnels.html">Professionnels</a>
+    <a href="../../a-propos.html">À propos</a>
   </nav>
 </div>
   </header>
 
   <main>
     <section class="section" id="article-section">
-      <a href="index.html" class="back-link">← Retour à l'accueil</a>
+      <a href="../../index.html" class="back-link">← Retour à l'accueil</a>
 
       <div id="article-not-found" style="display:none">
         <h1>Article introuvable</h1>
@@ -55,7 +62,7 @@
             <div class="article-cta">
               <p><strong>Envie de créer vos propres graphes de connaissances ?</strong><br>
               WynaGraph Workspace est une application de bureau, 100% locale — vos données ne quittent jamais votre ordinateur.</p>
-              <a href="particuliers.html" class="btn btn-primary">Découvrir le logiciel →</a>
+              <a href="../../particuliers.html" class="btn btn-primary">Découvrir le logiciel →</a>
             </div>
           </div>
 
@@ -83,21 +90,18 @@
   </main>
       <footer>
     © 2026 WynaGraph Space ·
-    <a href="index.html" style="color:var(--cyan)">Accueil</a> ·
-    <a href="a-propos.html" style="color:var(--cyan)">À propos</a> ·
-    <a href="mentions-legales.html" style="color:var(--cyan)">Mentions légales</a> .
-    <a href="confidentialite.html" style="color:var(--cyan)">Confidentialité</a> .
-    <a href="cgv.html" style="color:var(--cyan)">CGV</a> .
-    <a href="cluf.html" style="color:var(--cyan)">CLUF</a>
+    <a href="../../index.html" style="color:var(--cyan)">Accueil</a> ·
+    <a href="../../a-propos.html" style="color:var(--cyan)">À propos</a> ·
+    <a href="../../mentions-legales.html" style="color:var(--cyan)">Mentions légales</a> .
+    <a href="../../confidentialite.html" style="color:var(--cyan)">Confidentialité</a> .
+    <a href="../../cgv.html" style="color:var(--cyan)">CGV</a> .
+    <a href="../../cluf.html" style="color:var(--cyan)">CLUF</a>
   </footer>
 
-  <script src="data.js"></script>
-  <script src="posts.js"></script>
-  <script src="graph-render.js"></script>
+  <script src="../../data.js"></script>
+  <script src="../../posts.js"></script>
+  <script src="../../graph-render.js"></script>
   <script>
-    const _old = new URLSearchParams(location.search).get('id');
-    if (_old) { location.replace('article/' + _old + '/'); }
-    
     function esc(s) {
       if (s == null) return '';
       return String(s).replace(/[&<>"']/g, m =>
@@ -109,7 +113,7 @@
     }
 
     const params = new URLSearchParams(location.search);
-    const postId = params.get('id');
+    const postId = "pourquoi-penser-en-graphes";
     const post   = POSTS.find(p => p.id === postId);
 
     if (!post) {
@@ -139,7 +143,7 @@
           document.getElementById('graph-card-sub').textContent =
             `${g.nodes.length} nœuds · ${g.edges.length} liens`;
           document.getElementById('graph-full-link').href =
-            `graph.html?id=${encodeURIComponent(graph.id)}`;
+            `../../graphe/${graph.id}/`;
           const sel = document.getElementById('graph-selection');
 
           network.on('click', params => {

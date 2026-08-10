@@ -315,7 +315,7 @@
         <span class="cat-group-label">Graphes (${graphMatches.length})</span>
         <div class="cat-group-line"></div></div>`;
       html += `<div class="grid">` + graphMatches.map(g => `
-        <a class="card" href="graph.html?id=${encodeURIComponent(g.id)}">
+        <a class="card" href="graphe/${g.id}/">
           <div class="card-thumb"></div>
           <div class="card-body">
             <div class="card-cat">${escHtml(g.category)} · ${escHtml(themeNameFor(g.category))}</div>
@@ -330,7 +330,7 @@
         <span class="cat-group-label">Articles (${postMatches.length})</span>
         <div class="cat-group-line"></div></div>`;
       html += `<div class="post-results">` + postMatches.map(p => `
-        <a class="post-result" href="article.html?id=${encodeURIComponent(p.id)}">
+        <a class="post-result" href="article/${p.id}/">
           <span class="post-result-cat">${escHtml(p.category)}</span>
           <span class="post-result-title">${escHtml(p.title)}</span>
           <span class="post-result-excerpt">${escHtml(p.excerpt || '')}</span>

@@ -3,16 +3,23 @@
 <head>
   <meta charset="UTF-8" >
   <meta name="viewport" content="width=device-width, initial-scale=1.0" >
-  <title>Graphe — WynaGraph</title>
+  <title>Données Personnelles &amp; Fin de Vie — WynaGraph Space</title>
+  <meta name="description" content="Une cartographie des obligations, des droits et du testament numérique." />
+  <link rel="canonical" href="https://www.wynagraph.com/graphe/theme-legal-fin-de-vie-numerique" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="WynaGraph Space" />
+  <meta property="og:title" content="Données Personnelles &amp; Fin de Vie — WynaGraph Space" />
+  <meta property="og:description" content="Une cartographie des obligations, des droits et du testament numérique." />
+  <meta property="og:url" content="https://www.wynagraph.com/graphe/theme-legal-fin-de-vie-numerique" />
 
-  <link rel="stylesheet" href="styles.css" >
-  <script src="assets/vis-network.min.js"></script>
+  <link rel="stylesheet" href="../../styles.css" >
+  <script src="../../assets/vis-network.min.js"></script>
   
 </head>
 <body class="page-graph">
   <header class="site-header">
     <div class="nav">
-  <a href="index.html" class="brand">WYNAGRAPH<span class="dot"> SPACE</span></a>
+  <a href="../../index.html" class="brand">WYNAGRAPH<span class="dot"> SPACE</span></a>
 
   <input type="checkbox" id="nav-toggle" class="nav-toggle" />
 <label for="nav-toggle" class="nav-burger">
@@ -20,11 +27,11 @@
   <span class="sr-only">Menu</span>
 </label>
   <nav class="nav-links">
-    <a href="index.html">Galerie</a>
-    <a href="index.html#articles">Articles</a>
-    <a href="particuliers.html">Particuliers</a>
-    <a href="professionnels.html">Professionnels</a>
-    <a href="a-propos.html">À propos</a>
+    <a href="../../index.html">Galerie</a>
+    <a href="../../index.html#articles">Articles</a>
+    <a href="../../particuliers.html">Particuliers</a>
+    <a href="../../professionnels.html">Professionnels</a>
+    <a href="../../a-propos.html">À propos</a>
   </nav>
 </div>
   </header>
@@ -103,12 +110,10 @@
 
   <div id="import-toast" role="status" aria-live="polite"></div>
 
-  <script src="data.js"></script>
-  <script src="json-import.js"></script>
-  <script src="graph-render.js"></script>
+  <script src="../../data.js"></script>
+  <script src="../../json-import.js"></script>
+  <script src="../../graph-render.js"></script>
   <script>
-    const _old = new URLSearchParams(location.search).get('id');
-    if (_old && _old !== 'import') { location.replace('graphe/' + _old + '/'); }
     // ── Helpers ──────────────────────────────────────────────────────────────
     function esc(str) {
       if (str == null) return '';
@@ -210,7 +215,7 @@
 
     // ── Init ─────────────────────────────────────────────────────────────────
     const params = new URLSearchParams(location.search);
-    const id     = params.get("id");
+    const id = "theme-legal-fin-de-vie-numerique";
     const sel    = document.getElementById("selected");
     const title  = document.getElementById("side-title");
     const stats  = document.getElementById("stats");
