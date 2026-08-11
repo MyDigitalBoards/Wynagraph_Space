@@ -102,6 +102,9 @@
   <script src="../../posts.js"></script>
   <script src="../../graph-render.js"></script>
   <script>
+    const _old = new URLSearchParams(location.search).get('id');
+    if (_old) { location.replace('article/' + _old + '/'); }
+    
     function esc(s) {
       if (s == null) return '';
       return String(s).replace(/[&<>"']/g, m =>

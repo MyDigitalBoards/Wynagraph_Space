@@ -1562,6 +1562,973 @@ window.GRAPHS = [
   },
 
   {
+"id": "audit-personnel",
+  "title": "Audit personnel",
+  "category": "Développement personnel",
+  "description": "Cartographie des grands domaines d'un bilan personnel : santé, finances, relations, compétences, croyances et personnalité, et les liens qui les relient.",
+  "longDescription": "Faire le point sur sa vie suppose d'abord d'en nommer les composantes. Ce graphe décompose l'audit personnel en domaines — santé physique et mentale, finances, relations, compétences, valeurs, croyances et traits de caractère — puis explicite leurs ramifications : ce qu'un domaine comprend, ce qu'il requiert, ce qu'il déclenche. On y suit par exemple comment une croyance soutient une valeur, qui à son tour guide les choix, les actions et les jugements du quotidien.",
+    "nodes": [
+      {
+        "id": "86e68a3c-e412-4ca7-98bf-afaabae370ac",
+        "label": "Projet",
+        "category": "Projets",
+        "properties": {
+          "prop_1": "Un projet est une action unique et temporaire visant à créer un résultat précis grâce à des étapes clés."
+        }
+      },
+      {
+        "id": "3f69f86e-5403-4912-a67d-c386df29cde0",
+        "label": "Santé",
+        "category": "Santé",
+        "properties": {
+          "prop_1": "La santé est un état de complet bien-être physique, mental et social, et ne se limite pas à l'absence de maladie ou d'infirmité."
+        }
+      },
+      {
+        "id": "195e371b-709b-43c4-a9cf-b5e808a6dd52",
+        "label": "Activité",
+        "category": "Santé",
+        "properties": {
+          "prop_1": "Une activité est une action, un travail ou un loisir que l'on fait pour bouger, apprendre ou s'occuper."
+        }
+      },
+      {
+        "id": "d77d76ae-fb5c-4250-b711-b0c022f44936",
+        "label": "Bien être",
+        "category": "Santé mentale",
+        "properties": {
+          "prop_1": "Le bien-être est un état agréable qui vient de la satisfaction des besoins du corps et du calme de l'esprit."
+        }
+      },
+      {
+        "id": "eab41c29-c9f0-4c24-9e28-706707c1d0cb",
+        "label": "Finances",
+        "category": "Finances",
+        "properties": {
+          "prop_1": "Gestion de son argent"
+        }
+      },
+      {
+        "id": "872ce386-2391-46ef-a647-4adf9e34c63b",
+        "label": "Relation",
+        "category": "Contacts",
+        "properties": {
+          "prop_1": "Une relation est un lien, un rapport ou une connexion unissant des personnes."
+        }
+      },
+      {
+        "id": "88361550-1938-4bcc-b589-0de04160c1d8",
+        "label": "Compétences",
+        "category": "Talents",
+        "properties": {
+          "prop_1": "Une compétence est la capacité d'agir avec efficacité dans une situation donnée."
+        }
+      },
+      {
+        "id": "cbd7d8d8-6bc5-4c94-becd-ccf174516d64",
+        "label": "Valeur",
+        "category": "Valeurs",
+        "properties": {
+          "prop_1": "Les valeurs sont des principes de vie ou des croyances profondes qui définissent ce qui est important et désirable pour agir."
+        }
+      },
+      {
+        "id": "d0eb9ae0-6de7-42cc-b6ee-ea4afb8db610",
+        "label": "Idéal",
+        "category": "Rêves",
+        "properties": {
+          "prop_1": "Un idéal désigne un modèle de perfection absolue que l'esprit humain se fixe comme."
+        }
+      },
+      {
+        "id": "d2719726-be28-4701-8b6d-c809dc463f4c",
+        "label": "Faiblesse",
+        "category": "Faiblesses",
+        "properties": {
+          "prop_1": "Une faiblesse désigne un manque de force, de vigueur ou de résistance."
+        }
+      },
+      {
+        "id": "91610bca-fd4e-409e-bd8e-1b643fddefd8",
+        "label": "Trait de caractère",
+        "category": "Caractère",
+        "properties": {
+          "prop_1": "Un trait de caractère est une manière stable et habituelle qu'a un individu de réagir, de penser et de se comporter face aux situations du quotidien."
+        }
+      },
+      {
+        "id": "86814bda-327e-492b-8737-dbf2c6bc1e8c",
+        "label": "Freins",
+        "category": "Contraintes",
+        "properties": {
+          "prop_1": "Un frein pour une personne désigne un obstacle psychologique, émotionnel ou anatomique qui bloque son action, son évolution ou son bien-être. Il peut s'agir d'une peur, d'une croyance limitante"
+        }
+      },
+      {
+        "id": "0b53a7d1-55f3-4d16-9531-d61bf8719e0f",
+        "label": "Date",
+        "category": "Date",
+        "properties": {
+          "Une date est un repère temporel qui permet de": "",
+          "prop_2": "Analyser son passé,",
+          "prop_3": "Evaluer sa situation actuelle,",
+          "prop_4": "Planifier ses objectifs futurs"
+        }
+      },
+      {
+        "id": "5aa00b76-a214-4f89-bc41-6950e10c9f95",
+        "label": "Déclencheur",
+        "category": "Déclencheurs",
+        "properties": {
+          "prop_1": "Un déclencheur (souvent appelé trigger en anglais) est un stimulus externe ou interne comme un mot, un son, une odeur, une image ou une situation qui provoque une réaction émotionnelle ou physique forte, soudaine et souvent involontaire."
+        }
+      },
+      {
+        "id": "132ba9a1-c674-4b56-9384-99cac070727e",
+        "label": "Pensée",
+        "category": "Pensées",
+        "properties": {
+          "prop_1": "Une idée est une activité de l'esprit. C'est un processus mental conscient qui permet de créer des idées, de juger, de se souvenir, d'imaginer ou de comprendre le monde."
+        }
+      },
+      {
+        "id": "885b76ea-0b0f-4f68-b8d1-dcb69090bf4f",
+        "label": "Croyance",
+        "category": "Croyances",
+        "properties": {
+          "prop_1": "Les croyances sont des certitudes ou des idées que l'on tient pour vraies sur soi et le monde qu'il y ait des preuves ou non."
+        }
+      },
+      {
+        "id": "12439f27-0b11-4e0a-9e92-e5ae62569a85",
+        "label": "Une façon d'agir",
+        "category": "Action",
+        "properties": {
+          "Une \"façon d'agir\" désigne la manière concrète de": "",
+          "prop_2": "Se comporter et de réagir face aux situations",
+          "prop_3": "Mener ses actions au quotidien."
+        }
+      },
+      {
+        "id": "5852e966-a1f8-4f90-8c26-b20830656c9a",
+        "label": "Un façon de penser",
+        "category": "Pensées",
+        "properties": {
+          "prop_1": "Désigne notre manière unique de traiter l'information, d'analyser les situations, de juger le monde et de résoudre les problèmes."
+        }
+      },
+      {
+        "id": "76e69046-bd78-4108-802b-193a5e6003be",
+        "label": "Façon de ressentir",
+        "category": "Sentiment/Emotion",
+        "properties": {
+          "prop_1": "La façon de ressentir d'un individu désigne sa manière unique et subjective de percevoir d'accueillir et de vivre les émotions, les sensations physiques et les événements du monde extérieur."
+        }
+      },
+      {
+        "id": "d77a5f46-4717-470f-9ec1-b5090683212a",
+        "label": "Un événement",
+        "category": "Déclencheurs",
+        "properties": {
+          "prop_1": "Fait marquant qui rompt le cours habituel du quotidien."
+        }
+      },
+      {
+        "id": "3e584dde-8d94-45d5-a3d7-ef57341ecff4",
+        "label": "Une personne",
+        "category": "Déclencheurs",
+        "properties": {}
+      },
+      {
+        "id": "031e1b7d-0201-4d69-9264-a69c75963c3d",
+        "label": "Une situation",
+        "category": "Déclencheurs",
+        "properties": {
+          "prop_1": "Désigne l'ensemble des circonstances, du contexte et des relations au milieu desquels on se trouve à un moment donné."
+        }
+      },
+      {
+        "id": "fb0319cc-d629-4abc-be95-1de5e67a143e",
+        "label": "Réaction",
+        "category": "Action",
+        "properties": {
+          "prop_1": "Un réaction est une réponse physique, émotionnelle ou comportementale face à un événement, un stimulis ou une situation extérieure."
+        }
+      },
+      {
+        "id": "a79cd432-56e9-489b-8cc4-59d5ff3885ce",
+        "label": "Gestion du budget",
+        "category": "Finances",
+        "properties": {
+          "prop_1": "Consiste en premier lieu à lister ses entrées et ses sorties d'argent."
+        }
+      },
+      {
+        "id": "642f616a-5373-45c0-94d3-fe87ecd135a2",
+        "label": "Crédits",
+        "category": "Finances",
+        "properties": {
+          "prop_1": "Somme d'argent empruntée qu'on s'engage à rembourser plus tard, avec des intérêts et des frais."
+        }
+      },
+      {
+        "id": "385469e7-87a1-43c3-bcee-e2970a944c8c",
+        "label": "Investissements",
+        "category": "Finances",
+        "properties": {
+          "prop_1": "Un investissement consiste à placer de l'argent, du temps ou de l'énergie dans un projet, un bien ou soi-même."
+        }
+      },
+      {
+        "id": "6f38277c-18a9-4468-be32-1985be6d182f",
+        "label": "Epargne",
+        "category": "Finances",
+        "properties": {
+          "prop_1": "Part du revenu disponible qui n'est pas dépensée immédiatement.",
+          "prop_2": "Mettre de l'argent de côté pour se protéger contre les imprévus, financer des projets futurs ou faire fructifier son capital."
+        }
+      },
+      {
+        "id": "3daacd6f-f9ef-4f05-97c8-8b760a5c4df9",
+        "label": "Alimentation",
+        "category": "Santé",
+        "properties": {
+          "prop_1": "Au-delà de la simple survie biologique, l'alimentation englobe des dimensions de santé, de plaisir, de culture et d'identité."
+        }
+      },
+      {
+        "id": "bdbfddae-7423-452d-a027-383ff915f300",
+        "label": "Sommeil",
+        "category": "Santé",
+        "properties": {
+          "prop_1": "Le sommeil est vital pour la santé. Il permet au corps de récupérer de la fatigue, de réparer les cellules et de renforcer le système immunitaire."
+        }
+      },
+      {
+        "id": "7a355f04-b9b9-469e-ba49-95007f246a94",
+        "label": "Gestion du stress",
+        "category": "Santé",
+        "properties": {
+          "prop_1": "La gestion du stress regroupe l'ensemble des techniques et méthodes utilisées pour calmer le corps et l'esprit."
+        }
+      },
+      {
+        "id": "c921a310-4aff-43a7-9c66-2eb63e7fe084",
+        "label": "Equilibre mental",
+        "category": "Santé mentale",
+        "properties": {
+          "Etat de stabilité intérieure qui nous permet de": "",
+          "prop_2": "Gérer le stress,",
+          "prop_3": "S'adapter aux changements",
+          "prop_4": "Vivre en harmonie avec soi-même et les autres."
+        }
+      },
+      {
+        "id": "ae49e1d3-398c-41b0-a76e-a7b3b443e1b4",
+        "label": "Psychologique",
+        "category": "Santé mentale",
+        "properties": {
+          "prop_1": "Qualifie tout ce qui touche à la vie intérieure, à l'esprit, aux émotions, aux  pensées et à la façon dont on agit ou réagit face au monde"
+        }
+      },
+      {
+        "id": "cf5b5a83-4022-47d6-be2d-7a8dbab7dca7",
+        "label": "Emotionnel",
+        "category": "Santé mentale",
+        "properties": {
+          "prop_1": "Capacité à ressentir, exprimer et gérer des  émotions."
+        }
+      },
+      {
+        "id": "e05f6d3d-593e-44c9-b1ab-994e1fd6ce1a",
+        "label": "Anatomique",
+        "category": "Santé",
+        "properties": {
+          "prop_1": "Qualifie tout ce qui a rapport à la structure physique, à la forme des organes et à l'agencement corporel."
+        }
+      },
+      {
+        "id": "8d9754f3-9909-4bf8-af72-b73699f326d9",
+        "label": "Physique",
+        "category": "Santé",
+        "properties": {
+          "prop_1": "Une faiblesse physique est une perte de force musculaire ou un manque d'énergie qui empêche le corps de bouger ou d'agir normalement malgré l'effort."
+        }
+      },
+      {
+        "id": "45ccf7b3-bd4c-4291-89e9-67204171cce8",
+        "label": "Choix",
+        "category": "Choix",
+        "properties": {
+          "prop_1": "Choisir est l'action de décider entre plusieurs options en écartant les autres. Il désigne aussi bien le moment de la décision que l'éventail des possibilités disponibles."
+        }
+      },
+      {
+        "id": "02e6b496-b6ca-4b82-af1e-b82971c279d0",
+        "label": "Action",
+        "category": "Action",
+        "properties": {
+          "prop_1": "Une action désigne d'abord le fait d'agir, c'est-à-dire de manifester sa volonté pour transformer le réel ou répondre à une situation."
+        }
+      },
+      {
+        "id": "c7d18477-9e53-47a4-9451-c096df9413aa",
+        "label": "Jugement",
+        "category": "Pensées",
+        "properties": {}
+      },
+      {
+        "id": "a9973576-7088-4495-8a55-cf093e8f3683",
+        "label": "Un repère temporel",
+        "category": "Date",
+        "properties": {}
+      },
+      {
+        "id": "ac9aa069-69be-4dd8-a012-45ab5f359ea9",
+        "label": "Echéance",
+        "category": "Date",
+        "properties": {}
+      },
+      {
+        "id": "f42826df-97cf-4101-a762-7ad40f8ea5b0",
+        "label": "Analyser le passé",
+        "category": "Evénement",
+        "properties": {
+          "prop_1": "Examiner son histoire personnelle pour comprendre ses réactions actuelles",
+          "prop_2": "Identifier des schémas de comportement répétés"
+        }
+      },
+      {
+        "id": "4d3dcd78-a2f2-4f2a-a13f-ebf54f757d67",
+        "label": "Evaluer le présent",
+        "category": "Situation",
+        "properties": {}
+      },
+      {
+        "id": "6f586829-8c15-4a1c-9e2e-67a9ac4b6bab",
+        "label": "Planifier l'avenir",
+        "category": "Projets",
+        "properties": {
+          "prop_1": "Faire une projection de soi dans l'avenir",
+          "prop_2": "Anticiper le futur en organisant ses actions"
+        }
+      },
+      {
+        "id": "19bfebfe-36f3-48ee-8347-09bd1f9d7a9a",
+        "label": "Objectif",
+        "category": "Projets",
+        "properties": {
+          "prop_1": "Un objectif est un but précis, une cible ou un résultat que l'on vise et qui guide nos actions, motive nos efforts et oriente nos choix au quotidien"
+        }
+      },
+      {
+        "id": "e7718951-1341-4e57-aaa6-e78e9cbd1feb",
+        "label": "Un savoir",
+        "category": "Compétence",
+        "properties": {
+          "prop_1": "Ensemble de connaissances théoriques, d'informations et de concepts acquis par l'étude, l'apprentissage ou l'expérience."
+        }
+      },
+      {
+        "id": "491d0697-34d8-42dc-83dd-1dfe12e89963",
+        "label": "Un savoir-faire",
+        "category": "Compétence",
+        "properties": {
+          "prop_1": "Le savoir-faire désigne la capacité à appliquer de manière pratique et concrète des connaissances théoriques."
+        }
+      },
+      {
+        "id": "3ee5f568-8604-47f8-b47e-2de9d97c52be",
+        "label": "Le savoir-être",
+        "category": "Compétence",
+        "properties": {
+          "prop_1": "Le savoir-être désigne l'ensemble des qualités personnelles, des comportements et des habiletés sociales d'un individu.",
+          "prop_2": "Il définit la manière de réagir, de communiquer et de s'adapter face aux autres et à son environnement."
+        }
+      },
+      {
+        "id": "f9e5a165-622e-4ae4-942a-ac910f98662d",
+        "label": "Familiale",
+        "category": "Contacts",
+        "properties": {}
+      },
+      {
+        "id": "144fc3c4-c5ea-4948-87f2-f88e1e5a83ad",
+        "label": "Professionnelle",
+        "category": "Contacts",
+        "properties": {}
+      },
+      {
+        "id": "f8ebd664-6c88-440d-b693-dadbf8196fe7",
+        "label": "Amoureuse",
+        "category": "Contacts",
+        "properties": {}
+      },
+      {
+        "id": "c0b2e4f9-f5bc-4db8-9646-18c57aba484c",
+        "label": "Amicale",
+        "category": "Contacts",
+        "properties": {}
+      },
+      {
+        "id": "e2a6dcdb-2d86-4f17-8297-528960a6e36a",
+        "label": "Platonique",
+        "category": "Contacts",
+        "properties": {}
+      },
+      {
+        "id": "b6795809-b46d-407b-9cc1-fe37136d9ff9",
+        "label": "Occasionnelle",
+        "category": "Contacts",
+        "properties": {}
+      },
+      {
+        "id": "bfe0ab86-9cfc-4dc0-a1a7-516d20b99dd3",
+        "label": "Corps",
+        "category": "Santé",
+        "properties": {
+          "prop_1": "Enveloppe matérielle par laquelle chacun fait l'expérience du monde."
+        }
+      },
+      {
+        "id": "a5eb1a39-bbda-49c2-b4e4-2fd1c09ddf8a",
+        "label": "Esprit",
+        "category": "Santé mentale",
+        "properties": {
+          "prop_1": "Ensemble des facultés mentales, conscientes et inconscientes, qui permettent de penser, de ressentir, de se souvenir et de décider."
+        }
+      },
+      {
+        "id": "5e8cc6c1-4c99-40ef-aba5-82bcc1c5d258",
+        "label": "Loisir",
+        "category": "Choix",
+        "properties": {}
+      },
+      {
+        "id": "d9e286a5-6ad9-4267-bff1-9807ec769255",
+        "label": "Morale",
+        "category": "Faiblesses",
+        "properties": {
+          "prop_1": "Une faiblesse morale chez un individu désigne un manque de fermeté face aux tentations ou aux épreuves, le conduisant à trahir ses propres valeurs ou à céder à la facilité."
+        }
+      },
+      {
+        "id": "0289a7eb-91df-4c07-87bb-4338c85bd309",
+        "label": "Matérielle",
+        "category": "Faiblesses",
+        "properties": {
+          "prop_1": "Une faiblesse matérielle désigne une situation de vulnérabilité concrète liée à ses ressources financières, à ses biens ou à son environnement physique."
+        }
+      },
+      {
+        "id": "550d5bfd-45c4-4197-b684-ddfb3238a7e2",
+        "label": "Aidante",
+        "category": "Croyances",
+        "properties": {
+          "prop_1": "Une croyance aidante donne de l'élan et incite à agir."
+        }
+      },
+      {
+        "id": "6c8566fe-8388-4aa7-8f47-c589daa16f85",
+        "label": "Limitante",
+        "category": "Croyances",
+        "properties": {
+          "prop_1": "Une croyance limitante empêche l'action"
+        }
+      },
+      {
+        "id": "d912c5ea-4851-49d9-bebe-6df023e9aa5c",
+        "label": "Personnalité",
+        "category": "Personnalité",
+        "properties": {
+          "La personnalité est une structure psychologique profonde qui": "",
+          "prop_2": "Influence nos réactions face au monde, Guide notre adaptation au quotidien  Nous distingue de tous les autres"
+        }
+      },
+      {
+        "id": "7db15394-bd24-451f-9d94-a05a884d0061",
+        "label": "Un gain futur",
+        "category": "Finances",
+        "properties": {
+          "prop_1": "Augmentation attendue de ses ressources financières, de ses revenus ou de son patrimoine à venir."
+        }
+      },
+      {
+        "id": "274f0def-f8ef-489c-ba5a-97eb4bfe956b",
+        "label": "Améliorer sa vie",
+        "category": "Projets",
+        "properties": {
+          "prop_1": "Consiste à chercher un plus grand équilibre et un meilleur bien-être au quotidien.",
+          "prop_2": "Cela passe par l'alignement entre ses actions et ses valeurs profondes, le soin de la santé physique et mentale, ainsi que la qualité des relations avec les autres."
+        }
+      },
+      {
+        "id": "619d352a-2481-4133-9e11-1533fe1de836",
+        "label": "Augmenter son capital",
+        "category": "Finances",
+        "properties": {
+          "prop_1": "C'est accroître la valeur de ce que l'on possède. (patrimoine personnel)"
+        }
+      }
+    ],
+    "relationships": [
+      {
+        "id": "41c6ec10-9b9b-41c1-a8b8-fe87bd7aaf8d",
+        "type": "PEUT_ETRE",
+        "source": "91610bca-fd4e-409e-bd8e-1b643fddefd8",
+        "target": "12439f27-0b11-4e0a-9e92-e5ae62569a85",
+        "properties": {}
+      },
+      {
+        "id": "e323ed5d-af08-404e-a229-6f1978187a24",
+        "type": "PEUT_ETRE",
+        "source": "91610bca-fd4e-409e-bd8e-1b643fddefd8",
+        "target": "5852e966-a1f8-4f90-8c26-b20830656c9a",
+        "properties": {}
+      },
+      {
+        "id": "f8bd351c-98b7-42ac-8e59-e0c1d08c2ac1",
+        "type": "PEUT_ETRE",
+        "source": "91610bca-fd4e-409e-bd8e-1b643fddefd8",
+        "target": "76e69046-bd78-4108-802b-193a5e6003be",
+        "properties": {}
+      },
+      {
+        "id": "d908b749-b602-4dd0-a5e6-76d8912ff5e9",
+        "type": "PEUT_ETRE",
+        "source": "5aa00b76-a214-4f89-bc41-6950e10c9f95",
+        "target": "d77a5f46-4717-470f-9ec1-b5090683212a",
+        "properties": {}
+      },
+      {
+        "id": "20039070-8aac-458b-90dd-bd95342989a6",
+        "type": "PEUT_ETRE",
+        "source": "5aa00b76-a214-4f89-bc41-6950e10c9f95",
+        "target": "3e584dde-8d94-45d5-a3d7-ef57341ecff4",
+        "properties": {}
+      },
+      {
+        "id": "51eca755-96b7-4445-8a0f-7c5cb605ef8f",
+        "type": "PEUT_ETRE",
+        "source": "5aa00b76-a214-4f89-bc41-6950e10c9f95",
+        "target": "031e1b7d-0201-4d69-9264-a69c75963c3d",
+        "properties": {}
+      },
+      {
+        "id": "c5fa9f53-e60a-4215-b532-4fabbcaff78e",
+        "type": "PROVOQUE",
+        "source": "5aa00b76-a214-4f89-bc41-6950e10c9f95",
+        "target": "fb0319cc-d629-4abc-be95-1de5e67a143e",
+        "properties": {
+          "prop_1": "En faisant basculer d'un état calme ou stable vers une dynamique active"
+        }
+      },
+      {
+        "id": "b321676d-8943-4eab-8a04-819ba98cfc01",
+        "type": "COMPREND",
+        "source": "eab41c29-c9f0-4c24-9e28-706707c1d0cb",
+        "target": "a79cd432-56e9-489b-8cc4-59d5ff3885ce",
+        "properties": {}
+      },
+      {
+        "id": "4c4e8a47-7ddf-45bc-8604-0da7fdc63357",
+        "type": "COMPREND",
+        "source": "eab41c29-c9f0-4c24-9e28-706707c1d0cb",
+        "target": "642f616a-5373-45c0-94d3-fe87ecd135a2",
+        "properties": {}
+      },
+      {
+        "id": "a553925a-c7a8-4174-a84b-01ffc046824a",
+        "type": "COMPREND",
+        "source": "eab41c29-c9f0-4c24-9e28-706707c1d0cb",
+        "target": "385469e7-87a1-43c3-bcee-e2970a944c8c",
+        "properties": {}
+      },
+      {
+        "id": "17572444-cba8-4df3-b284-69d3f8c05dec",
+        "type": "COMPREND",
+        "source": "eab41c29-c9f0-4c24-9e28-706707c1d0cb",
+        "target": "6f38277c-18a9-4468-be32-1985be6d182f",
+        "properties": {}
+      },
+      {
+        "id": "58a0a81e-c27f-4c8f-b459-2cc652bcbb09",
+        "type": "LIEE_A",
+        "source": "3f69f86e-5403-4912-a67d-c386df29cde0",
+        "target": "3daacd6f-f9ef-4f05-97c8-8b760a5c4df9",
+        "properties": {}
+      },
+      {
+        "id": "3e59c6fc-ed0d-4ed5-81b0-3f26213b3a95",
+        "type": "LIEE_A",
+        "source": "3f69f86e-5403-4912-a67d-c386df29cde0",
+        "target": "195e371b-709b-43c4-a9cf-b5e808a6dd52",
+        "properties": {
+          "prop_1": "Physique"
+        }
+      },
+      {
+        "id": "5e634b9e-6b38-442c-862d-07c267a38698",
+        "type": "LIEE_AU",
+        "source": "3f69f86e-5403-4912-a67d-c386df29cde0",
+        "target": "bdbfddae-7423-452d-a027-383ff915f300",
+        "properties": {}
+      },
+      {
+        "id": "52832a61-d307-4a70-8d6e-c9df900c7e7a",
+        "type": "LIEE_A",
+        "source": "3f69f86e-5403-4912-a67d-c386df29cde0",
+        "target": "7a355f04-b9b9-469e-ba49-95007f246a94",
+        "properties": {}
+      },
+      {
+        "id": "1434d9ce-396d-44fd-a8e6-814b02b94220",
+        "type": "LIEE_A",
+        "source": "3f69f86e-5403-4912-a67d-c386df29cde0",
+        "target": "c921a310-4aff-43a7-9c66-2eb63e7fe084",
+        "properties": {}
+      },
+      {
+        "id": "c1fbf624-a74c-4e72-a5d7-c0fca596838a",
+        "type": "PEUT_ETRE",
+        "source": "86814bda-327e-492b-8737-dbf2c6bc1e8c",
+        "target": "ae49e1d3-398c-41b0-a76e-a7b3b443e1b4",
+        "properties": {}
+      },
+      {
+        "id": "b6e9d502-ede5-45ed-882c-190a4a395f24",
+        "type": "PEUT_ETRE",
+        "source": "86814bda-327e-492b-8737-dbf2c6bc1e8c",
+        "target": "cf5b5a83-4022-47d6-be2d-7a8dbab7dca7",
+        "properties": {}
+      },
+      {
+        "id": "93850d2e-b285-488f-9d04-e02c4e806da5",
+        "type": "PEUT_ETRE",
+        "source": "86814bda-327e-492b-8737-dbf2c6bc1e8c",
+        "target": "e05f6d3d-593e-44c9-b1ab-994e1fd6ce1a",
+        "properties": {}
+      },
+      {
+        "id": "bdcea37e-145b-4f8d-affd-71dd11c2755f",
+        "type": "PEUT_ETRE",
+        "source": "86814bda-327e-492b-8737-dbf2c6bc1e8c",
+        "target": "8d9754f3-9909-4bf8-af72-b73699f326d9",
+        "properties": {}
+      },
+      {
+        "id": "e1a0f397-51f3-4da9-b6a7-53e26882f508",
+        "type": "GUIDE",
+        "source": "cbd7d8d8-6bc5-4c94-becd-ccf174516d64",
+        "target": "45ccf7b3-bd4c-4291-89e9-67204171cce8",
+        "properties": {}
+      },
+      {
+        "id": "93bacfd8-a4a9-4cfe-ad0c-d22194d4c770",
+        "type": "GUIDE",
+        "source": "cbd7d8d8-6bc5-4c94-becd-ccf174516d64",
+        "target": "02e6b496-b6ca-4b82-af1e-b82971c279d0",
+        "properties": {}
+      },
+      {
+        "id": "0c3c2ba6-3892-44ef-ad21-310790e6df77",
+        "type": "GUIDE",
+        "source": "cbd7d8d8-6bc5-4c94-becd-ccf174516d64",
+        "target": "c7d18477-9e53-47a4-9451-c096df9413aa",
+        "properties": {}
+      },
+      {
+        "id": "71a53c05-85fd-4d77-9ab0-b1ba368378bf",
+        "type": "PEUT_ETRE",
+        "source": "0b53a7d1-55f3-4d16-9531-d61bf8719e0f",
+        "target": "a9973576-7088-4495-8a55-cf093e8f3683",
+        "properties": {}
+      },
+      {
+        "id": "c69475cd-1314-4158-887e-51090df9d7aa",
+        "type": "PEUT_ETRE",
+        "source": "0b53a7d1-55f3-4d16-9531-d61bf8719e0f",
+        "target": "ac9aa069-69be-4dd8-a012-45ab5f359ea9",
+        "properties": {}
+      },
+      {
+        "id": "bf0beae3-b002-42d7-9c6e-07839c5a80d7",
+        "type": "PERMET",
+        "source": "a9973576-7088-4495-8a55-cf093e8f3683",
+        "target": "f42826df-97cf-4101-a762-7ad40f8ea5b0",
+        "properties": {}
+      },
+      {
+        "id": "d3c82574-c8d2-4585-b658-278cbdd15305",
+        "type": "PERMET",
+        "source": "a9973576-7088-4495-8a55-cf093e8f3683",
+        "target": "4d3dcd78-a2f2-4f2a-a13f-ebf54f757d67",
+        "properties": {}
+      },
+      {
+        "id": "fa6c4a82-a301-4095-9734-2aa92115b3f9",
+        "type": "PERMET",
+        "source": "ac9aa069-69be-4dd8-a012-45ab5f359ea9",
+        "target": "6f586829-8c15-4a1c-9e2e-67a9ac4b6bab",
+        "properties": {}
+      },
+      {
+        "id": "3371c577-271d-4b67-a092-84ce444af6dc",
+        "type": "A_UN",
+        "source": "86e68a3c-e412-4ca7-98bf-afaabae370ac",
+        "target": "19bfebfe-36f3-48ee-8347-09bd1f9d7a9a",
+        "properties": {}
+      },
+      {
+        "id": "fa77335c-547e-4c1b-a63f-bb247a3791f1",
+        "type": "LIEE_A",
+        "source": "d0eb9ae0-6de7-42cc-b6ee-ea4afb8db610",
+        "target": "19bfebfe-36f3-48ee-8347-09bd1f9d7a9a",
+        "properties": {}
+      },
+      {
+        "id": "8584191a-8f3a-48c6-b17c-ad879a4f73fc",
+        "type": "REQUIERT",
+        "source": "88361550-1938-4bcc-b589-0de04160c1d8",
+        "target": "e7718951-1341-4e57-aaa6-e78e9cbd1feb",
+        "properties": {}
+      },
+      {
+        "id": "c28575b6-e446-45d9-ae3c-613d08dab7b8",
+        "type": "REQUIERT",
+        "source": "88361550-1938-4bcc-b589-0de04160c1d8",
+        "target": "491d0697-34d8-42dc-83dd-1dfe12e89963",
+        "properties": {}
+      },
+      {
+        "id": "5654a5d3-dfaa-4278-95d9-586848096800",
+        "type": "REQUIERT",
+        "source": "88361550-1938-4bcc-b589-0de04160c1d8",
+        "target": "3ee5f568-8604-47f8-b47e-2de9d97c52be",
+        "properties": {}
+      },
+      {
+        "id": "b395b293-a761-41e7-bca0-36140dd24847",
+        "type": "S'EXPRIMENT_DANS",
+        "source": "88361550-1938-4bcc-b589-0de04160c1d8",
+        "target": "031e1b7d-0201-4d69-9264-a69c75963c3d",
+        "properties": {}
+      },
+      {
+        "id": "28d6720d-709e-4fe7-a683-62990b5c3a75",
+        "type": "DE_TYPE",
+        "source": "872ce386-2391-46ef-a647-4adf9e34c63b",
+        "target": "f9e5a165-622e-4ae4-942a-ac910f98662d",
+        "properties": {}
+      },
+      {
+        "id": "f7c9adeb-9f7f-43e3-9487-55a63c5633c2",
+        "type": "DE_TYPE",
+        "source": "872ce386-2391-46ef-a647-4adf9e34c63b",
+        "target": "144fc3c4-c5ea-4948-87f2-f88e1e5a83ad",
+        "properties": {}
+      },
+      {
+        "id": "41ca391d-a9b9-4856-8954-7091f92d5230",
+        "type": "DE_TYPE",
+        "source": "872ce386-2391-46ef-a647-4adf9e34c63b",
+        "target": "f8ebd664-6c88-440d-b693-dadbf8196fe7",
+        "properties": {}
+      },
+      {
+        "id": "2e3a3349-6cff-4a56-ba94-c3ae1176ea81",
+        "type": "DE_TYPE",
+        "source": "872ce386-2391-46ef-a647-4adf9e34c63b",
+        "target": "c0b2e4f9-f5bc-4db8-9646-18c57aba484c",
+        "properties": {}
+      },
+      {
+        "id": "6edaff33-af90-46c9-a7e6-cf46f8adfe9a",
+        "type": "DE_TYPE",
+        "source": "872ce386-2391-46ef-a647-4adf9e34c63b",
+        "target": "e2a6dcdb-2d86-4f17-8297-528960a6e36a",
+        "properties": {}
+      },
+      {
+        "id": "a05fed0c-caf5-4e03-b1da-b34071f999a6",
+        "type": "DE_TYPE",
+        "source": "872ce386-2391-46ef-a647-4adf9e34c63b",
+        "target": "b6795809-b46d-407b-9cc1-fe37136d9ff9",
+        "properties": {}
+      },
+      {
+        "id": "327838d5-fcde-4498-ace7-61d34b7cf6c9",
+        "type": "SOURCE_DE",
+        "source": "195e371b-709b-43c4-a9cf-b5e808a6dd52",
+        "target": "872ce386-2391-46ef-a647-4adf9e34c63b",
+        "properties": {}
+      },
+      {
+        "id": "ad9027f1-432c-4dba-a7a2-dfdeaa5f4cad",
+        "type": "DE_TYPE",
+        "source": "195e371b-709b-43c4-a9cf-b5e808a6dd52",
+        "target": "144fc3c4-c5ea-4948-87f2-f88e1e5a83ad",
+        "properties": {
+          "prop_1": "Activité physique ou mentale utile à tous."
+        }
+      },
+      {
+        "id": "1ee89993-debc-42bb-9b65-1771991aca3e",
+        "type": "RELEVE_DU",
+        "source": "d77d76ae-fb5c-4250-b711-b0c022f44936",
+        "target": "bfe0ab86-9cfc-4dc0-a1a7-516d20b99dd3",
+        "properties": {}
+      },
+      {
+        "id": "188990a1-a3f7-4550-985c-3fa1bfdf8f00",
+        "type": "RELEVE_DU",
+        "source": "d77d76ae-fb5c-4250-b711-b0c022f44936",
+        "target": "a5eb1a39-bbda-49c2-b4e4-2fd1c09ddf8a",
+        "properties": {
+          "prop_1": "Calme"
+        }
+      },
+      {
+        "id": "805087b2-0ae6-42d5-84b9-e8cb9a832d46",
+        "type": "IMPLIQUE",
+        "source": "195e371b-709b-43c4-a9cf-b5e808a6dd52",
+        "target": "bfe0ab86-9cfc-4dc0-a1a7-516d20b99dd3",
+        "properties": {}
+      },
+      {
+        "id": "ad560fc8-6a44-424f-94c8-a1096fbf0997",
+        "type": "IMPLIQUE",
+        "source": "195e371b-709b-43c4-a9cf-b5e808a6dd52",
+        "target": "a5eb1a39-bbda-49c2-b4e4-2fd1c09ddf8a",
+        "properties": {}
+      },
+      {
+        "id": "39f2325c-d098-4c83-8895-96aa9551d0dd",
+        "type": "DE_TYPE",
+        "source": "195e371b-709b-43c4-a9cf-b5e808a6dd52",
+        "target": "5e8cc6c1-4c99-40ef-aba5-82bcc1c5d258",
+        "properties": {}
+      },
+      {
+        "id": "ea697c7c-0375-4cef-8ead-9ccac6531228",
+        "type": "PEUT_ETRE",
+        "source": "d2719726-be28-4701-8b6d-c809dc463f4c",
+        "target": "8d9754f3-9909-4bf8-af72-b73699f326d9",
+        "properties": {
+          "prop_1": "Manque de force",
+          "prop_2": "Manque de 'volonté'"
+        }
+      },
+      {
+        "id": "1523a5a4-789f-4278-8361-bd40ba4b25a8",
+        "type": "PEUT_ETRE",
+        "source": "d2719726-be28-4701-8b6d-c809dc463f4c",
+        "target": "d9e286a5-6ad9-4267-bff1-9807ec769255",
+        "properties": {
+          "prop_1": "Résistance"
+        }
+      },
+      {
+        "id": "b8f4afab-29d7-45bc-aad9-f78fa62443c8",
+        "type": "PEUT_ETRE",
+        "source": "d2719726-be28-4701-8b6d-c809dc463f4c",
+        "target": "0289a7eb-91df-4c07-87bb-4338c85bd309",
+        "properties": {
+          "prop_1": "Manque de moyens"
+        }
+      },
+      {
+        "id": "6b82dcfa-a67b-4c06-9f17-466e34a7f86c",
+        "type": "LIEE_A",
+        "source": "d9e286a5-6ad9-4267-bff1-9807ec769255",
+        "target": "885b76ea-0b0f-4f68-b8d1-dcb69090bf4f",
+        "properties": {}
+      },
+      {
+        "id": "85fb716c-9ee0-4c9d-b00b-fec9c2249009",
+        "type": "SOUTIENT",
+        "source": "885b76ea-0b0f-4f68-b8d1-dcb69090bf4f",
+        "target": "cbd7d8d8-6bc5-4c94-becd-ccf174516d64",
+        "properties": {}
+      },
+      {
+        "id": "5c43a8e9-1c10-46f8-be22-139c94bf01ab",
+        "type": "PEUT_ETRE",
+        "source": "885b76ea-0b0f-4f68-b8d1-dcb69090bf4f",
+        "target": "550d5bfd-45c4-4197-b684-ddfb3238a7e2",
+        "properties": {}
+      },
+      {
+        "id": "ac790855-726f-4e2e-b095-a4a07b0d1ca6",
+        "type": "PEUT_ETRE",
+        "source": "885b76ea-0b0f-4f68-b8d1-dcb69090bf4f",
+        "target": "6c8566fe-8388-4aa7-8f47-c589daa16f85",
+        "properties": {}
+      },
+      {
+        "id": "320c6afa-2afd-4f4b-9965-fb23e4f49c68",
+        "type": "POUSSE_A",
+        "source": "550d5bfd-45c4-4197-b684-ddfb3238a7e2",
+        "target": "02e6b496-b6ca-4b82-af1e-b82971c279d0",
+        "properties": {}
+      },
+      {
+        "id": "ad79c1a6-31c3-4973-a689-00f96c51d3b3",
+        "type": "REGULE",
+        "source": "bdbfddae-7423-452d-a027-383ff915f300",
+        "target": "cf5b5a83-4022-47d6-be2d-7a8dbab7dca7",
+        "properties": {}
+      },
+      {
+        "id": "b0147562-6a95-4e70-a10c-a50e90092704",
+        "type": "POUR",
+        "source": "7a355f04-b9b9-469e-ba49-95007f246a94",
+        "target": "a5eb1a39-bbda-49c2-b4e4-2fd1c09ddf8a",
+        "properties": {
+          "prop_1": "Calmer"
+        }
+      },
+      {
+        "id": "a92e5db0-8208-4703-b49b-763b7c58a6f9",
+        "type": "POUR",
+        "source": "7a355f04-b9b9-469e-ba49-95007f246a94",
+        "target": "bfe0ab86-9cfc-4dc0-a1a7-516d20b99dd3",
+        "properties": {
+          "prop_1": "Réguler"
+        }
+      },
+      {
+        "id": "8df44ea1-6208-4f6d-a849-b42f7b1208dd",
+        "type": "COMPOSANTE_DE",
+        "source": "91610bca-fd4e-409e-bd8e-1b643fddefd8",
+        "target": "d912c5ea-4851-49d9-bebe-6df023e9aa5c",
+        "properties": {}
+      },
+      {
+        "id": "674d0ff9-b35c-4054-bab4-ac0b1118fb3f",
+        "type": "A_POUR_BUT",
+        "source": "385469e7-87a1-43c3-bcee-e2970a944c8c",
+        "target": "7db15394-bd24-451f-9d94-a05a884d0061",
+        "properties": {}
+      },
+      {
+        "id": "e7e5d653-bde7-45c0-846b-094d2770cac0",
+        "type": "A_POUR_BUT",
+        "source": "385469e7-87a1-43c3-bcee-e2970a944c8c",
+        "target": "274f0def-f8ef-489c-ba5a-97eb4bfe956b",
+        "properties": {}
+      },
+      {
+        "id": "0c6b6aa9-7a68-49db-8e3b-2e66bbfac45f",
+        "type": "A_POUR_BUT",
+        "source": "385469e7-87a1-43c3-bcee-e2970a944c8c",
+        "target": "619d352a-2481-4133-9e11-1533fe1de836",
+        "properties": {}
+      }
+    ]
+  },
+
+  {
     "id": "structure-patrimoniale",
     "title": "Exemple de Structure patrimoniale",
     "category": "Finances et Patrimoine",

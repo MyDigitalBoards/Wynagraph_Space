@@ -114,6 +114,8 @@
   <script src="../../json-import.js"></script>
   <script src="../../graph-render.js"></script>
   <script>
+    const _old = new URLSearchParams(location.search).get('id');
+    if (_old && _old !== 'import') { location.replace('graphe/' + _old + '/'); }
     // ── Helpers ──────────────────────────────────────────────────────────────
     function esc(str) {
       if (str == null) return '';
