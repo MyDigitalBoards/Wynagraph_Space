@@ -184,10 +184,10 @@ function buildNetwork(container, graphRaw, opts = {}) {
     physics: hasPositions ? false : {
       enabled: true,
       barnesHut: {
-        gravitationalConstant: -3500,
-        centralGravity: 0.15,
-        springLength: interactive ? 142 : 90,
-        springConstant: 0.04,
+        gravitationalConstant: -8000,   
+        centralGravity: 0.08,           
+        springLength: interactive ? 220 : 90,   
+        springConstant: 0.03,
       },
     
       stabilization: {

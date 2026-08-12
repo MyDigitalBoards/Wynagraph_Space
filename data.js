@@ -2638,51 +2638,635 @@ window.GRAPHS = [
     ]
   },
 
-  {
-  "id": "theme-legal-fin-de-vie-numerique",
-  "title": "Données Personnelles & Fin de Vie",
-  "category": "Droits & Démarches",
-  "description": "Une cartographie des obligations, des droits et du testament numérique.",
-  "longDescription": "À l'ère du numérique, la fin de vie ne concerne plus seulement le patrimoine physique. Ce graphe structure les démarches administratives indispensables, les droits d'accès aux données (loi République Numérique), et la gestion des comptes en ligne après le décès.",
-  "nodes": [
-    { "id": "prevoyance", "label": "Planification Fin de Vie", "group": "racine", "size": 28 },
-    
-    // Volet Juridique & Administratif Classique
-    { "id": "directives_anticipees", "label": "Directives Anticipées (Santé)", "group": "legal_sante", "size": 20 },
-    { "id": "testament_notarie", "label": "Testament (Notaire)", "group": "legal_patrimoine", "size": 20 },
-    { "id": "personne_confiance", "label": "Personne de Confiance", "group": "humain", "size": 18 },
-    { "id": "executeur_testamentaire", "label": "Exécuteur Testamentaire", "group": "humain", "size": 16 },
-    
-    // Volet Numérique (Le "Testament Numérique")
-    { "id": "testament_numerique", "label": "Directives Numériques (Post-Mortem)", "group": "legal_numerique", "size": 22 },
-    { "id": "gestionnaire_mots_passe", "label": "Coffre-fort / Gestionnaire de Mots de Passe", "group": "outil", "size": 16 },
-    { "id": "cnil", "label": "Droits CNIL (Accès/Effacement)", "group": "institution", "size": 16 },
-    
-    // Les Actifs Numériques & Comptes
-    { "id": "comptes_sociaux", "label": "Réseaux Sociaux (Mémorial/Suppression)", "group": "plateforme", "size": 15 },
-    { "id": "cloud_photos", "label": "Données Cloud (Photos/Souvenirs)", "group": "plateforme", "size": 15 },
-    { "id": "crypto_banque", "label": "Comptes Bancaires & Crypto-actifs", "group": "plateforme", "size": 16 }
-  ],
-  "edges": [
-    // Liens du volet classique / médical
-    { "source": "prevoyance", "target": "directives_anticipees", "label": "Consigne les choix médicaux dans" },
-    { "source": "prevoyance", "target": "testament_notarie", "label": "Organise la succession via" },
-    { "source": "directives_anticipees", "target": "personne_confiance", "label": "Est consultée par / confiée à" },
-    { "source": "testament_notarie", "target": "executeur_testamentaire", "label": "Nomme l'" },
-    
-    // Liens du volet numérique
-    { "source": "prevoyance", "target": "testament_numerique", "label": "Anticipe l'héritage digital par" },
-    { "source": "testament_numerique", "target": "gestionnaire_mots_passe", "label": "Nécessite le legs des accès via" },
-    { "source": "testament_numerique", "target": "cnil", "label": "S'appuie sur le cadre légal de la" },
-    { "source": "gestionnaire_mots_passe", "target": "executeur_testamentaire", "label": "Doit être transmis à l'" },
-    
-    // Application sur les plateformes
-    { "source": "testament_numerique", "target": "comptes_sociaux", "label": "Décide du statut (ex: 'Compte de commémoration') de" },
-    { "source": "testament_numerique", "target": "cloud_photos", "label": "Autorise le transfert aux proches de" },
-    { "source": "testament_notarie", "target": "crypto_banque", "label": "Lègue légalement les accès et fonds de" },
-    { "source": "cnil", "target": "comptes_sociaux", "label": "Permet aux héritiers d'exiger la clôture de" }
-  ]
-},
+    {
+    "id": "fin-de-vie-numerique",
+      "title": "Fin de vie numérique",
+      "category": "Droits & Démarches",
+      "description": "Ce que deviennent comptes, contenus et actifs en ligne après un décès : le cadre légal français, les dispositifs des plateformes, et ce qui reste hors d'atteinte.",
+      "longDescription": "La loi française permet depuis 2016 d'organiser le sort de ses données après sa mort — mais le registre destiné à recueillir ces volontés n'a jamais été créé. Ce graphe distingue les trois voies qui subsistent : les directives déposées chez un notaire, les dispositifs proposés par chaque plateforme, et les droits que la loi reconnaît aux héritiers à défaut de volonté exprimée. Il sépare aussi ce qui relève de la succession classique de ce qui n'en relève pas — un compte bancaire se transmet, une clé de portefeuille crypto se perd.",
+    "nodes": [
+      {
+        "id": "273f3947-13e1-44ea-bc5f-393638661b3d",
+        "label": "Fin de vie numérique",
+        "category": "racine",
+        "properties": {
+          "prop_1": "Ensemble des comptes contenus et actifs en ligne qui subsistent au décès.",
+          "prop_2": "Aucun n'est clôturé automatiquement si les plateformes ne sont pas informées."
+        }
+      },
+      {
+        "id": "9bbf47c9-70d1-4593-badd-8fd10f9b8eea",
+        "label": "Article 85 (loi Informatique et Libertés)",
+        "category": "cadre_legal",
+        "properties": {
+          "prop_1": "Issu de la loi pour une République numérique de 2016.",
+          "prop_2": "Permet de définir des directives sur la conservation, l'effacement et la communication de ses données après le décès.",
+          "prop_3": "Modifiables et révocables à tout moment."
+        }
+      },
+      {
+        "id": "f91dbc0e-8a81-47da-8859-9995f6b5e365",
+        "label": "Directives générales",
+        "category": "cadre_legal",
+        "properties": {
+          "prop_1": "Couvrent l'ensemble des données",
+          "prop_2": "tous services confondus.",
+          "prop_3": "Supposent un dépôt auprès d'un tiers pour être retrouvées."
+        }
+      },
+      {
+        "id": "c9def8e7-aaa3-452d-b28e-fb1d3b7484e3",
+        "label": "Directives particulières",
+        "category": "cadre_legal",
+        "properties": {
+          "Ne valent que pour un service donné. Consentement spécifique exigé": "l'acceptation des conditions générales d'utilisation ne suffit pas."
+        }
+      },
+      {
+        "id": "7d2ce016-f502-4f3b-bd96-349c5e9aabdb",
+        "label": "Droits des héritiers (à défaut de directives)",
+        "category": "cadre_legal",
+        "properties": {
+          "prop_1": "Accès aux données utiles au règlement de la succession",
+          "prop_2": "clôture des comptes",
+          "prop_3": "opposition au traitement",
+          "prop_4": "mise à jour après décès.",
+          "prop_5": "N'ouvre pas droit à la correspondance privée."
+        }
+      },
+      {
+        "id": "96dc96bc-1ece-47fd-9eb3-c79975ceae1a",
+        "label": "Registre unique",
+        "category": "blocage",
+        "properties": {
+          "Prévu par la loi pour référencer les directives générales. Jamais créé": "les décrets d'application n'ont pas été publiés."
+        }
+      },
+      {
+        "id": "ced5ce40-907f-4135-9d02-5941b4e1ea7b",
+        "label": "Tiers de confiance certifié CNIL",
+        "category": "blocage",
+        "properties": {
+          "prop_1": "Certification prévue par la loi jamais mise en œuvre. Aucun opérateur certifié à ce jour."
+        }
+      },
+      {
+        "id": "8dd42205-1feb-43c4-bd62-65293b0f3fc4",
+        "label": "Dépôt chez le notaire",
+        "category": "repli",
+        "properties": {
+          "prop_1": "Solution de repli en l'absence du dispositif légal.",
+          "prop_2": "Le notaire conserve les directives et les révèle au décès. C'est aujourd'hui la seule voie opérationnelle pour des directives générales."
+        }
+      },
+      {
+        "id": "ebb276d5-7c82-48ba-8135-0e4b2672a1cb",
+        "label": "Héritiers",
+        "category": "humain",
+        "properties": {
+          "prop_1": "Titulaires des droits post-mortem lorsque le défunt n'a rien prévu."
+        }
+      },
+      {
+        "id": "169a012e-c4bc-4f66-a41b-2e781b8b6d68",
+        "label": "Exécuteur testamentaire",
+        "category": "humain",
+        "properties": {
+          "prop_1": "Désigné au testament",
+          "prop_2": "veille à l'exécution des volontés. Compétent sur le patrimoine",
+          "prop_3": "pas sur les accès aux services en ligne."
+        }
+      },
+      {
+        "id": "df4750f8-80f6-4af2-b63c-af8aa21421f9",
+        "label": "Contact légataire désigné",
+        "category": "humain",
+        "properties": {
+          "prop_1": "Personne désignée dans les paramètres d'un service.",
+          "prop_2": "Agit sans jamais connaître le mot de passe du défunt."
+        }
+      },
+      {
+        "id": "d75afc60-16d8-4e84-bd2d-fab0a4c07bcd",
+        "label": "Dispositifs proposés par les plateformes",
+        "category": "dispositif",
+        "properties": {
+          "prop_1": "Réglages internes à chaque service",
+          "prop_2": "gratuits et immédiats. En pratique plus efficaces que le cadre légal",
+          "prop_3": "qui reste incomplet."
+        }
+      },
+      {
+        "id": "ebac8d14-6292-4fcf-a1f8-95170813fe74",
+        "label": "Gestionnaire de compte inactif (Google)",
+        "category": "dispositif",
+        "properties": {
+          "Se déclenche après une période d'inactivité fixée par l'utilisateur": "",
+          "prop_2": "des contacts sont prévenus",
+          "prop_3": "certaines données transférées",
+          "prop_4": "ou le compte supprimé."
+        }
+      },
+      {
+        "id": "8a9d3dff-07c6-4477-a109-9b00861ff56a",
+        "label": "Contact légataire (Meta)",
+        "category": "dispositif",
+        "properties": {
+          "prop_1": "Facebook et Instagram.",
+          "prop_2": "Gère un compte transformé en page de commémoration."
+        }
+      },
+      {
+        "id": "9ccc52c9-eb8a-4796-bbb6-c9e0ed978293",
+        "label": "Contact légataire (Apple)",
+        "category": "dispositif",
+        "properties": {
+          "prop_1": "Suppose la remise d'une clé d'accès à la personne désignée du vivant du titulaire."
+        }
+      },
+      {
+        "id": "0a181a91-cb42-4fc5-9d3b-34b9813c7393",
+        "label": "Commémoration ou suppression (LinkedIn, X)",
+        "category": "dispositif",
+        "properties": {
+          "prop_1": "Profil commémoratif ou fermeture sur demande des proches et sur présentation de justificatifs."
+        }
+      },
+      {
+        "id": "2c3c7470-4bc7-46e7-a21f-e7861f19579f",
+        "label": "Réseaux sociaux (contenus publiés)",
+        "category": "contenu",
+        "properties": {
+          "prop_1": "Restent visibles indéfiniment si personne n'intervient."
+        }
+      },
+      {
+        "id": "978c3ec9-a102-4aa6-b4c8-074dda3c6751",
+        "label": "Données cloud (photos, documents)",
+        "category": "contenu",
+        "properties": {
+          "prop_1": "Souvent la part la plus précieuse pour les proches et la moins couverte par les droits des héritiers."
+        }
+      },
+      {
+        "id": "8ec75168-427b-4efd-ba73-2d62f9ad1d5c",
+        "label": "Boîte mail",
+        "category": "contenu",
+        "properties": {
+          "prop_1": "Point de récupération de la plupart des autres comptes.",
+          "prop_2": "À traiter en priorité",
+          "prop_3": "avant les services qui en dépendent."
+        }
+      },
+      {
+        "id": "b1409ee8-b57a-41d5-bae1-1e6033059ae2",
+        "label": "Comptes bancaires en ligne",
+        "category": "actif",
+        "properties": {
+          "Relèvent de la succession classique": "bloqués dès que la banque est informée. Aucune directive numérique n'est nécessaire."
+        }
+      },
+      {
+        "id": "3be0ec8e-287f-44dc-a03d-86c01e864f4a",
+        "label": "Crypto-actifs (portefeuille personnel)",
+        "category": "actif",
+        "properties": {
+          "Inaccessibles sans la clé privée. Ni la plateforme, ni le notaire, ni un juge ne peuvent y suppléer": "la perte est définitive."
+        }
+      },
+      {
+        "id": "125dfac5-860e-4f74-8888-9e941229e8b7",
+        "label": "Abonnements récurrents",
+        "category": "actif",
+        "properties": {
+          "prop_1": "Continuent de prélever tant qu'ils ne sont pas résiliés y compris plusieurs années après le décès."
+        }
+      },
+      {
+        "id": "550f84b7-ed74-4694-b5e4-06d579c2494a",
+        "label": "Gestionnaire de mots de passe",
+        "category": "outil",
+        "properties": {
+          "prop_1": "Centralise les accès",
+          "prop_2": "Plusieurs proposent une fonction d'accès d'urgence qui organise la transmission sans divulgation préalable."
+        }
+      },
+      {
+        "id": "570d2494-2fc8-43d5-8ba1-23ca6f8ec0fd",
+        "label": "Accès d'urgence",
+        "category": "outil",
+        "properties": {
+          "Fonction de transmission différée": "le bénéficiaire obtient l'accès après un délai de carence sauf refus du titulaire."
+        }
+      },
+      {
+        "id": "0c08de9f-3c29-4f6f-9050-ecece94dafbb",
+        "label": "Inventaire des comptes (sans mots de passe)",
+        "category": "outil",
+        "properties": {
+          "prop_1": "Liste ce qui existe et où le chercher.",
+          "prop_2": "Ne contient aucun code donc ne se périme pas."
+        }
+      },
+      {
+        "id": "9145a426-e1b7-4111-8319-bf1cdb40ef48",
+        "label": "Partage de mots de passe",
+        "category": "risque",
+        "properties": {
+          "Écrire ses codes dans un testament ou une lettre": "périmé au premier changement et contraire aux conditions d'utilisation de la quasi-totalité des services."
+        }
+      },
+      {
+        "id": "ad062329-0f2b-4abc-a3a8-4e634cd15a35",
+        "label": "Directives anticipées (santé)",
+        "category": "perimetre_distinct",
+        "properties": {
+          "prop_1": "Volet médical de la fin de vie",
+          "prop_2": "Régi par le code de la santé publique.",
+          "prop_3": "Sans aucun effet sur les comptes en ligne."
+        }
+      },
+      {
+        "id": "0728f797-4140-4f61-a838-bba1dc56bdb7",
+        "label": "Personne de confiance (santé)",
+        "category": "perimetre_distinct",
+        "properties": {
+          "prop_1": "Notion de droit de la santé.",
+          "Ne dispose d'aucun pouvoir sur les données numériques": "à ne pas confondre avec le contact légataire."
+        }
+      },
+      {
+        "id": "8f1426bc-cf84-4771-9ffc-ee7095399f26",
+        "label": "Testament / succession",
+        "category": "perimetre_distinct",
+        "properties": {
+          "prop_1": "Organise la transmission du patrimoine. Ne transmet ni les accès aux services en ligne ni les secrets cryptographiques."
+        }
+      }
+    ],
+    "relationships": [
+      {
+        "id": "e_30_gd6o",
+        "type": "S'APPUIE_SUR",
+        "source": "273f3947-13e1-44ea-bc5f-393638661b3d",
+        "target": "9bbf47c9-70d1-4593-badd-8fd10f9b8eea",
+        "properties": {
+          "prop_1": "Le droit existe depuis 2016",
+          "prop_2": "mais il suppose une démarche active du vivant."
+        }
+      },
+      {
+        "id": "e_31_g86h",
+        "type": "SE_REGLE_PAR",
+        "source": "273f3947-13e1-44ea-bc5f-393638661b3d",
+        "target": "d75afc60-16d8-4e84-bd2d-fab0a4c07bcd",
+        "properties": {
+          "Voie la plus efficace": "gratuite",
+          "prop_2": "immédiate",
+          "prop_3": "sans intermédiaire ni formalisme."
+        }
+      },
+      {
+        "id": "e_32_nz2j",
+        "type": "COMMENCE_PAR",
+        "source": "273f3947-13e1-44ea-bc5f-393638661b3d",
+        "target": "0c08de9f-3c29-4f6f-9050-ecece94dafbb",
+        "properties": {
+          "prop_1": "On ne peut transmettre que ce dont l'existence est connue des proches."
+        }
+      },
+      {
+        "id": "e_33_zd2i",
+        "type": "NE_CONCERNE_PAS",
+        "source": "273f3947-13e1-44ea-bc5f-393638661b3d",
+        "target": "ad062329-0f2b-4abc-a3a8-4e634cd15a35",
+        "properties": {
+          "prop_1": "Deux planifications distinctes",
+          "souvent mélangées": "régimes et effets sans rapport."
+        }
+      },
+      {
+        "id": "e_34_sw09",
+        "type": "SE_DISTINGUE_DE",
+        "source": "273f3947-13e1-44ea-bc5f-393638661b3d",
+        "target": "8f1426bc-cf84-4771-9ffc-ee7095399f26",
+        "properties": {
+          "Périmètre différent": "l'un vise le patrimoine",
+          "prop_2": "l'autre les accès et les contenus."
+        }
+      },
+      {
+        "id": "e_35_bpnd",
+        "type": "PREVOIT",
+        "source": "9bbf47c9-70d1-4593-badd-8fd10f9b8eea",
+        "target": "f91dbc0e-8a81-47da-8859-9995f6b5e365",
+        "properties": {
+          "prop_1": "Portée maximale",
+          "prop_2": "mais dispositif de dépôt inachevé."
+        }
+      },
+      {
+        "id": "e_36_e9z8",
+        "type": "PREVOIT",
+        "source": "9bbf47c9-70d1-4593-badd-8fd10f9b8eea",
+        "target": "c9def8e7-aaa3-452d-b28e-fb1d3b7484e3",
+        "properties": {
+          "prop_1": "Seule branche pleinement opérationnelle aujourd'hui."
+        }
+      },
+      {
+        "id": "e_37_agfl",
+        "type": "PREVOIT_A_DEFAUT",
+        "source": "9bbf47c9-70d1-4593-badd-8fd10f9b8eea",
+        "target": "7d2ce016-f502-4f3b-bd96-349c5e9aabdb",
+        "properties": {
+          "prop_1": "Filet de sécurité légal",
+          "prop_2": "au périmètre volontairement restreint."
+        }
+      },
+      {
+        "id": "e_38_b1e2",
+        "type": "SONT_EXERCES_PAR",
+        "source": "7d2ce016-f502-4f3b-bd96-349c5e9aabdb",
+        "target": "ebb276d5-7c82-48ba-8135-0e4b2672a1cb",
+        "properties": {
+          "prop_1": "Sur justification de la qualité d'héritier."
+        }
+      },
+      {
+        "id": "e_39_cmyl",
+        "type": "SE_DEPOSENT_AUPRES_DE",
+        "source": "f91dbc0e-8a81-47da-8859-9995f6b5e365",
+        "target": "ced5ce40-907f-4135-9d02-5941b4e1ea7b",
+        "properties": {
+          "Prévu par la loi. Aucun opérateur n'est certifié": "la voie est fermée en pratique."
+        }
+      },
+      {
+        "id": "e_40_1076",
+        "type": "FIGURE_DANS",
+        "source": "ced5ce40-907f-4135-9d02-5941b4e1ea7b",
+        "target": "96dc96bc-1ece-47fd-9eb3-c79975ceae1a",
+        "properties": {
+          "prop_1": "Les deux dispositifs dépendent de décrets jamais publiés."
+        }
+      },
+      {
+        "id": "e_41_s23z",
+        "type": "BLOQUE",
+        "source": "96dc96bc-1ece-47fd-9eb3-c79975ceae1a",
+        "target": "f91dbc0e-8a81-47da-8859-9995f6b5e365",
+        "properties": {
+          "prop_1": "Des directives rédigées et conservées chez soi ne seront jamais retrouvées."
+        }
+      },
+      {
+        "id": "e_42_b666",
+        "type": "PASSENT_PAR",
+        "source": "f91dbc0e-8a81-47da-8859-9995f6b5e365",
+        "target": "8dd42205-1feb-43c4-bd62-65293b0f3fc4",
+        "properties": {
+          "prop_1": "Seul relais fonctionnel tant que le dispositif légal reste inachevé."
+        }
+      },
+      {
+        "id": "e_43_zn1y",
+        "type": "CONSERVE",
+        "source": "8dd42205-1feb-43c4-bd62-65293b0f3fc4",
+        "target": "0c08de9f-3c29-4f6f-9050-ecece94dafbb",
+        "properties": {
+          "Le document devient repérable": "c'est ce qui lui donne son utilité."
+        }
+      },
+      {
+        "id": "e_44_e9xh",
+        "type": "EST_REVELE_A",
+        "source": "8dd42205-1feb-43c4-bd62-65293b0f3fc4",
+        "target": "169a012e-c4bc-4f66-a41b-2e781b8b6d68",
+        "properties": {
+          "prop_1": "Encore faut-il que quelqu'un sache que le dépôt existe."
+        }
+      },
+      {
+        "id": "e_45_072c",
+        "type": "S'ENREGISTRENT_VIA",
+        "source": "c9def8e7-aaa3-452d-b28e-fb1d3b7484e3",
+        "target": "d75afc60-16d8-4e84-bd2d-fab0a4c07bcd",
+        "properties": {
+          "Le consentement doit être spécifique": "accepter les CGU ne vaut pas directive."
+        }
+      },
+      {
+        "id": "e_46_ypyo",
+        "type": "COMPREND",
+        "source": "d75afc60-16d8-4e84-bd2d-fab0a4c07bcd",
+        "target": "ebac8d14-6292-4fcf-a1f8-95170813fe74",
+        "properties": {
+          "Le plus complet": "délai paramétrable",
+          "prop_2": "contacts prévenus",
+          "prop_3": "transfert ou suppression."
+        }
+      },
+      {
+        "id": "e_47_0cx9",
+        "type": "COMPREND",
+        "source": "d75afc60-16d8-4e84-bd2d-fab0a4c07bcd",
+        "target": "8a9d3dff-07c6-4477-a109-9b00861ff56a",
+        "properties": {
+          "prop_1": "Couvre Facebook et Instagram en un seul réglage."
+        }
+      },
+      {
+        "id": "e_48_vseo",
+        "type": "COMPREND",
+        "source": "d75afc60-16d8-4e84-bd2d-fab0a4c07bcd",
+        "target": "9ccc52c9-eb8a-4796-bbb6-c9e0ed978293",
+        "properties": {
+          "Particularité": "la clé d'accès doit être remise du vivant",
+          "prop_2": "sinon le réglage est inopérant."
+        }
+      },
+      {
+        "id": "e_49_96lc",
+        "type": "COMPREND",
+        "source": "d75afc60-16d8-4e84-bd2d-fab0a4c07bcd",
+        "target": "0a181a91-cb42-4fc5-9d3b-34b9813c7393",
+        "properties": {
+          "Pas de désignation préalable": "la demande vient des proches",
+          "prop_2": "après coup."
+        }
+      },
+      {
+        "id": "e_50_srjb",
+        "type": "DESIGNE",
+        "source": "d75afc60-16d8-4e84-bd2d-fab0a4c07bcd",
+        "target": "df4750f8-80f6-4af2-b63c-af8aa21421f9",
+        "properties": {
+          "Fonctionne sans partage de mot de passe": "c'est tout l'intérêt du mécanisme."
+        }
+      },
+      {
+        "id": "e_51_6t14",
+        "type": "TRANSFERE",
+        "source": "ebac8d14-6292-4fcf-a1f8-95170813fe74",
+        "target": "978c3ec9-a102-4aa6-b4c8-074dda3c6751",
+        "properties": {
+          "prop_1": "Seule voie prévue à l'avance pour transmettre des souvenirs numériques."
+        }
+      },
+      {
+        "id": "e_52_wmoj",
+        "type": "COMMEMORE",
+        "source": "8a9d3dff-07c6-4477-a109-9b00861ff56a",
+        "target": "2c3c7470-4bc7-46e7-a21f-e7861f19579f",
+        "properties": {
+          "prop_1": "Le compte reste visible mais figé",
+          "prop_2": "sans possibilité de connexion."
+        }
+      },
+      {
+        "id": "e_53_ousl",
+        "type": "DONNE_ACCES_A",
+        "source": "9ccc52c9-eb8a-4796-bbb6-c9e0ed978293",
+        "target": "978c3ec9-a102-4aa6-b4c8-074dda3c6751",
+        "properties": {
+          "prop_1": "Accès conditionné à la clé remise du vivant et à l'acte de décès."
+        }
+      },
+      {
+        "id": "e_54_njwk",
+        "type": "FERME",
+        "source": "0a181a91-cb42-4fc5-9d3b-34b9813c7393",
+        "target": "2c3c7470-4bc7-46e7-a21f-e7861f19579f",
+        "properties": {
+          "prop_1": "Demande à formuler par les proches",
+          "prop_2": "avec justificatifs."
+        }
+      },
+      {
+        "id": "e_55_hkdt",
+        "type": "FONT_CLOTURER",
+        "source": "7d2ce016-f502-4f3b-bd96-349c5e9aabdb",
+        "target": "2c3c7470-4bc7-46e7-a21f-e7861f19579f",
+        "properties": {
+          "prop_1": "Recours utile quand rien n'a été paramétré du vivant."
+        }
+      },
+      {
+        "id": "e_56_kg2t",
+        "type": "DONNENT_ACCES_A",
+        "source": "7d2ce016-f502-4f3b-bd96-349c5e9aabdb",
+        "target": "978c3ec9-a102-4aa6-b4c8-074dda3c6751",
+        "properties": {
+          "Uniquement ce qui est utile au règlement de la succession": "pas de tri des souvenirs."
+        }
+      },
+      {
+        "id": "e_57_r7r5",
+        "type": "REINITIALISE",
+        "source": "8ec75168-427b-4efd-ba73-2d62f9ad1d5c",
+        "target": "2c3c7470-4bc7-46e7-a21f-e7861f19579f",
+        "properties": {
+          "prop_1": "Qui contrôle la boîte mail contrôle la réinitialisation de presque tout le reste."
+        }
+      },
+      {
+        "id": "e_58_0fz3",
+        "type": "REVELENT",
+        "source": "b1409ee8-b57a-41d5-bae1-1e6033059ae2",
+        "target": "125dfac5-860e-4f74-8888-9e941229e8b7",
+        "properties": {
+          "prop_1": "Les relevés sont le moyen le plus fiable de recenser les abonnements oubliés."
+        }
+      },
+      {
+        "id": "e_59_cnzf",
+        "type": "NE_CONDITIONNE_PAS",
+        "source": "8f1426bc-cf84-4771-9ffc-ee7095399f26",
+        "target": "b1409ee8-b57a-41d5-bae1-1e6033059ae2",
+        "properties": {
+          "prop_1": "Les comptes reviennent aux héritiers par la dévolution légale",
+          "prop_2": "testament ou non."
+        }
+      },
+      {
+        "id": "e_60_szbs",
+        "type": "NE_TRANSMET_PAS",
+        "source": "8f1426bc-cf84-4771-9ffc-ee7095399f26",
+        "target": "3be0ec8e-287f-44dc-a03d-86c01e864f4a",
+        "properties": {
+          "prop_1": "Un testament transmet un droit",
+          "prop_2": "pas un secret cryptographique."
+        }
+      },
+      {
+        "id": "e_61_rt7j",
+        "type": "NOMME",
+        "source": "8f1426bc-cf84-4771-9ffc-ee7095399f26",
+        "target": "169a012e-c4bc-4f66-a41b-2e781b8b6d68",
+        "properties": {
+          "prop_1": "Compétence patrimoniale",
+          "prop_2": "distincte du contact légataire des plateformes."
+        }
+      },
+      {
+        "id": "e_62_mnug",
+        "type": "PRESERVE_L'ACCES_A",
+        "source": "550f84b7-ed74-4694-b5e4-06d579c2494a",
+        "target": "3be0ec8e-287f-44dc-a03d-86c01e864f4a",
+        "properties": {
+          "prop_1": "Sans la clé privée",
+          "prop_2": "la perte est définitive et sans recours possible."
+        }
+      },
+      {
+        "id": "e_63_j5pk",
+        "type": "PROPOSE",
+        "source": "550f84b7-ed74-4694-b5e4-06d579c2494a",
+        "target": "570d2494-2fc8-43d5-8ba1-23ca6f8ec0fd",
+        "properties": {
+          "À activer explicitement": "la fonction existe mais reste inactive par défaut."
+        }
+      },
+      {
+        "id": "e_64_g0c1",
+        "type": "BENEFICIE_A",
+        "source": "570d2494-2fc8-43d5-8ba1-23ca6f8ec0fd",
+        "target": "df4750f8-80f6-4af2-b63c-af8aa21421f9",
+        "properties": {
+          "prop_1": "Transmission après un délai de carence",
+          "prop_2": "sans divulgation préalable des codes."
+        }
+      },
+      {
+        "id": "e_65_6hmq",
+        "type": "EXCLUT",
+        "source": "0c08de9f-3c29-4f6f-9050-ecece94dafbb",
+        "target": "9145a426-e1b7-4111-8319-bf1cdb40ef48",
+        "properties": {
+          "prop_1": "Un document contenant des codes est périmé au premier changement de mot de passe."
+        }
+      },
+      {
+        "id": "e_66_dipe",
+        "type": "CONTREVIENT_A",
+        "source": "9145a426-e1b7-4111-8319-bf1cdb40ef48",
+        "target": "d75afc60-16d8-4e84-bd2d-fab0a4c07bcd",
+        "properties": {
+          "prop_1": "Un accès effectué avec les codes du défunt n'est pas un accès légitime."
+        }
+      },
+      {
+        "id": "e_67_95wm",
+        "type": "SONT_CONFIEES_A",
+        "source": "ad062329-0f2b-4abc-a3a8-4e634cd15a35",
+        "target": "0728f797-4140-4f61-a838-bba1dc56bdb7",
+        "properties": {
+          "Rôle médical uniquement": "aucun pouvoir sur les comptes et les données en ligne."
+        }
+      }
+    ]
+  },
 {
   "id": "theme-sport-entrainement-physique",
   "title": "La Science de l'Entraînement Physique",

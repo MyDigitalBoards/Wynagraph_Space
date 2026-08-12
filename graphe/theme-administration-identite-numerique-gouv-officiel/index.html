@@ -11,7 +11,7 @@
   <meta property="og:title" content="L'Identité Numérique France Identité — WynaGraph Space" />
   <meta property="og:description" content="Le parcours de création et de certification conforme aux étapes du site gouv.fr." />
   <meta property="og:url" content="https://www.wynagraph.com/graphe/theme-administration-identite-numerique-gouv-officiel" />
-
+  <base href="../.././">
   <link rel="stylesheet" href="../../styles.css" >
   <script src="../../assets/vis-network.min.js"></script>
   
@@ -295,7 +295,7 @@
             .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
             .replace(/[^a-z0-9]+/g, '-')
             .replace(/^-+|-+$/g, '') || 'mon-graphe';
-          const newId = prompt('Identifiant du graphe (utilisé dans l’URL graph.html?id=…) :', suggested);
+          const newId = prompt('Identifiant du graphe (utilisé dans l’URL graphe/<id>/=…) :', suggested);
           if (!newId || !newId.trim()) return;
 
           const entry = {

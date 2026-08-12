@@ -87,7 +87,7 @@
     if (alreadyOnImportView) {
       location.reload();
     } else {
-      location.href = 'graph.html?id=import';
+      location.href = '/graph.html?id=import';
     }
     return null;
   }

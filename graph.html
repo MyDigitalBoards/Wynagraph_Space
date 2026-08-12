@@ -4,7 +4,7 @@
   <meta charset="UTF-8" >
   <meta name="viewport" content="width=device-width, initial-scale=1.0" >
   <title>Graphe — WynaGraph</title>
-
+  <base href="./">
   <link rel="stylesheet" href="styles.css" >
   <script src="assets/vis-network.min.js"></script>
   
@@ -288,7 +288,7 @@
             .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
             .replace(/[^a-z0-9]+/g, '-')
             .replace(/^-+|-+$/g, '') || 'mon-graphe';
-          const newId = prompt('Identifiant du graphe (utilisé dans l’URL graph.html?id=…) :', suggested);
+          const newId = prompt('Identifiant du graphe (utilisé dans l’URL graphe/<id>/=…) :', suggested);
           if (!newId || !newId.trim()) return;
 
           const entry = {
