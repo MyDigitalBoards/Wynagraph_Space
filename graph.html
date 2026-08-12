@@ -45,6 +45,7 @@
     <div id="graph-tools">
       <button id="btn-reset" type="button" title="Effacer recherche et filtres">Réinitialiser</button>
       <button id="btn-view" type="button" title="Basculer entre le graphe et la vue tableau">Vue tableau</button>
+      <button id="btn-cards" type="button" hidden title="Basculer entre lignes et pastilles">▦ Pastilles</button>
       <button id="btn-physics" type="button" title="Activer/désactiver la physique du graphe">Physique : ON</button>
       <button id="btn-fit" type="button" title="Recadrer le graphe">Recadrer</button>
     </div>
@@ -615,7 +616,12 @@
       // clic (croissant / décroissant / aucun).
       const tableWrap = document.getElementById("graph-table-wrap");
       const btnView   = document.getElementById("btn-view");
+      const btnCards  = document.getElementById("btn-cards");
       let tableVisible = false;
+      // Mode de présentation des MÊMES lignes : false = tableau, true = pastilles.
+      // Sur mobile les pastilles sont forcées (4 colonnes y sont illisibles) et
+      // le bouton de bascule est masqué : il mentirait sur l'état réel.
+      let cardsMode = false;
       const tSort = { col: null, dir: 1 };
       const COLS = [
         { key: "cat",  label: "Catégorie" },
@@ -630,10 +636,41 @@
         graphEl.style.visibility = tableVisible ? "hidden" : "visible";
         btnView.textContent = tableVisible ? "Vue graphe" : "Vue tableau";
         btnView.classList.toggle("active", tableVisible);
+        syncCardsButton();
         if (tableVisible) { resetSidebar(); renderTable(); }
         // Retour au graphe : les filtres ont pu changer pendant que la vue
         // tableau masquait le graphe, on recadre sur ce qui reste visible.
         else fitVisible(Object.keys(computeVisible()));
+      });
+
+      // Le libellé décrit la vue vers laquelle on VA basculer.
+      function syncCardsButton() {
+        btnCards.hidden = !tableVisible || isMobile();
+        btnCards.textContent = cardsMode ? "▤ Tableau" : "▦ Pastilles";
+        btnCards.classList.toggle("active", cardsMode);
+      }
+
+      btnCards.addEventListener("click", () => {
+        cardsMode = !cardsMode;
+        // On ne touche ni au tri, ni à la recherche, ni aux filtres de
+        // catégorie : ce sont les mêmes lignes, présentées autrement.
+        syncCardsButton();
+        renderTable();
+      });
+
+      // Le rendu bifurque sur isMobile() à chaque appel, mais rien ne
+      // redessinait au franchissement du seuil : en repassant de mobile à
+      // desktop, les pastilles forcées restaient et le bouton ne revenait
+      // qu'après un rechargement. On ne redessine qu'au franchissement réel
+      // du seuil, et seulement si la vue tableau est ouverte.
+      let lastIsMobile = isMobile();
+      window.addEventListener("resize", () => {
+        const now = isMobile();
+        if (now === lastIsMobile) return;
+        lastIsMobile = now;
+        if (!tableVisible) return;
+        syncCardsButton();
+        renderTable();
       });
 
       function buildTableRows() {
@@ -704,6 +741,9 @@
           return;
         }
 
+        // Pastilles : choix explicite sur PC, forcé sur mobile.
+        if (cardsMode || isMobile()) { renderCards(rows); return; }
+
         const table = document.createElement("table");
         const thead = document.createElement("thead");
         const trh = document.createElement("tr");
@@ -755,6 +795,113 @@
         });
         table.appendChild(tbody);
         tableWrap.appendChild(table);
+      }
+
+      // ── Rendu pastilles ─────────────────────────────────────────────────
+      // Mêmes lignes que le tableau (buildTableRows), donc mêmes filtres,
+      // même tri, même définition de « visible ». Seule la présentation
+      // change : une carte par relation ou par élément isolé.
+      function renderCards(rows) {
+        // Le tri se fait par les en-têtes de colonnes, qui n'existent pas
+        // ici : sans cette barre, passer en pastilles ferait perdre l'accès
+        // au tri jusqu'au retour au tableau.
+        const sortBar = document.createElement("div");
+        sortBar.className = "cards-sort";
+        const sortLabel = document.createElement("span");
+        sortLabel.className = "cards-sort-label";
+        sortLabel.textContent = "Trier :";
+        sortBar.appendChild(sortLabel);
+
+        COLS.forEach(col => {
+          const b = document.createElement("button");
+          b.type = "button";
+          b.className = "cards-sort-btn" + (tSort.col === col.key ? " active" : "");
+          b.textContent = col.label + (tSort.col === col.key ? (tSort.dir === 1 ? " ▲" : " ▼") : "");
+          b.addEventListener("click", () => {
+            if (tSort.col !== col.key) { tSort.col = col.key; tSort.dir = 1; }
+            else if (tSort.dir === 1) { tSort.dir = -1; }
+            else { tSort.col = null; tSort.dir = 1; }
+            renderTable();
+          });
+          sortBar.appendChild(b);
+        });
+        tableWrap.appendChild(sortBar);
+
+        const list = document.createElement("div");
+        list.className = "cards-list";
+
+        rows.forEach(row => {
+          const isEdge = row.type === "edge";
+          const node   = isEdge ? row.fromNode : row.node;
+          const cat    = (node.group || "").trim();
+
+          const card = document.createElement("article");
+          card.className = "gcard" + (isEdge ? "" : " gcard-isolated");
+
+          // Badge de catégorie : mêmes couleurs que la légende et que les
+          // bordures de nœuds dans le graphe (colorFor + textColorFor).
+          const badge = document.createElement("span");
+          badge.className = "gcard-cat";
+          badge.textContent = cat || "—";
+          if (cat) {
+            const color = colorFor(cat);
+            badge.style.background  = color;
+            badge.style.borderColor = color;
+            badge.style.color       = textColorFor(color);
+          }
+          card.appendChild(badge);
+
+          const titleRow = document.createElement("div");
+          titleRow.className = "gcard-title";
+
+          const src = document.createElement("strong");
+          src.className = "gcard-src";
+          src.textContent = node.label || node.id;
+          titleRow.appendChild(src);
+
+          if (isEdge) {
+            const rel = document.createElement("span");
+            rel.className = "gcard-rel";
+            rel.textContent = "→ " + (row.edge.label || "lié à") + " →";
+            titleRow.appendChild(rel);
+
+            const tgt = document.createElement("strong");
+            tgt.className = "gcard-tgt";
+            tgt.textContent = row.toNode.label || row.toNode.id;
+            titleRow.appendChild(tgt);
+          } else {
+            const lonely = document.createElement("span");
+            lonely.className = "gcard-lonely";
+            lonely.textContent = "— élément isolé —";
+            titleRow.appendChild(lonely);
+          }
+          card.appendChild(titleRow);
+
+          addCardProps(card, "📌", node.properties);
+          if (isEdge) {
+            addCardProps(card, "🔗", row.edge.properties);
+            addCardProps(card, "🎯", row.toNode.properties);
+          }
+
+          // Même destination qu'un clic de ligne dans le tableau.
+          card.addEventListener("click", () => {
+            if (isEdge) openEdgePanel(row.edgeId);
+            else openNodePanel(row.node.id);
+            if (isMobile()) setSidebarOpen(true);
+          });
+
+          list.appendChild(card);
+        });
+
+        tableWrap.appendChild(list);
+      }
+
+      function addCardProps(card, icon, props) {
+        if (!Array.isArray(props) || !props.length) return;
+        const div = document.createElement("div");
+        div.className = "gcard-props";
+        div.textContent = icon + " " + props.join(" | ");
+        card.appendChild(div);
       }
 
       // ── Liste de résultats de recherche (focus sur un nœud) ─────────────
