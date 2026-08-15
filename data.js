@@ -2638,6 +2638,4728 @@ window.GRAPHS = [
     ]
   },
 
+  {
+    "id": "biais-cognitifs",
+    "title": "biais cognitifs",
+    "category": "Psychologie",
+    "description": "Biais cognitifs - source de nos erreurs de raisonnement.",
+    "longDescription": "Réalisé à partir du Codex des Biais Cognitifs de John Manoogian III, ce graphe organise les raccourcis mentaux de notre cerveau en quatre mécanismes fondamentaux : la surcharge d'information, le manque de sens, le besoin d'agir rapidement et la gestion de la mémoire. C'est une cartographie essentielle pour identifier nos'angles morts' cognitifs et améliorer notre esprit critique.",
+    "nodes": [
+      {
+        "id": "2a1976e3-def0-4967-a22d-ff7079253d4f",
+        "label": "Gérer l'information",
+        "category": "Gestion de l'information",
+        "properties": {
+          "prop_1": "Le cerveau filtre la surcharge d'informations en ne retenant que ce qui attire l'attention."
+        }
+      },
+      {
+        "id": "0353572f-acb4-4bbd-9637-94200f82a203",
+        "label": "Illusion de vérité par répétition",
+        "category": "Filtrage",
+        "properties": {
+          "prop_1": "Nous nous rappelons les choses qui sont déjà  amorcées dans notre mémoire ou qui sont souvent répétées"
+        }
+      },
+      {
+        "id": "c579a650-6d64-44e9-a5ff-0202684ee599",
+        "label": "Quand l'insolite éclipse la réalité",
+        "category": "Filtrage",
+        "properties": {
+          "prop_1": "Les choses bizarres, drôles, visuellement frappantes ou anthropomorphiques sont plus saillantes que celles qui ne le sont pas"
+        }
+      },
+      {
+        "id": "b6879047-c20a-44f4-bae0-d2adbc9a4a1a",
+        "label": "Perception du changement",
+        "category": "Filtrage",
+        "properties": {
+          "prop_1": "On remarque lorsque quelque chose a changé"
+        }
+      },
+      {
+        "id": "1dc748db-5478-400d-aa95-199785e98217",
+        "label": "Attirés par ce qui confirme nos croyances",
+        "category": "Filtrage",
+        "properties": {
+          "prop_1": "Nous sommes attirés par les détails qui confirment nos propres croyances préexistantes"
+        }
+      },
+      {
+        "id": "45bfbeeb-2b99-4a33-9287-ad42e28f440f",
+        "label": "Voir la paille, non la pourtre",
+        "category": "Filtrage",
+        "properties": {
+          "prop_1": "Nous remarquons les failles chez les autres plus facilement que chez nous-même"
+        }
+      },
+      {
+        "id": "1970552a-548b-4504-a51c-01beb00e19c8",
+        "label": "Trouver du sens",
+        "category": "Interprétation",
+        "properties": {
+          "prop_1": "Le cerveau comble les vides et simplifie le monde pour lui donner du sens."
+        }
+      },
+      {
+        "id": "718d32be-7a70-4860-9588-f64db84a4baa",
+        "label": "Trouver des motifs dans le hasard",
+        "category": "Interprétation",
+        "properties": {
+          "prop_1": "Notre cerveau a une tendance naturelle pour chercher à donner du sens au hasard en reliant des éléments isolés pour former une image ou une logique cohérente.",
+          "prop_2": "Il fabrique des récits et des schémas logiques pour structurer la réalité."
+        }
+      },
+      {
+        "id": "70f26c35-5943-4554-a027-c2a4b96c98a1",
+        "label": "Combler les vides par des stéréotypes",
+        "category": "Interprétation",
+        "properties": {
+          "prop_1": "Nous remplissons les caractéristiques manquantes à  partir de stéréotypes",
+          "prop_2": "de généralités et de nos a priori"
+        }
+      },
+      {
+        "id": "7bf6e32b-f37d-468f-b60c-ba3189a2b281",
+        "label": "On idéalise ce qu'on aime ou connaît",
+        "category": "Interprétation",
+        "properties": {
+          "prop_1": "Nous imaginons que les personnes que nous aimons ou que les choses avec lesquelles nous sommes familiers sont meilleures que les choses et les personnes qui ne le sont pas"
+        }
+      },
+      {
+        "id": "a7044da0-52eb-4d82-a8b2-9a1a7f4dd15c",
+        "label": "Simplifier probabilités et nombres",
+        "category": "Interprétation",
+        "properties": {
+          "prop_1": "Nous simplifions les probabilités et les nombres pour les rendre plus faciles et abordables à  notre pensée"
+        }
+      },
+      {
+        "id": "b0ce1500-9df0-4395-81c4-3755392963f2",
+        "label": "Croire connaître les pensées des autres",
+        "category": "Interprétation",
+        "properties": {
+          "prop_1": "Nous pensons que nous savons ce que les autres pensent"
+        }
+      },
+      {
+        "id": "65c06cb3-69e7-41fc-b87f-3f939d056d94",
+        "label": "Passer à l'action",
+        "category": "Prise de décision",
+        "properties": {
+          "prop_1": "Face à l'urgence ou à la nécessité d'agir, le cerveau prend des raccourcis décisionnels."
+        }
+      },
+      {
+        "id": "10e19a26-4d73-4d0d-bc2d-e15827baa05c",
+        "label": "Projeter le présent sur passé/futur",
+        "category": "Prise de décision",
+        "properties": {
+          "prop_1": "Nous projetons nos croyances et schémas de pensées actuels sur le passé et le futur"
+        }
+      },
+      {
+        "id": "95d91a65-c535-4061-8dd8-20c95f592579",
+        "label": "Avoir confiance pour agir",
+        "category": "Prise de décision",
+        "properties": {
+          "prop_1": "Pour pouvoir agir",
+          "prop_2": "nous devons avoir confiance en notre capacité à  avoir un impact et sentir que ce que nous faisons est important"
+        }
+      },
+      {
+        "id": "c47cd210-ef57-461c-8d9b-f0903672ccb0",
+        "label": "Privilégier l'immédiat et la proximité",
+        "category": "Prise de décision",
+        "properties": {
+          "prop_1": "Afin de rester concentré",
+          "prop_2": "nous favorisons ce qui nous est immédiat",
+          "prop_3": "proche ou autour de nous"
+        }
+      },
+      {
+        "id": "802621aa-e5bd-46cf-8c8f-e5e6b833222f",
+        "label": "Finir ce qu'on a commencé",
+        "category": "Prise de décision",
+        "properties": {
+          "prop_1": "Pour accomplir nos tâches",
+          "prop_2": "nous avons tendance à  vouloir compléter celles dans lesquelles nous avons déjà  investi du temps et de l'énergie"
+        }
+      },
+      {
+        "id": "0b04b165-ce00-42b5-91d5-f34b761dacfc",
+        "label": "Éviter erreurs et décisions irréversibles",
+        "category": "Prise de décision",
+        "properties": {
+          "prop_1": "Pour éviter de faire des erreurs",
+          "prop_2": "nous avons tendance à  préserver notre autonomie et notre statut de groupe et à  éviter les décisions irréversibles"
+        }
+      },
+      {
+        "id": "b9c00cfa-73ed-4a9e-8f9b-c4eeaf54bae9",
+        "label": "Préférer le simple au complexe",
+        "category": "Prise de décision",
+        "properties": {
+          "prop_1": "Nous favorisons les options qui nous paraissent simples ou qui ont des informations plus complètes aux options plus complexes ou ambiguës"
+        }
+      },
+      {
+        "id": "69f2609d-6bd8-4f07-8a9a-ec7852826cda",
+        "label": "Organiser la mémoire",
+        "category": "Gestion de la mémoire",
+        "properties": {
+          "prop_1": "Le cerveau trie et remodèle les souvenirs pour alléger la mémoire."
+        }
+      },
+      {
+        "id": "66055844-7315-488f-b9ce-6639b03843ae",
+        "label": "Stockage selon le vécu",
+        "category": "Stockage",
+        "properties": {
+          "prop_1": "Nous stockons les souvenirs différemment selon la façon dont nous avons vécu l'expérience"
+        }
+      },
+      {
+        "id": "7b961bc6-d471-4d52-80a9-29b3cdac13cb",
+        "label": "Réduire aux éléments-clés",
+        "category": "Stockage",
+        "properties": {
+          "prop_1": "Nous réduisons les événements et listes à  leurs éléments-clés"
+        }
+      },
+      {
+        "id": "f49d41b9-e37e-4205-9308-6cb9618dbb57",
+        "label": "Modifier les souvenirs après coup",
+        "category": "Stockage",
+        "properties": {
+          "prop_1": "Nous modifions et renforçons certains souvenirs après les faits"
+        }
+      },
+      {
+        "id": "ea966319-b764-4837-aa5c-5b0cdb4c5356",
+        "label": "Du spécifique au général",
+        "category": "Stockage",
+        "properties": {
+          "prop_1": "Nous écartons les spécificités et formons des généralités"
+        }
+      },
+      {
+        "id": "15c3f7ca-8cdb-4fa9-b1b7-ba16ac8d24c9",
+        "label": "Biais de disponibilité",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Raccourci mental qui consiste à évaluer l'importance, la fréquence ou la probabilité d'un sujet en se basant uniquement sur les exemples les plus immédiats et marquants qui viennent à l'esprit. Ce mécanisme repose sur l'illusion que ce qui est facilement mémorisable ou perçu rapidement est nécessairement plus important ou plus fréquent que ce qui demande un effort de remémoration."
+        }
+      },
+      {
+        "id": "7e965bea-bdb8-4cb6-bc91-286842553f2d",
+        "label": "Biais attentionnel",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "C'est la tendance à voir le monde à travers le prisme de ce qui retient notre attention au moment présent. Lorsque notre esprit est concentré sur une idée ou un sujet particulier, cela nous empêche complètement de voir les autres options ou possibilités qui s'offrent à nous."
+        }
+      },
+      {
+        "id": "3b49c1e4-4920-49af-8022-b3326d69a01f",
+        "label": "Effet de vérité illusoire",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à croire qu'une information est vraie simplement parce qu'elle a déjà été répétée plusieurs fois, indépendamment de sa véracité objective. Plus nous entendons une déclaration, plus notre cerveau la trouve familière, et cette familiarité est confondue à tort avec de la vérité."
+        }
+      },
+      {
+        "id": "56df17cc-8c0d-4b1c-b464-b555aca00d7d",
+        "label": "Effet de simple exposition",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance psychologique qui nous pousse à développer une préférence ou une familiarité positive envers quelque chose ou quelqu'un simplement à force d'y être exposé de manière répétée. Plus nous voyons ou entendons un stimulus, plus nous l'aimons ou le trouvons rassurant, souvent de manière totalement inconsciente."
+        }
+      },
+      {
+        "id": "bc000663-c8f9-43d2-928f-14b91e05283a",
+        "label": "Effet de contexte",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Biais cognitif qui influence notre perception",
+          "prop_2": "notre compréhension ou notre mémorisation d'une information en fonction de l'environnement",
+          "prop_3": "de la situation ou des éléments qui l'entourent. Une même donnée change radicalement de sens ou d'impact selon le décor dans lequel elle est perçue."
+        }
+      },
+      {
+        "id": "0c01e471-4ee9-49b7-ae81-1dd6f8e58b2d",
+        "label": "Biais mnésique lié à  l'humeur",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance psychologique qui fait que notre état émotionnel actuel influence directement la sélection et la récupération de nos souvenirs. Lorsque nous sommes triste",
+          "prop_2": "notre cerveau exhume en priorité des souvenirs sombres ou douloureux ; à l'inverse",
+          "prop_3": "la joie fait resurgir des souvenirs lumineux et positifs",
+          "prop_4": "agissant comme un filtre filtrant le passé selon notre météo intérieure."
+        }
+      },
+      {
+        "id": "7ebf2ae1-a3cf-438a-b81f-0a2f657805f2",
+        "label": "Illusion de fréquence",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Une fois qu'on a remarqué une chose pour la première fois, on a l'impression de la revoir partout, alors qu'elle était déjà présente avant mais ignorée. C'est aussi appelé le phénomène Baader-Meinhof."
+        }
+      },
+      {
+        "id": "566b5886-8d71-4c79-bacb-db7409de1bc1",
+        "label": "Phénomène de Baader-Meinhof",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Biais cognitif qui se manifeste lorsque vous remarquez soudainement partout un mot, un objet ou un concept que vous veniez tout juste de découvrir ou d'acheter, vous donnant l'impression étrange qu'il est devenu omniprésent du jour au lendemain."
+        }
+      },
+      {
+        "id": "e2452e29-5028-4b41-bd7a-7d777413d6ac",
+        "label": "Décalage empathique",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à sous-estimer l'influence que nos pulsions ou nos états émotionnels auront sur nos propres décisions futures. On juge nos comportements passés ou futurs depuis notre état émotionnel présent, très différent de celui qu'on aura au moment d'agir."
+        }
+      },
+      {
+        "id": "fdb6afe1-b8f6-4ffc-8e22-7d9ea67aa000",
+        "label": "Biais d'omission",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à juger les actions nuisibles comme pires, ou moins morales, que des omissions tout aussi nuisibles. Ne pas agir semble moins condamnable que d'agir, même si le résultat est identique."
+        }
+      },
+      {
+        "id": "720469df-3e4c-4ed0-9167-1e4dc672ba5c",
+        "label": "Oubli de la fréquence de base",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à ignorer les statistiques générales (taux de base) au profit d'informations spécifiques ou anecdotiques concernant un cas particulier. On surpondère ainsi les détails individuels au détriment des probabilités réelles."
+        }
+      },
+      {
+        "id": "a96e2b2a-c3b6-4991-abbe-0359e2cb26e7",
+        "label": "Effet de bizarrerie",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Les informations, images ou événements inhabituels et étranges sont mieux mémorisés que les informations banales et ordinaires. Le caractère insolite agit comme un aimant pour l'attention et la mémoire."
+        }
+      },
+      {
+        "id": "b52ede92-d691-427e-946b-99ba85180f98",
+        "label": "Effet d'humour",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Les phrases ou informations amusantes sont plus facilement retenues que celles qui ne le sont pas, probablement parce qu'elles demandent un traitement cognitif plus riche et suscitent une émotion positive."
+        }
+      },
+      {
+        "id": "f1a0aebf-5120-422d-91d1-94aa7a1b1e18",
+        "label": "Effet d'isolement",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à retenir plus facilement et plus longtemps un élément qui se distingue de ses voisins par une caractéristique unique (une couleur différente, une forme bizarre, une information insolite). Tout ce qui sort du lot crée une \"saillance\" visuelle ou mentale qui capte immédiatement toute notre attention."
+        }
+      },
+      {
+        "id": "dcf4bea1-b835-468b-b928-b784883c2d9b",
+        "label": "Effet de supériorité de l'image",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Les concepts appris par l'image sont mieux mémorisés et reconnus que ceux appris uniquement par des mots. Une image marquante laisse une trace mnésique plus forte qu'un texte équivalent."
+        }
+      },
+      {
+        "id": "aecbdedb-65ac-440e-9e62-64355a58c2cf",
+        "label": "Effet de référence à soi",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance naturelle à retenir beaucoup plus facilement et durablement les informations que l'on relie directement à sa propre personne, à sa propre vie ou à ses expériences personnelles. Notre cerveau traite et stocke en priorité tout ce qui nous concerne intimement."
+        }
+      },
+      {
+        "id": "4ccbb52c-98f7-4604-b27f-85e9abe48adf",
+        "label": "Biais de négativité",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Les événements et informations négatifs marquent davantage l'esprit et pèsent plus lourd dans nos jugements que les événements positifs de même intensité. À poids égal, le mauvais l'emporte psychologiquement sur le bon."
+        }
+      },
+      {
+        "id": "69c57704-7937-473a-a032-5c5a9076e850",
+        "label": "Ancrage",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à se reposer excessivement sur la première information reçue (l'« ancre ») pour tous les jugements ultérieurs, même lorsque cette information est arbitraire ou sans rapport direct avec la décision à prendre."
+        }
+      },
+      {
+        "id": "6e8bd7be-aa0b-4c30-be34-4e8e558a1a3a",
+        "label": "Conservatisme",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à ne réviser ses croyances ou probabilités que faiblement face à de nouvelles preuves, en restant ancré sur ses estimations initiales au lieu de les mettre suffisamment à jour."
+        }
+      },
+      {
+        "id": "2e49f2a9-1663-4521-9265-6d22d8a27461",
+        "label": "Effet de contraste",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "La perception d'un stimulus est modifiée par comparaison avec ce qui vient d'être perçu juste avant, plutôt qu'évaluée dans l'absolu. Un objet moyen semble petit après un grand, et grand après un petit."
+        }
+      },
+      {
+        "id": "0ee7a1e2-5173-4739-b56b-afffbb0376db",
+        "label": "Biais de distinction",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à percevoir deux options comme plus différentes lorsqu'on les évalue côte à côte que lorsqu'on les évalue séparément, ce qui pousse à surestimer l'importance des différences au moment du choix."
+        }
+      },
+      {
+        "id": "8bd69e1e-a737-4d0c-baf1-fc54d8d57024",
+        "label": "Effet de focus",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à accorder trop d'importance à un seul aspect d'un événement ou d'une situation, au détriment des autres facteurs, ce qui fausse les prédictions sur le bonheur ou l'impact réel de cet événement."
+        }
+      },
+      {
+        "id": "ef012956-f53a-4782-ba19-7d48c3388ac5",
+        "label": "Effet de cadrage",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Nos décisions changent selon la façon dont une même information est présentée, par exemple en termes de gains ou de pertes, alors que les faits sous-jacents restent identiques."
+        }
+      },
+      {
+        "id": "0ecdff02-eaaa-40d4-81a9-e24750909286",
+        "label": "Illusion monétaire",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à raisonner en termes de valeur nominale de l'argent plutôt qu'en termes de pouvoir d'achat réel, en ignorant l'effet de l'inflation sur la valeur des sommes en jeu."
+        }
+      },
+      {
+        "id": "cec82655-214a-4a30-9d0e-6f2cebdc567e",
+        "label": "Loi de Weber-Fechner",
+        "category": "Biais",
+        "properties": {
+          "La capacité à percevoir la différence entre deux stimuli dépend de leur intensité relative et non de leur différence absolue": "plus la quantité de départ est grande, plus le changement doit être important pour être remarqué."
+        }
+      },
+      {
+        "id": "398f8bd7-ded0-4d82-a73c-804399cf9714",
+        "label": "Biais de confirmation",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à rechercher, interpréter et mémoriser en priorité les informations qui confirment nos croyances préexistantes, tout en négligeant ou minimisant celles qui les contredisent."
+        }
+      },
+      {
+        "id": "cdfa96d8-bec2-4e8c-ae19-ee73f429c6e0",
+        "label": "Biais de congruence",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à tester ses hypothèses uniquement de manière directe, en cherchant des confirmations, plutôt qu'en envisageant et testant des hypothèses alternatives qui pourraient les infirmer."
+        }
+      },
+      {
+        "id": "ff3c42f0-97ed-4baf-8711-2fd2ae0e428d",
+        "label": "Rationalisation post-achat",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à se convaincre, après coup, qu'un achat était un bon choix, en surestimant ses qualités et en minimisant ses défauts, afin de réduire l'inconfort d'avoir pu se tromper."
+        }
+      },
+      {
+        "id": "73d930ff-6f13-4aa3-bb9f-bdd3166ca5df",
+        "label": "Biais de soutien du choix",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à se souvenir de ses choix passés comme meilleurs qu'ils ne l'étaient réellement, en attribuant des qualités positives à l'option choisie et des défauts à celles écartées."
+        }
+      },
+      {
+        "id": "db93c459-ea03-4030-8484-cbdf474e4de6",
+        "label": "Perception sélective",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à laisser nos attentes influencer notre perception, en filtrant ce que l'on voit ou entend pour qu'il corresponde à ce que l'on s'attendait à percevoir."
+        }
+      },
+      {
+        "id": "8ece8c80-7c5c-4f99-966a-cde3a5f9ccac",
+        "label": "Attente de l'expérimentateur",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance d'un chercheur à influencer inconsciemment, par ses attentes, le déroulement ou l'interprétation d'une expérience, biaisant ainsi les résultats obtenus dans le sens attendu."
+        }
+      },
+      {
+        "id": "f383f661-71d6-417a-bf59-fa6c7a7eccc3",
+        "label": "Biais de l'expérimentateur",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance des chercheurs à privilégier les résultats qui confirment leur hypothèse de recherche, en négligeant ou en écartant les données qui la contredisent."
+        }
+      },
+      {
+        "id": "affe4b23-15c1-4a95-9256-9abf00e210d3",
+        "label": "Effet de l'observateur",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Le simple fait d'observer et de mesurer un phénomène peut en modifier le déroulement, faussant ainsi les résultats obtenus."
+        }
+      },
+      {
+        "id": "5551b7e8-df4f-4bb1-bae0-cede48ca2a5f",
+        "label": "Biais d'attente",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à percevoir, interpréter ou rapporter un résultat de façon à ce qu'il corresponde à ce que l'on attendait, indépendamment des faits réels observés."
+        }
+      },
+      {
+        "id": "22550712-c0f5-4ea1-9b2b-872322760b8f",
+        "label": "Effet de l'autruche",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à ignorer volontairement une information négative ou menaçante, en évitant d'y penser ou de la rechercher, comme un moyen de se protéger d'un inconfort psychologique."
+        }
+      },
+      {
+        "id": "5d67d9f0-c95a-4320-8c04-7c003ae29626",
+        "label": "Validation subjective",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à percevoir une affirmation vague ou générale comme précise et pertinente pour soi, dès lors qu'on lui accorde suffisamment de sens personnel, indépendamment de sa véracité objective."
+        }
+      },
+      {
+        "id": "a0a37709-4135-4a5e-9082-270f527711e5",
+        "label": "Effet de l'influence continue",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Une information erronée continue d'influencer nos jugements et nos raisonnements même après avoir été explicitement corrigée ou démentie."
+        }
+      },
+      {
+        "id": "10e430a5-27ac-4144-8511-b1c45e0c823e",
+        "label": "Réflexe de Semmelweis",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à rejeter automatiquement une nouvelle preuve ou connaissance parce qu'elle contredit des normes, des croyances ou des paradigmes déjà établis."
+        }
+      },
+      {
+        "id": "917e6fde-e1b2-4e09-b94f-3d58616b0f2a",
+        "label": "Biais de l'angle mort",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à reconnaître plus facilement l'impact des biais cognitifs chez les autres que chez soi-même, en se percevant comme moins sujet à ces biais que la moyenne des gens."
+        }
+      },
+      {
+        "id": "33ac7838-50b5-4f79-839e-fde4c9f82726",
+        "label": "Cynisme naïf",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à penser que les autres sont plus égoïstes ou biaisés dans leurs jugements qu'ils ne le sont réellement, en surestimant l'intérêt personnel derrière leurs opinions."
+        }
+      },
+      {
+        "id": "54d5c0d1-2869-4a59-b54d-7a56bb87b137",
+        "label": "Réalisme naïf",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à croire que l'on perçoit la réalité de façon objective et neutre, et que les personnes qui ne partagent pas notre point de vue sont irrationnelles, mal informées ou de mauvaise foi."
+        }
+      },
+      {
+        "id": "d8c3257d-e40a-4ca0-8128-3c977bbb531a",
+        "label": "Confabulation",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à combler les trous de sa mémoire avec des souvenirs fabriqués, déformés ou mal interprétés, sans intention consciente de tromper."
+        }
+      },
+      {
+        "id": "f3fc29d7-18bb-401a-991f-b6b595259ab7",
+        "label": "Illusion des séries",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à percevoir des motifs ou des tendances significatives dans des données en réalité aléatoires, en particulier dans de petits échantillons."
+        }
+      },
+      {
+        "id": "ac7aa519-2f9f-4b55-98c3-03ee5095e047",
+        "label": "Insensibilité à  la taille du groupe",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à mal évaluer la probabilité d'un résultat en ignorant l'effet de la taille de l'échantillon, alors que les petits échantillons produisent des résultats bien plus variables que les grands."
+        }
+      },
+      {
+        "id": "fd71f3d1-fcf0-43b0-b2e0-adf35ca3f5b2",
+        "label": "Négligence des probabilités",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à ignorer complètement les probabilités objectives lors d'une décision prise dans l'incertitude, en se laissant guider par l'émotion plutôt que par le calcul."
+        }
+      },
+      {
+        "id": "3a7ee8f1-5228-43b2-98ae-56e1e7365e82",
+        "label": "Erreur de la preuve anecdotique",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à utiliser un exemple personnel ou une anecdote isolée comme preuve suffisante d'un fait général, en ignorant des données statistiques plus fiables et représentatives."
+        }
+      },
+      {
+        "id": "bda30ff5-fd0f-463f-b5f4-5425e8d8a9c3",
+        "label": "Illusion de la validité",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à surestimer la fiabilité et l'exactitude de ses propres jugements, en particulier lorsque les informations disponibles forment un récit cohérent, même si ce récit repose sur des données peu fiables."
+        }
+      },
+      {
+        "id": "b74a5023-b8b6-4c93-b94b-07e053cc04e5",
+        "label": "Erreur de l'homme masqué",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à ne pas appliquer une règle logique valide lorsqu'elle mène à une conclusion qui semble contre-intuitive, en refusant une déduction pourtant correcte."
+        }
+      },
+      {
+        "id": "d48822be-bda0-410c-8694-a587817e5e00",
+        "label": "Illusion de la récence",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à croire qu'un mot, une expression ou un phénomène que l'on remarque pour la première fois est nouveau, alors qu'il existe en réalité depuis longtemps."
+        }
+      },
+      {
+        "id": "e4277c4b-4ba0-4065-9bdf-f7c3d4456f8b",
+        "label": "Erreur du parieur",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Croyance erronée que si un événement aléatoire s'est produit plus souvent que d'habitude par le passé, il est moins susceptible de se reproduire à l'avenir (ou inversement), alors que chaque tirage reste indépendant."
+        }
+      },
+      {
+        "id": "ebcce980-e81f-4ea3-966b-696ea2d5b072",
+        "label": "Erreur de la main chaude",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Croyance erronée qu'une personne ayant connu une série de succès a plus de chances de réussir à nouveau, alors que les événements restent statistiquement indépendants les uns des autres."
+        }
+      },
+      {
+        "id": "eea34542-eff3-4657-b7db-9bdeb91b0626",
+        "label": "Corrélation illusoire",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à percevoir une relation entre deux événements ou variables alors qu'il n'en existe aucune, ou à en surestimer fortement la force réelle."
+        }
+      },
+      {
+        "id": "92967425-9ff3-4539-8358-de040ed20c6b",
+        "label": "Paréidolie",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à percevoir un motif significatif, souvent un visage ou une forme familière, dans un stimulus vague ou aléatoire qui n'en contient pourtant pas réellement."
+        }
+      },
+      {
+        "id": "3e797d43-8e03-4e09-ab91-2b98037deec5",
+        "label": "Anthropomorphisme",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à attribuer des caractéristiques, des intentions ou des émotions humaines à des animaux, des objets ou des phénomènes non humains."
+        }
+      },
+      {
+        "id": "e5674fcb-3ddb-4fa5-b466-a35f9d3e8f76",
+        "label": "Erreur d'attribution de groupe",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à généraliser les caractéristiques observées chez un ou quelques membres d'un groupe à l'ensemble de ce groupe, ou à croire que les décisions d'un groupe reflètent les préférences individuelles de ses membres."
+        }
+      },
+      {
+        "id": "5da429b9-b472-4f1b-b48a-ffd9f88c4069",
+        "label": "Erreur ultime d'attribution",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à attribuer les comportements négatifs des membres d'un exogroupe à leur nature profonde, et leurs comportements positifs à des circonstances extérieures ou à la chance."
+        }
+      },
+      {
+        "id": "85663ce3-9de1-44a6-8201-bbf3d4c6a5cb",
+        "label": "Stéréotypage",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à attribuer certaines caractéristiques à tous les membres d'un groupe, sans tenir compte des informations réelles disponibles sur chaque individu."
+        }
+      },
+      {
+        "id": "f12e3b20-b30a-4924-97ef-62bd1960d69a",
+        "label": "Essentialisme",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à attribuer à des personnes, des groupes ou des objets une essence fixe et immuable qui déterminerait leur nature, indépendamment du contexte ou de l'évolution possible."
+        }
+      },
+      {
+        "id": "9f6618bd-35aa-4645-8941-1d7f0225cfad",
+        "label": "Fixité fonctionnelle",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à ne concevoir un objet que dans son usage habituel, ce qui limite notre capacité à imaginer des usages alternatifs et freine la résolution créative de problèmes."
+        }
+      },
+      {
+        "id": "4de4313a-3ac9-4699-8efd-0b270fcc07f0",
+        "label": "Effet d'hypocrisie morale",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à évaluer nos propres actions moralement discutables avec plus d'indulgence que lorsque ce sont les autres qui les commettent."
+        }
+      },
+      {
+        "id": "4381d222-4485-41e0-98d4-94a8ebcdf5be",
+        "label": "Croyance en un monde juste",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à croire que le monde est fondamentalement juste, et que les gens obtiennent ce qu'ils méritent, ce qui pousse parfois à blâmer les victimes de leur propre malheur."
+        }
+      },
+      {
+        "id": "c3661fee-68e7-4908-add6-72ae8c140e30",
+        "label": "Argument tiré d'un sophisme",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à juger la validité d'un argument non pas sur sa logique mais sur la plausibilité de sa conclusion, en rejetant un raisonnement correct simplement parce que sa conclusion paraît improbable."
+        }
+      },
+      {
+        "id": "e1a1136b-99fd-472a-bf62-3e4741782089",
+        "label": "Biais d'autorité",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à attribuer davantage d'exactitude et d'influence à l'opinion d'une figure d'autorité, indépendamment de son contenu réel, et à s'y conformer plus facilement."
+        }
+      },
+      {
+        "id": "256b6cea-3d99-4c3a-af4b-717e6dc818d8",
+        "label": "Biais d'automatisation",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à accorder une confiance excessive aux suggestions d'un système automatisé, en négligeant les informations contradictoires même lorsqu'elles sont correctes."
+        }
+      },
+      {
+        "id": "9bd9c92a-76c7-4e62-9bf8-91c06f277779",
+        "label": "Effet de mode",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à penser, croire ou faire une chose principalement parce que beaucoup d'autres personnes pensent, croient ou font la même chose."
+        }
+      },
+      {
+        "id": "7190430c-b440-4594-b148-3e884c30ff55",
+        "label": "Effet placebo",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Lorsqu'on croit ou qu'on nous dit qu'un traitement sans principe actif va produire un effet, celui-ci peut se manifester réellement, simplement du fait de cette croyance."
+        }
+      },
+      {
+        "id": "ee4300ca-169e-4934-9346-3527c5649b69",
+        "label": "Biais d'homogénéité d'exogroupe",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à percevoir les membres des autres groupes comme plus semblables entre eux que les membres de son propre groupe, perçus comme plus variés et individualisés."
+        }
+      },
+      {
+        "id": "2869a2bb-fce9-482a-8a13-dbb7455d7232",
+        "label": "Effet inter-races",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à mieux reconnaître les visages des personnes de sa propre origine ethnique que ceux de personnes d'autres origines."
+        }
+      },
+      {
+        "id": "180792c0-a1c7-43b3-8171-c63116907100",
+        "label": "Favoritisme intragroupe",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à accorder un traitement préférentiel, une confiance ou des ressources aux membres de son propre groupe, au détriment des membres d'autres groupes."
+        }
+      },
+      {
+        "id": "e5c3ade6-5b10-4b56-95bb-f9c11fd5bcb1",
+        "label": "Effet de halo",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à ce qu'une impression positive globale d'une personne (par exemple son apparence) influence favorablement le jugement porté sur ses autres qualités, sans rapport direct."
+        }
+      },
+      {
+        "id": "fa093f3e-b6f7-4785-b5d1-e13786ec6b8a",
+        "label": "Effet pom-pom girl",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à percevoir les individus comme plus attirants lorsqu'ils sont vus en groupe que lorsqu'ils sont vus isolément."
+        }
+      },
+      {
+        "id": "ce9d2d52-1106-4547-a104-3cf113bb6b3f",
+        "label": "Effet de positivité",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance, en particulier chez les personnes âgées, à privilégier le traitement et la mémorisation des informations positives plutôt que négatives."
+        }
+      },
+      {
+        "id": "926656e3-b8b6-43a2-87ba-3e6429b42af7",
+        "label": "Pas inventé ici",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à éviter, dévaloriser ou rejeter des idées, produits ou solutions provenant de l'extérieur d'un groupe, simplement parce qu'ils n'ont pas été créés en interne."
+        }
+      },
+      {
+        "id": "58c409bc-7e42-47a8-81ce-aa0b5485d93d",
+        "label": "Dévaluation réactive",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à dévaloriser une proposition ou un argument simplement parce qu'il provient d'une personne perçue comme adverse ou hostile."
+        }
+      },
+      {
+        "id": "2503e785-6ba3-4c4f-977a-244c87845694",
+        "label": "Effet de la route familière",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à sous-estimer la durée d'un trajet emprunté fréquemment, celui-ci semblant plus court et demandant moins d'effort cognitif qu'un trajet inconnu de même distance."
+        }
+      },
+      {
+        "id": "b3b37d87-f047-4798-8cb2-3fe37b426d50",
+        "label": "Comptabilité mentale",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à traiter l'argent différemment selon son origine ou l'usage prévu, en lui attribuant une valeur subjective plutôt qu'une valeur strictement fongible et interchangeable."
+        }
+      },
+      {
+        "id": "9676a80d-ac30-45b7-b5a4-93b0243558f8",
+        "label": "Erreur d'appel à  la probabilité",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à supposer que, parce qu'une chose est possible, elle est donc probable, en confondant possibilité théorique et probabilité réelle."
+        }
+      },
+      {
+        "id": "818a21f2-3238-4f0e-aa31-ec7c9e1ce73f",
+        "label": "Biais de normalité",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à sous-estimer la probabilité et l'impact d'une catastrophe, en supposant que, parce qu'elle ne s'est jamais produite, elle ne se produira jamais."
+        }
+      },
+      {
+        "id": "24ee4663-139a-4f8b-addf-4ab1b1a03e01",
+        "label": "Loi de Murphy",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Croyance selon laquelle tout ce qui peut mal tourner finira par mal tourner, souvent renforcée après coup par le souvenir sélectif des fois où cela s'est effectivement produit."
+        }
+      },
+      {
+        "id": "b0bb7074-933a-40d1-b2b1-070a37ea9fe6",
+        "label": "Biais de la somme nulle",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à percevoir une situation comme un jeu à somme nulle, où le gain d'une partie implique nécessairement la perte d'une autre, même quand ce n'est pas le cas."
+        }
+      },
+      {
+        "id": "c55d4a77-a3c8-4a1d-a9d3-88ec2985b190",
+        "label": "Biais du survivant",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à tirer des conclusions à partir des seuls cas ayant « survécu » à un processus de sélection, en ignorant les cas qui ont échoué et qui sont, de fait, invisibles."
+        }
+      },
+      {
+        "id": "7e3d8ae1-8326-4218-a3c4-77b5d742b3cf",
+        "label": "Effet de sous-additivité",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à estimer la probabilité d'un événement global comme inférieure à la somme des probabilités de ses composantes prises séparément."
+        }
+      },
+      {
+        "id": "54595137-9501-4fd2-9311-1141709987dc",
+        "label": "Effet de dénomination",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à dépenser plus facilement de l'argent lorsqu'il se présente sous une forme jugée moins « réelle » (petites coupures, monnaie, jetons) que sous forme de grosses coupures."
+        }
+      },
+      {
+        "id": "e78b5df1-9345-4b89-99b5-9f8b92cc41a5",
+        "label": "Nombre magique 7 ± 2",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "La mémoire de travail à court terme ne peut retenir simultanément qu'un nombre limité d'éléments, généralement estimé entre cinq et neuf."
+        }
+      },
+      {
+        "id": "58790247-0af5-4b92-bc11-327ef8a4dd76",
+        "label": "Illusion de transparence",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à surestimer la mesure dans laquelle les autres perçoivent nos états mentaux internes, comme nos émotions ou nos pensées."
+        }
+      },
+      {
+        "id": "490a7ebe-c09d-477b-8a2a-0a2102cece11",
+        "label": "Malédiction de la connaissance",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Une fois qu'on connaît une information, il devient difficile d'imaginer ce que c'est que de ne pas la connaître, ce qui nous fait surestimer ce que les autres savent déjà."
+        }
+      },
+      {
+        "id": "97c7ebc0-98b6-4235-a3d0-c38e7cccd207",
+        "label": "Effet de projecteur",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à surestimer à quel point les autres remarquent notre apparence ou notre comportement, en se croyant davantage observé qu'on ne l'est réellement."
+        }
+      },
+      {
+        "id": "da99f7d0-c604-4f1c-bbd2-193d49205542",
+        "label": "Biais des incitations extrinsèques",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à surestimer l'effet des récompenses ou punitions externes sur le comportement d'autrui, en sous-estimant le rôle de leur motivation intrinsèque."
+        }
+      },
+      {
+        "id": "091c1150-3711-42f9-837c-879aafea7986",
+        "label": "Illusion d'agence externe",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à interpréter les événements comme étant l'œuvre d'un agent invisible ou d'une force extérieure, plutôt que le résultat de processus impersonnels ou du hasard."
+        }
+      },
+      {
+        "id": "00611885-e456-4cc2-8acf-94d01efc3dd7",
+        "label": "Illusion de connaissance asymétrique",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à croire que l'on connaît les autres mieux qu'ils ne se connaissent eux-mêmes, tout en pensant que les autres nous connaissent moins bien que nous ne les connaissons."
+        }
+      },
+      {
+        "id": "89c33c02-1aa0-4829-97ce-c9ccdb53b95b",
+        "label": "Effet de télescopage",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à percevoir les événements récents comme plus anciens qu'ils ne le sont, et les événements anciens comme plus récents."
+        }
+      },
+      {
+        "id": "d9134f2c-04e0-41ec-83e8-d97aecbcba56",
+        "label": "Rétrospective de la vie en rose",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à se souvenir du passé, notamment des objets, des relations ou des expériences, de façon plus positive qu'il ne l'était réellement au moment vécu."
+        }
+      },
+      {
+        "id": "738d00d4-adff-46f0-b9b3-dbc39c39ab06",
+        "label": "Biais rétrospectif",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance, après qu'un événement s'est produit, à avoir l'impression qu'on l'avait prévu ou qu'il était prévisible, alors qu'on n'aurait pas pu le prédire à l'avance."
+        }
+      },
+      {
+        "id": "69de2a56-02c7-456e-91d8-48ff1d9ec90a",
+        "label": "Biais de résultat",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à juger la qualité d'une décision passée en se basant sur son résultat final plutôt que sur la qualité du raisonnement au moment où elle a été prise."
+        }
+      },
+      {
+        "id": "b9103494-621a-438b-bbd6-0f7246d338cc",
+        "label": "Chance morale",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à juger la moralité d'un acte en fonction de son issue, alors que cette issue dépend en partie de facteurs échappant totalement au contrôle de la personne qui a agi."
+        }
+      },
+      {
+        "id": "4d8337b9-8a82-40fd-8b9c-e2c3f712a8e1",
+        "label": "Déclinisme",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à idéaliser le passé et à percevoir le présent, ou l'avenir, comme étant en déclin par rapport à lui, souvent de façon irréaliste."
+        }
+      },
+      {
+        "id": "c539e19d-9961-45ed-a8ab-2df03112df5c",
+        "label": "Biais d'impact",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à surestimer la durée et l'intensité de nos futures réactions émotionnelles, positives comme négatives, face à un événement à venir."
+        }
+      },
+      {
+        "id": "2c24da5c-b160-409c-a440-b3854f8210bd",
+        "label": "Biais de pessimisme",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance, chez certaines personnes, à surestimer la probabilité que des événements négatifs se produisent, dans leur propre vie ou en général."
+        }
+      },
+      {
+        "id": "ddb176ea-c11d-4cef-82fd-0c9c15b06ee8",
+        "label": "Biais de planification",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à sous-estimer systématiquement le temps, les coûts et les risques nécessaires pour réaliser une tâche future, même en connaissant les dépassements survenus par le passé."
+        }
+      },
+      {
+        "id": "aa033a6f-7f5f-4e95-8f31-c61a6cffa2dd",
+        "label": "Biais du gain de temps",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à mal estimer l'effet d'un changement de vitesse sur la durée d'un trajet, en surestimant le temps gagné lorsqu'on augmente une vitesse déjà élevée."
+        }
+      },
+      {
+        "id": "78525ed2-ca5c-430b-a9b8-736f023ab7d4",
+        "label": "Biais pro-innovation",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance des porteurs d'une innovation à en surestimer l'utilité et l'adoption future, tout en sous-estimant ses limites ou les difficultés de sa diffusion."
+        }
+      },
+      {
+        "id": "0cc47408-5b06-4829-a3e2-a9140772a3ec",
+        "label": "Biais de projection",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à supposer, à tort, que les autres partagent nos pensées, croyances, valeurs ou états émotionnels actuels."
+        }
+      },
+      {
+        "id": "29fd607e-8045-419c-89d1-a3b8afa9bd89",
+        "label": "Biais de retenue",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à surestimer notre propre capacité à résister à des pulsions ou des tentations futures, ce qui nous pousse à nous exposer imprudemment à des situations tentantes."
+        }
+      },
+      {
+        "id": "d4ac3ed1-1bba-4426-b6ac-0b5aedcb21e8",
+        "label": "Biais de cohérence avec soi",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à percevoir ses attitudes et comportements passés comme davantage cohérents avec ses opinions actuelles qu'ils ne l'étaient réellement à l'époque."
+        }
+      },
+      {
+        "id": "5741727e-76ae-4110-9547-fb8fdb173689",
+        "label": "Biais d'excès de confiance",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à avoir une confiance excessive et injustifiée dans l'exactitude de ses propres réponses, jugements ou capacités."
+        }
+      },
+      {
+        "id": "e69d5eaf-9c72-49b2-bcb6-76e5f63d0e83",
+        "label": "Désirabilité sociale",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à répondre à des questions, notamment dans des enquêtes, de manière à être perçu favorablement par les autres, plutôt qu'en exprimant sa véritable opinion."
+        }
+      },
+      {
+        "id": "20d0750b-cc9c-401e-91df-1fe321062821",
+        "label": "Effet troisième personne",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à croire que les messages persuasifs, notamment les médias, influencent davantage les autres que soi-même."
+        }
+      },
+      {
+        "id": "80200a7c-3f45-423c-a8de-b0af19bad03a",
+        "label": "Effet difficile-facile",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à surestimer sa performance sur des tâches difficiles et à la sous-estimer sur des tâches faciles, par rapport à sa performance réelle."
+        }
+      },
+      {
+        "id": "9c4ddf0f-87f2-4c43-99a2-086755500228",
+        "label": "Effet Lac Wobegon",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance générale à se percevoir soi-même comme supérieur à la moyenne sur la plupart des qualités positives, ce qui est statistiquement impossible pour l'ensemble d'un groupe."
+        }
+      },
+      {
+        "id": "b09b1030-031e-4bfc-ab00-a18984698ba3",
+        "label": "Effet Dunning-Kruger",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Les personnes les moins compétentes dans un domaine ont tendance à surestimer fortement leurs compétences, faute de posséder les connaissances nécessaires pour évaluer correctement leurs propres limites."
+        }
+      },
+      {
+        "id": "9b5d635b-1dd5-44a9-b886-673bcee11b31",
+        "label": "Biais égocentrique",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à se souvenir du passé d'une manière qui nous met en valeur, en surestimant notre propre contribution à un résultat commun par rapport à celle des autres."
+        }
+      },
+      {
+        "id": "6db8a785-f620-44d0-beeb-48cede141bce",
+        "label": "Biais d'optimisme",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à surestimer la probabilité de vivre des événements positifs et à sous-estimer celle de vivre des événements négatifs, comparé à autrui."
+        }
+      },
+      {
+        "id": "e7ba11f7-af02-4c5a-8c8e-9f5b48c3b243",
+        "label": "Effet Forer",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à accepter comme précise et personnelle une description de sa personnalité vague et générale, en pensant qu'elle a été spécifiquement conçue pour soi."
+        }
+      },
+      {
+        "id": "a0530a02-2da0-4943-b953-c458ff3e677c",
+        "label": "Effet Barnum",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à accorder une grande validité à des descriptions de personnalité générales et flatteuses, applicables en réalité à un grand nombre de personnes, comme dans l'astrologie."
+        }
+      },
+      {
+        "id": "4b2cb31e-7180-4dfc-a5c6-31491f89bdbc",
+        "label": "Biais d'autocomplaisance",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à s'attribuer le mérite de ses succès, tout en attribuant ses échecs à des facteurs externes indépendants de sa volonté."
+        }
+      },
+      {
+        "id": "81ba4c40-8070-4b19-aabe-b758cc0574ff",
+        "label": "Effet acteur-observateur",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à attribuer son propre comportement à des circonstances extérieures, tout en attribuant le comportement des autres à leur personnalité ou à leurs traits de caractère."
+        }
+      },
+      {
+        "id": "21b00761-36f5-4cba-89af-18a843acde8d",
+        "label": "Illusion de contrôle",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à surestimer sa capacité à contrôler des événements qui, en réalité, dépendent largement du hasard."
+        }
+      },
+      {
+        "id": "afcee631-ffc0-4d89-b46d-8e2e4a9a84e4",
+        "label": "Supériorité illusoire",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à surestimer ses propres qualités et capacités par rapport à celles des autres, en se percevant comme meilleur que la moyenne dans des domaines valorisés."
+        }
+      },
+      {
+        "id": "0a392bb1-b5b5-41c9-af4e-3e73dd9cba93",
+        "label": "Erreur fondamentale d'attribution",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à surestimer le rôle des traits de personnalité et à sous-estimer le rôle des facteurs situationnels pour expliquer le comportement des autres."
+        }
+      },
+      {
+        "id": "3203bd48-a094-4a98-b259-8663556c6c89",
+        "label": "Hypothèse d'attribution défensive",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à attribuer moins de responsabilité à une victime, et davantage à l'auteur d'un incident, lorsque l'on se sent proche ou similaire à cette victime, pour se protéger de l'idée qu'un tel malheur pourrait nous arriver."
+        }
+      },
+      {
+        "id": "d76f1dbd-6711-49dd-8c8c-48da63accc9f",
+        "label": "Biais d'attribution des traits",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à voir sa propre personnalité, ses valeurs et ses comportements comme variables et dépendants du contexte, tout en percevant ceux des autres comme fixes et prévisibles."
+        }
+      },
+      {
+        "id": "ba135b92-e512-4e06-946a-a35f9404a30d",
+        "label": "Justification de l'effort",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à accorder une valeur plus élevée à un résultat obtenu après un effort important, indépendamment de sa qualité objective, afin de justifier l'énergie investie."
+        }
+      },
+      {
+        "id": "3a6d743a-17d5-4799-978f-edc4babb48c3",
+        "label": "Compensation du risque",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à ajuster son comportement en prenant davantage de risques lorsqu'on se sent protégé par une mesure de sécurité, ce qui peut annuler en partie le bénéfice de cette protection."
+        }
+      },
+      {
+        "id": "4cc78d6a-5817-4898-8b15-3099be7a0db8",
+        "label": "Effet Peltzman",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance des individus à adopter un comportement plus risqué en réponse à une mesure de sécurité perçue, réduisant ainsi une partie des bénéfices attendus de cette mesure."
+        }
+      },
+      {
+        "id": "32d6a682-0670-41e3-b192-da8a1015c9f5",
+        "label": "Rabais hyperbolique",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à préférer une récompense plus petite mais immédiate à une récompense plus grande mais différée, en accordant une valeur disproportionnée au présent."
+        }
+      },
+      {
+        "id": "53fa2e16-1563-4579-8dd4-16f30053b338",
+        "label": "Appel à  la nouveauté",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à supposer qu'une idée ou une solution est meilleure simplement parce qu'elle est nouvelle ou moderne, indépendamment de sa qualité réelle."
+        }
+      },
+      {
+        "id": "84760cc4-d0cc-419b-aa92-cd2e2f046d5d",
+        "label": "Effet de la victime identifiable",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à ressentir plus d'empathie et à être davantage disposé à agir pour une victime spécifique et identifiée que pour un grand nombre de victimes anonymes, même si le besoin réel est plus grand."
+        }
+      },
+      {
+        "id": "b2b08377-0f89-4fcb-b9f5-8702c3355411",
+        "label": "Biais des coûts irrécupérables",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à continuer un projet ou une action en raison des ressources (temps, argent, effort) déjà investies, alors que ces ressources ne peuvent de toute façon plus être récupérées."
+        }
+      },
+      {
+        "id": "ccbdb925-c4e4-4842-a061-7d5c5ab46f57",
+        "label": "Escalade irrationnelle",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à justifier un investissement supplémentaire dans une décision sur la base des ressources déjà englouties, malgré des preuves croissantes que ce choix était mauvais."
+        }
+      },
+      {
+        "id": "8bbc2e1f-c35b-48ca-b70c-b2f147a5ed48",
+        "label": "Escalade d'engagement",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à s'enfoncer davantage dans une décision ou un comportement dont on connaît pourtant les résultats négatifs, plutôt que de faire marche arrière."
+        }
+      },
+      {
+        "id": "34000f95-af9a-43ce-93ab-30a2c082aae5",
+        "label": "Effet de génération d'information",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Une information que l'on a soi-même générée ou déduite est mieux mémorisée qu'une information simplement lue ou reçue passivement."
+        }
+      },
+      {
+        "id": "72d4fa34-b7b2-4a3a-9a1d-515fd366e96e",
+        "label": "Aversion à  la perte",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à ressentir la douleur d'une perte de façon plus intense que le plaisir d'un gain équivalent, ce qui pousse à privilégier fortement l'évitement des pertes."
+        }
+      },
+      {
+        "id": "9593327a-bbac-4cec-bcc7-6727f2965fb3",
+        "label": "Effet IKEA",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à accorder une valeur disproportionnée à un objet que l'on a soi-même partiellement fabriqué ou assemblé, indépendamment de sa qualité finale."
+        }
+      },
+      {
+        "id": "1a35febd-ceae-4db8-a720-97d1b05afb96",
+        "label": "Biais de la portion",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à consommer davantage de nourriture ou de boisson lorsque la portion servie est plus grande, indépendamment de la sensation réelle de faim."
+        }
+      },
+      {
+        "id": "38ae604d-2ef7-42eb-bf95-f4b8a97c65e3",
+        "label": "Biais du risque zéro",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à préférer réduire un petit risque à zéro plutôt que de réduire davantage un risque plus grand, même si la seconde option apporte un bénéfice global supérieur."
+        }
+      },
+      {
+        "id": "28ea0592-fb77-4f1f-b1ce-55d065766d64",
+        "label": "Effet de disposition",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance des investisseurs à vendre trop tôt les actifs qui gagnent de la valeur, et à conserver trop longtemps ceux qui en perdent, par aversion à réaliser une perte."
+        }
+      },
+      {
+        "id": "bb88a338-fb53-4e44-a700-a0fe545cadf5",
+        "label": "Effet de pseudo-certitude",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à faire des choix différents selon qu'une issue est présentée comme certaine ou seulement probable, même lorsque les probabilités réelles sont équivalentes."
+        }
+      },
+      {
+        "id": "0c833b99-93e1-4b48-a8ec-a17c3ad59a62",
+        "label": "Effet de difficulté de traitement",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à juger une information comme plus vraie, plus intelligente ou plus mémorable lorsqu'elle est présentée d'une manière facile à traiter mentalement, par exemple avec une police claire."
+        }
+      },
+      {
+        "id": "806ae353-e3c4-4447-a7be-17306a026935",
+        "label": "Effet de dotation",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à accorder plus de valeur à un objet du seul fait qu'on le possède déjà, comparé à la valeur qu'on lui accorderait si on ne le possédait pas."
+        }
+      },
+      {
+        "id": "ed251fe7-0df1-4582-85f9-b231459d407a",
+        "label": "Effet boomerang",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance, face à un message persuasif perçu comme trop insistant, à adopter la position exactement opposée à celle défendue par ce message."
+        }
+      },
+      {
+        "id": "8aa70b03-c9aa-4635-8f38-cd7aab322d4a",
+        "label": "Justification du système",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à défendre et à rationaliser le statu quo social, économique ou politique, même lorsqu'il nous est défavorable, en le percevant comme juste et légitime."
+        }
+      },
+      {
+        "id": "1a73fee6-b3d3-432b-bb4a-db44dc226fbf",
+        "label": "Psychologie inversée",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Technique consistant à préconiser un comportement opposé à celui réellement souhaité, en misant sur la tendance de la personne à vouloir faire l'inverse de ce qu'on lui suggère."
+        }
+      },
+      {
+        "id": "12df5da8-5047-40a0-97ca-ced93f3045f8",
+        "label": "Réactance",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à réagir à une contrainte perçue sur notre liberté en adoptant précisément le comportement que l'on cherchait à nous interdire ou à nous imposer."
+        }
+      },
+      {
+        "id": "345564f1-33e8-470d-b414-2595c0d90b0a",
+        "label": "Effet de dominance asymétrique",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à préférer une option lorsqu'une troisième option, clairement inférieure à elle mais pas à l'autre, est ajoutée aux choix proposés."
+        }
+      },
+      {
+        "id": "898f4aa5-f8e5-40f1-bfbf-c9725a467f6e",
+        "label": "Biais de comparaison sociale",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à évaluer favorablement des candidats ou des idées qui ne rivalisent pas directement avec nos propres compétences ou opinions, par crainte inconsciente de la comparaison."
+        }
+      },
+      {
+        "id": "88ad6b0b-3b17-4733-b77e-d8b20f53d882",
+        "label": "Biais du status quo",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à préférer que les choses restent telles qu'elles sont, en percevant tout changement par rapport à la situation actuelle comme une perte plutôt qu'un gain potentiel."
+        }
+      },
+      {
+        "id": "3c7bb4bb-7a7e-4da1-8524-7c36e9aaf68e",
+        "label": "Effet d'ambiguïté",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à éviter les options dont la probabilité de succès est inconnue, en préférant une option dont le risque est clairement défini, même s'il est plus élevé."
+        }
+      },
+      {
+        "id": "5c76376b-6bf2-4e56-b26c-2bff8cde1cc1",
+        "label": "Biais d'information",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à rechercher des informations supplémentaires même lorsqu'elles n'ont aucune chance de modifier concrètement l'action à entreprendre."
+        }
+      },
+      {
+        "id": "d4ae465f-f0f5-4b66-8b69-23104e0f328a",
+        "label": "Biais de croyance",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à évaluer la validité logique d'un raisonnement en fonction de la plausibilité de sa conclusion, plutôt que sur la base de sa structure logique réelle."
+        }
+      },
+      {
+        "id": "f6b18da9-53e2-4d32-8bf2-7f55c7ee2fc2",
+        "label": "Effet ça rime donc c'est bon",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à percevoir un énoncé rimé comme plus véridique ou plus pertinent qu'un énoncé équivalent qui ne rime pas."
+        }
+      },
+      {
+        "id": "6153011a-b8d8-4f28-9bda-f313aeebee3e",
+        "label": "Effet abri à  vélo",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à accorder une importance disproportionnée à des sujets simples et faciles à débattre, au détriment de sujets plus complexes et plus importants qui demandent une expertise réelle."
+        }
+      },
+      {
+        "id": "4d8cb9a5-a627-46ac-b766-b18d99a089ec",
+        "label": "Loi de futilité de Parkinson",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance des groupes à consacrer un temps disproportionné à des questions mineures et faciles à comprendre, au détriment de décisions majeures et complexes."
+        }
+      },
+      {
+        "id": "b719dfa9-1885-48c9-9e06-3235a0635274",
+        "label": "Erreur de conjonction",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à juger la probabilité de la conjonction de deux événements comme plus élevée que la probabilité de l'un des deux événements pris isolément, ce qui est statistiquement impossible."
+        }
+      },
+      {
+        "id": "06f50152-be2b-42f0-b2f2-ac014074ccc3",
+        "label": "Rasoir d'Ockham",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Principe selon lequel, entre plusieurs explications possibles d'un même phénomène, celle qui repose sur le moins d'hypothèses doit généralement être privilégiée."
+        }
+      },
+      {
+        "id": "61993aa6-8659-400f-8193-46ca7981a8db",
+        "label": "Effet moins-c'est-mieux",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à préférer, dans une évaluation isolée, une option plus petite ou moins généreuse à une option plus grande, alors que la préférence s'inverse lorsqu'on les compare côte à côte."
+        }
+      },
+      {
+        "id": "2447387a-9328-4676-8efe-78b9a4363f58",
+        "label": "Distraction",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Un souvenir peut échouer à se former, ou disparaître, lorsque l'attention est détournée vers autre chose au moment de son encodage, faute de ressources cognitives disponibles."
+        }
+      },
+      {
+        "id": "38790c9a-d0c9-4b18-b271-3a61047d581e",
+        "label": "Effet test",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Le simple fait de tester activement sa mémoire sur une information améliore sa rétention à long terme, davantage que la relire passivement."
+        }
+      },
+      {
+        "id": "098c798d-0391-40ce-8481-137defcd5287",
+        "label": "Effet au-suivant",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Lorsqu'on est présenté à un groupe de personnes, on a plus de mal à se souvenir du nom de la personne rencontrée juste avant la dernière, car on se concentre déjà sur la préparation de la rencontre suivante."
+        }
+      },
+      {
+        "id": "a8f87556-23f9-43e0-954c-99a6d5d9f7eb",
+        "label": "Effet Google ou Amnésie numérique",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance naturelle du cerveau à oublier une information dès qu'il sait qu'elle est facilement accessible en ligne (sur un moteur de recherche, un smartphone ou le cloud). Le cerveau ne stocke plus la donnée elle-même, mais l'emplacement ou le moyen de la retrouver."
+        }
+      },
+      {
+        "id": "16189197-bc4f-4864-8482-635d042df6cb",
+        "label": "Mot sur le bout de la langue",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Sensation de savoir un mot ou un nom, sans parvenir à le récupérer immédiatement, alors que des informations partielles (première lettre, nombre de syllabes) restent accessibles."
+        }
+      },
+      {
+        "id": "dce5f4e1-1a79-4a2c-9ca3-83bf4ea640b6",
+        "label": "Effet de profondeur du traitement",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Une information traitée de manière approfondie et significative, en lien avec son sens, est mieux mémorisée qu'une information traitée superficiellement."
+        }
+      },
+      {
+        "id": "2fd9b6ae-ada6-418f-8c1f-816c07fa3130",
+        "label": "Règle pic-fin",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Notre souvenir d'une expérience est déterminé principalement par son moment le plus intense (le pic) et par la façon dont elle s'est terminée, plutôt que par sa durée totale ou sa moyenne."
+        }
+      },
+      {
+        "id": "14dac8ed-a352-412b-88fd-e9822be71b90",
+        "label": "Nivellement et affinement",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "En se remémorant un souvenir de façon répétée, on tend à en simplifier les détails (nivellement) tout en exagérant certains éléments marquants (affinement), déformant progressivement le souvenir initial."
+        }
+      },
+      {
+        "id": "9dcc8b26-2714-410c-ae89-b74b5d78512d",
+        "label": "Effet de désinformation",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "L'exposition à une information erronée après un événement peut altérer le souvenir que l'on a de cet événement."
+        }
+      },
+      {
+        "id": "d321860a-6809-479e-a215-3df1b25e2b7d",
+        "label": "Effet de position dans une série",
+        "category": "Biais",
+        "properties": {
+          "La capacité à se souvenir d'un élément dépend de sa position dans une séquence": "les premiers et les derniers éléments sont mieux retenus que ceux du milieu."
+        }
+      },
+      {
+        "id": "26f49a63-b98d-40fc-823e-81133f3b9a89",
+        "label": "Effet de la longueur de la liste",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Plus une liste d'éléments à mémoriser est longue, plus la proportion d'éléments effectivement retenus diminue, même si le nombre absolu d'éléments mémorisés augmente."
+        }
+      },
+      {
+        "id": "8fe10c7b-d44b-4179-a8b8-bba9cfa9dab7",
+        "label": "Négligence de la durée",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à accorder peu d'importance à la durée réelle d'une expérience lorsqu'on l'évalue rétrospectivement, au profit de son intensité et de sa fin."
+        }
+      },
+      {
+        "id": "e4390ac4-74a0-4606-b8ca-5de09de3405c",
+        "label": "Effet de la modalité",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "La mémoire à court terme est meilleure pour les derniers éléments d'une liste lorsqu'ils sont présentés oralement plutôt que par écrit."
+        }
+      },
+      {
+        "id": "9535000d-0b5d-437c-98e0-dfcbb14df66b",
+        "label": "Inhibition de la mémoire",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Se remémorer certains souvenirs peut, par le mécanisme même du rappel, rendre plus difficile l'accès à d'autres souvenirs apparentés."
+        }
+      },
+      {
+        "id": "4c777033-df01-4823-8f9b-f1063ad86731",
+        "label": "Effet de primauté",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à mieux mémoriser les premiers éléments d'une liste ou d'une série que ceux situés au milieu."
+        }
+      },
+      {
+        "id": "f160a863-276a-4ec8-9903-17452a8e498f",
+        "label": "Effet du plus récent",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à mieux mémoriser les derniers éléments présentés dans une liste ou une série que ceux situés au milieu."
+        }
+      },
+      {
+        "id": "a1e197c0-1574-40d4-a987-35980d7bc7c8",
+        "label": "Indiçage partiel",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Le fait de se voir proposer une partie d'une information (un indice) peut en réalité rendre plus difficile le rappel du reste de cette information."
+        }
+      },
+      {
+        "id": "56d69af7-36a4-4c48-accf-e60d83127f73",
+        "label": "Effet de position sérielle",
+        "category": "Biais",
+        "properties": {
+          "Combinaison des effets de primauté et de récence": "dans une liste, les éléments situés au début et à la fin sont mieux mémorisés que ceux situés au milieu."
+        }
+      },
+      {
+        "id": "b2f904f5-bb7c-45d1-af5b-25874edc67be",
+        "label": "Effet du suffixe",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "L'effet de récence, qui favorise la mémorisation des derniers éléments d'une liste orale, est réduit lorsqu'un élément supplémentaire et non pertinent est ajouté juste après la liste."
+        }
+      },
+      {
+        "id": "d5366b1b-df59-4806-a922-83b93674e581",
+        "label": "Erreur d'attribution de la source",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à se souvenir correctement d'une information, mais à se tromper sur son origine, en l'attribuant à une source erronée."
+        }
+      },
+      {
+        "id": "0dfa6d6a-1e4a-4b1d-8bd2-e0be66e09bb6",
+        "label": "Confusion de la source",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à confondre l'origine réelle d'un souvenir, en attribuant à tort une expérience vécue à une source imaginée, ou inversement."
+        }
+      },
+      {
+        "id": "8c9b7f7b-634b-427e-bf43-41e1088f2a2a",
+        "label": "Cryptomnésie",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à croire qu'une idée ou une création est originale, alors qu'il s'agit en réalité d'un souvenir oublié provenant d'une source extérieure."
+        }
+      },
+      {
+        "id": "d322ff02-483a-4103-97e5-d47d92692b78",
+        "label": "Faux souvenir",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à se rappeler avec confiance d'un événement qui ne s'est en réalité jamais produit, ou dont les détails ont été profondément déformés."
+        }
+      },
+      {
+        "id": "f36339cd-2368-4f9f-84fe-3550ac426c13",
+        "label": "Suggestibilité",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à incorporer dans ses propres souvenirs des informations suggérées par d'autres, par exemple à travers des questions orientées."
+        }
+      },
+      {
+        "id": "16ec805b-5ce7-407a-af74-9a133877d51a",
+        "label": "Effet d'espacement",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "L'information est mieux mémorisée sur le long terme lorsque son apprentissage est réparti dans le temps, plutôt que concentré en une seule session massée."
+        }
+      },
+      {
+        "id": "2ed595fe-fc65-4842-a15a-f9a2239ac7be",
+        "label": "Association implicite",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance inconsciente à associer plus rapidement certains concepts entre eux, sur la base de stéréotypes ou d'expériences passées, sans en avoir pleinement conscience."
+        }
+      },
+      {
+        "id": "e1147c21-f65d-4000-b560-a54864aaa228",
+        "label": "Stéréotype implicite",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance inconsciente à attribuer certaines caractéristiques à un groupe de personnes, influençant nos jugements et comportements sans que l'on en soit conscient."
+        }
+      },
+      {
+        "id": "c2035658-81d0-4258-afb3-991cc6e100c0",
+        "label": "Mémorisation stéréotypée",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à encoder et à restituer les informations en se basant sur des schémas préexistants, des clichés, des habitudes culturelles ou des structures toutes faites, plutôt que sur la réalité exacte des faits. Le cerveau simplifie le monde en le faisant entrer dans des cases mentales déjà prêtes."
+        }
+      },
+      {
+        "id": "832e3a18-6ddc-4ed1-841d-dcc79102522d",
+        "label": "Préjudice",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Opinion ou jugement défavorable formé à l'égard d'une personne ou d'un groupe, sans connaissance ou expérience suffisante pour le justifier réellement."
+        }
+      },
+      {
+        "id": "db06816e-b5d5-4f37-9e1b-9840976b2e08",
+        "label": "Biais d'affaiblissement de l'affect",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Tendance à sous-estimer l'intensité de nos futures réactions émotionnelles, en particulier face à des événements négatifs, une fois qu'un peu de temps s'est écoulé."
+        }
+      },
+      {
+        "id": "44874861-d1d8-48e9-8a7e-aedcefc1f2e2",
+        "label": "La peur de l'avion (vs. voiture)",
+        "category": "Exemple",
+        "properties": {
+          "prop_1": "Beaucoup de gens ont une peur panique de prendre l'avion, redoutant un accident mortel, mais prennent la route tous les jours sans aucune anxiété.",
+          "Pourquoi c'est l'heuristique de disponibilité": "Lorsqu'un accident d'avion se produit, il fait la une de tous les journaux mondiaux avec des images spectaculaires, ce qui le rend très facile à se remémorer. En revanche, les accidents de la route, beaucoup plus fréquents, sont banalisés et ne marquent pas autant les esprits. Notre cerveau conclut donc à tort que l'avion est plus dangereux que la voiture."
+        }
+      },
+      {
+        "id": "cb7bf109-ea86-4fef-97a2-5ff5d0073bb4",
+        "label": "Le choix d'un restaurant à partir de souvenirs récents",
+        "category": "Exemple",
+        "properties": {
+          "prop_1": "Vous devez choisir un restaurant ce soir et vous optez immédiatement pour celui où vous êtes allés la semaine dernière, en pensant que c'est \"le meilleur\", sans chercher d'autres options.",
+          "Processus mental": "Le nom de ce restaurant et les émotions positives du dernier repas sont immédiatement accessibles dans votre mémoire. Les dizaines d'autres restaurants de la ville, moins présents à votre esprit à cet instant précis, sont ignorés."
+        }
+      },
+      {
+        "id": "79809f7e-8874-4460-b0ce-848f2af3cb33",
+        "label": "Mon grand-père a fumé toute sa vie...",
+        "category": "Exemple",
+        "properties": {
+          "Quelqu'un minimise les dangers du tabac en affirmant": "\"Mon grand-père a fumé un paquet par jour jusqu'à 95 ans et il n'a jamais rien eu, donc le tabac n'est pas si dangereux.\"",
+          "Processus mental": "L'image marquante de ce proche en bonne santé éclipse la masse de données statistiques et médicales (qui demandent un effort de réflexion) prouvant la dangerosité réelle de la cigarette. Le cas particulier et mémorable prend toute la place dans la décision."
+        }
+      },
+      {
+        "id": "de263efb-a495-49c6-a487-969aad4edd27",
+        "label": "Notre Cerveau",
+        "category": "Cerveau",
+        "properties": {
+          "prop_1": "Pour économiser de l'énergie et décider vite face à la surcharge d'informations",
+          "prop_2": "le cerveau utilise des raccourcis mentaux automatiques appelés heuristiques",
+          "prop_3": "ce qui crée des erreurs systématiques de perception."
+        }
+      },
+      {
+        "id": "be35dfcd-67f2-4c07-89ee-97fcd039f904",
+        "label": "La voiture de vos rêves (ou la grossesse)",
+        "category": "Exemple",
+        "properties": {
+          "prop_1": "Vous venez d'acheter une nouvelle voiture (imaginons une citadine rouge) ou vous apprenez que vous allez être parent. Soudain, vous avez l'impression que tout le monde roule en citadine rouge ou que la ville est envahie de poussettes.",
+          "Processus mental": "Votre attention est focalisée sur un sujet précis. Votre cerveau filtre l'environnement et met en avant tout ce qui y correspond, créant l'illusion d'une augmentation soudaine alors que ces éléments étaient déjà présents avant, mais ignorés."
+        }
+      },
+      {
+        "id": "3bd83a00-f87b-49fc-a458-46a880b38806",
+        "label": "La petite critique au milieu des compliments",
+        "category": "Exemple",
+        "properties": {
+          "prop_1": "Vous présentez un projet devant un public. Neuf personnes vous font d'excellents retours, et une seule émet une critique constructive mineure. En sortant, vous ne pensez qu'à cette remarque négative et ruminez toute la journée.",
+          "Processus mental": "Votre attention est happée par l'élément conflictuel ou menaçant. Ce \"spotlight\" mental bloque l'accès aux autres possibilités (les retours positifs), vous empêchant d'avoir une vision objective de la situation."
+        }
+      },
+      {
+        "id": "98905f32-ed5d-4bf5-99d0-6f6329608b23",
+        "label": "La faim au supermarché",
+        "category": "Exemple",
+        "properties": {
+          "Vous allez faire vos courses en ayant le ventre vide. Résultat": "vous rentrez chez vous avec des quantités de snacks et de plats préparés dont vous n'aviez pas besoin, en oubliant la moitié des produits de votre liste de base.",
+          "Processus mental": "Votre faim mobilise toute votre attention sur la nourriture immédiate. Ce filtre attentionnel occulte vos objectifs initiaux (faire des courses rationnelles et équilibrées), rendant impossible l'envisage de s'en tenir à la liste."
+        }
+      },
+      {
+        "id": "9e31b0d7-99f3-47fb-a34e-ee89e8c6a1e9",
+        "label": "La publicité et les slogans",
+        "category": "Exemple",
+        "properties": {
+          "prop_1": "Vous entendez ou voyez quotidiennement la même publicité affirmant qu'une marque de dentifrice \"protège 2 fois plus longtemps\". Sans vérifier les études scientifiques, vous finissez par l'acheter en étant convaincu que c'est objectivement le meilleur.",
+          "Processus mental": "La répétition fréquente du message crée un sentiment de fluidité cognitive (l'information se rappelle facilement). Votre cerveau interprète cette aisance de traitement comme un signe de vérité, oubliant que la répétition d'une affirmation n'en fait pas un fait prouvé."
+        }
+      },
+      {
+        "id": "a20a86ef-46ab-4764-afb9-83a17a74207e",
+        "label": "Les 'Fake News'",
+        "category": "Exemple",
+        "properties": {
+          "prop_1": "Vous tombez à plusieurs reprises sur une rumeur ou une fausse citation partagée par différents comptes sur votre fil d'actualité. Même si elle vous paraissait douteuse au début, vous finissez par l'accepter comme un fait établi et la partagez à votre tour.",
+          "Processus mental": "L'exposition répétée à la même idée désensibilise votre esprit critique. La familiarité accumulée au fil des vues remplace la vérification des sources, rendant le mensonge \"vrai\" à votre esprit par force d'habitude."
+        }
+      },
+      {
+        "id": "67590459-7259-4401-b06a-6d9efbd7c680",
+        "label": "La fausse astuce de grand-mère",
+        "category": "Exemple",
+        "properties": {
+          "Vous vous brûlez légèrement en cuisinant et, instantanément, quelqu'un vous lance": "\"Vite, mets une bonne couche de beurre dessus pour stopper la douleur !\" Vous l'avez entendu toute votre enfance, c'est le premier réflexe que l'on vous a enseigné. Pourtant, sur le plan médical, c'est une très mauvaise idée : le corps gras emprisonne la chaleur, retarde le refroidissement de la peau et, pire encore, le beurre non stérile augmente considérablement les risques d'infection.",
+          "La répétition": "Ce conseil est transmis de génération en génération avec tellement d'assurance qu'on le croirait infaillible.",
+          "La confusion": "À force d'entendre cette méthode en boucle depuis toujours, le cerveau la traite avec une grande fluidité et la classe d'office dans la case \"vérité incontestable\".",
+          "Le résultat": "Le jour où l'accident arrive, on applique ce faux bon plan machinalement, sans jamais remettre en question cette habitude collective pourtant contredite par tous les médecins."
+        }
+      },
+      {
+        "id": "b075dd71-4d6d-4580-8b53-bbd56315caac",
+        "label": "La faute d'orthographe",
+        "category": "Exemple",
+        "properties": {
+          "Vous recevez un e-mail professionnel très long et parfaitement rédigé, contenant une cinquantaine de lignes de texte irréprochable. Seul petit détail": "à la troisième ligne, le mot \"professionnel\" est orthographié avec deux \"f\". Le soir, quand vous repensez au message, c'est le seul détail dont vous vous souvenez.",
+          "Processus mental": "L'erreur crée une rupture visuelle et logique par rapport à la norme (le texte correct). Votre cerveau zoome instantanément sur cette anomalie, faisant de cette petite faute l'élément le plus marquant de tout le document."
+        }
+      },
+      {
+        "id": "f83fbfb2-a537-43b3-82ae-11724272acce",
+        "label": "Le vêtement fluo dans la foule",
+        "category": "Exemple",
+        "properties": {
+          "prop_1": "Vous attendez sur le quai d'une gare bondée où des centaines de voyageurs habillés en noir, gris ou beige font les cent pas. Soudain, une personne passe avec une veste jaune fluo éclatante. Plus tard, si l'on vous demande comment était habillée la foule, c'est la seule tenue dont vous pourrez vous rappeler précisément.",
+          "Processus mental": "En sortant de l'uniformité visuelle ambiante, la veste fluo devient un élément isolé. Le cerveau capte ce contraste et l'enregistre en priorité, reléguant le reste du décor dans un flou indifférencié."
+        }
+      },
+      {
+        "id": "5e2587e9-1a9c-43c6-91fe-0cf630db0cdc",
+        "label": "Le prix en rouge",
+        "category": "Exemple",
+        "properties": {
+          "prop_1": "Dans un rayon de supermarché où tous les étiquetages des prix sont imprimés sur des étiquettes blanches identiques, un seul produit affiche un prix en gros feutre rouge fluo. C'est le seul article dont vous retiendrez le prix en sortant du magasin.",
+          "Le processus mental (Effet von Restorff)": "",
+          "prop_3": "L'élément qui rompt l'uniformité visuelle capte instantanément toute votre attention et se grave durablement dans votre mémoire, éclipsant le reste."
+        }
+      },
+      {
+        "id": "487b44eb-fb59-43dd-b4c4-5199386e83ca",
+        "label": "L'anecdote",
+        "category": "Exemple",
+        "properties": {
+          "Vous assistez à une longue réunion où un collègue présente des statistiques compliquées sur la gestion du temps en entreprise. Vous écoutez distraitement, jusqu'au moment où il prend un exemple précis": "\"Par exemple, si l'un de vous a déjà galéré à gérer un projet de dernière minute en solo la semaine dernière...\" Vous repensez immédiatement à votre propre galère de mardi dernier. En sortant de la réunion, c'est le seul point de toute la présentation dont vous vous souvenez dans les moindres détails.",
+          "prop_2": "Dès que l'information fait écho à votre vécu, votre cerveau active votre \"soi\" comme point de repère central."
+        }
+      },
+      {
+        "id": "e248aa10-f2b3-4c59-8b69-4173b0432247",
+        "label": "La description d'un symptôme",
+        "category": "Exemple",
+        "properties": {
+          "Vous lisez un article de santé sur les causes de la fatigue chronique. Soudain, vous tombez sur la ligne": "\"Une sensation de lourdeur dans les jambes en fin de journée, particulièrement si vous avez l'habitude de piétiner au travail.\" Vous pensez immédiatement à vos propres journées éreintantes. Le soir venu, c'est le seul symptôme dont vous vous souvenez par cœur.",
+          "prop_2": "En croisant un détail qui résonne directement avec votre propre quotidien, votre cerveau cesse de traiter l'information comme une donnée abstraite et l'associe à votre propre vécu, la rendant instantanément inoubliable."
+        }
+      },
+      {
+        "id": "434d241e-e0d0-4fc0-a957-911c42f0d0b4",
+        "label": "Le choix du prénom",
+        "category": "Exemple",
+        "properties": {
+          "prop_1": "Vous lisez un roman avec de nombreux personnages dont vous oubliez constamment les noms au fil des chapitres. Tout à coup, l'auteur introduit un personnage secondaire qui porte votre propre prénom (ou celui de votre enfant/conjoint). Quelques jours plus tard, alors que les autres personnages vous sortent de la tête, vous vous souvenez précisément de toutes les péripéties de celui qui partageait ce nom.",
+          "prop_2": "Votre cerveau est câblé pour s'intéresser en priorité à tout ce qui le touche de près ou de loin. Le lien direct avec votre identité crée un ancrage mémoriel ultra-puissant."
+        }
+      },
+      {
+        "id": "fd90ba1b-5d2c-4a3c-9620-073ca6512efb",
+        "label": "Le numéro de téléphone",
+        "category": "Exemple",
+        "properties": {
+          "prop_1": "Vous connaissez par cœur le numéro de téléphone fixe de vos parents depuis l'enfance, mais vous êtes totalement incapable de réciter le numéro de votre propre partenaire avec qui vous vivez pourtant depuis des années. Si votre téléphone portable n'a plus de batterie, vous êtes bloqué car vous ne l'avez jamais mémorisé.",
+          "Puisque le répertoire du smartphone stocke l'information de manière infaillible et permanente, le cerveau refuse d'investir de l'énergie pour l'apprendre. Il a remplacé la donnée par un raccourci": "\"C'est dans mes contacts\"."
+        }
+      },
+      {
+        "id": "2b19f867-1a97-4ead-863d-2f459131c023",
+        "label": "La recette de cuisine",
+        "category": "Exemple",
+        "properties": {
+          "Vous avez préparé un gâteau absolument délicieux le mois dernier en suivant une recette trouvée sur un blog culinaire, que vous avez soigneusement enregistrée dans vos favoris internet. Aujourd'hui, on vous demande comment vous avez fait": "impossible de vous rappeler les proportions exactes de sucre ou de beurre. Vous êtes obligé de rouvrir la page web.",
+          "prop_2": "Le cerveau externalise la charge mémorielle vers le stockage numérique. Il ne retient pas le contenu de la recette, mais l'existence du lien ou le nom du site web, créant une dépendance totale à l'outil technologique."
+        }
+      },
+      {
+        "id": "45407bf6-a4f5-434f-8e79-328cb4187bf8",
+        "label": "Le GPS vs. Boussole intérieure",
+        "category": "Exemple",
+        "properties": {
+          "Vous devez vous rendre à un nouveau rendez-vous dans une ville voisine. Autrefois, vous auriez imprimé un plan ou mémorisé les principales étapes du trajet. Aujourd'hui, vous tapez simplement l'adresse sur votre application GPS et vous vous laissez guider passivement. Une semaine plus tard, si on vous demande le chemin, vous en êtes incapable": "votre cerveau n'a pas enregistré le parcours, sachant pertinemment que le smartphone s'en chargera pour vous à nouveau.",
+          "Le processus mental": "",
+          "L'externalisation de la mémoire": "Face à une information disponible en permanence à l'extérieur, le cerveau fait une économie d'énergie cognitive.",
+          "Le stockage de l'indice": "Au lieu de mémoriser le contenu (le chemin, la date, la formule), il retient uniquement la porte d'accès (où chercher, quoi taper).",
+          "Le résultat": "Une amnésie immédiate de la réalité brute, compensée par une cartographie numérique externe."
+        }
+      },
+      {
+        "id": "809b6f29-8cfc-4ff6-ac31-ba4503c8729b",
+        "label": "Le piège du genre",
+        "category": "Exemple",
+        "properties": {
+          "prop_1": "Vous lisez le compte-rendu d'un procès où un(e) avocat(e) brillant(e) a magistralement démonté l'accusation pour sauver son client. Le texte ne précise pas explicitement son genre, mais mentionne des détails neutres. Plus tard, vous racontez l'histoire à un ami en employant systématiquement le pronom \"il\" et en qualifiant l'avocat d'un ton \"très autoritaire\", alors que le texte original décrivait une avocate calme et méthodique.",
+          "prop_2": "Le cerveau associe spontanément la figure d'autorité et de plaidoirie au stéréotype masculin. Il complète automatiquement les \"trous\" de la mémoire en s'appuyant sur des clichés culturels bien ancrés."
+        }
+      },
+      {
+        "id": "b900e969-eeb7-4f02-b9a4-9405f044abc3",
+        "label": "Le médecin et l'infirmière",
+        "category": "Exemple",
+        "properties": {
+          "prop_1": "Dans un hôpital, vous assistez à une scène où une femme en blouse blanche donne des instructions à un homme en tunique médicale. Quelques heures plus tard, on vous demande qui s'occupait du patient. Vous répondez machinalement que le médecin était l'homme et l'infirmière la femme, alors que c'était exactement l'inverse.",
+          "prop_2": "La hiérarchie des rôles médicaux est passée au filtre des stéréotypes de genre traditionnels. Votre cerveau a \"corrigé\" la réalité pour la faire entrer dans le schéma mental le plus prévisible et habituel."
+        }
+      },
+      {
+        "id": "5287b7fa-629e-414d-bd0d-d47d2668491d",
+        "label": "Le look du PDG",
+        "category": "Exemple",
+        "properties": {
+          "prop_1": "Vous participez à une visioconférence avec le directeur d'une grande entreprise technologique. Il porte un sweat-shirt à capuche basique et des baskets usées. Le lendemain, lorsque vous décrivez sa tenue à un collègue, vous soutenez qu'il portait \"un costume-cravate impeccable sur mesure\".",
+          "prop_2": "L'image mentale classique associée au statut de \"PDG\" a totalement écrasé la perception visuelle réelle. Le cerveau privilégie le stéréotype du costume de direction plutôt que d'accepter une incohérence par rapport à sa grille de lecture habituelle."
+        }
+      },
+      {
+        "id": "d601edb6-9e82-4da7-ad11-ba904f4d5c28",
+        "label": "La chanson publicitaire",
+        "category": "Exemple",
+        "properties": {
+          "prop_1": "Au début, vous détestez profondément la musique agaçante d'une publicité locale qui passe en boucle à la radio tous les matins sur le chemin du travail. Mais après trois semaines d'écoute quotidienne, vous vous surprenez à fredonner l'air sous la douche, et vous finissez même par trouver le morceau \"plutôt sympa\".",
+          "La réduction de l'inconnu": "À chaque répétition, la nouveauté et le danger perçu du stimulus diminuent. Le cerveau s'habitue sans effort conscient.",
+          "Le confort de la familiarité": "Ce qui est familier devient, pour le cerveau, plus sûr et donc plus agréable à traiter.",
+          "Le résultat": "Votre avis initial bascule du rejet à l'adhésion, uniquement grâce à la répétition de l'exposition."
+        }
+      },
+      {
+        "id": "96427619-4942-48d1-ba72-ca03089ba627",
+        "label": "L'effet de mode",
+        "category": "Exemple",
+        "properties": {
+          "prop_1": "Lorsque la mode des chaussures imposantes et massives (type dad shoes) est sortie, vous avez trouvé ça affreux et totalement ridicule. Pourtant, en les voyant portées partout autour de vous — dans la rue, sur les réseaux sociaux, en vitrine — de manière quotidienne pendant des mois, votre regard s'est apprivoisé. Finalement, vous finissez par vous en acheter une paire en vous disant que \"c'est tendance\".",
+          "prop_2": "À force d'être confronté visuellement à un objet, le cerveau assimile la nouveauté choquante à de la familiarité. L'esthétique n'a pas changé, mais votre tolérance et votre appréciation se sont construites par la simple force de la répétition."
+        }
+      },
+      {
+        "id": "8390ce7c-885a-4595-b25a-8ef6e979b230",
+        "label": "Le choix du vin",
+        "category": "Exemple",
+        "properties": {
+          "prop_1": "Devant le rayon des vins, vous devez choisir une bouteille au hasard parmi des dizaines de références que vous ne connaissez pas. Sans trop réfléchir, votre main se tend vers une bouteille dont l'étiquette vous dit vaguement quelque chose, sans que vous puissiez l'expliquer. En y repensant, c'est simplement parce que vous aviez aperçu cette même étiquette sur une affiche publicitaire dans le métro deux semaines plus tôt.",
+          "prop_2": "La familiarité visuelle crée un faux sentiment de confiance et de sécurité. Le cerveau privilégie l'option qu'il a déjà rencontrée, l'assimilant inconsciemment à un choix de meilleure qualité ou \"plus sûr\" que l'inconnu total."
+        }
+      },
+      {
+        "id": "bd9ea4aa-572f-49d2-b4c4-a611d3dc8e47",
+        "label": "La voiture rouge",
+        "category": "Exemple",
+        "properties": {
+          "prop_1": "Vous venez d'acheter une petite voiture citadine d'un rouge très spécifique. Le lendemain, en allant au travail, vous avez l'impression que la route est remplie exactement du même modèle et de la même couleur, alors que vous n'en aviez jamais remarqué une seule auparavant.",
+          "Le processus mental (Phénomène de Baader-Meinhof)": "",
+          "L'activation de l'attention": "Votre cerveau a enregistré une nouvelle information prioritaire (votre nouvel achat).",
+          "Le filtre de sélection": "Il se met à repérer et à sur-analyser activement ce stimulus précis dans votre environnement, là où il l'ignorait complètement auparavant.",
+          "Le résultat": "L'objet n'est pas devenu plus fréquent dans la réalité ; c'est votre cerveau qui est désormais hyper-sensibilisé à sa présence."
+        }
+      },
+      {
+        "id": "3712b1dd-259b-4026-a44c-322996f861eb",
+        "label": "Le mot nouveau",
+        "category": "Exemple",
+        "properties": {
+          "prop_1": "Vous apprenez un terme peu courant en feuilletant un livre un mardi (par exemple, le mot \"sérendipité\"). Le jeudi suivant, vous l'entendez prononcé par un journaliste à la télévision, puis vous le lisez dans un article de journal le samedi. Vous pensez à une coïncidence cosmique ou à un signe du destin.",
+          "prop_2": "Ce mot passait très probablement inaperçu sous vos yeux ou vos oreilles toutes les semaines auparavant, mais votre cerveau, fraîchement \"programmé\" pour le reconnaître, le sort instantanément du bruit ambiant pour le porter à votre conscience."
+        }
+      },
+      {
+        "id": "2719a571-34e1-41e5-9649-61570c3ecd98",
+        "label": "Le prénom rare",
+        "category": "Exemple",
+        "properties": {
+          "prop_1": "Vous choisissez un prénom un peu original pour votre nouveau-né, persuadé qu'il sera unique à l'école. Dès la semaine de la rentrée des classes, vous entendez ce même prénom dans la bouche de deux mères au parc, puis vous le lisez sur le faire-part de voisins. Vous avez l'impression que la terre entière a eu la même idée.",
+          "prop_2": "Le prénom n'a pas subitement envahi la population. C'est simplement que votre esprit est désormais câblé pour l'isoler et l'identifier immédiatement au milieu de centaines d'autres prénoms qu'il continue d'ignorer royalement."
+        }
+      },
+      {
+        "id": "a3dfd84a-d10a-48f2-bc67-d979b73c3b59",
+        "label": "Le violoniste du métro",
+        "category": "Exemple",
+        "properties": {
+          "prop_1": "Un grand musicien joue des partitions complexes de Bach sur un violon hors de prix dans une station de métro bondée aux heures de pointe, habillé de façon simple. Presque tout le monde l'ignore et jette à peine quelques pièces en passant. Pourtant, le même musicien, jouant exactement les mêmes morceaux sur la même scène d'une prestigieuse salle de concert philharmonique avec un billet à 100 euros, déclenche une standing ovation.",
+          "L'influence du décor": "Le cerveau n'évalue pas la valeur intrinsèque d'une chose de manière objective ; il s'appuie massivement sur les indices du cadre environnant (le lieu, les codes sociaux, l'ambiance).",
+          "Le biais d'évaluation": "Dans le métro, le contexte de \"bruit et de transport\" déclenche un réflexe d'évitement. Dans la salle de concert, le contexte de \"prestige\" conditionne l'admiration.",
+          "Le résultat": "La perception de la qualité de la musique est totalement modifiée par le simple changement de décor."
+        }
+      },
+      {
+        "id": "232ed07f-a8db-4d7b-ba17-ce2c32e0fcc2",
+        "label": "Le faux air conditionné",
+        "category": "Exemple",
+        "properties": {
+          "prop_1": "En plein hiver, vous entrez dans une salle de réunion où la température affiche pourtant un 20 °C tout à fait normal. Mais la pièce est décorée avec des affiches murales géantes représentant des plages tropicales de sable fin avec des cocotiers. Au bout de vingt minutes, plusieurs collaborateurs se plaignent qu'il fait \"trop chaud\" et demandent à baisser le chauffage.",
+          "prop_2": "Le cerveau intègre les indices visuels de l'environnement pour ajuster ses sensations physiques. L'évocation visuelle de la chaleur trompe la perception thermique réelle des occupants."
+        }
+      },
+      {
+        "id": "b6b65dc8-1835-488c-8609-2cdd9a1474a5",
+        "label": "Le vin de table étiqueté grand cru",
+        "category": "Exemple",
+        "properties": {
+          "prop_1": "Lors d'un dîner",
+          "prop_2": "on vous sert deux verres de vin rouge en vous affirmant que l'un est une bouteille de supermarché à 3 euros et l'autre un grand cru classé hors de prix. Vous trouvez le second infiniment plus raffiné",
+          "prop_3": "complexe et subtil. En réalité",
+          "prop_4": "les deux verres provenaient de la même et unique bouteille d'entrée de gamme."
+        }
+      },
+      {
+        "id": "dc7ba9a8-482b-4549-be3e-b883b0c202d5",
+        "label": "Échec de récupération",
+        "category": "Biais",
+        "properties": {
+          "prop_1": "Phénomène où une information est bien stockée dans votre mémoire à long terme mais où votre cerveau est incapable de la retrouver car il manque un point d'ancrage",
+          "prop_2": "un signal ou un indice extérieur pour la réveiller. Dès que l'indice adéquat réapparaît",
+          "prop_3": "le souvenir ressurgit instantanément.",
+          "prop_4": "Phénomène où une information est bien stockée dans votre mémoire à long terme",
+          "prop_5": "mais où votre cerveau est incapable de la retrouver car il manque un point d'ancrage"
+        }
+      },
+      {
+        "id": "9cb8b596-4608-4f7e-a276-4d78a23dd463",
+        "label": "Le mot sur le bout de la langue",
+        "category": "Exemple",
+        "properties": {
+          "Vous discutez avec un ami et vous voulez absolument citer le titre d'un film que vous adorez et avez vu dix fois. Impossible de mettre la main dessus": "vous savez qu'il est là",
+          "prop_2": "mais le titre refuse obstinément de venir. Dix minutes plus tard",
+          "prop_3": "alors que vous êtes passé à un autre sujet",
+          "votre ami lâche": "\"Ah oui",
+          "prop_5": "avec l'acteur principal qui jouait dans Matrix !\". Immédiatement",
+          "prop_6": "le titre complet du film vous revient à l'esprit."
+        }
+      },
+      {
+        "id": "7c059611-6ca1-40ba-af5d-147154f11a8c",
+        "label": "Le cours d'histoire bloqué dans la classe",
+        "category": "Exemple",
+        "properties": {
+          "prop_1": "Vous révisez un examen d'histoire chez vous dans votre chambre et vous maîtrisez parfaitement vos dates. Le lendemain",
+          "prop_2": "assis à votre table de composition dans la salle de classe",
+          "panique": "impossible de vous rappeler la date exacte d'un traité historique crucial. Vous sortez de l'épreuve frustré",
+          "prop_4": "et dès que vous franchissez la porte de l'école en retrouvant vos camarades",
+          "prop_5": "la date vous revient en tête d'un coup."
+        }
+      },
+      {
+        "id": "cfddea67-a1fd-4a7b-8b70-2263c2431535",
+        "label": "Le nom de l'ancienne collègue",
+        "category": "Exemple",
+        "properties": {
+          "prop_1": "Vous croisez par surprise une personne dans les allées d'un supermarché. Son visage vous dit vaguement quelque chose",
+          "prop_2": "vous savez que vous avez travaillé ensemble",
+          "prop_3": "mais son prénom vous échappe complètement malgré vos efforts. Le soir",
+          "prop_4": "en repensant à votre journée",
+          "l'image de la machine à café de votre ancien bureau vous revient": "soudain",
+          "prop_6": "son prénom surgit en une fraction de seconde."
+        }
+      },
+      {
+        "id": "e57a7e61-89e7-4ce2-8b1b-9cfb437831f2",
+        "label": "Le jour de pluie nostalgique",
+        "category": "Exemple",
+        "properties": {
+          "prop_1": "Vous vous réveillez un dimanche matin avec une grosse baisse de moral, sous une pluie battante et un ciel totalement gris. En buvant votre café, vous commencez à repenser à vos anciens emplois ou à vos relations passées, et vous n'avez en tête que les échecs, les disputes et les moments de solitude. Le lendemain, requinqué par le soleil et une excellente nouvelle professionnelle, vous repensez aux mêmes périodes de votre vie, mais cette fois, seuls les éclats de rire, les réussites et les bons moments vous reviennent à l'esprit."
+        }
+      },
+      {
+        "id": "d6ec3324-a41e-468e-888f-7468fd1e6943",
+        "label": "La dispute qui assombrit les vacances",
+        "category": "Exemple",
+        "properties": {
+          "prop_1": "Au beau milieu d'une semaine de vacances pourtant globalement idyllique",
+          "prop_2": "vous avez une vive discussion avec votre partenaire pour une broutille. Pendant les deux heures qui suivent",
+          "prop_3": "alors que vous ruminez votre colère",
+          "prop_4": "vous êtes convaincu(e) que ce voyage est \"un ratage total\"",
+          "prop_5": "vous remémorant tous les petits tracas",
+          "prop_6": "les retards de train et les mauvais restaurants des jours précédents. Le soir",
+          "prop_7": "après une réconciliation chaleureuse",
+          "prop_8": "ces contrariétés s'effacent et vous ne retenez plus que la beauté des paysages."
+        }
+      },
+      {
+        "id": "28e81687-1057-4209-8b9a-a41ec850d283",
+        "label": "L'optimisme de la réussite",
+        "category": "Exemple",
+        "properties": {
+          "prop_1": "Vous venez d'obtenir une promotion importante au travail. Porté par cette vague d'euphorie",
+          "prop_2": "vous vous remémorez vos années d'études ou vos débuts professionnels difficiles. Étrangement",
+          "prop_3": "les galères financières",
+          "prop_4": "les nuits blanches de révision et les échecs cuisants aux examens vous apparaissent sous un jour \"nostalgique et attendrissant\"",
+          "prop_5": "presque comme une aventure exaltante",
+          "prop_6": "alors que vous les aviez vécus comme un enfer absolu sur le moment."
+        }
+      },
+      {
+        "id": "57a3b8bc-1da7-4329-ba40-a216e3e3db02",
+        "label": "Le mot nouveau qu'on entend partout",
+        "category": "Exemple",
+        "properties": {
+          "prop_1": "Un ami vous parle d'un mot qu'il vient d'apprendre",
+          "prop_2": "disons « ubiquiste ». Le lendemain",
+          "prop_3": "vous l'entendez à la radio",
+          "prop_4": "puis vous le croisez dans un article."
+        }
+      },
+      {
+        "id": "2b5df9a5-eb4e-46df-9ad1-18ef1a5ea0d9",
+        "label": "La voiture qu'on vient d'acheter",
+        "category": "Exemple",
+        "properties": {
+          "prop_1": "Après avoir acheté un modèle de voiture précis",
+          "prop_2": "vous avez l'impression de croiser exactement le même modèle à chaque coin de rue."
+        }
+      },
+      {
+        "id": "3bcc6af4-75be-4e16-a3bd-d95442e2efa5",
+        "label": "Le diagnostic médical qu'on découvre",
+        "category": "Exemple",
+        "properties": {
+          "prop_1": "On vous diagnostique une maladie rare et",
+          "prop_2": "dans les jours qui suivent",
+          "prop_3": "vous avez l'impression que tout le monde en parle ou en est atteint."
+        }
+      },
+      {
+        "id": "296edcc7-e9cb-4676-a6b1-e032744b8514",
+        "label": "Faire les courses le ventre plein",
+        "category": "Exemple",
+        "properties": {
+          "prop_1": "Vous faites vos courses juste après un repas copieux et achetez très peu de nourriture",
+          "prop_2": "convaincu que cela suffira pour la semaine."
+        }
+      },
+      {
+        "id": "ed654def-d208-439f-805c-257d7dcf39ef",
+        "label": "La résolution prise à froid",
+        "category": "Exemple",
+        "properties": {
+          "prop_1": "En pleine forme et motivé",
+          "prop_2": "vous planifiez un programme sportif intensif pour les prochains mois",
+          "prop_3": "certain de tenir la cadence."
+        }
+      },
+      {
+        "id": "94367762-93ab-43dc-803e-035ae13f81c4",
+        "label": "Négocier un contrat sans colère",
+        "category": "Exemple",
+        "properties": {
+          "prop_1": "Calme et détendu",
+          "prop_2": "vous acceptez à l'avance une clause qui vous semble mineure",
+          "prop_3": "sans imaginer à quel point elle vous frustrera une fois appliquée."
+        }
+      },
+      {
+        "id": "97107666-dfc7-44f4-bb87-a1e97993812b",
+        "label": "Le médecin qui ne vaccine pas",
+        "category": "Exemple",
+        "properties": {
+          "prop_1": "Un parent refuse de faire vacciner son enfant par peur d'un effet secondaire rare",
+          "prop_2": "alors que ne pas vacciner expose l'enfant à un risque bien plus grand de contracter la maladie."
+        }
+      },
+      {
+        "id": "9f96d8d1-a87e-4cdb-855c-1151bc9ef73f",
+        "label": "Le sauveteur qui hésite à intervenir",
+        "category": "Exemple",
+        "properties": {
+          "prop_1": "Face à une personne en difficulté",
+          "prop_2": "un témoin hésite à porter secours par peur de mal faire",
+          "prop_3": "alors que ne rien faire est presque certainement plus dommageable."
+        }
+      },
+      {
+        "id": "f0e3ebe9-7167-4f7b-920e-88c05aff42b7",
+        "label": "L'investisseur qui ne vend pas",
+        "category": "Exemple",
+        "properties": {
+          "prop_1": "Un investisseur garde une action qu'il sait vouée à perdre de la valeur plutôt que de la vendre",
+          "prop_2": "car vendre \"activement\" à perte lui semble pire que simplement ne rien faire."
+        }
+      },
+      {
+        "id": "d7b0f171-3d3d-4359-8e53-68922f29605d",
+        "label": "Le test médical rare",
+        "category": "Exemple",
+        "properties": {
+          "prop_1": "On vous annonce qu'un test de dépistage est positif pour une maladie rare fiable à 99%",
+          "prop_2": "et vous en concluez que vous avez presque certainement la maladie."
+        }
+      },
+      {
+        "id": "705edaf0-7a28-47a9-9dbc-736332adc2b9",
+        "label": "L'ingénieur discret et méticuleux",
+        "category": "Exemple",
+        "properties": {
+          "prop_1": "On vous décrit une personne calme",
+          "prop_2": "méticuleuse et passionnée de détails",
+          "prop_3": "et vous devinez spontanément qu'elle est bibliothécaire plutôt qu'agricultrice."
+        }
+      },
+      {
+        "id": "c851f2ae-7e72-4225-86c3-397ba0171948",
+        "label": "La peur de l'attaque de requin",
+        "category": "Exemple",
+        "properties": {
+          "prop_1": "Après un reportage sur une attaque de requin",
+          "prop_2": "vous évitez de vous baigner en mer",
+          "prop_3": "convaincu que le risque est élevé."
+        }
+      },
+      {
+        "id": "42388962-cd64-427e-9a74-d65dcf490997",
+        "label": "La liste de courses avec un éléphant rose",
+        "category": "Exemple",
+        "properties": {
+          "prop_1": "Dans une liste de mots à mémoriser",
+          "prop_2": "celui qui décrit un « éléphant rose à roulettes » reste gravé",
+          "prop_3": "alors que les mots ordinaires environnants s'effacent vite."
+        }
+      },
+      {
+        "id": "b7ad94d5-bde7-43b1-ae57-24127bfee0dc",
+        "label": "Le collègue au costume improbable",
+        "category": "Exemple",
+        "properties": {
+          "prop_1": "Des années après",
+          "prop_2": "vous vous souvenez précisément du jour où un collègue est venu travailler en costume de super-héros",
+          "prop_3": "mais plus du contenu de la réunion."
+        }
+      },
+      {
+        "id": "301eda22-a8e5-4775-8efc-d0cb8533644d",
+        "label": "La blague absurde retenue par cœur",
+        "category": "Exemple",
+        "properties": {
+          "prop_1": "Sur dix blagues entendues à un dîner",
+          "prop_2": "c'est la plus absurde et improbable que vous racontez encore des mois plus tard."
+        }
+      },
+      {
+        "id": "29842980-9d26-49d0-aa07-17d2d0616851",
+        "label": "La règle de grammaire apprise en chanson",
+        "category": "Exemple",
+        "properties": {
+          "prop_1": "Vous retenez sans effort une règle de conjugaison présentée sous forme de comptine amusante",
+          "prop_2": "alors que la version du manuel scolaire vous avait complètement échappé."
+        }
+      },
+      {
+        "id": "5840f8bf-9512-4559-addb-42834ca966c1",
+        "label": "La publicité qu'on n'oublie pas",
+        "category": "Exemple",
+        "properties": {
+          "prop_1": "Des années après l'avoir vue une seule fois",
+          "prop_2": "vous vous souvenez parfaitement d'une publicité drôle",
+          "prop_3": "alors que des dizaines d'autres publicités sérieuses sont oubliées."
+        }
+      },
+      {
+        "id": "b097b1f4-de92-492e-9ae0-f0484b3dc6f2",
+        "label": "L'anecdote du prof qui plaisante",
+        "category": "Exemple",
+        "properties": {
+          "prop_1": "Le seul cours dont vous vous souvenez précisément dix ans après est celui où le professeur avait fait une blague mémorable en introduction."
+        }
+      },
+      {
+        "id": "916c5531-8b15-4c29-8d11-a80fdc4aa2bb",
+        "label": "Le mode d'emploi en pictogrammes",
+        "category": "Exemple",
+        "properties": {
+          "prop_1": "Vous suivez sans difficulté une notice de montage illustrée uniquement de schémas",
+          "prop_2": "alors qu'une version purement textuelle du même mode d'emploi vous aurait perdu."
+        }
+      },
+      {
+        "id": "3c67f0ae-d8bd-4eeb-a026-b72382ad1cb8",
+        "label": "Le visage reconnu, le nom oublié",
+        "category": "Exemple",
+        "properties": {
+          "prop_1": "Vous reconnaissez immédiatement le visage d'une personne croisée une seule fois il y a des années",
+          "prop_2": "mais êtes incapable de retrouver son nom."
+        }
+      },
+      {
+        "id": "3e18c8e6-12af-4894-ba92-f7c55ae3e60f",
+        "label": "Le cours retenu grâce aux schémas",
+        "category": "Exemple",
+        "properties": {
+          "prop_1": "Vous vous souvenez précisément d'un concept complexe grâce au schéma dessiné au tableau",
+          "prop_2": "bien plus que des explications orales qui l'accompagnaient."
+        }
+      },
+      {
+        "id": "5a11335c-d4be-4ddf-8454-12f8eab69b0f",
+        "label": "Une critique parmi dix compliments",
+        "category": "Exemple",
+        "properties": {
+          "prop_1": "Après une présentation très bien reçue",
+          "prop_2": "vous ne retenez que l'unique remarque négative formulée par un participant",
+          "prop_3": "et l'événement vous semble globalement raté."
+        }
+      },
+      {
+        "id": "a2dcb77b-d0e3-438a-a557-1fe2b4ae6e75",
+        "label": "La note négative sur dix avis positifs",
+        "category": "Exemple",
+        "properties": {
+          "prop_1": "Avant d'acheter un produit très bien noté",
+          "prop_2": "vous lisez en priorité les rares avis négatifs",
+          "prop_3": "qui influencent votre décision plus que la majorité des avis positifs."
+        }
+      },
+      {
+        "id": "711d464f-e414-4459-91a6-50fbc252e667",
+        "label": "La journée gâchée par un incident",
+        "category": "Exemple",
+        "properties": {
+          "prop_1": "Une journée globalement agréable est retenue comme « mauvaise » à cause d'un seul incident désagréable survenu le matin."
+        }
+      },
+      {
+        "id": "4ac37c01-083d-421f-9497-14a00099eb94",
+        "label": "Le prix barré en solde",
+        "category": "Exemple",
+        "properties": {
+          "prop_1": "Un vêtement affiché à 150 € barré et vendu à 90 € semble être une bonne affaire",
+          "prop_2": "même si sa valeur réelle est plus proche de 60 €."
+        }
+      },
+      {
+        "id": "fdba5f23-422f-4746-a868-6705571ee4cf",
+        "label": "La première offre dans une négociation salariale",
+        "category": "Exemple",
+        "properties": {
+          "prop_1": "Dans une négociation",
+          "prop_2": "la première somme proposée par l'employeur oriente fortement l'ensemble des échanges suivants",
+          "prop_3": "même si elle est volontairement basse."
+        }
+      },
+      {
+        "id": "85ddc2bc-860c-4988-82b5-960598217975",
+        "label": "La roue truquée et l'estimation en pourcentage",
+        "category": "Exemple",
+        "properties": {
+          "prop_1": "Des participants font tourner une roue truquée donnant un chiffre au hasard",
+          "puis on leur demande d'estimer le pourcentage de pays africains à l'ONU": "leur réponse est influencée par le chiffre tiré",
+          "prop_3": "pourtant sans rapport."
+        }
+      },
+      {
+        "id": "e12cc8a1-822e-4dab-89a6-5680fd80e60a",
+        "label": "La rumeur qui persiste malgré les preuves",
+        "category": "Exemple",
+        "properties": {
+          "prop_1": "Après avoir cru une rumeur sur un collègue",
+          "prop_2": "vous continuez à vous méfier de lui même après avoir reçu des preuves claires de son innocence."
+        }
+      },
+      {
+        "id": "0cef0a37-4fd4-42a8-9988-b54435be714f",
+        "label": "Le pronostic sportif jamais actualisé",
+        "category": "Exemple",
+        "properties": {
+          "prop_1": "Convaincu qu'une équipe va perdre en début de saison",
+          "prop_2": "vous continuez à sous-estimer ses chances de victoire malgré une série de bons résultats."
+        }
+      },
+      {
+        "id": "4acf868c-4abb-4a95-a39b-44098961a586",
+        "label": "L'investisseur qui ignore les bons résultats",
+        "category": "Exemple",
+        "properties": {
+          "prop_1": "Persuadé qu'une entreprise est un mauvais investissement",
+          "prop_2": "un actionnaire continue de sous-évaluer son action malgré plusieurs trimestres de résultats excellents."
+        }
+      },
+      {
+        "id": "48485a04-cc55-4a0b-a128-78ea22524d02",
+        "label": "Le prix moyen qui paraît cher",
+        "category": "Exemple",
+        "properties": {
+          "prop_1": "Après avoir consulté un menu très cher",
+          "prop_2": "un plat à prix moyen dans un autre restaurant paraît soudain bon marché",
+          "prop_3": "alors qu'il est objectivement dans la moyenne."
+        }
+      },
+      {
+        "id": "82978103-828b-4785-ae12-184b888c42a3",
+        "label": "Le poids du sac",
+        "category": "Exemple",
+        "properties": {
+          "prop_1": "Après avoir porté un sac très lourd",
+          "prop_2": "un sac de poids moyen semble étonnamment léger en comparaison",
+          "prop_3": "alors que son poids réel n'a pas changé."
+        }
+      },
+      {
+        "id": "f59c1b12-1d70-4882-831f-451177fc3dba",
+        "label": "L'appartement qui semble spacieux",
+        "category": "Exemple",
+        "properties": {
+          "prop_1": "Après avoir visité un studio minuscule",
+          "prop_2": "un appartement de taille modeste paraît soudain spacieux et confortable en comparaison."
+        }
+      },
+      {
+        "id": "fcbbf0bb-421e-4e4e-a5cd-23cbd27f71bf",
+        "label": "Choisir entre deux téléviseurs côte à côte",
+        "category": "Exemple",
+        "properties": {
+          "prop_1": "En magasin",
+          "prop_2": "deux téléviseurs affichés côte à côte semblent très différents en qualité d'image",
+          "prop_3": "mais une fois l'un d'eux installé seul chez vous",
+          "prop_4": "la différence devient à peine perceptible."
+        }
+      },
+      {
+        "id": "722d90f3-8335-4481-8721-b8235bd9e774",
+        "label": "Le choix de poste entre deux offres d'emploi",
+        "category": "Exemple",
+        "properties": {
+          "prop_1": "En comparant deux offres d'emploi ligne par ligne",
+          "prop_2": "un léger écart de salaire semble déterminant",
+          "prop_3": "alors qu'il aurait été jugé insignifiant si chaque offre avait été évaluée séparément."
+        }
+      },
+      {
+        "id": "f2955cd0-8238-4a60-af0d-e727c713fa87",
+        "label": "Deux appartements presque identiques",
+        "category": "Exemple",
+        "properties": {
+          "prop_1": "En visitant deux appartements l'un après l'autre",
+          "prop_2": "une différence mineure de luminosité devient le critère décisif",
+          "prop_3": "alors qu'elle n'aurait pas été remarquée en évaluant chaque bien séparément."
+        }
+      },
+      {
+        "id": "a016ede8-e498-4d52-bb94-daced971ab17",
+        "label": "Le salaire perçu comme seule source de bonheur",
+        "category": "Exemple",
+        "properties": {
+          "prop_1": "En imaginant sa vie avec un salaire deux fois plus élevé",
+          "prop_2": "on la projette comme bien plus heureuse",
+          "prop_3": "en négligeant tous les autres facteurs (santé",
+          "prop_4": "relations",
+          "prop_5": "stress) qui la composent réellement."
+        }
+      },
+      {
+        "id": "f87477e7-b30d-4689-acfb-786a8b9aac4b",
+        "label": "Le déménagement vers une région ensoleillée",
+        "category": "Exemple",
+        "properties": {
+          "prop_1": "On imagine qu'un déménagement vers une région au climat plus agréable rendra bien plus heureux",
+          "prop_2": "en oubliant que le quotidien restera largement similaire sur les autres plans."
+        }
+      },
+      {
+        "id": "38367551-b87a-48c6-932e-9f0119f5ba59",
+        "label": "La note d'examen jugée décisive",
+        "category": "Exemple",
+        "properties": {
+          "prop_1": "Avant un examen important",
+          "prop_2": "un étudiant est convaincu qu'un échec ruinerait définitivement son avenir",
+          "prop_3": "en focalisant toute son anxiété sur ce seul événement."
+        }
+      },
+      {
+        "id": "83770309-89aa-48a0-b1d5-3b0aa128301c",
+        "label": "Le steak 90% maigre",
+        "category": "Exemple",
+        "properties": {
+          "prop_1": "Une viande présentée comme « 90% sans matière grasse » est perçue plus favorablement que la même viande présentée comme « contenant 10% de matière grasse »",
+          "prop_2": "alors que l'information est strictement identique."
+        }
+      },
+      {
+        "id": "7119d0e9-4a8f-429d-92bd-debe9583685e",
+        "label": "L'opération chirurgicale à risque",
+        "category": "Exemple",
+        "properties": {
+          "prop_1": "Un patient accepte plus facilement une opération présentée avec « 90% de chances de survie » qu'avec « 10% de risque de décès »",
+          "prop_2": "bien que les deux formulations décrivent exactement le même risque."
+        }
+      },
+      {
+        "id": "c4f38c54-57c0-4ada-8590-c3052a52eec9",
+        "label": "Le taux de réussite scolaire",
+        "category": "Exemple",
+        "properties": {
+          "prop_1": "Une école affichant « 95% de réussite au bac » paraît plus attractive qu'une école affichant « 5% d'échec au bac »",
+          "prop_2": "alors que les deux chiffres décrivent la même réalité."
+        }
+      },
+      {
+        "id": "304206a3-0748-4bd9-925f-4917d32d4a12",
+        "label": "L'augmentation de salaire",
+        "category": "Exemple",
+        "properties": {
+          "prop_1": "Un salarié se réjouit d'une augmentation de salaire de 3%",
+          "prop_2": "sans réaliser que l'inflation de 4% sur la même période fait en réalité baisser son pouvoir d'achat."
+        }
+      },
+      {
+        "id": "ea8aac12-a2cb-4ae1-8f84-1795af1e2784",
+        "label": "Le prix d'achat comparé sur 20 ans",
+        "category": "Exemple",
+        "properties": {
+          "prop_1": "On compare le prix d'une maison achetée il y a 20 ans à son prix actuel et on en conclut qu'elle a énormément pris de valeur",
+          "prop_2": "sans ajuster ces montants à l'inflation cumulée sur la période."
+        }
+      },
+      {
+        "id": "275e864c-a0a0-467f-8c54-58a391ca44e2",
+        "label": "Le bonus perçu comme un cadeau",
+        "category": "Exemple",
+        "properties": {
+          "prop_1": "Un employé perçoit une prime exceptionnelle comme un vrai gain de pouvoir d'achat",
+          "prop_2": "même durant une période de forte inflation qui annule en réalité une bonne partie de ce gain."
+        }
+      }
+    ],
+    "relationships": [
+      {
+        "id": "e_1_hxnm",
+        "type": "IMPLIQUE",
+        "source": "2a1976e3-def0-4967-a22d-ff7079253d4f",
+        "target": "0353572f-acb4-4bbd-9637-94200f82a203",
+        "properties": {
+          "prop_1": "Notre cerveau est submergé d'informations et doit faire un tri (filtrer) pour ne retenir que ce qui a déjà été amorcé ou rendu familier par la répétition."
+        }
+      },
+      {
+        "id": "e_2_4okl",
+        "type": "IMPLIQUE",
+        "source": "2a1976e3-def0-4967-a22d-ff7079253d4f",
+        "target": "c579a650-6d64-44e9-a5ff-0202684ee599",
+        "properties": {}
+      },
+      {
+        "id": "e_3_14cj",
+        "type": "IMPLIQUE",
+        "source": "2a1976e3-def0-4967-a22d-ff7079253d4f",
+        "target": "b6879047-c20a-44f4-bae0-d2adbc9a4a1a",
+        "properties": {}
+      },
+      {
+        "id": "e_4_zerk",
+        "type": "IMPLIQUE",
+        "source": "2a1976e3-def0-4967-a22d-ff7079253d4f",
+        "target": "1dc748db-5478-400d-aa95-199785e98217",
+        "properties": {}
+      },
+      {
+        "id": "e_5_08vy",
+        "type": "IMPLIQUE",
+        "source": "2a1976e3-def0-4967-a22d-ff7079253d4f",
+        "target": "45bfbeeb-2b99-4a33-9287-ad42e28f440f",
+        "properties": {}
+      },
+      {
+        "id": "e_6_wqbs",
+        "type": "IMPLIQUE",
+        "source": "1970552a-548b-4504-a51c-01beb00e19c8",
+        "target": "718d32be-7a70-4860-9588-f64db84a4baa",
+        "properties": {}
+      },
+      {
+        "id": "e_7_ooki",
+        "type": "IMPLIQUE",
+        "source": "1970552a-548b-4504-a51c-01beb00e19c8",
+        "target": "70f26c35-5943-4554-a027-c2a4b96c98a1",
+        "properties": {}
+      },
+      {
+        "id": "e_8_awkv",
+        "type": "IMPLIQUE",
+        "source": "1970552a-548b-4504-a51c-01beb00e19c8",
+        "target": "7bf6e32b-f37d-468f-b60c-ba3189a2b281",
+        "properties": {}
+      },
+      {
+        "id": "e_9_wglx",
+        "type": "IMPLIQUE",
+        "source": "1970552a-548b-4504-a51c-01beb00e19c8",
+        "target": "a7044da0-52eb-4d82-a8b2-9a1a7f4dd15c",
+        "properties": {}
+      },
+      {
+        "id": "e_10_dhtm",
+        "type": "IMPLIQUE",
+        "source": "1970552a-548b-4504-a51c-01beb00e19c8",
+        "target": "b0ce1500-9df0-4395-81c4-3755392963f2",
+        "properties": {}
+      },
+      {
+        "id": "e_11_kxqm",
+        "type": "IMPLIQUE",
+        "source": "65c06cb3-69e7-41fc-b87f-3f939d056d94",
+        "target": "10e19a26-4d73-4d0d-bc2d-e15827baa05c",
+        "properties": {}
+      },
+      {
+        "id": "e_12_mkwy",
+        "type": "IMPLIQUE",
+        "source": "65c06cb3-69e7-41fc-b87f-3f939d056d94",
+        "target": "95d91a65-c535-4061-8dd8-20c95f592579",
+        "properties": {}
+      },
+      {
+        "id": "e_13_5t1f",
+        "type": "IMPLIQUE",
+        "source": "65c06cb3-69e7-41fc-b87f-3f939d056d94",
+        "target": "c47cd210-ef57-461c-8d9b-f0903672ccb0",
+        "properties": {}
+      },
+      {
+        "id": "e_14_pj2s",
+        "type": "IMPLIQUE",
+        "source": "65c06cb3-69e7-41fc-b87f-3f939d056d94",
+        "target": "802621aa-e5bd-46cf-8c8f-e5e6b833222f",
+        "properties": {}
+      },
+      {
+        "id": "e_15_zgtk",
+        "type": "IMPLIQUE",
+        "source": "65c06cb3-69e7-41fc-b87f-3f939d056d94",
+        "target": "0b04b165-ce00-42b5-91d5-f34b761dacfc",
+        "properties": {}
+      },
+      {
+        "id": "e_16_2unn",
+        "type": "IMPLIQUE",
+        "source": "65c06cb3-69e7-41fc-b87f-3f939d056d94",
+        "target": "b9c00cfa-73ed-4a9e-8f9b-c4eeaf54bae9",
+        "properties": {}
+      },
+      {
+        "id": "e_17_v478",
+        "type": "IMPLIQUE",
+        "source": "69f2609d-6bd8-4f07-8a9a-ec7852826cda",
+        "target": "66055844-7315-488f-b9ce-6639b03843ae",
+        "properties": {}
+      },
+      {
+        "id": "e_18_yj86",
+        "type": "IMPLIQUE",
+        "source": "69f2609d-6bd8-4f07-8a9a-ec7852826cda",
+        "target": "7b961bc6-d471-4d52-80a9-29b3cdac13cb",
+        "properties": {}
+      },
+      {
+        "id": "e_19_ms4g",
+        "type": "IMPLIQUE",
+        "source": "69f2609d-6bd8-4f07-8a9a-ec7852826cda",
+        "target": "f49d41b9-e37e-4205-9308-6cb9618dbb57",
+        "properties": {}
+      },
+      {
+        "id": "e_20_sz8v",
+        "type": "IMPLIQUE",
+        "source": "69f2609d-6bd8-4f07-8a9a-ec7852826cda",
+        "target": "ea966319-b764-4837-aa5c-5b0cdb4c5356",
+        "properties": {}
+      },
+      {
+        "id": "e_21_vnc7",
+        "type": ".",
+        "source": "0353572f-acb4-4bbd-9637-94200f82a203",
+        "target": "15c3f7ca-8cdb-4fa9-b1b7-ba16ac8d24c9",
+        "properties": {}
+      },
+      {
+        "id": "e_22_20eq",
+        "type": ".",
+        "source": "0353572f-acb4-4bbd-9637-94200f82a203",
+        "target": "7e965bea-bdb8-4cb6-bc91-286842553f2d",
+        "properties": {}
+      },
+      {
+        "id": "e_23_f5ic",
+        "type": ".",
+        "source": "0353572f-acb4-4bbd-9637-94200f82a203",
+        "target": "3b49c1e4-4920-49af-8022-b3326d69a01f",
+        "properties": {}
+      },
+      {
+        "id": "e_24_z2t1",
+        "type": ".",
+        "source": "0353572f-acb4-4bbd-9637-94200f82a203",
+        "target": "56df17cc-8c0d-4b1c-b464-b555aca00d7d",
+        "properties": {}
+      },
+      {
+        "id": "e_25_ywam",
+        "type": ".",
+        "source": "0353572f-acb4-4bbd-9637-94200f82a203",
+        "target": "bc000663-c8f9-43d2-928f-14b91e05283a",
+        "properties": {}
+      },
+      {
+        "id": "e_27_stb2",
+        "type": ".",
+        "source": "0353572f-acb4-4bbd-9637-94200f82a203",
+        "target": "0c01e471-4ee9-49b7-ae81-1dd6f8e58b2d",
+        "properties": {}
+      },
+      {
+        "id": "e_28_vbjx",
+        "type": ".",
+        "source": "0353572f-acb4-4bbd-9637-94200f82a203",
+        "target": "7ebf2ae1-a3cf-438a-b81f-0a2f657805f2",
+        "properties": {}
+      },
+      {
+        "id": "e_29_appy",
+        "type": ".",
+        "source": "0353572f-acb4-4bbd-9637-94200f82a203",
+        "target": "566b5886-8d71-4c79-bacb-db7409de1bc1",
+        "properties": {}
+      },
+      {
+        "id": "e_30_zxmp",
+        "type": ".",
+        "source": "0353572f-acb4-4bbd-9637-94200f82a203",
+        "target": "e2452e29-5028-4b41-bd7a-7d777413d6ac",
+        "properties": {}
+      },
+      {
+        "id": "e_31_9egx",
+        "type": ".",
+        "source": "0353572f-acb4-4bbd-9637-94200f82a203",
+        "target": "fdb6afe1-b8f6-4ffc-8e22-7d9ea67aa000",
+        "properties": {}
+      },
+      {
+        "id": "e_32_r1yb",
+        "type": ".",
+        "source": "0353572f-acb4-4bbd-9637-94200f82a203",
+        "target": "720469df-3e4c-4ed0-9167-1e4dc672ba5c",
+        "properties": {}
+      },
+      {
+        "id": "e_33_6uoa",
+        "type": ".",
+        "source": "c579a650-6d64-44e9-a5ff-0202684ee599",
+        "target": "a96e2b2a-c3b6-4991-abbe-0359e2cb26e7",
+        "properties": {}
+      },
+      {
+        "id": "e_34_bsux",
+        "type": ".",
+        "source": "c579a650-6d64-44e9-a5ff-0202684ee599",
+        "target": "b52ede92-d691-427e-946b-99ba85180f98",
+        "properties": {}
+      },
+      {
+        "id": "e_35_zc77",
+        "type": ".",
+        "source": "c579a650-6d64-44e9-a5ff-0202684ee599",
+        "target": "f1a0aebf-5120-422d-91d1-94aa7a1b1e18",
+        "properties": {}
+      },
+      {
+        "id": "e_36_f6nw",
+        "type": ".",
+        "source": "c579a650-6d64-44e9-a5ff-0202684ee599",
+        "target": "dcf4bea1-b835-468b-b928-b784883c2d9b",
+        "properties": {}
+      },
+      {
+        "id": "e_37_o9ze",
+        "type": ".",
+        "source": "c579a650-6d64-44e9-a5ff-0202684ee599",
+        "target": "aecbdedb-65ac-440e-9e62-64355a58c2cf",
+        "properties": {}
+      },
+      {
+        "id": "e_38_swfn",
+        "type": ".",
+        "source": "c579a650-6d64-44e9-a5ff-0202684ee599",
+        "target": "4ccbb52c-98f7-4604-b27f-85e9abe48adf",
+        "properties": {}
+      },
+      {
+        "id": "e_39_wgw6",
+        "type": ".",
+        "source": "b6879047-c20a-44f4-bae0-d2adbc9a4a1a",
+        "target": "69c57704-7937-473a-a032-5c5a9076e850",
+        "properties": {}
+      },
+      {
+        "id": "e_40_mxjy",
+        "type": ".",
+        "source": "b6879047-c20a-44f4-bae0-d2adbc9a4a1a",
+        "target": "6e8bd7be-aa0b-4c30-be34-4e8e558a1a3a",
+        "properties": {}
+      },
+      {
+        "id": "e_41_0yu9",
+        "type": ".",
+        "source": "b6879047-c20a-44f4-bae0-d2adbc9a4a1a",
+        "target": "2e49f2a9-1663-4521-9265-6d22d8a27461",
+        "properties": {}
+      },
+      {
+        "id": "e_42_ai8t",
+        "type": ".",
+        "source": "b6879047-c20a-44f4-bae0-d2adbc9a4a1a",
+        "target": "0ee7a1e2-5173-4739-b56b-afffbb0376db",
+        "properties": {}
+      },
+      {
+        "id": "e_43_as8k",
+        "type": ".",
+        "source": "b6879047-c20a-44f4-bae0-d2adbc9a4a1a",
+        "target": "8bd69e1e-a737-4d0c-baf1-fc54d8d57024",
+        "properties": {}
+      },
+      {
+        "id": "e_44_it2p",
+        "type": ".",
+        "source": "b6879047-c20a-44f4-bae0-d2adbc9a4a1a",
+        "target": "ef012956-f53a-4782-ba19-7d48c3388ac5",
+        "properties": {}
+      },
+      {
+        "id": "e_45_1sd4",
+        "type": ".",
+        "source": "b6879047-c20a-44f4-bae0-d2adbc9a4a1a",
+        "target": "0ecdff02-eaaa-40d4-81a9-e24750909286",
+        "properties": {}
+      },
+      {
+        "id": "e_46_xatg",
+        "type": ".",
+        "source": "b6879047-c20a-44f4-bae0-d2adbc9a4a1a",
+        "target": "cec82655-214a-4a30-9d0e-6f2cebdc567e",
+        "properties": {}
+      },
+      {
+        "id": "e_47_6pca",
+        "type": ".",
+        "source": "1dc748db-5478-400d-aa95-199785e98217",
+        "target": "398f8bd7-ded0-4d82-a73c-804399cf9714",
+        "properties": {}
+      },
+      {
+        "id": "e_48_7hy2",
+        "type": ".",
+        "source": "1dc748db-5478-400d-aa95-199785e98217",
+        "target": "cdfa96d8-bec2-4e8c-ae19-ee73f429c6e0",
+        "properties": {}
+      },
+      {
+        "id": "e_49_xmdi",
+        "type": ".",
+        "source": "1dc748db-5478-400d-aa95-199785e98217",
+        "target": "ff3c42f0-97ed-4baf-8711-2fd2ae0e428d",
+        "properties": {}
+      },
+      {
+        "id": "e_50_fsca",
+        "type": ".",
+        "source": "1dc748db-5478-400d-aa95-199785e98217",
+        "target": "73d930ff-6f13-4aa3-bb9f-bdd3166ca5df",
+        "properties": {}
+      },
+      {
+        "id": "e_51_imlz",
+        "type": ".",
+        "source": "1dc748db-5478-400d-aa95-199785e98217",
+        "target": "db93c459-ea03-4030-8484-cbdf474e4de6",
+        "properties": {}
+      },
+      {
+        "id": "e_52_0ow2",
+        "type": ".",
+        "source": "1dc748db-5478-400d-aa95-199785e98217",
+        "target": "8ece8c80-7c5c-4f99-966a-cde3a5f9ccac",
+        "properties": {}
+      },
+      {
+        "id": "e_53_yr30",
+        "type": ".",
+        "source": "1dc748db-5478-400d-aa95-199785e98217",
+        "target": "f383f661-71d6-417a-bf59-fa6c7a7eccc3",
+        "properties": {}
+      },
+      {
+        "id": "e_54_bk54",
+        "type": ".",
+        "source": "1dc748db-5478-400d-aa95-199785e98217",
+        "target": "affe4b23-15c1-4a95-9256-9abf00e210d3",
+        "properties": {}
+      },
+      {
+        "id": "e_55_l1mu",
+        "type": ".",
+        "source": "1dc748db-5478-400d-aa95-199785e98217",
+        "target": "5551b7e8-df4f-4bb1-bae0-cede48ca2a5f",
+        "properties": {}
+      },
+      {
+        "id": "e_56_j354",
+        "type": ".",
+        "source": "1dc748db-5478-400d-aa95-199785e98217",
+        "target": "22550712-c0f5-4ea1-9b2b-872322760b8f",
+        "properties": {}
+      },
+      {
+        "id": "e_57_y0ib",
+        "type": ".",
+        "source": "1dc748db-5478-400d-aa95-199785e98217",
+        "target": "5d67d9f0-c95a-4320-8c04-7c003ae29626",
+        "properties": {}
+      },
+      {
+        "id": "e_58_k6er",
+        "type": ".",
+        "source": "1dc748db-5478-400d-aa95-199785e98217",
+        "target": "a0a37709-4135-4a5e-9082-270f527711e5",
+        "properties": {}
+      },
+      {
+        "id": "e_59_mg9t",
+        "type": ".",
+        "source": "1dc748db-5478-400d-aa95-199785e98217",
+        "target": "10e430a5-27ac-4144-8511-b1c45e0c823e",
+        "properties": {}
+      },
+      {
+        "id": "e_60_fc1e",
+        "type": ".",
+        "source": "45bfbeeb-2b99-4a33-9287-ad42e28f440f",
+        "target": "917e6fde-e1b2-4e09-b94f-3d58616b0f2a",
+        "properties": {}
+      },
+      {
+        "id": "e_61_1y1k",
+        "type": ".",
+        "source": "45bfbeeb-2b99-4a33-9287-ad42e28f440f",
+        "target": "33ac7838-50b5-4f79-839e-fde4c9f82726",
+        "properties": {}
+      },
+      {
+        "id": "e_62_oisq",
+        "type": ".",
+        "source": "45bfbeeb-2b99-4a33-9287-ad42e28f440f",
+        "target": "54d5c0d1-2869-4a59-b54d-7a56bb87b137",
+        "properties": {}
+      },
+      {
+        "id": "e_63_0vyx",
+        "type": ".",
+        "source": "718d32be-7a70-4860-9588-f64db84a4baa",
+        "target": "d8c3257d-e40a-4ca0-8128-3c977bbb531a",
+        "properties": {}
+      },
+      {
+        "id": "e_64_418y",
+        "type": ".",
+        "source": "718d32be-7a70-4860-9588-f64db84a4baa",
+        "target": "f3fc29d7-18bb-401a-991f-b6b595259ab7",
+        "properties": {}
+      },
+      {
+        "id": "e_65_thmf",
+        "type": ".",
+        "source": "718d32be-7a70-4860-9588-f64db84a4baa",
+        "target": "ac7aa519-2f9f-4b55-98c3-03ee5095e047",
+        "properties": {}
+      },
+      {
+        "id": "e_66_32gr",
+        "type": ".",
+        "source": "718d32be-7a70-4860-9588-f64db84a4baa",
+        "target": "fd71f3d1-fcf0-43b0-b2e0-adf35ca3f5b2",
+        "properties": {}
+      },
+      {
+        "id": "e_67_8iuv",
+        "type": ".",
+        "source": "718d32be-7a70-4860-9588-f64db84a4baa",
+        "target": "3a7ee8f1-5228-43b2-98ae-56e1e7365e82",
+        "properties": {}
+      },
+      {
+        "id": "e_68_enez",
+        "type": ".",
+        "source": "718d32be-7a70-4860-9588-f64db84a4baa",
+        "target": "bda30ff5-fd0f-463f-b5f4-5425e8d8a9c3",
+        "properties": {}
+      },
+      {
+        "id": "e_69_bood",
+        "type": ".",
+        "source": "718d32be-7a70-4860-9588-f64db84a4baa",
+        "target": "b74a5023-b8b6-4c93-b94b-07e053cc04e5",
+        "properties": {}
+      },
+      {
+        "id": "e_70_0grx",
+        "type": ".",
+        "source": "718d32be-7a70-4860-9588-f64db84a4baa",
+        "target": "d48822be-bda0-410c-8694-a587817e5e00",
+        "properties": {}
+      },
+      {
+        "id": "e_71_cifu",
+        "type": ".",
+        "source": "718d32be-7a70-4860-9588-f64db84a4baa",
+        "target": "e4277c4b-4ba0-4065-9bdf-f7c3d4456f8b",
+        "properties": {}
+      },
+      {
+        "id": "e_72_bcr7",
+        "type": ".",
+        "source": "718d32be-7a70-4860-9588-f64db84a4baa",
+        "target": "ebcce980-e81f-4ea3-966b-696ea2d5b072",
+        "properties": {}
+      },
+      {
+        "id": "e_73_zq7z",
+        "type": ".",
+        "source": "718d32be-7a70-4860-9588-f64db84a4baa",
+        "target": "eea34542-eff3-4657-b7db-9bdeb91b0626",
+        "properties": {}
+      },
+      {
+        "id": "e_74_jt9y",
+        "type": ".",
+        "source": "718d32be-7a70-4860-9588-f64db84a4baa",
+        "target": "92967425-9ff3-4539-8358-de040ed20c6b",
+        "properties": {}
+      },
+      {
+        "id": "e_75_mf43",
+        "type": ".",
+        "source": "718d32be-7a70-4860-9588-f64db84a4baa",
+        "target": "3e797d43-8e03-4e09-ab91-2b98037deec5",
+        "properties": {}
+      },
+      {
+        "id": "e_76_rfi8",
+        "type": ".",
+        "source": "70f26c35-5943-4554-a027-c2a4b96c98a1",
+        "target": "e5674fcb-3ddb-4fa5-b466-a35f9d3e8f76",
+        "properties": {}
+      },
+      {
+        "id": "e_77_mztk",
+        "type": ".",
+        "source": "70f26c35-5943-4554-a027-c2a4b96c98a1",
+        "target": "5da429b9-b472-4f1b-b48a-ffd9f88c4069",
+        "properties": {}
+      },
+      {
+        "id": "e_78_1a6w",
+        "type": ".",
+        "source": "70f26c35-5943-4554-a027-c2a4b96c98a1",
+        "target": "85663ce3-9de1-44a6-8201-bbf3d4c6a5cb",
+        "properties": {}
+      },
+      {
+        "id": "e_79_iaap",
+        "type": ".",
+        "source": "70f26c35-5943-4554-a027-c2a4b96c98a1",
+        "target": "f12e3b20-b30a-4924-97ef-62bd1960d69a",
+        "properties": {}
+      },
+      {
+        "id": "e_80_6knl",
+        "type": ".",
+        "source": "70f26c35-5943-4554-a027-c2a4b96c98a1",
+        "target": "9f6618bd-35aa-4645-8941-1d7f0225cfad",
+        "properties": {}
+      },
+      {
+        "id": "e_81_cl81",
+        "type": ".",
+        "source": "70f26c35-5943-4554-a027-c2a4b96c98a1",
+        "target": "4de4313a-3ac9-4699-8efd-0b270fcc07f0",
+        "properties": {}
+      },
+      {
+        "id": "e_82_1a9j",
+        "type": ".",
+        "source": "70f26c35-5943-4554-a027-c2a4b96c98a1",
+        "target": "4381d222-4485-41e0-98d4-94a8ebcdf5be",
+        "properties": {}
+      },
+      {
+        "id": "e_83_46bu",
+        "type": ".",
+        "source": "70f26c35-5943-4554-a027-c2a4b96c98a1",
+        "target": "c3661fee-68e7-4908-add6-72ae8c140e30",
+        "properties": {}
+      },
+      {
+        "id": "e_84_xgao",
+        "type": ".",
+        "source": "70f26c35-5943-4554-a027-c2a4b96c98a1",
+        "target": "e1a1136b-99fd-472a-bf62-3e4741782089",
+        "properties": {}
+      },
+      {
+        "id": "e_85_eb46",
+        "type": ".",
+        "source": "70f26c35-5943-4554-a027-c2a4b96c98a1",
+        "target": "256b6cea-3d99-4c3a-af4b-717e6dc818d8",
+        "properties": {}
+      },
+      {
+        "id": "e_86_flpf",
+        "type": ".",
+        "source": "70f26c35-5943-4554-a027-c2a4b96c98a1",
+        "target": "9bd9c92a-76c7-4e62-9bf8-91c06f277779",
+        "properties": {}
+      },
+      {
+        "id": "e_87_ztxv",
+        "type": ".",
+        "source": "70f26c35-5943-4554-a027-c2a4b96c98a1",
+        "target": "7190430c-b440-4594-b148-3e884c30ff55",
+        "properties": {}
+      },
+      {
+        "id": "e_88_bdg1",
+        "type": ".",
+        "source": "7bf6e32b-f37d-468f-b60c-ba3189a2b281",
+        "target": "ee4300ca-169e-4934-9346-3527c5649b69",
+        "properties": {}
+      },
+      {
+        "id": "e_89_khmd",
+        "type": ".",
+        "source": "7bf6e32b-f37d-468f-b60c-ba3189a2b281",
+        "target": "2869a2bb-fce9-482a-8a13-dbb7455d7232",
+        "properties": {}
+      },
+      {
+        "id": "e_90_gsc1",
+        "type": ".",
+        "source": "7bf6e32b-f37d-468f-b60c-ba3189a2b281",
+        "target": "180792c0-a1c7-43b3-8171-c63116907100",
+        "properties": {}
+      },
+      {
+        "id": "e_91_x2ue",
+        "type": ".",
+        "source": "7bf6e32b-f37d-468f-b60c-ba3189a2b281",
+        "target": "e5c3ade6-5b10-4b56-95bb-f9c11fd5bcb1",
+        "properties": {}
+      },
+      {
+        "id": "e_92_vfh5",
+        "type": ".",
+        "source": "7bf6e32b-f37d-468f-b60c-ba3189a2b281",
+        "target": "fa093f3e-b6f7-4785-b5d1-e13786ec6b8a",
+        "properties": {}
+      },
+      {
+        "id": "e_93_i39x",
+        "type": ".",
+        "source": "7bf6e32b-f37d-468f-b60c-ba3189a2b281",
+        "target": "ce9d2d52-1106-4547-a104-3cf113bb6b3f",
+        "properties": {}
+      },
+      {
+        "id": "e_94_vbtn",
+        "type": ".",
+        "source": "7bf6e32b-f37d-468f-b60c-ba3189a2b281",
+        "target": "926656e3-b8b6-43a2-87ba-3e6429b42af7",
+        "properties": {}
+      },
+      {
+        "id": "e_95_pgmi",
+        "type": ".",
+        "source": "7bf6e32b-f37d-468f-b60c-ba3189a2b281",
+        "target": "58c409bc-7e42-47a8-81ce-aa0b5485d93d",
+        "properties": {}
+      },
+      {
+        "id": "e_96_u9nv",
+        "type": ".",
+        "source": "7bf6e32b-f37d-468f-b60c-ba3189a2b281",
+        "target": "2503e785-6ba3-4c4f-977a-244c87845694",
+        "properties": {}
+      },
+      {
+        "id": "e_97_cbok",
+        "type": ".",
+        "source": "a7044da0-52eb-4d82-a8b2-9a1a7f4dd15c",
+        "target": "b3b37d87-f047-4798-8cb2-3fe37b426d50",
+        "properties": {}
+      },
+      {
+        "id": "e_98_2ksr",
+        "type": ".",
+        "source": "a7044da0-52eb-4d82-a8b2-9a1a7f4dd15c",
+        "target": "9676a80d-ac30-45b7-b5a4-93b0243558f8",
+        "properties": {}
+      },
+      {
+        "id": "e_99_ni8k",
+        "type": ".",
+        "source": "a7044da0-52eb-4d82-a8b2-9a1a7f4dd15c",
+        "target": "818a21f2-3238-4f0e-aa31-ec7c9e1ce73f",
+        "properties": {}
+      },
+      {
+        "id": "e_100_45jv",
+        "type": ".",
+        "source": "a7044da0-52eb-4d82-a8b2-9a1a7f4dd15c",
+        "target": "24ee4663-139a-4f8b-addf-4ab1b1a03e01",
+        "properties": {}
+      },
+      {
+        "id": "e_101_r5a6",
+        "type": ".",
+        "source": "a7044da0-52eb-4d82-a8b2-9a1a7f4dd15c",
+        "target": "b0bb7074-933a-40d1-b2b1-070a37ea9fe6",
+        "properties": {}
+      },
+      {
+        "id": "e_102_n3jt",
+        "type": ".",
+        "source": "a7044da0-52eb-4d82-a8b2-9a1a7f4dd15c",
+        "target": "c55d4a77-a3c8-4a1d-a9d3-88ec2985b190",
+        "properties": {}
+      },
+      {
+        "id": "e_103_14d9",
+        "type": ".",
+        "source": "a7044da0-52eb-4d82-a8b2-9a1a7f4dd15c",
+        "target": "7e3d8ae1-8326-4218-a3c4-77b5d742b3cf",
+        "properties": {}
+      },
+      {
+        "id": "e_104_6il0",
+        "type": ".",
+        "source": "a7044da0-52eb-4d82-a8b2-9a1a7f4dd15c",
+        "target": "54595137-9501-4fd2-9311-1141709987dc",
+        "properties": {}
+      },
+      {
+        "id": "e_105_2vol",
+        "type": ".",
+        "source": "a7044da0-52eb-4d82-a8b2-9a1a7f4dd15c",
+        "target": "e78b5df1-9345-4b89-99b5-9f8b92cc41a5",
+        "properties": {}
+      },
+      {
+        "id": "e_106_uliw",
+        "type": ".",
+        "source": "b0ce1500-9df0-4395-81c4-3755392963f2",
+        "target": "58790247-0af5-4b92-bc11-327ef8a4dd76",
+        "properties": {}
+      },
+      {
+        "id": "e_107_fx6a",
+        "type": ".",
+        "source": "b0ce1500-9df0-4395-81c4-3755392963f2",
+        "target": "490a7ebe-c09d-477b-8a2a-0a2102cece11",
+        "properties": {}
+      },
+      {
+        "id": "e_108_aatw",
+        "type": ".",
+        "source": "b0ce1500-9df0-4395-81c4-3755392963f2",
+        "target": "97c7ebc0-98b6-4235-a3d0-c38e7cccd207",
+        "properties": {}
+      },
+      {
+        "id": "e_109_z5zm",
+        "type": ".",
+        "source": "b0ce1500-9df0-4395-81c4-3755392963f2",
+        "target": "da99f7d0-c604-4f1c-bbd2-193d49205542",
+        "properties": {}
+      },
+      {
+        "id": "e_110_2xaz",
+        "type": ".",
+        "source": "b0ce1500-9df0-4395-81c4-3755392963f2",
+        "target": "091c1150-3711-42f9-837c-879aafea7986",
+        "properties": {}
+      },
+      {
+        "id": "e_111_lc9o",
+        "type": ".",
+        "source": "b0ce1500-9df0-4395-81c4-3755392963f2",
+        "target": "00611885-e456-4cc2-8acf-94d01efc3dd7",
+        "properties": {}
+      },
+      {
+        "id": "e_112_6mr4",
+        "type": ".",
+        "source": "10e19a26-4d73-4d0d-bc2d-e15827baa05c",
+        "target": "89c33c02-1aa0-4829-97ce-c9ccdb53b95b",
+        "properties": {}
+      },
+      {
+        "id": "e_113_10dn",
+        "type": ".",
+        "source": "10e19a26-4d73-4d0d-bc2d-e15827baa05c",
+        "target": "d9134f2c-04e0-41ec-83e8-d97aecbcba56",
+        "properties": {}
+      },
+      {
+        "id": "e_114_lzmi",
+        "type": ".",
+        "source": "10e19a26-4d73-4d0d-bc2d-e15827baa05c",
+        "target": "738d00d4-adff-46f0-b9b3-dbc39c39ab06",
+        "properties": {}
+      },
+      {
+        "id": "e_115_ctao",
+        "type": ".",
+        "source": "10e19a26-4d73-4d0d-bc2d-e15827baa05c",
+        "target": "69de2a56-02c7-456e-91d8-48ff1d9ec90a",
+        "properties": {}
+      },
+      {
+        "id": "e_116_iud8",
+        "type": ".",
+        "source": "10e19a26-4d73-4d0d-bc2d-e15827baa05c",
+        "target": "b9103494-621a-438b-bbd6-0f7246d338cc",
+        "properties": {}
+      },
+      {
+        "id": "e_117_wszu",
+        "type": ".",
+        "source": "10e19a26-4d73-4d0d-bc2d-e15827baa05c",
+        "target": "4d8337b9-8a82-40fd-8b9c-e2c3f712a8e1",
+        "properties": {}
+      },
+      {
+        "id": "e_118_qjyj",
+        "type": ".",
+        "source": "10e19a26-4d73-4d0d-bc2d-e15827baa05c",
+        "target": "c539e19d-9961-45ed-a8ab-2df03112df5c",
+        "properties": {}
+      },
+      {
+        "id": "e_119_lra0",
+        "type": ".",
+        "source": "10e19a26-4d73-4d0d-bc2d-e15827baa05c",
+        "target": "2c24da5c-b160-409c-a440-b3854f8210bd",
+        "properties": {}
+      },
+      {
+        "id": "e_120_onc5",
+        "type": ".",
+        "source": "10e19a26-4d73-4d0d-bc2d-e15827baa05c",
+        "target": "ddb176ea-c11d-4cef-82fd-0c9c15b06ee8",
+        "properties": {}
+      },
+      {
+        "id": "e_121_jiep",
+        "type": ".",
+        "source": "10e19a26-4d73-4d0d-bc2d-e15827baa05c",
+        "target": "aa033a6f-7f5f-4e95-8f31-c61a6cffa2dd",
+        "properties": {}
+      },
+      {
+        "id": "e_122_ajer",
+        "type": ".",
+        "source": "10e19a26-4d73-4d0d-bc2d-e15827baa05c",
+        "target": "78525ed2-ca5c-430b-a9b8-736f023ab7d4",
+        "properties": {}
+      },
+      {
+        "id": "e_123_55sh",
+        "type": ".",
+        "source": "10e19a26-4d73-4d0d-bc2d-e15827baa05c",
+        "target": "0cc47408-5b06-4829-a3e2-a9140772a3ec",
+        "properties": {}
+      },
+      {
+        "id": "e_124_5g2d",
+        "type": ".",
+        "source": "10e19a26-4d73-4d0d-bc2d-e15827baa05c",
+        "target": "29fd607e-8045-419c-89d1-a3b8afa9bd89",
+        "properties": {}
+      },
+      {
+        "id": "e_125_k7j4",
+        "type": ".",
+        "source": "10e19a26-4d73-4d0d-bc2d-e15827baa05c",
+        "target": "d4ac3ed1-1bba-4426-b6ac-0b5aedcb21e8",
+        "properties": {}
+      },
+      {
+        "id": "e_126_tz42",
+        "type": ".",
+        "source": "95d91a65-c535-4061-8dd8-20c95f592579",
+        "target": "5741727e-76ae-4110-9547-fb8fdb173689",
+        "properties": {}
+      },
+      {
+        "id": "e_127_l7jz",
+        "type": ".",
+        "source": "95d91a65-c535-4061-8dd8-20c95f592579",
+        "target": "e69d5eaf-9c72-49b2-bcb6-76e5f63d0e83",
+        "properties": {}
+      },
+      {
+        "id": "e_128_4qf9",
+        "type": ".",
+        "source": "95d91a65-c535-4061-8dd8-20c95f592579",
+        "target": "20d0750b-cc9c-401e-91df-1fe321062821",
+        "properties": {}
+      },
+      {
+        "id": "e_129_82cy",
+        "type": ".",
+        "source": "95d91a65-c535-4061-8dd8-20c95f592579",
+        "target": "80200a7c-3f45-423c-a8de-b0af19bad03a",
+        "properties": {}
+      },
+      {
+        "id": "e_130_upu9",
+        "type": ".",
+        "source": "95d91a65-c535-4061-8dd8-20c95f592579",
+        "target": "9c4ddf0f-87f2-4c43-99a2-086755500228",
+        "properties": {}
+      },
+      {
+        "id": "e_131_mozn",
+        "type": ".",
+        "source": "95d91a65-c535-4061-8dd8-20c95f592579",
+        "target": "b09b1030-031e-4bfc-ab00-a18984698ba3",
+        "properties": {}
+      },
+      {
+        "id": "e_132_wt3j",
+        "type": ".",
+        "source": "95d91a65-c535-4061-8dd8-20c95f592579",
+        "target": "9b5d635b-1dd5-44a9-b886-673bcee11b31",
+        "properties": {}
+      },
+      {
+        "id": "e_133_tp0m",
+        "type": ".",
+        "source": "95d91a65-c535-4061-8dd8-20c95f592579",
+        "target": "6db8a785-f620-44d0-beeb-48cede141bce",
+        "properties": {}
+      },
+      {
+        "id": "e_134_1sqm",
+        "type": ".",
+        "source": "95d91a65-c535-4061-8dd8-20c95f592579",
+        "target": "e7ba11f7-af02-4c5a-8c8e-9f5b48c3b243",
+        "properties": {}
+      },
+      {
+        "id": "e_135_igen",
+        "type": ".",
+        "source": "95d91a65-c535-4061-8dd8-20c95f592579",
+        "target": "a0530a02-2da0-4943-b953-c458ff3e677c",
+        "properties": {}
+      },
+      {
+        "id": "e_136_onli",
+        "type": ".",
+        "source": "95d91a65-c535-4061-8dd8-20c95f592579",
+        "target": "4b2cb31e-7180-4dfc-a5c6-31491f89bdbc",
+        "properties": {}
+      },
+      {
+        "id": "e_137_1eti",
+        "type": ".",
+        "source": "95d91a65-c535-4061-8dd8-20c95f592579",
+        "target": "81ba4c40-8070-4b19-aabe-b758cc0574ff",
+        "properties": {}
+      },
+      {
+        "id": "e_138_p2xs",
+        "type": ".",
+        "source": "95d91a65-c535-4061-8dd8-20c95f592579",
+        "target": "21b00761-36f5-4cba-89af-18a843acde8d",
+        "properties": {}
+      },
+      {
+        "id": "e_139_00ze",
+        "type": ".",
+        "source": "95d91a65-c535-4061-8dd8-20c95f592579",
+        "target": "afcee631-ffc0-4d89-b46d-8e2e4a9a84e4",
+        "properties": {}
+      },
+      {
+        "id": "e_140_lfpx",
+        "type": ".",
+        "source": "95d91a65-c535-4061-8dd8-20c95f592579",
+        "target": "0a392bb1-b5b5-41c9-af4e-3e73dd9cba93",
+        "properties": {}
+      },
+      {
+        "id": "e_141_ncko",
+        "type": ".",
+        "source": "95d91a65-c535-4061-8dd8-20c95f592579",
+        "target": "3203bd48-a094-4a98-b259-8663556c6c89",
+        "properties": {}
+      },
+      {
+        "id": "e_142_t52b",
+        "type": ".",
+        "source": "95d91a65-c535-4061-8dd8-20c95f592579",
+        "target": "d76f1dbd-6711-49dd-8c8c-48da63accc9f",
+        "properties": {}
+      },
+      {
+        "id": "e_143_ywaa",
+        "type": ".",
+        "source": "95d91a65-c535-4061-8dd8-20c95f592579",
+        "target": "ba135b92-e512-4e06-946a-a35f9404a30d",
+        "properties": {}
+      },
+      {
+        "id": "e_144_o7vb",
+        "type": ".",
+        "source": "95d91a65-c535-4061-8dd8-20c95f592579",
+        "target": "3a6d743a-17d5-4799-978f-edc4babb48c3",
+        "properties": {}
+      },
+      {
+        "id": "e_145_yevj",
+        "type": ".",
+        "source": "95d91a65-c535-4061-8dd8-20c95f592579",
+        "target": "4cc78d6a-5817-4898-8b15-3099be7a0db8",
+        "properties": {}
+      },
+      {
+        "id": "e_146_gcsu",
+        "type": ".",
+        "source": "c47cd210-ef57-461c-8d9b-f0903672ccb0",
+        "target": "32d6a682-0670-41e3-b192-da8a1015c9f5",
+        "properties": {}
+      },
+      {
+        "id": "e_147_u10c",
+        "type": ".",
+        "source": "c47cd210-ef57-461c-8d9b-f0903672ccb0",
+        "target": "53fa2e16-1563-4579-8dd4-16f30053b338",
+        "properties": {}
+      },
+      {
+        "id": "e_148_nzmr",
+        "type": ".",
+        "source": "c47cd210-ef57-461c-8d9b-f0903672ccb0",
+        "target": "84760cc4-d0cc-419b-aa92-cd2e2f046d5d",
+        "properties": {}
+      },
+      {
+        "id": "e_149_gomg",
+        "type": ".",
+        "source": "802621aa-e5bd-46cf-8c8f-e5e6b833222f",
+        "target": "b2b08377-0f89-4fcb-b9f5-8702c3355411",
+        "properties": {}
+      },
+      {
+        "id": "e_150_293a",
+        "type": ".",
+        "source": "802621aa-e5bd-46cf-8c8f-e5e6b833222f",
+        "target": "ccbdb925-c4e4-4842-a061-7d5c5ab46f57",
+        "properties": {}
+      },
+      {
+        "id": "e_151_6lnb",
+        "type": ".",
+        "source": "802621aa-e5bd-46cf-8c8f-e5e6b833222f",
+        "target": "8bbc2e1f-c35b-48ca-b70c-b2f147a5ed48",
+        "properties": {}
+      },
+      {
+        "id": "e_152_gre1",
+        "type": ".",
+        "source": "802621aa-e5bd-46cf-8c8f-e5e6b833222f",
+        "target": "34000f95-af9a-43ce-93ab-30a2c082aae5",
+        "properties": {}
+      },
+      {
+        "id": "e_153_ijuv",
+        "type": ".",
+        "source": "802621aa-e5bd-46cf-8c8f-e5e6b833222f",
+        "target": "72d4fa34-b7b2-4a3a-9a1d-515fd366e96e",
+        "properties": {}
+      },
+      {
+        "id": "e_154_nkyk",
+        "type": ".",
+        "source": "802621aa-e5bd-46cf-8c8f-e5e6b833222f",
+        "target": "9593327a-bbac-4cec-bcc7-6727f2965fb3",
+        "properties": {}
+      },
+      {
+        "id": "e_155_6bsh",
+        "type": ".",
+        "source": "802621aa-e5bd-46cf-8c8f-e5e6b833222f",
+        "target": "1a35febd-ceae-4db8-a720-97d1b05afb96",
+        "properties": {}
+      },
+      {
+        "id": "e_156_16up",
+        "type": ".",
+        "source": "802621aa-e5bd-46cf-8c8f-e5e6b833222f",
+        "target": "38ae604d-2ef7-42eb-bf95-f4b8a97c65e3",
+        "properties": {}
+      },
+      {
+        "id": "e_157_gqcz",
+        "type": ".",
+        "source": "802621aa-e5bd-46cf-8c8f-e5e6b833222f",
+        "target": "28ea0592-fb77-4f1f-b1ce-55d065766d64",
+        "properties": {}
+      },
+      {
+        "id": "e_158_focr",
+        "type": ".",
+        "source": "802621aa-e5bd-46cf-8c8f-e5e6b833222f",
+        "target": "bb88a338-fb53-4e44-a700-a0fe545cadf5",
+        "properties": {}
+      },
+      {
+        "id": "e_159_66xz",
+        "type": ".",
+        "source": "802621aa-e5bd-46cf-8c8f-e5e6b833222f",
+        "target": "0c833b99-93e1-4b48-a8ec-a17c3ad59a62",
+        "properties": {}
+      },
+      {
+        "id": "e_160_25sa",
+        "type": ".",
+        "source": "802621aa-e5bd-46cf-8c8f-e5e6b833222f",
+        "target": "806ae353-e3c4-4447-a7be-17306a026935",
+        "properties": {}
+      },
+      {
+        "id": "e_161_x8j6",
+        "type": ".",
+        "source": "802621aa-e5bd-46cf-8c8f-e5e6b833222f",
+        "target": "ed251fe7-0df1-4582-85f9-b231459d407a",
+        "properties": {}
+      },
+      {
+        "id": "e_162_ayua",
+        "type": ".",
+        "source": "0b04b165-ce00-42b5-91d5-f34b761dacfc",
+        "target": "8aa70b03-c9aa-4635-8f38-cd7aab322d4a",
+        "properties": {}
+      },
+      {
+        "id": "e_163_u3tv",
+        "type": ".",
+        "source": "0b04b165-ce00-42b5-91d5-f34b761dacfc",
+        "target": "1a73fee6-b3d3-432b-bb4a-db44dc226fbf",
+        "properties": {}
+      },
+      {
+        "id": "e_164_mig3",
+        "type": ".",
+        "source": "0b04b165-ce00-42b5-91d5-f34b761dacfc",
+        "target": "12df5da8-5047-40a0-97ca-ced93f3045f8",
+        "properties": {}
+      },
+      {
+        "id": "e_165_ub3z",
+        "type": ".",
+        "source": "0b04b165-ce00-42b5-91d5-f34b761dacfc",
+        "target": "345564f1-33e8-470d-b414-2595c0d90b0a",
+        "properties": {}
+      },
+      {
+        "id": "e_166_yzcz",
+        "type": ".",
+        "source": "0b04b165-ce00-42b5-91d5-f34b761dacfc",
+        "target": "898f4aa5-f8e5-40f1-bfbf-c9725a467f6e",
+        "properties": {}
+      },
+      {
+        "id": "e_167_ra6b",
+        "type": ".",
+        "source": "0b04b165-ce00-42b5-91d5-f34b761dacfc",
+        "target": "88ad6b0b-3b17-4733-b77e-d8b20f53d882",
+        "properties": {}
+      },
+      {
+        "id": "e_168_8hdu",
+        "type": ".",
+        "source": "b9c00cfa-73ed-4a9e-8f9b-c4eeaf54bae9",
+        "target": "3c7bb4bb-7a7e-4da1-8524-7c36e9aaf68e",
+        "properties": {}
+      },
+      {
+        "id": "e_169_rhmc",
+        "type": ".",
+        "source": "b9c00cfa-73ed-4a9e-8f9b-c4eeaf54bae9",
+        "target": "5c76376b-6bf2-4e56-b26c-2bff8cde1cc1",
+        "properties": {}
+      },
+      {
+        "id": "e_170_ongc",
+        "type": ".",
+        "source": "b9c00cfa-73ed-4a9e-8f9b-c4eeaf54bae9",
+        "target": "d4ae465f-f0f5-4b66-8b69-23104e0f328a",
+        "properties": {}
+      },
+      {
+        "id": "e_171_8lbx",
+        "type": ".",
+        "source": "b9c00cfa-73ed-4a9e-8f9b-c4eeaf54bae9",
+        "target": "f6b18da9-53e2-4d32-8bf2-7f55c7ee2fc2",
+        "properties": {}
+      },
+      {
+        "id": "e_172_sw2q",
+        "type": ".",
+        "source": "b9c00cfa-73ed-4a9e-8f9b-c4eeaf54bae9",
+        "target": "6153011a-b8d8-4f28-9bda-f313aeebee3e",
+        "properties": {}
+      },
+      {
+        "id": "e_173_ggyn",
+        "type": ".",
+        "source": "b9c00cfa-73ed-4a9e-8f9b-c4eeaf54bae9",
+        "target": "4d8cb9a5-a627-46ac-b766-b18d99a089ec",
+        "properties": {}
+      },
+      {
+        "id": "e_174_i8wh",
+        "type": ".",
+        "source": "b9c00cfa-73ed-4a9e-8f9b-c4eeaf54bae9",
+        "target": "b719dfa9-1885-48c9-9e06-3235a0635274",
+        "properties": {}
+      },
+      {
+        "id": "e_175_he4r",
+        "type": ".",
+        "source": "b9c00cfa-73ed-4a9e-8f9b-c4eeaf54bae9",
+        "target": "06f50152-be2b-42f0-b2f2-ac014074ccc3",
+        "properties": {}
+      },
+      {
+        "id": "e_176_vemo",
+        "type": ".",
+        "source": "b9c00cfa-73ed-4a9e-8f9b-c4eeaf54bae9",
+        "target": "61993aa6-8659-400f-8193-46ca7981a8db",
+        "properties": {}
+      },
+      {
+        "id": "e_177_yvsq",
+        "type": ".",
+        "source": "66055844-7315-488f-b9ce-6639b03843ae",
+        "target": "2447387a-9328-4676-8efe-78b9a4363f58",
+        "properties": {}
+      },
+      {
+        "id": "e_178_45gk",
+        "type": ".",
+        "source": "66055844-7315-488f-b9ce-6639b03843ae",
+        "target": "38790c9a-d0c9-4b18-b271-3a61047d581e",
+        "properties": {}
+      },
+      {
+        "id": "e_179_heqc",
+        "type": ".",
+        "source": "66055844-7315-488f-b9ce-6639b03843ae",
+        "target": "098c798d-0391-40ce-8481-137defcd5287",
+        "properties": {}
+      },
+      {
+        "id": "e_180_uijc",
+        "type": ".",
+        "source": "66055844-7315-488f-b9ce-6639b03843ae",
+        "target": "a8f87556-23f9-43e0-954c-99a6d5d9f7eb",
+        "properties": {}
+      },
+      {
+        "id": "e_181_at4g",
+        "type": ".",
+        "source": "66055844-7315-488f-b9ce-6639b03843ae",
+        "target": "16189197-bc4f-4864-8482-635d042df6cb",
+        "properties": {}
+      },
+      {
+        "id": "e_182_49dg",
+        "type": ".",
+        "source": "66055844-7315-488f-b9ce-6639b03843ae",
+        "target": "dce5f4e1-1a79-4a2c-9ca3-83bf4ea640b6",
+        "properties": {}
+      },
+      {
+        "id": "e_183_moq8",
+        "type": ".",
+        "source": "7b961bc6-d471-4d52-80a9-29b3cdac13cb",
+        "target": "2fd9b6ae-ada6-418f-8c1f-816c07fa3130",
+        "properties": {}
+      },
+      {
+        "id": "e_184_o0hb",
+        "type": ".",
+        "source": "7b961bc6-d471-4d52-80a9-29b3cdac13cb",
+        "target": "14dac8ed-a352-412b-88fd-e9822be71b90",
+        "properties": {}
+      },
+      {
+        "id": "e_185_1wke",
+        "type": ".",
+        "source": "7b961bc6-d471-4d52-80a9-29b3cdac13cb",
+        "target": "9dcc8b26-2714-410c-ae89-b74b5d78512d",
+        "properties": {}
+      },
+      {
+        "id": "e_186_k4fx",
+        "type": ".",
+        "source": "7b961bc6-d471-4d52-80a9-29b3cdac13cb",
+        "target": "d321860a-6809-479e-a215-3df1b25e2b7d",
+        "properties": {}
+      },
+      {
+        "id": "e_187_s81t",
+        "type": ".",
+        "source": "7b961bc6-d471-4d52-80a9-29b3cdac13cb",
+        "target": "26f49a63-b98d-40fc-823e-81133f3b9a89",
+        "properties": {}
+      },
+      {
+        "id": "e_188_25hz",
+        "type": ".",
+        "source": "7b961bc6-d471-4d52-80a9-29b3cdac13cb",
+        "target": "8fe10c7b-d44b-4179-a8b8-bba9cfa9dab7",
+        "properties": {}
+      },
+      {
+        "id": "e_189_gkrm",
+        "type": ".",
+        "source": "7b961bc6-d471-4d52-80a9-29b3cdac13cb",
+        "target": "e4390ac4-74a0-4606-b8ca-5de09de3405c",
+        "properties": {}
+      },
+      {
+        "id": "e_190_em0m",
+        "type": ".",
+        "source": "7b961bc6-d471-4d52-80a9-29b3cdac13cb",
+        "target": "9535000d-0b5d-437c-98e0-dfcbb14df66b",
+        "properties": {}
+      },
+      {
+        "id": "e_191_qiwp",
+        "type": ".",
+        "source": "7b961bc6-d471-4d52-80a9-29b3cdac13cb",
+        "target": "4c777033-df01-4823-8f9b-f1063ad86731",
+        "properties": {}
+      },
+      {
+        "id": "e_192_tusp",
+        "type": ".",
+        "source": "7b961bc6-d471-4d52-80a9-29b3cdac13cb",
+        "target": "f160a863-276a-4ec8-9903-17452a8e498f",
+        "properties": {}
+      },
+      {
+        "id": "e_193_q7ta",
+        "type": ".",
+        "source": "7b961bc6-d471-4d52-80a9-29b3cdac13cb",
+        "target": "a1e197c0-1574-40d4-a987-35980d7bc7c8",
+        "properties": {}
+      },
+      {
+        "id": "e_194_p0t9",
+        "type": ".",
+        "source": "7b961bc6-d471-4d52-80a9-29b3cdac13cb",
+        "target": "56d69af7-36a4-4c48-accf-e60d83127f73",
+        "properties": {}
+      },
+      {
+        "id": "e_195_aeu6",
+        "type": ".",
+        "source": "7b961bc6-d471-4d52-80a9-29b3cdac13cb",
+        "target": "b2f904f5-bb7c-45d1-af5b-25874edc67be",
+        "properties": {}
+      },
+      {
+        "id": "e_196_oh14",
+        "type": ".",
+        "source": "f49d41b9-e37e-4205-9308-6cb9618dbb57",
+        "target": "d5366b1b-df59-4806-a922-83b93674e581",
+        "properties": {}
+      },
+      {
+        "id": "e_197_yjjw",
+        "type": ".",
+        "source": "f49d41b9-e37e-4205-9308-6cb9618dbb57",
+        "target": "0dfa6d6a-1e4a-4b1d-8bd2-e0be66e09bb6",
+        "properties": {}
+      },
+      {
+        "id": "e_198_6v7h",
+        "type": ".",
+        "source": "f49d41b9-e37e-4205-9308-6cb9618dbb57",
+        "target": "8c9b7f7b-634b-427e-bf43-41e1088f2a2a",
+        "properties": {}
+      },
+      {
+        "id": "e_199_2qap",
+        "type": ".",
+        "source": "f49d41b9-e37e-4205-9308-6cb9618dbb57",
+        "target": "d322ff02-483a-4103-97e5-d47d92692b78",
+        "properties": {}
+      },
+      {
+        "id": "e_200_6jw2",
+        "type": ".",
+        "source": "f49d41b9-e37e-4205-9308-6cb9618dbb57",
+        "target": "f36339cd-2368-4f9f-84fe-3550ac426c13",
+        "properties": {}
+      },
+      {
+        "id": "e_201_2jde",
+        "type": ".",
+        "source": "f49d41b9-e37e-4205-9308-6cb9618dbb57",
+        "target": "16ec805b-5ce7-407a-af74-9a133877d51a",
+        "properties": {}
+      },
+      {
+        "id": "e_202_wdbj",
+        "type": ".",
+        "source": "ea966319-b764-4837-aa5c-5b0cdb4c5356",
+        "target": "2ed595fe-fc65-4842-a15a-f9a2239ac7be",
+        "properties": {}
+      },
+      {
+        "id": "e_203_g6gl",
+        "type": ".",
+        "source": "ea966319-b764-4837-aa5c-5b0cdb4c5356",
+        "target": "e1147c21-f65d-4000-b560-a54864aaa228",
+        "properties": {}
+      },
+      {
+        "id": "e_204_jnrr",
+        "type": ".",
+        "source": "ea966319-b764-4837-aa5c-5b0cdb4c5356",
+        "target": "c2035658-81d0-4258-afb3-991cc6e100c0",
+        "properties": {}
+      },
+      {
+        "id": "e_205_rv0q",
+        "type": ".",
+        "source": "ea966319-b764-4837-aa5c-5b0cdb4c5356",
+        "target": "832e3a18-6ddc-4ed1-841d-dcc79102522d",
+        "properties": {}
+      },
+      {
+        "id": "e_206_vghm",
+        "type": ".",
+        "source": "ea966319-b764-4837-aa5c-5b0cdb4c5356",
+        "target": "4ccbb52c-98f7-4604-b27f-85e9abe48adf",
+        "properties": {}
+      },
+      {
+        "id": "e_207_92ck",
+        "type": ".",
+        "source": "ea966319-b764-4837-aa5c-5b0cdb4c5356",
+        "target": "db06816e-b5d5-4f37-9e1b-9840976b2e08",
+        "properties": {}
+      },
+      {
+        "id": "e_208_7sn5",
+        "type": "COMME",
+        "source": "15c3f7ca-8cdb-4fa9-b1b7-ba16ac8d24c9",
+        "target": "44874861-d1d8-48e9-8a7e-aedcefc1f2e2",
+        "properties": {}
+      },
+      {
+        "id": "e_209_yf6j",
+        "type": "COMME",
+        "source": "15c3f7ca-8cdb-4fa9-b1b7-ba16ac8d24c9",
+        "target": "cb7bf109-ea86-4fef-97a2-5ff5d0073bb4",
+        "properties": {}
+      },
+      {
+        "id": "e_210_hys8",
+        "type": "COMME",
+        "source": "15c3f7ca-8cdb-4fa9-b1b7-ba16ac8d24c9",
+        "target": "79809f7e-8874-4460-b0ce-848f2af3cb33",
+        "properties": {}
+      },
+      {
+        "id": "e_211_dr2b",
+        "type": "DOIT",
+        "source": "de263efb-a495-49c6-a487-969aad4edd27",
+        "target": "1970552a-548b-4504-a51c-01beb00e19c8",
+        "properties": {
+          "prop_1": "relever des défis au quotidien"
+        }
+      },
+      {
+        "id": "e_212_1pg1",
+        "type": "DOIT",
+        "source": "de263efb-a495-49c6-a487-969aad4edd27",
+        "target": "2a1976e3-def0-4967-a22d-ff7079253d4f",
+        "properties": {
+          "prop_1": "Le cerveau reçoit, trie, analyse et stocke toutes les informations du monde extérieur et de l'intérieur du corps."
+        }
+      },
+      {
+        "id": "e_213_9zgf",
+        "type": "DOIT",
+        "source": "de263efb-a495-49c6-a487-969aad4edd27",
+        "target": "69f2609d-6bd8-4f07-8a9a-ec7852826cda",
+        "properties": {}
+      },
+      {
+        "id": "e_214_08f2",
+        "type": "DOIT",
+        "source": "de263efb-a495-49c6-a487-969aad4edd27",
+        "target": "65c06cb3-69e7-41fc-b87f-3f939d056d94",
+        "properties": {}
+      },
+      {
+        "id": "e_215_2g85",
+        "type": "COMME",
+        "source": "7e965bea-bdb8-4cb6-bc91-286842553f2d",
+        "target": "be35dfcd-67f2-4c07-89ee-97fcd039f904",
+        "properties": {}
+      },
+      {
+        "id": "e_216_2uyo",
+        "type": "COMME",
+        "source": "7e965bea-bdb8-4cb6-bc91-286842553f2d",
+        "target": "3bd83a00-f87b-49fc-a458-46a880b38806",
+        "properties": {}
+      },
+      {
+        "id": "e_217_1xpg",
+        "type": "COMME",
+        "source": "7e965bea-bdb8-4cb6-bc91-286842553f2d",
+        "target": "98905f32-ed5d-4bf5-99d0-6f6329608b23",
+        "properties": {}
+      },
+      {
+        "id": "e_218_2rqh",
+        "type": "COMME",
+        "source": "3b49c1e4-4920-49af-8022-b3326d69a01f",
+        "target": "9e31b0d7-99f3-47fb-a34e-ee89e8c6a1e9",
+        "properties": {}
+      },
+      {
+        "id": "e_219_yk73",
+        "type": "COMME",
+        "source": "3b49c1e4-4920-49af-8022-b3326d69a01f",
+        "target": "a20a86ef-46ab-4764-afb9-83a17a74207e",
+        "properties": {}
+      },
+      {
+        "id": "e_220_q2nv",
+        "type": "COMME",
+        "source": "3b49c1e4-4920-49af-8022-b3326d69a01f",
+        "target": "67590459-7259-4401-b06a-6d9efbd7c680",
+        "properties": {}
+      },
+      {
+        "id": "e_221_vy4w",
+        "type": "COMME",
+        "source": "f1a0aebf-5120-422d-91d1-94aa7a1b1e18",
+        "target": "b075dd71-4d6d-4580-8b53-bbd56315caac",
+        "properties": {}
+      },
+      {
+        "id": "e_222_hhiw",
+        "type": "COMME",
+        "source": "f1a0aebf-5120-422d-91d1-94aa7a1b1e18",
+        "target": "f83fbfb2-a537-43b3-82ae-11724272acce",
+        "properties": {}
+      },
+      {
+        "id": "e_223_hv8s",
+        "type": "COMME",
+        "source": "f1a0aebf-5120-422d-91d1-94aa7a1b1e18",
+        "target": "5e2587e9-1a9c-43c6-91fe-0cf630db0cdc",
+        "properties": {}
+      },
+      {
+        "id": "e_224_jj4g",
+        "type": "COMME",
+        "source": "aecbdedb-65ac-440e-9e62-64355a58c2cf",
+        "target": "487b44eb-fb59-43dd-b4c4-5199386e83ca",
+        "properties": {}
+      },
+      {
+        "id": "e_225_tnm3",
+        "type": "COMME",
+        "source": "aecbdedb-65ac-440e-9e62-64355a58c2cf",
+        "target": "e248aa10-f2b3-4c59-8b69-4173b0432247",
+        "properties": {}
+      },
+      {
+        "id": "e_226_t84c",
+        "type": "COMME",
+        "source": "aecbdedb-65ac-440e-9e62-64355a58c2cf",
+        "target": "434d241e-e0d0-4fc0-a957-911c42f0d0b4",
+        "properties": {}
+      },
+      {
+        "id": "e_227_pfcb",
+        "type": "COMME",
+        "source": "a8f87556-23f9-43e0-954c-99a6d5d9f7eb",
+        "target": "fd90ba1b-5d2c-4a3c-9620-073ca6512efb",
+        "properties": {}
+      },
+      {
+        "id": "e_228_uzry",
+        "type": "COMME",
+        "source": "a8f87556-23f9-43e0-954c-99a6d5d9f7eb",
+        "target": "2b19f867-1a97-4ead-863d-2f459131c023",
+        "properties": {}
+      },
+      {
+        "id": "e_229_cfu1",
+        "type": "COMME",
+        "source": "a8f87556-23f9-43e0-954c-99a6d5d9f7eb",
+        "target": "45407bf6-a4f5-434f-8e79-328cb4187bf8",
+        "properties": {}
+      },
+      {
+        "id": "e_230_myt9",
+        "type": "COMME",
+        "source": "c2035658-81d0-4258-afb3-991cc6e100c0",
+        "target": "809b6f29-8cfc-4ff6-ac31-ba4503c8729b",
+        "properties": {}
+      },
+      {
+        "id": "e_231_3675",
+        "type": "COMME",
+        "source": "c2035658-81d0-4258-afb3-991cc6e100c0",
+        "target": "b900e969-eeb7-4f02-b9a4-9405f044abc3",
+        "properties": {}
+      },
+      {
+        "id": "e_232_evex",
+        "type": "COMME",
+        "source": "c2035658-81d0-4258-afb3-991cc6e100c0",
+        "target": "5287b7fa-629e-414d-bd0d-d47d2668491d",
+        "properties": {}
+      },
+      {
+        "id": "e_233_6jhs",
+        "type": "COMME",
+        "source": "56df17cc-8c0d-4b1c-b464-b555aca00d7d",
+        "target": "d601edb6-9e82-4da7-ad11-ba904f4d5c28",
+        "properties": {}
+      },
+      {
+        "id": "e_234_omuo",
+        "type": "COMME",
+        "source": "56df17cc-8c0d-4b1c-b464-b555aca00d7d",
+        "target": "96427619-4942-48d1-ba72-ca03089ba627",
+        "properties": {}
+      },
+      {
+        "id": "e_235_um5f",
+        "type": "COMME",
+        "source": "56df17cc-8c0d-4b1c-b464-b555aca00d7d",
+        "target": "8390ce7c-885a-4595-b25a-8ef6e979b230",
+        "properties": {}
+      },
+      {
+        "id": "e_236_zpd0",
+        "type": "COMME",
+        "source": "566b5886-8d71-4c79-bacb-db7409de1bc1",
+        "target": "bd9ea4aa-572f-49d2-b4c4-a611d3dc8e47",
+        "properties": {}
+      },
+      {
+        "id": "e_237_2c6b",
+        "type": "COMME",
+        "source": "566b5886-8d71-4c79-bacb-db7409de1bc1",
+        "target": "3712b1dd-259b-4026-a44c-322996f861eb",
+        "properties": {}
+      },
+      {
+        "id": "e_238_le7s",
+        "type": "COMME",
+        "source": "566b5886-8d71-4c79-bacb-db7409de1bc1",
+        "target": "2719a571-34e1-41e5-9649-61570c3ecd98",
+        "properties": {}
+      },
+      {
+        "id": "e_239_9g47",
+        "type": "COMME",
+        "source": "bc000663-c8f9-43d2-928f-14b91e05283a",
+        "target": "a3dfd84a-d10a-48f2-bc67-d979b73c3b59",
+        "properties": {}
+      },
+      {
+        "id": "e_240_y8g8",
+        "type": "COMME",
+        "source": "bc000663-c8f9-43d2-928f-14b91e05283a",
+        "target": "232ed07f-a8db-4d7b-ba17-ce2c32e0fcc2",
+        "properties": {}
+      },
+      {
+        "id": "e_241_b2dc",
+        "type": "COMME",
+        "source": "bc000663-c8f9-43d2-928f-14b91e05283a",
+        "target": "b6b65dc8-1835-488c-8609-2cdd9a1474a5",
+        "properties": {
+          "prop_1": "Le contexte informationnel (le prix annoncé, le prestige de l'étiquette) modifie l'expérience sensorielle réelle.",
+          "prop_2": "Le cerveau active le circuit du plaisir et du goût en fonction de ce qu'il s'attend à ressentir d'après le cadre."
+        }
+      },
+      {
+        "id": "e_242_ij8z",
+        "type": "COMME",
+        "source": "dc7ba9a8-482b-4549-be3e-b883b0c202d5",
+        "target": "9cb8b596-4608-4f7e-a276-4d78a23dd463",
+        "properties": {
+          "prop_1": "L'information n'a pas été oubliée au sens de l'effacement ; le chemin d'accès était simplement bloqué dans le labyrinthe de la mémoire.",
+          "Le rôle de la clé (l'indice)": "Le cerveau fonctionne par association d'idées. Sans le bon signal de départ (l'indice), la recherche reste infructueuse. Le nom de l'acteur a agi comme une clé ouvrant la bonne porte.  Le souvenir était intact, il lui fallait juste le bon déclencheur extérieur pour refaire surface."
+        }
+      },
+      {
+        "id": "e_243_wby1",
+        "type": "COMME",
+        "source": "dc7ba9a8-482b-4549-be3e-b883b0c202d5",
+        "target": "7c059611-6ca1-40ba-af5d-147154f11a8c",
+        "properties": {
+          "prop_1": "Le contexte et l'état émotionnel servent d'indices de récupération (mémoire dépendante du contexte). Le changement d'environnement a coupé les signaux d'accès au souvenir",
+          "prop_2": "qui s'est trouvé temporairement verrouillé."
+        }
+      },
+      {
+        "id": "e_244_apcd",
+        "type": "COMME",
+        "source": "dc7ba9a8-482b-4549-be3e-b883b0c202d5",
+        "target": "cfddea67-a1fd-4a7b-8b70-2263c2431535",
+        "properties": {
+          "prop_1": "La vision de la personne hors de son contexte habituel (le bureau) a privé votre cerveau des indices visuels contextuels nécessaires. C'est l'association secondaire (la machine à café) qui a fourni la clé d'accès manquante."
+        }
+      },
+      {
+        "id": "e_245_7esw",
+        "type": "COMME",
+        "source": "0c01e471-4ee9-49b7-ae81-1dd6f8e58b2d",
+        "target": "e57a7e61-89e7-4ce2-8b1b-9cfb437831f2",
+        "properties": {
+          "prop_1": "Le cerveau utilise l'humeur présente comme une clé d'indexation pour fouiller dans les archives de la mémoire à long terme.",
+          "prop_2": "Il active plus facilement les souvenirs qui partagent la même tonalité affective que l'état émotionnel actuel, rendant les souvenirs contraires temporairement inaccessibles ou invisibles.",
+          "prop_3": "Votre perception du passé est constamment colorée, voire déformée, par votre état d'esprit du moment présent."
+        }
+      },
+      {
+        "id": "e_246_tpkv",
+        "type": "COMME",
+        "source": "0c01e471-4ee9-49b7-ae81-1dd6f8e58b2d",
+        "target": "d6ec3324-a41e-468e-888f-7468fd1e6943",
+        "properties": {
+          "prop_1": "La colère ou le ressentiment agissent comme un aimant mémoriel qui attire et rassemble tous les petits désagréments passés",
+          "prop_2": "occultant totalement les aspects positifs qui faisaient consensus quelques heures plus tôt."
+        }
+      },
+      {
+        "id": "e_247_fltd",
+        "type": "COMME",
+        "source": "0c01e471-4ee9-49b7-ae81-1dd6f8e58b2d",
+        "target": "28e81687-1057-4209-8b9a-a41ec850d283",
+        "properties": {
+          "prop_1": "La joie présente colore rétrospectivement le passé. Le filtre de l'enthousiasme réécrit la charge émotionnelle des souvenirs négatifs pour les faire correspondre à l'état de triomphe actuel."
+        }
+      },
+      {
+        "id": "e_248_k3xi",
+        "type": "COMME",
+        "source": "7ebf2ae1-a3cf-438a-b81f-0a2f657805f2",
+        "target": "57a3b8bc-1da7-4329-ba40-a216e3e3db02",
+        "properties": {
+          "Le mot n'est pas devenu plus fréquent du jour au lendemain": "c'est votre attention",
+          "prop_2": "désormais amorcée sur ce mot",
+          "prop_3": "qui le remarque enfin alors qu'il vous échappait avant."
+        }
+      },
+      {
+        "id": "e_249_wdyf",
+        "type": "COMME",
+        "source": "7ebf2ae1-a3cf-438a-b81f-0a2f657805f2",
+        "target": "2b5df9a5-eb4e-46df-9ad1-18ef1a5ea0d9",
+        "properties": {
+          "prop_1": "Votre cerveau filtre désormais activement les stimuli visuels liés à ce modèle",
+          "prop_2": "alors que sa fréquence réelle sur la route n'a pas changé."
+        }
+      },
+      {
+        "id": "e_250_3qj6",
+        "type": "COMME",
+        "source": "7ebf2ae1-a3cf-438a-b81f-0a2f657805f2",
+        "target": "3bcc6af4-75be-4e16-a3bd-d95442e2efa5",
+        "properties": {
+          "prop_1": "L'information vient d'être rendue saillante dans votre mémoire ; votre cerveau la repère désormais partout où elle apparaît",
+          "prop_2": "alors qu'elle était déjà présente avant sans être remarquée."
+        }
+      },
+      {
+        "id": "e_251_tluf",
+        "type": "COMME",
+        "source": "e2452e29-5028-4b41-bd7a-7d777413d6ac",
+        "target": "296edcc7-e9cb-4676-a6b1-e032744b8514",
+        "properties": {
+          "prop_1": "Dans votre état de satiété actuel",
+          "prop_2": "vous êtes incapable d'anticiper correctement la faim que vous ressentirez plus tard",
+          "prop_3": "et vous sous-estimez vos besoins futurs."
+        }
+      },
+      {
+        "id": "e_252_tj4l",
+        "type": "COMME",
+        "source": "e2452e29-5028-4b41-bd7a-7d777413d6ac",
+        "target": "ed654def-d208-439f-805c-257d7dcf39ef",
+        "properties": {
+          "prop_1": "Votre état émotionnel positif du moment vous empêche d'anticiper les baisses de motivation",
+          "prop_2": "la fatigue ou les imprévus que vous connaîtrez plus tard."
+        }
+      },
+      {
+        "id": "e_253_irq8",
+        "type": "COMME",
+        "source": "e2452e29-5028-4b41-bd7a-7d777413d6ac",
+        "target": "94367762-93ab-43dc-803e-035ae13f81c4",
+        "properties": {
+          "prop_1": "N'étant pas dans l'état émotionnel que vous vivrez au moment de l'application de la clause",
+          "prop_2": "vous sous-estimez l'impact réel qu'elle aura sur vous."
+        }
+      },
+      {
+        "id": "e_254_oceb",
+        "type": "COMME",
+        "source": "fdb6afe1-b8f6-4ffc-8e22-7d9ea67aa000",
+        "target": "97107666-dfc7-44f4-bb87-a1e97993812b",
+        "properties": {
+          "prop_1": "Ne rien faire est perçu comme moins actif",
+          "prop_2": "donc moins « coupable » en cas de problème",
+          "prop_3": "même si l'inaction cause objectivement plus de tort que l'action évitée."
+        }
+      },
+      {
+        "id": "e_255_1kle",
+        "type": "COMME",
+        "source": "fdb6afe1-b8f6-4ffc-8e22-7d9ea67aa000",
+        "target": "9f96d8d1-a87e-4cdb-855c-1151bc9ef73f",
+        "properties": {
+          "prop_1": "L'idée de provoquer activement un tort par une mauvaise manipulation pèse plus lourd dans le jugement que le tort",
+          "prop_2": "pourtant réel",
+          "prop_3": "causé par l'inaction."
+        }
+      },
+      {
+        "id": "e_256_fsoa",
+        "type": "COMME",
+        "source": "fdb6afe1-b8f6-4ffc-8e22-7d9ea67aa000",
+        "target": "f0e3ebe9-7167-4f7b-920e-88c05aff42b7",
+        "properties": {
+          "prop_1": "Vendre est perçu comme une décision active qui engage sa responsabilité",
+          "prop_2": "alors que garder l'action",
+          "prop_3": "bien que tout aussi risqué",
+          "prop_4": "semble moins engager sa faute."
+        }
+      },
+      {
+        "id": "e_257_2o7y",
+        "type": "COMME",
+        "source": "720469df-3e4c-4ed0-9167-1e4dc672ba5c",
+        "target": "d7b0f171-3d3d-4359-8e53-68922f29605d",
+        "properties": {
+          "prop_1": "Vous ignorez que la maladie elle-même est extrêmement rare dans la population",
+          "prop_2": "ce qui rend un faux positif bien plus probable qu'un vrai positif",
+          "prop_3": "même avec un test fiable à 99%."
+        }
+      },
+      {
+        "id": "e_258_8ybh",
+        "type": "COMME",
+        "source": "720469df-3e4c-4ed0-9167-1e4dc672ba5c",
+        "target": "705edaf0-7a28-47a9-9dbc-736332adc2b9",
+        "properties": {
+          "prop_1": "Vous jugez uniquement sur la ressemblance au stéréotype",
+          "prop_2": "en oubliant qu'il existe statistiquement bien plus d'agriculteurs que de bibliothécaires."
+        }
+      },
+      {
+        "id": "e_259_6ny9",
+        "type": "COMME",
+        "source": "720469df-3e4c-4ed0-9167-1e4dc672ba5c",
+        "target": "c851f2ae-7e72-4225-86c3-397ba0171948",
+        "properties": {
+          "prop_1": "Vous vous focalisez sur ce cas rare et marquant sans tenir compte du taux de base réel",
+          "prop_2": "extrêmement faible",
+          "prop_3": "des attaques de requins par rapport au nombre de baigneurs."
+        }
+      },
+      {
+        "id": "e_260_ytrd",
+        "type": "COMME",
+        "source": "a96e2b2a-c3b6-4991-abbe-0359e2cb26e7",
+        "target": "42388962-cd64-427e-9a74-d65dcf490997",
+        "properties": {
+          "prop_1": "L'étrangeté de l'image capte davantage l'attention et déclenche un traitement mental plus riche",
+          "prop_2": "ce qui renforce sa trace en mémoire par rapport aux éléments banals."
+        }
+      },
+      {
+        "id": "e_261_rcmu",
+        "type": "COMME",
+        "source": "a96e2b2a-c3b6-4991-abbe-0359e2cb26e7",
+        "target": "b7ad94d5-bde7-43b1-ae57-24127bfee0dc",
+        "properties": {
+          "prop_1": "Le caractère insolite de l'événement l'a rendu saillant et distinct des journées ordinaires",
+          "prop_2": "ce qui a facilité son encodage et son rappel en mémoire."
+        }
+      },
+      {
+        "id": "e_262_bdqq",
+        "type": "COMME",
+        "source": "a96e2b2a-c3b6-4991-abbe-0359e2cb26e7",
+        "target": "301eda22-a8e5-4775-8efc-d0cb8533644d",
+        "properties": {
+          "prop_1": "Le décalage avec les attentes habituelles crée une trace mémorielle plus forte que les blagues classiques",
+          "prop_2": "plus prévisibles et donc moins marquantes."
+        }
+      },
+      {
+        "id": "e_263_3kmf",
+        "type": "COMME",
+        "source": "b52ede92-d691-427e-946b-99ba85180f98",
+        "target": "29842980-9d26-49d0-aa07-17d2d0616851",
+        "properties": {
+          "prop_1": "L'humeur positive et le traitement ludique associés à l'humour engagent davantage de ressources cognitives",
+          "prop_2": "ce qui renforce la mémorisation de l'information."
+        }
+      },
+      {
+        "id": "e_264_5m4r",
+        "type": "COMME",
+        "source": "b52ede92-d691-427e-946b-99ba85180f98",
+        "target": "5840f8bf-9512-4559-addb-42834ca966c1",
+        "properties": {
+          "prop_1": "L'émotion positive suscitée par l'humour favorise un encodage plus profond et plus durable de l'information associée."
+        }
+      },
+      {
+        "id": "e_265_nutc",
+        "type": "COMME",
+        "source": "b52ede92-d691-427e-946b-99ba85180f98",
+        "target": "b097b1f4-de92-492e-9ae0-f0484b3dc6f2",
+        "properties": {
+          "prop_1": "Le contenu drôle capte l'attention et crée une association émotionnelle positive qui ancre plus solidement le souvenir du cours entier."
+        }
+      },
+      {
+        "id": "e_266_bk2i",
+        "type": "COMME",
+        "source": "dcf4bea1-b835-468b-b928-b784883c2d9b",
+        "target": "916c5531-8b15-4c29-8d11-a80fdc4aa2bb",
+        "properties": {
+          "prop_1": "Les images sont traitées et stockées différemment des mots",
+          "prop_2": "avec un accès mnésique plus direct",
+          "prop_3": "ce qui rend l'information visuelle plus facilement récupérable."
+        }
+      },
+      {
+        "id": "e_267_akcf",
+        "type": "COMME",
+        "source": "dcf4bea1-b835-468b-b928-b784883c2d9b",
+        "target": "3c67f0ae-d8bd-4eeb-a026-b72382ad1cb8",
+        "properties": {
+          "prop_1": "La mémoire visuelle des visages est particulièrement robuste comparée à la mémoire verbale des noms",
+          "prop_2": "plus abstraite et plus fragile."
+        }
+      },
+      {
+        "id": "e_268_4cyo",
+        "type": "COMME",
+        "source": "dcf4bea1-b835-468b-b928-b784883c2d9b",
+        "target": "3e18c8e6-12af-4894-ba92-f7c55ae3e60f",
+        "properties": {
+          "prop_1": "L'image concrète crée une trace mnésique plus forte et plus facilement récupérable que l'explication verbale équivalente",
+          "prop_2": "plus abstraite."
+        }
+      },
+      {
+        "id": "e_269_60q4",
+        "type": "COMME",
+        "source": "4ccbb52c-98f7-4604-b27f-85e9abe48adf",
+        "target": "5a11335c-d4be-4ddf-8454-12f8eab69b0f",
+        "properties": {
+          "prop_1": "L'information négative pèse psychologiquement plus lourd que les informations positives de même intensité",
+          "prop_2": "ce qui déforme le bilan global perçu."
+        }
+      },
+      {
+        "id": "e_270_3bf4",
+        "type": "COMME",
+        "source": "4ccbb52c-98f7-4604-b27f-85e9abe48adf",
+        "target": "a2dcb77b-d0e3-438a-a557-1fe2b4ae6e75",
+        "properties": {
+          "prop_1": "Les informations négatives captent davantage l'attention et sont perçues comme plus fiables ou plus importantes que les informations positives équivalentes."
+        }
+      },
+      {
+        "id": "e_271_9mfg",
+        "type": "COMME",
+        "source": "4ccbb52c-98f7-4604-b27f-85e9abe48adf",
+        "target": "711d464f-e414-4459-91a6-50fbc252e667",
+        "properties": {
+          "prop_1": "L'événement négatif domine le souvenir global de la journée",
+          "prop_2": "alors que les nombreux moments positifs pèsent proportionnellement moins dans le bilan émotionnel final."
+        }
+      },
+      {
+        "id": "e_272_0c2i",
+        "type": "COMME",
+        "source": "69c57704-7937-473a-a032-5c5a9076e850",
+        "target": "4ac37c01-083d-421f-9497-14a00099eb94",
+        "properties": {
+          "Le prix initial de 150 € sert d'ancre": "tous les jugements sur le prix de vente sont faits par comparaison avec cette première valeur",
+          "prop_2": "même arbitraire."
+        }
+      },
+      {
+        "id": "e_273_uscq",
+        "type": "COMME",
+        "source": "69c57704-7937-473a-a032-5c5a9076e850",
+        "target": "fdba5f23-422f-4746-a868-6705571ee4cf",
+        "properties": {
+          "prop_1": "Une fois l'ancre posée par la première offre",
+          "prop_2": "la discussion se déroule autour de cette valeur de référence plutôt qu'autour d'une évaluation indépendante du poste."
+        }
+      },
+      {
+        "id": "e_274_xcyd",
+        "type": "COMME",
+        "source": "69c57704-7937-473a-a032-5c5a9076e850",
+        "target": "85ddc2bc-860c-4988-82b5-960598217975",
+        "properties": {
+          "prop_1": "Même un nombre totalement arbitraire et sans lien logique avec la question sert d'ancre inconsciente et influence l'estimation finale."
+        }
+      },
+      {
+        "id": "e_275_soas",
+        "type": "COMME",
+        "source": "6e8bd7be-aa0b-4c30-be34-4e8e558a1a3a",
+        "target": "e12cc8a1-822e-4dab-89a6-5680fd80e60a",
+        "properties": {
+          "prop_1": "Votre croyance initiale n'est révisée que très partiellement face aux nouvelles preuves",
+          "prop_2": "au lieu d'être mise à jour à la hauteur de leur poids réel."
+        }
+      },
+      {
+        "id": "e_276_p7mb",
+        "type": "COMME",
+        "source": "6e8bd7be-aa0b-4c30-be34-4e8e558a1a3a",
+        "target": "0cef0a37-4fd4-42a8-9988-b54435be714f",
+        "properties": {
+          "prop_1": "Les nouvelles informations positives sur l'équipe ne parviennent à corriger que faiblement votre estimation initiale",
+          "prop_2": "restée ancrée sur votre première impression."
+        }
+      },
+      {
+        "id": "e_277_gq99",
+        "type": "COMME",
+        "source": "6e8bd7be-aa0b-4c30-be34-4e8e558a1a3a",
+        "target": "4acf868c-4abb-4a95-a39b-44098961a586",
+        "properties": {
+          "prop_1": "L'estimation de départ reste dominante et n'est ajustée que très progressivement",
+          "prop_2": "malgré l'accumulation de preuves contraires solides."
+        }
+      },
+      {
+        "id": "e_278_8xr7",
+        "type": "COMME",
+        "source": "2e49f2a9-1663-4521-9265-6d22d8a27461",
+        "target": "48485a04-cc55-4a0b-a128-78ea22524d02",
+        "properties": {
+          "prop_1": "Le jugement sur le prix se fait par comparaison avec la référence récente (le menu cher)",
+          "prop_2": "et non par une évaluation absolue et indépendante du prix réel."
+        }
+      },
+      {
+        "id": "e_279_feep",
+        "type": "COMME",
+        "source": "2e49f2a9-1663-4521-9265-6d22d8a27461",
+        "target": "82978103-828b-4785-ae12-184b888c42a3",
+        "properties": {
+          "prop_1": "La perception du poids dépend du stimulus précédent servant de référence",
+          "prop_2": "et non d'une mesure absolue et indépendante."
+        }
+      },
+      {
+        "id": "e_280_2321",
+        "type": "COMME",
+        "source": "2e49f2a9-1663-4521-9265-6d22d8a27461",
+        "target": "f59c1b12-1d70-4882-831f-451177fc3dba",
+        "properties": {
+          "prop_1": "L'évaluation de la taille se fait par contraste avec la visite précédente",
+          "prop_2": "plutôt que par une mesure objective de la surface réelle."
+        }
+      },
+      {
+        "id": "e_281_956o",
+        "type": "COMME",
+        "source": "0ee7a1e2-5173-4739-b56b-afffbb0376db",
+        "target": "fcbbf0bb-421e-4e4e-a5cd-23cbd27f71bf",
+        "properties": {
+          "prop_1": "La comparaison directe amplifie artificiellement les différences perçues",
+          "prop_2": "qui s'estompent largement dès lors que les options ne sont plus évaluées simultanément."
+        }
+      },
+      {
+        "id": "e_282_yagz",
+        "type": "COMME",
+        "source": "0ee7a1e2-5173-4739-b56b-afffbb0376db",
+        "target": "722d90f3-8335-4481-8721-b8235bd9e774",
+        "properties": {
+          "prop_1": "L'évaluation conjointe pousse à surpondérer chaque petite différence",
+          "prop_2": "qui perdrait presque toute son importance en évaluation isolée."
+        }
+      },
+      {
+        "id": "e_283_hoe3",
+        "type": "COMME",
+        "source": "0ee7a1e2-5173-4739-b56b-afffbb0376db",
+        "target": "f2955cd0-8238-4a60-af0d-e727c713fa87",
+        "properties": {
+          "prop_1": "La mise en comparaison directe grossit artificiellement l'écart perçu entre les deux options",
+          "prop_2": "au-delà de sa réelle importance pratique."
+        }
+      },
+      {
+        "id": "e_284_wgc6",
+        "type": "COMME",
+        "source": "8bd69e1e-a737-4d0c-baf1-fc54d8d57024",
+        "target": "a016ede8-e498-4d52-bb94-daced971ab17",
+        "properties": {
+          "prop_1": "L'attention se concentre exclusivement sur la dimension mise en avant (le salaire)",
+          "prop_2": "en éclipsant les nombreux autres facteurs qui déterminent en réalité le bien-être global."
+        }
+      },
+      {
+        "id": "e_285_cgr6",
+        "type": "COMME",
+        "source": "8bd69e1e-a737-4d0c-baf1-fc54d8d57024",
+        "target": "f87477e7-b30d-4689-acfb-786a8b9aac4b",
+        "properties": {
+          "prop_1": "L'aspect saillant du changement (le climat) capte toute l'attention lors de la prédiction",
+          "prop_2": "au détriment des nombreux éléments de vie qui",
+          "prop_3": "eux",
+          "prop_4": "ne changeront pas."
+        }
+      },
+      {
+        "id": "e_286_uhju",
+        "type": "COMME",
+        "source": "8bd69e1e-a737-4d0c-baf1-fc54d8d57024",
+        "target": "38367551-b87a-48c6-932e-9f0119f5ba59",
+        "properties": {
+          "prop_1": "L'attention exclusive portée à cet événement précis exagère son importance réelle dans la trajectoire globale",
+          "prop_2": "plus longue et plus riche en opportunités que ce seul moment."
+        }
+      },
+      {
+        "id": "e_287_kb0v",
+        "type": "COMME",
+        "source": "ef012956-f53a-4782-ba19-7d48c3388ac5",
+        "target": "83770309-89aa-48a0-b1d5-3b0aa128301c",
+        "properties": {
+          "prop_1": "Le jugement sur le produit dépend de la formulation choisie (gain vs perte) et non du contenu factuel réel",
+          "prop_2": "pourtant équivalent dans les deux cas."
+        }
+      },
+      {
+        "id": "e_288_bwsw",
+        "type": "COMME",
+        "source": "ef012956-f53a-4782-ba19-7d48c3388ac5",
+        "target": "7119d0e9-4a8f-429d-92bd-debe9583685e",
+        "properties": {
+          "prop_1": "La présentation en termes de gain (survie) rend l'option plus acceptable que la présentation en termes de perte (décès)",
+          "prop_2": "pour un même risque objectif."
+        }
+      },
+      {
+        "id": "e_289_alv8",
+        "type": "COMME",
+        "source": "ef012956-f53a-4782-ba19-7d48c3388ac5",
+        "target": "c4f38c54-57c0-4ada-8590-c3052a52eec9",
+        "properties": {
+          "prop_1": "Le choix du cadrage (réussite plutôt qu'échec) modifie la perception de la qualité de l'établissement sans que l'information factuelle ne change."
+        }
+      },
+      {
+        "id": "e_290_llv1",
+        "type": "COMME",
+        "source": "0ecdff02-eaaa-40d4-81a9-e24750909286",
+        "target": "304206a3-0748-4bd9-925f-4917d32d4a12",
+        "properties": {
+          "prop_1": "Le raisonnement se fait sur la valeur nominale (le chiffre affiché sur la fiche de paie) plutôt que sur la valeur réelle une fois l'inflation prise en compte."
+        }
+      },
+      {
+        "id": "e_291_ccdo",
+        "type": "COMME",
+        "source": "0ecdff02-eaaa-40d4-81a9-e24750909286",
+        "target": "ea8aac12-a2cb-4ae1-8f84-1795af1e2784",
+        "properties": {
+          "prop_1": "La comparaison des sommes se fait en valeur nominale brute",
+          "prop_2": "sans tenir compte de l'érosion du pouvoir d'achat de la monnaie entre les deux dates."
+        }
+      },
+      {
+        "id": "e_292_eoxx",
+        "type": "COMME",
+        "source": "0ecdff02-eaaa-40d4-81a9-e24750909286",
+        "target": "275e864c-a0a0-467f-8c54-58a391ca44e2",
+        "properties": {
+          "prop_1": "L'attention se porte sur le montant nominal reçu",
+          "prop_2": "plutôt que sur ce que ce montant permet réellement d'acheter compte tenu du contexte économique."
+        }
+      },
+      {
+        "id": "8e8f6b5c-6b92-4eb8-bca7-6abfa09d76eb",
+        "type": ".",
+        "source": "66055844-7315-488f-b9ce-6639b03843ae",
+        "target": "dc7ba9a8-482b-4549-be3e-b883b0c202d5",
+        "properties": {}
+      },
+      {
+        "id": "21501407-1a65-41f7-bcb9-854ec906026f",
+        "type": ".",
+        "source": "0353572f-acb4-4bbd-9637-94200f82a203",
+        "target": "dc7ba9a8-482b-4549-be3e-b883b0c202d5",
+        "properties": {}
+      }
+    ]
+  },
+
     {
     "id": "fin-de-vie-numerique",
       "title": "Fin de vie numérique",

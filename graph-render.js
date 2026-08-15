@@ -56,7 +56,7 @@ const CATEGORY_COLORS = {
   racine: "#42ebe2", branche: "#0dbac1", penseur: "#a78bfa",
   notion: "#7dd3fc", figure: "#fbbf24", objet: "#e05454", pratique: "#34d399",
   legume: "#34d399", herbe: "#86efac", laitier: "#fde68a",
-  technique: "#fbbf24", fruit: "#fcd34d", proteine: "#fca5a5", saison: "#42ebe2",
+  technique: "#57968f", fruit: "#9572c4", proteine: "#fca5a5", saison: "#42ebe2",
   scene: "#42ebe2", artiste: "#a78bfa",
   haircare: "#e879b9", pays: "#7dd3fc", personne: "#fbbf24", groupe: "#e05454",
   default: "#1D3655",
@@ -65,7 +65,7 @@ const CATEGORY_COLORS = {
 
 const FALLBACK_PALETTE = [
   "#42ebe2", "#0dbac1", "#7dd3fc", "#a78bfa", "#fbbf24", "#34d399",
-  "#e879b9", "#fca5a5", "#fcd34d", "#86efac", "#e05454", "#fde68a",
+  "#e879b9", "#fca5a5", "#4dd3fc", "#86efac", "#e05454", "#aba899",
 ];
 
 function hashString(str) {
