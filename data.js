@@ -2642,7 +2642,7 @@ window.GRAPHS = [
     "id": "biais-cognitifs",
     "title": "biais cognitifs",
     "category": "Psychologie",
-    "description": "Biais cognitifs - source de nos erreurs de raisonnement.",
+    "description": "Biais cognitifs - La source de nos erreurs de raisonnement. Une cartographie essentielle pour identifier nos propres'angles morts' cognitifs et améliorer notre esprit critique.",
     "longDescription": "Réalisé à partir du Codex des Biais Cognitifs de John Manoogian III, ce graphe organise les raccourcis mentaux de notre cerveau en quatre mécanismes fondamentaux : la surcharge d'information, le manque de sens, le besoin d'agir rapidement et la gestion de la mémoire. C'est une cartographie essentielle pour identifier nos'angles morts' cognitifs et améliorer notre esprit critique.",
     "nodes": [
       {
