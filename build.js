@@ -21,7 +21,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const DOMAIN    = 'https://www.wynagraph.com';   // ← forme déclarée dans Search Console
+const DOMAIN    = 'https://wynagraph.com';       // ← forme déclarée dans le fichier CNAME
 const SITE_NAME = 'WynaGraph Space';
 const PREFIX    = '../../';                      // profondeur des pages générées
 
@@ -137,9 +137,12 @@ function buildSitemap() {
   let xml = '<?xml version="1.0" encoding="UTF-8"?>\n' +
             '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n\n';
 
-  xml += entry(DOMAIN + '/',              today, 'weekly', '1.0');
-  xml += entry(DOMAIN + '/galerie.html',  today, 'weekly', '0.9');
-  xml += entry(DOMAIN + '/a-propos.html', today, 'yearly', '0.5');
+  xml += entry(DOMAIN + '/',                    today, 'weekly',  '1.0');
+  xml += entry(DOMAIN + '/galerie.html',        today, 'weekly',  '0.9');
+  xml += entry(DOMAIN + '/particuliers.html',   today, 'monthly', '0.8');
+  xml += entry(DOMAIN + '/professionnels.html', today, 'monthly', '0.8');
+  xml += entry(DOMAIN + '/ecrans.html',         today, 'monthly', '0.7');
+  xml += entry(DOMAIN + '/a-propos.html',       today, 'yearly',  '0.5');
 
   xml += '\n  <!-- Graphes (' + GRAPHS.length + ') -->\n';
   GRAPHS.forEach(function (g) {
@@ -153,7 +156,7 @@ function buildSitemap() {
 
   xml += '\n</urlset>\n';
   fs.writeFileSync('sitemap.xml', xml);
-  console.log('  sitemap.xml (' + (3 + GRAPHS.length + POSTS.length) + ' URL)');
+  console.log('  sitemap.xml (' + (6 + GRAPHS.length + POSTS.length) + ' URL)');
 }
 
 // ── Exécution ────────────────────────────────────────────────────────────────

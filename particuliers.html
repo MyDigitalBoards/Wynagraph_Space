@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" >
   <title>WynaGraph pour les particuliers — mettre à plat ce qui compte</title>
   <meta name="description" content="Un logiciel de bureau 100 % hors ligne pour cartographier vos contrats, vos biens et votre succession — et transmettre une cartographie claire à vos proches. 59 €, une fois." >
+  <link rel="canonical" href="https://wynagraph.com/particuliers.html">
 
   <link rel="stylesheet" href="styles.css" >
   <link rel="stylesheet" href="styles-vente.css" >
@@ -79,8 +80,26 @@
         <div class="btns">
           <a id="btn-commande"
              href="mailto:contact@wynagraph.com?subject=WynaGraph%20%E2%80%94%20commande%20licence%20Personnelle&body=Bonjour%2C%0A%0AJe%20souhaite%20commander%20une%20licence%20WynaGraph%2C%20%C3%A9dition%20Personnelle%20%2859%20%E2%82%AC%29%2C%20pour%20un%20usage%20strictement%20priv%C3%A9.%0A%0ANom%20et%20pr%C3%A9nom%20%3A%0AAdresse%20de%20facturation%20%3A%0A%0AJe%20demande%20l%27ex%C3%A9cution%20imm%C3%A9diate%20du%20contrat%20et%20je%20renonce%20express%C3%A9ment%20%C3%A0%20mon%20droit%20de%20r%C3%A9tractation%20de%20quatorze%20jours.%0A%0AMerci%20de%20m%27indiquer%20les%20modalit%C3%A9s%20de%20r%C3%A8glement.%0A%0ACordialement%2C"
-             class="btn btn-primary">Commander →</a>
+             class="btn btn-primary btn-inactif" aria-disabled="true">Commander →</a>
         </div>
+        <script>
+        (function () {
+          var lu = document.getElementById('lu');
+          var btn = document.getElementById('btn-commande');
+          if (!lu || !btn) return;
+          function sync() {
+            var ok = lu.checked;
+            btn.classList.toggle('btn-inactif', !ok);
+            btn.setAttribute('aria-disabled', ok ? 'false' : 'true');
+          }
+          lu.addEventListener('change', sync);
+          sync();
+          // Garde-fou : bloque l'activation même si le clic contourne pointer-events (clavier, lecteur d'écran).
+          btn.addEventListener('click', function (e) {
+            if (!lu.checked) e.preventDefault();
+          });
+        })();
+        </script>
 
         <p class="pv-legal">
           Vente directe par l'éditeur.

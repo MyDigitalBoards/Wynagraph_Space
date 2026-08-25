@@ -200,6 +200,7 @@
 .btn.btn-inactif {
   opacity: .45;
   cursor: not-allowed;
+  pointer-events: none;
 }
 
 .btn-copy {

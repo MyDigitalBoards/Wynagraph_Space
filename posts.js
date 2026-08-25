@@ -258,4 +258,225 @@ window.POSTS = [
     <p>Cet article présente les règles générales applicables en France à titre informatif, à jour à sa date de publication. Il ne constitue pas un conseil juridique et ne remplace pas un notaire. Les montants et délais évoluent — les plafonds cités sont revalorisés chaque année, et le régime des frais bancaires a changé deux fois depuis 2025. Vérifiez sur service-public.fr ou auprès de votre notaire avant de vous fier à un chiffre.</p>
   `
 },
+
+{
+  id: "inventaire-personnel-sinistre",
+  title: "Ce qui brûle en dix minutes, votre mémoire ne le retient pas",
+  date: "2026-08-25",
+  category: "Développement personnel",
+  excerpt: "Après un cambriolage ou un dégât des eaux, l'assurance demande une liste précise de ce qui a disparu. La plupart des gens improvisent — et sous-déclarent.",
+  graphId: "inventaire-personnel",
+  body: `
+    <p>Un sinistre laisse rarement le temps de réfléchir. L'assureur demande une liste des biens touchés, avec dates d'achat, valeurs et parfois factures — dans un moment où la mémoire est justement la moins fiable. Résultat : la plupart des déclarations sont incomplètes, et l'indemnisation suit.</p>
+
+    <h3>Le problème n'est pas l'oubli, c'est l'absence de trace</h3>
+    <p>Personne ne mémorise le numéro de série de son vélo électrique ni la date d'achat exacte du réfrigérateur. Ces informations existent — sur un email de confirmation, une facture papier, une photo — mais éparpillées, sans lien entre elles.</p>
+
+    <h3>Ce qu'un graphe personnel change</h3>
+    <p>Relier chaque bien de valeur à sa facture, sa garantie et sa localisation dans le logement transforme une liste qu'on redoute de faire en une carte qu'on consulte en cinq minutes le jour où on en a besoin. On voit d'un coup ce qui est couvert, ce qui ne l'est pas, et ce qu'il reste à documenter.</p>
+
+    <p>C'est exactement ce que permet WynaGraph Workspace : construire cet inventaire une fois, hors ligne, et le garder à jour au fil des achats — sans jamais dépendre d'un service en ligne pour retrouver ce qui vous appartient.</p>
+  `
+},
+
+{
+  id: "comptes-en-ligne-effet-domino",
+  title: "Le jour où vous perdez l'accès à votre boîte mail principale",
+  date: "2026-08-24",
+  category: "Technologie & Sécurité",
+  excerpt: "Un email de récupération oublié, une double authentification liée à un ancien numéro : et c'est une dizaine de comptes qui deviennent inaccessibles d'un coup.",
+  graphId: "comptes-en-ligne",
+  body: `
+    <p>La plupart des comptes en ligne ne sont pas indépendants les uns des autres. Ils dépendent d'une adresse email de récupération, d'un numéro de téléphone pour la double authentification, parfois d'un autre compte pour se connecter. Cette dépendance est invisible — jusqu'au jour où le maillon central cède.</p>
+
+    <h3>Un point de défaillance qu'on ne voit jamais</h3>
+    <p>Changer de numéro de téléphone, perdre l'accès à une vieille adresse email : un incident mineur peut suffire à verrouiller en cascade des comptes bancaires, administratifs ou professionnels, chacun pensant dépendre d'un autre pour la récupération.</p>
+
+    <h3>Cartographier avant que ça arrive</h3>
+    <p>Un graphe qui relie chaque compte à son email de récupération et à sa méthode de double authentification rend cette chaîne de dépendances visible. On repère en un coup d'œil le compte qui, s'il tombe, entraîne les autres — et on peut corriger avant l'incident, pas après.</p>
+
+    <p>WynaGraph Workspace permet de construire cette carte localement, sans jamais faire transiter vos identifiants où que ce soit : seule la structure des dépendances compte, pas les mots de passe eux-mêmes.</p>
+  `
+},
+
+{
+  id: "applications-abonnements-fuite-invisible",
+  title: "Combien d'abonnements payez-vous sans vous en souvenir ?",
+  date: "2026-08-23",
+  category: "Technologie & Sécurité",
+  excerpt: "Streaming oublié, cloud en double, application testée une fois et jamais désinstallée : la fuite est rarement un gros poste, mais une accumulation de petits.",
+  graphId: "applications-abonnements",
+  body: `
+    <p>Aucun abonnement n'est jamais souscrit pour être oublié. Et pourtant, entre les essais gratuits devenus payants, les doublons de stockage cloud et les applications installées pour un usage ponctuel, la plupart des gens paient chaque mois pour des services qu'ils n'utilisent plus.</p>
+
+    <h3>Le vrai coût n'est pas que financier</h3>
+    <p>Chaque application installée a aussi obtenu des permissions — accès aux contacts, à la localisation, aux photos — qui restent actives bien après que l'usage a cessé. On perd de l'argent, et on perd la trace de ce à quoi on a donné accès.</p>
+
+    <h3>Une carte plutôt qu'une liste de débits bancaires</h3>
+    <p>Relier chaque application à son coût, sa fréquence d'usage réelle et les permissions accordées fait apparaître immédiatement les doublons et les oublis. Ce n'est pas un relevé bancaire qui montre ça — c'est une carte des connexions entre ce que vous payez et ce que vous utilisez vraiment.</p>
+
+    <p>Un premier passage avec WynaGraph Workspace suffit en général à repérer de quoi couvrir plusieurs mois d'abonnements — simplement en rendant visible ce qui était éparpillé.</p>
+  `
+},
+
+{
+  id: "boite-mail-dix-boites-en-une",
+  title: "Votre boîte mail contient dix boîtes mail différentes, mélangées",
+  date: "2026-08-22",
+  category: "Technologie & Sécurité",
+  excerpt: "Newsletters, factures, notifications, échanges importants : tout arrive au même endroit, dans le même ordre chronologique, sans aucune hiérarchie.",
+  graphId: "boite-mail",
+  body: `
+    <p>Une boîte de réception ne trie rien par nature. Elle empile. Un email important côtoie une newsletter jamais lue, une facture urgente se perd entre deux notifications automatiques — et le tri, quand il a lieu, se fait dans l'urgence plutôt que dans la clarté.</p>
+
+    <h3>Le mélange est le problème, pas le volume</h3>
+    <p>Ce n'est pas le nombre d'emails qui pose difficulté, c'est l'absence de catégories stables. Sans elles, impossible de savoir d'où vient réellement l'encombrement, ni quels comptes ou services génèrent le plus de bruit.</p>
+
+    <h3>Voir la structure avant de trier</h3>
+    <p>Cartographier les grandes catégories d'emails et les comptes qui les génèrent change l'angle d'attaque : au lieu de trier des centaines de messages un par un, on identifie trois ou quatre sources à désabonner, et le reste se dégage de lui-même.</p>
+
+    <p>C'est le genre de clarté que WynaGraph Workspace rend possible en quelques minutes — une vue d'ensemble avant de replonger dans le détail.</p>
+  `
+},
+
+{
+  id: "reseaux-sociaux-empreinte-numerique",
+  title: "Combien de comptes avez-vous, sur combien de réseaux, avec quels réglages ?",
+  date: "2026-08-21",
+  category: "Technologie & Sécurité",
+  excerpt: "Un profil créé il y a huit ans, jamais supprimé, toujours public : votre empreinte numérique est probablement plus large — et plus ouverte — que vous ne le pensez.",
+  graphId: "reseaux-sociaux-personnels",
+  body: `
+    <p>Chaque réseau social créé à un moment de votre vie continue d'exister, même quand vous n'y allez plus. Les paramètres de confidentialité fixés à l'inscription restent souvent inchangés des années plus tard, alors que ce que vous étiez prêt à rendre public a, lui, changé.</p>
+
+    <h3>Ce qu'on ne revoit jamais</h3>
+    <p>Un compte abandonné n'est pas un compte neutre : il contient des données, parfois visibles publiquement, que personne ne pense à revérifier une fois l'usage arrêté. La plupart des gens ne pourraient pas lister tous leurs profils sans y réfléchir longuement.</p>
+
+    <h3>Une carte de sa présence en ligne</h3>
+    <p>Relier chaque compte à son usage réel et à son niveau de confidentialité fait apparaître les profils oubliés et les réglages restés trop ouverts. C'est un exercice qu'on ne fait jamais spontanément — mais qui prend dix minutes une fois qu'on le cartographie.</p>
+
+    <p>WynaGraph Workspace permet de construire cette carte hors ligne, sans jamais se connecter aux plateformes elles-mêmes : seule votre propre description de vos comptes compte.</p>
+  `
+},
+
+{
+  id: "documents-administratifs-echeance-ratee",
+  title: "Le jour où votre passeport expire sans que vous l'ayez vu venir",
+  date: "2026-08-20",
+  category: "Droits & Démarches",
+  excerpt: "Un titre de séjour, une carte grise, une attestation d'assurance : chaque document a sa propre date de validité, et aucune ne s'affiche nulle part.",
+  graphId: "documents-administratifs",
+  body: `
+    <p>Les documents administratifs importants ne se ressemblent pas dans leur cycle de vie : certains n'expirent jamais, d'autres doivent être renouvelés tous les cinq ou dix ans, auprès d'organismes différents, avec des délais de traitement qui varient énormément.</p>
+
+    <h3>Le problème n'est pas de les ranger, c'est de savoir quand</h3>
+    <p>Un classeur bien organisé répond à la question « où est ce document ? ». Il ne répond jamais à « lequel expire dans trois mois ? ». Or c'est cette seconde question qui coûte cher — un renouvellement démarré trop tard peut bloquer un voyage, une location, une démarche entière.</p>
+
+    <h3>Relier document, échéance et organisme</h3>
+    <p>Une cartographie qui relie chaque document à sa date de validité et à l'organisme qui le délivre transforme un classeur statique en système d'alerte silencieux : on voit venir les échéances au lieu de les découvrir après coup.</p>
+
+    <p>C'est ce que WynaGraph Workspace permet de construire, une fois, et de garder à jour au fil des renouvellements — localement, sans dépendre d'un service tiers pour retrouver ce qui vous appartient.</p>
+  `
+},
+
+{
+  id: "bibliotheque-personnelle-livre-prete",
+  title: "Ce livre que vous avez prêté... à qui déjà ?",
+  date: "2026-08-19",
+  category: "Culture & Société",
+  excerpt: "Une bibliothèque personnelle grandit sans qu'on la cartographie jamais — jusqu'au jour où l'on cherche un titre précis, prêté on ne sait plus à qui.",
+  graphId: "bibliotheque-personnelle",
+  body: `
+    <p>Les livres qu'on a lus, prêtés, ou qu'on garde pour plus tard s'accumulent sans qu'aucun lien ne soit jamais tracé entre eux. On se souvient d'une phrase, pas du titre. D'un ami qui l'a conseillé, pas du livre lui-même. Le lien existe dans la mémoire, jamais ailleurs.</p>
+
+    <h3>Une bibliothèque sans mémoire de ses propres liens</h3>
+    <p>Deux livres du même auteur, lus à cinq ans d'écart, ne sont jamais rapprochés. Un livre prêté à quelqu'un il y a un an devient introuvable — ni dans la bibliothèque, ni dans le souvenir de qui l'a emprunté.</p>
+
+    <h3>Ce que révèle une carte de ses lectures</h3>
+    <p>Relier les livres par auteur, par genre et par la personne qui les a recommandés ou empruntés fait apparaître des motifs qu'aucune étagère ne montre : les autrices qu'on relit sans s'en rendre compte, les prêts jamais rendus, les recommandations qui reviennent toujours de la même personne.</p>
+
+    <p>C'est un usage simple et concret de WynaGraph Workspace — une carte de ses lectures, construite en quelques minutes, qui en dit souvent plus sur ses propres goûts qu'on ne l'aurait cru.</p>
+  `
+},
+
+{
+  id: "centres-interet-valeur-commune",
+  title: "Vos loisirs ont un point commun que vous n'avez jamais vu",
+  date: "2026-08-18",
+  category: "Développement personnel",
+  excerpt: "Photographie, cuisine, course à pied : des passe-temps qui semblent n'avoir rien en commun peuvent exprimer, sous des formes différentes, la même valeur.",
+  graphId: "centres-interet",
+  body: `
+    <p>On choisit rarement ses loisirs au hasard, mais on réfléchit encore plus rarement à ce qu'ils ont en commun. Vus séparément, ils ressemblent à une liste de cases cochées sur un agenda. Reliés entre eux, ils racontent autre chose.</p>
+
+    <h3>Le temps libre comme liste plutôt que comme carte</h3>
+    <p>Une liste de loisirs répond à « qu'est-ce que je fais ? ». Elle ne répond jamais à « pourquoi celui-là plutôt qu'un autre ? » ni à « lequel devrais-je prioriser cette année ? ». Sans cette seconde couche, le temps libre se répartit un peu au hasard.</p>
+
+    <h3>Ce qu'un graphe fait apparaître</h3>
+    <p>Relier chaque centre d'intérêt à la valeur qu'il exprime — créer, partager, se dépasser — révèle des points communs entre des activités qui, à première vue, n'ont rien à voir. Deux loisirs très différents peuvent nourrir exactement le même besoin, ce qui change la façon d'arbitrer son temps.</p>
+
+    <p>C'est le genre d'exercice que WynaGraph Workspace rend accessible : pas une analyse abstraite, mais une carte concrète de ce qui occupe réellement votre temps libre, et de ce que ça révèle.</p>
+  `
+},
+
+{
+  id: "reseau-de-contacts-carnet-vs-graphe",
+  title: "Un carnet d'adresses classe les gens. Un graphe les relie.",
+  date: "2026-08-17",
+  category: "Développement personnel",
+  excerpt: "L'ordre alphabétique ne dit rien de qui compte vraiment, ni de qui vous n'avez pas contacté depuis deux ans sans vous en rendre compte.",
+  graphId: "reseau-de-contacts",
+  body: `
+    <p>Un répertoire téléphonique traite tous les contacts de la même façon : un nom, un numéro, classés par ordre alphabétique. Il ne fait aucune différence entre une relation qu'on entretient chaque semaine et une autre dont on a perdu le fil sans le remarquer.</p>
+
+    <h3>Ce que l'ordre alphabétique ne montre pas</h3>
+    <p>La nature d'un lien, sa fréquence, ce qu'il apporte : rien de tout cela n'apparaît dans une liste de contacts. On découvre souvent qu'on n'a pas parlé à quelqu'un d'important depuis longtemps par hasard, jamais parce qu'on l'a vu venir.</p>
+
+    <h3>Relier plutôt que lister</h3>
+    <p>Une cartographie de son réseau — qui relie chaque personne à la nature du lien et à la fréquence des échanges — rend visible ce qu'un carnet d'adresses ne montrera jamais : les relations qui se sont distendues sans qu'on le décide, et celles qui méritent plus d'attention.</p>
+
+    <p>C'est exactement l'usage que permet WynaGraph Workspace : transformer un répertoire plat en carte de ce qui compte vraiment dans son entourage, personnel comme professionnel.</p>
+  `
+},
+
+{
+  id: "projets-personnels-blocage-invisible",
+  title: "Pourquoi vos projets personnels n'avancent jamais vraiment",
+  date: "2026-08-16",
+  category: "Développement personnel",
+  excerpt: "Un projet personnel stagne rarement par manque de volonté. Il stagne parce qu'une étape invisible en bloque discrètement trois autres.",
+  graphId: "projets-personnels",
+  body: `
+    <p>Un projet personnel avance rarement de façon linéaire. Il dépend de ressources qu'on n'a pas encore réunies, de personnes qu'on n'a pas encore sollicitées, d'étapes qui, sans qu'on le formule clairement, en conditionnent d'autres.</p>
+
+    <h3>Le blocage qu'on ne voit pas</h3>
+    <p>Sur une simple liste de tâches, toutes les étapes se ressemblent. Rien n'indique que l'une d'elles, une fois débloquée, ferait avancer trois autres d'un coup — ni, à l'inverse, laquelle retient tout le reste sans qu'on s'en aperçoive.</p>
+
+    <h3>Voir les dépendances plutôt que la liste</h3>
+    <p>Cartographier un projet — ses étapes, les ressources qu'il mobilise, ce qui le bloque réellement — fait apparaître ces dépendances d'un coup d'œil. La question n'est plus « qu'est-ce qui reste à faire ? » mais « qu'est-ce qui, débloqué en premier, fait avancer tout le reste ? ».</p>
+
+    <p>C'est précisément ce que WynaGraph Workspace permet de visualiser : la structure réelle d'un projet, au-delà de la liste de tâches qui la cache habituellement.</p>
+  `
+},
+
+{
+  id: "garde-robe-vingt-pourcent",
+  title: "Vous portez 20 % de votre garde-robe, 80 % du temps",
+  date: "2026-08-15",
+  category: "Style de vie",
+  excerpt: "Le reste du dressing n'est pas inutile — il est simplement oublié, faute d'un lien visible entre les pièces qu'on possède déjà.",
+  graphId: "garde-robe",
+  body: `
+    <p>La plupart des dressings contiennent largement plus de vêtements que ce qu'on porte réellement. Non par excès d'achats, mais parce qu'une fois rangée, une pièce sort rarement de sa place — surtout si on a oublié avec quoi l'associer.</p>
+
+    <h3>Le problème n'est pas la quantité, c'est l'oubli des liens</h3>
+    <p>Un vêtement isolé, sans association mémorisée avec le reste de la garde-robe, finit par disparaître visuellement même s'il est toujours là. On rachète alors des pièces qui font, sans le savoir, doublon avec ce qu'on possède déjà.</p>
+
+    <h3>Cartographier plutôt que ranger</h3>
+    <p>Relier les vêtements par usage, saison et association fait ressortir des combinaisons oubliées et des pièces qui, une fois reliées, retrouvent leur utilité. C'est un exercice différent du tri classique : il ne s'agit pas de jeter, mais de reconnecter ce qui existe déjà.</p>
+
+    <p>WynaGraph Workspace permet de construire cette carte en partant simplement de ce que contient votre dressing — de quoi acheter plus juste, et redécouvrir ce que vous possédez déjà.</p>
+  `
+},
+
 ];

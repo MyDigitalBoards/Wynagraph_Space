@@ -2,192 +2,246 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <url>
-    <loc>https://www.wynagraph.com/</loc>
-    <lastmod>2026-08-15</lastmod>
+    <loc>https://wynagraph.com/</loc>
+    <lastmod>2026-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.wynagraph.com/galerie.html</loc>
-    <lastmod>2026-08-15</lastmod>
+    <loc>https://wynagraph.com/galerie.html</loc>
+    <lastmod>2026-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.wynagraph.com/a-propos.html</loc>
-    <lastmod>2026-08-15</lastmod>
+    <loc>https://wynagraph.com/particuliers.html</loc>
+    <lastmod>2026-08-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://wynagraph.com/professionnels.html</loc>
+    <lastmod>2026-08-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://wynagraph.com/ecrans.html</loc>
+    <lastmod>2026-08-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://wynagraph.com/a-propos.html</loc>
+    <lastmod>2026-08-25</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
 
-  <!-- Graphes (22) -->
+  <!-- Graphes (17) -->
   <url>
-    <loc>https://www.wynagraph.com/graphe/cartographie-succession-complete</loc>
-    <lastmod>2026-08-15</lastmod>
+    <loc>https://wynagraph.com/graphe/cartographie-succession-complete</loc>
+    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.wynagraph.com/graphe/audit-personnel</loc>
-    <lastmod>2026-08-15</lastmod>
+    <loc>https://wynagraph.com/graphe/audit-personnel</loc>
+    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.wynagraph.com/graphe/structure-patrimoniale</loc>
-    <lastmod>2026-08-15</lastmod>
+    <loc>https://wynagraph.com/graphe/structure-patrimoniale</loc>
+    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.wynagraph.com/graphe/biais-cognitifs</loc>
-    <lastmod>2026-08-15</lastmod>
+    <loc>https://wynagraph.com/graphe/biais-cognitifs</loc>
+    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.wynagraph.com/graphe/fin-de-vie-numerique</loc>
-    <lastmod>2026-08-15</lastmod>
+    <loc>https://wynagraph.com/graphe/fin-de-vie-numerique</loc>
+    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.wynagraph.com/graphe/theme-sport-entrainement-physique</loc>
-    <lastmod>2026-08-15</lastmod>
+    <loc>https://wynagraph.com/graphe/assurances</loc>
+    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.wynagraph.com/graphe/theme-cybersecurite-particuliers</loc>
-    <lastmod>2026-08-15</lastmod>
+    <loc>https://wynagraph.com/graphe/inventaire-personnel</loc>
+    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.wynagraph.com/graphe/theme-survie-autonomie-blackout</loc>
-    <lastmod>2026-08-15</lastmod>
+    <loc>https://wynagraph.com/graphe/comptes-en-ligne</loc>
+    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.wynagraph.com/graphe/theme-administration-creation-entreprise-france</loc>
-    <lastmod>2026-08-15</lastmod>
+    <loc>https://wynagraph.com/graphe/applications-abonnements</loc>
+    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.wynagraph.com/graphe/theme-administration-identite-numerique-gouv-officiel</loc>
-    <lastmod>2026-08-15</lastmod>
+    <loc>https://wynagraph.com/graphe/boite-mail</loc>
+    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.wynagraph.com/graphe/theme-immobilier-acquisition-france-valide</loc>
-    <lastmod>2026-08-15</lastmod>
+    <loc>https://wynagraph.com/graphe/reseaux-sociaux-personnels</loc>
+    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.wynagraph.com/graphe/theme-administration-declaration-impots-france</loc>
-    <lastmod>2026-08-15</lastmod>
+    <loc>https://wynagraph.com/graphe/documents-administratifs</loc>
+    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.wynagraph.com/graphe/theme-automobile-budget-entretien</loc>
-    <lastmod>2026-08-15</lastmod>
+    <loc>https://wynagraph.com/graphe/bibliotheque-personnelle</loc>
+    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.wynagraph.com/graphe/theme-immobilier-obligations-meuble-france</loc>
-    <lastmod>2026-08-15</lastmod>
+    <loc>https://wynagraph.com/graphe/centres-interet</loc>
+    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.wynagraph.com/graphe/theme-ia-vulgarisation-grand-public</loc>
-    <lastmod>2026-08-15</lastmod>
+    <loc>https://wynagraph.com/graphe/reseau-de-contacts</loc>
+    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.wynagraph.com/graphe/theme-tech-ecosysteme-reseaux-sociaux-2026</loc>
-    <lastmod>2026-08-15</lastmod>
+    <loc>https://wynagraph.com/graphe/projets-personnels</loc>
+    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.wynagraph.com/graphe/theme-sante-physiologie-bienfaits-froid</loc>
-    <lastmod>2026-08-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.wynagraph.com/graphe/theme-services-urgence-france-europe</loc>
-    <lastmod>2026-08-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.wynagraph.com/graphe/theme-sante-premiers-secours</loc>
-    <lastmod>2026-08-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.wynagraph.com/graphe/theme-sante-detection-avc</loc>
-    <lastmod>2026-08-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.wynagraph.com/graphe/assurances</loc>
-    <lastmod>2026-08-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.wynagraph.com/graphe/wurecosmetics</loc>
-    <lastmod>2026-08-15</lastmod>
+    <loc>https://wynagraph.com/graphe/garde-robe</loc>
+    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Articles (6) -->
+  <!-- Articles (17) -->
   <url>
-    <loc>https://www.wynagraph.com/article/fin-de-vie-numerique</loc>
+    <loc>https://wynagraph.com/article/fin-de-vie-numerique</loc>
     <lastmod>2026-08-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.wynagraph.com/article/pourquoi-penser-en-graphes</loc>
+    <loc>https://wynagraph.com/article/pourquoi-penser-en-graphes</loc>
     <lastmod>2026-06-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.wynagraph.com/article/doublons-assurance-argent-perdu</loc>
+    <loc>https://wynagraph.com/article/doublons-assurance-argent-perdu</loc>
     <lastmod>2026-06-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.wynagraph.com/article/reconversion-professionnelle-carte</loc>
+    <loc>https://wynagraph.com/article/reconversion-professionnelle-carte</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.wynagraph.com/article/audit-personnel-pourquoi-faire-le-point</loc>
+    <loc>https://wynagraph.com/article/audit-personnel-pourquoi-faire-le-point</loc>
     <lastmod>2026-08-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.wynagraph.com/article/succession-premieres-demarches-delais</loc>
+    <loc>https://wynagraph.com/article/succession-premieres-demarches-delais</loc>
     <lastmod>2026-08-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://wynagraph.com/article/inventaire-personnel-sinistre</loc>
+    <lastmod>2026-08-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://wynagraph.com/article/comptes-en-ligne-effet-domino</loc>
+    <lastmod>2026-08-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://wynagraph.com/article/applications-abonnements-fuite-invisible</loc>
+    <lastmod>2026-08-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://wynagraph.com/article/boite-mail-dix-boites-en-une</loc>
+    <lastmod>2026-08-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://wynagraph.com/article/reseaux-sociaux-empreinte-numerique</loc>
+    <lastmod>2026-08-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://wynagraph.com/article/documents-administratifs-echeance-ratee</loc>
+    <lastmod>2026-08-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://wynagraph.com/article/bibliotheque-personnelle-livre-prete</loc>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://wynagraph.com/article/centres-interet-valeur-commune</loc>
+    <lastmod>2026-08-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://wynagraph.com/article/reseau-de-contacts-carnet-vs-graphe</loc>
+    <lastmod>2026-08-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://wynagraph.com/article/projets-personnels-blocage-invisible</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://wynagraph.com/article/garde-robe-vingt-pourcent</loc>
+    <lastmod>2026-08-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

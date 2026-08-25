@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+  <title>Bibliothèque personnelle : ce que vous lisez, et ce que ça révèle — WynaGraph Space</title>
+  <meta name="description" content="Vos lectures reliées par auteurs, genres et recommandations — pour redécouvrir votre propre bibliothèque." />
+  <link rel="canonical" href="https://wynagraph.com/graphe/bibliotheque-personnelle" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="WynaGraph Space" />
+  <meta property="og:title" content="Bibliothèque personnelle : ce que vous lisez, et ce que ça révèle — WynaGraph Space" />
+  <meta property="og:description" content="Vos lectures reliées par auteurs, genres et recommandations — pour redécouvrir votre propre bibliothèque." />
+  <meta property="og:url" content="https://wynagraph.com/graphe/bibliotheque-personnelle" />
+  <base href="../.././">
+  <link rel="stylesheet" href="../../styles.css" >
+  <script src="../../assets/vis-network.min.js"></script>
+  
+</head>
+<body class="page-graph">
+  <header class="site-header">
+    <div class="nav">
+  <a href="../../index.html" class="brand">WYNAGRAPH<span class="dot"> SPACE</span></a>
+
+  <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+<label for="nav-toggle" class="nav-burger">
+  <span></span><span></span><span></span>
+  <span class="sr-only">Menu</span>
+</label>
+  <nav class="nav-links">
+    <a href="../../index.html">Galerie</a>
+    <a href="../../index.html#articles">Articles</a>
+    <a href="../../particuliers.html">Particuliers</a>
+    <a href="../../professionnels.html">Professionnels</a>
+    <a href="../../a-propos.html">À propos</a>
+  </nav>
+</div>
+  </header>
+
+  <!-- Barre titre sous le header -->
+  <div id="graph-topbar">
+    <a href="javascript:history.back()" class="back-link" style="margin:0">← Retour</a>
+    <div id="graph-topbar-info">
+      <span id="graph-topbar-title"></span>
+      <span id="graph-topbar-stats"></span>
+    </div>
+    <div id="graph-search-wrap">
+      <span id="graph-search-icon">⌕</span>
+      <input type="text" id="graph-search" placeholder="Rechercher un nœud…" autocomplete="off" >
+      <button id="graph-search-clear" title="Effacer" aria-label="Effacer la recherche">✕</button>
+      <div id="graph-search-results"></div>
+    </div>
+    <div id="graph-tools">
+      <button id="btn-reset" type="button" title="Effacer recherche et filtres">Réinitialiser</button>
+      <button id="btn-view" type="button" title="Basculer entre le graphe et la vue tableau">Vue tableau</button>
+      <button id="btn-cards" type="button" hidden title="Basculer entre lignes et pastilles">▦ Pastilles</button>
+      <button id="btn-physics" type="button" title="Activer/désactiver la physique du graphe">Physique : ON</button>
+      <button id="btn-fit" type="button" title="Recadrer le graphe">Recadrer</button>
+    </div>
+    <button id="import-btn" title="Importer un graphe JSON exporté depuis WynaGraph Workspace">
+      📥 <span class="label">Importer JSON</span>
+    </button>
+    <button id="copy-data-btn" title="Copier ce graphe importé comme entrée prête à coller dans data.js">
+      📋 <span class="label">Copier pour data.js</span>
+    </button>
+    <input type="file" id="import-file" accept=".json,application/json" style="display:none" >
+  </div>
+
+  <!-- Layout plein écran -->
+  <div id="fullscreen-layout">
+    <div id="graph"></div>
+
+    <!-- Vue tableau (lecture seule) : une ligne par relation visible,
+         plus une ligne par élément visible sans relation. -->
+    <div id="graph-table-wrap" hidden></div>
+
+    <!-- Légende des catégories : pastille = filtre solo, œil = masquage cumulable -->
+    <div id="graph-legend" hidden>
+      <div class="legend-title" id="graph-legend-title"></div>
+      <div id="graph-legend-chips"></div>
+    </div>
+
+    <!-- Zone d'import affichée quand aucun graphe n'est chargé -->
+    <div id="graph-dropzone" hidden>
+      <div class="dz-inner">
+        <div class="dz-icon">⬡</div>
+        <h2>Importer un graphe JSON</h2>
+        <p>Déposez ici un fichier <b>.json</b> exporté depuis
+        WynaGraph Workspace (Export → JSON), ou choisissez-le manuellement.</p>
+        <button id="dropzone-pick">Choisir un fichier</button>
+        <p class="dz-hint">Le graphe reste local : rien n'est envoyé sur un serveur.</p>
+      </div>
+    </div>
+
+    <!-- Voile de glisser-déposer par-dessus un graphe déjà affiché -->
+    <div id="drag-overlay">Déposez le fichier .json pour l'importer</div>
+
+    <div id="sidebar-backdrop"></div>
+    <aside id="graph-sidebar">
+      <div id="graph-sidebar-header">
+        <h3 id="side-title">Sélection</h3>
+        <button id="sidebar-close" title="Fermer le panneau" aria-label="Fermer le panneau">✕</button>
+      </div>
+      <div id="selected">
+        <p class="sel-empty">Cliquez sur un <strong style="color:#fff">nœud</strong> pour voir ses connexions,
+        ou sur une <strong style="color:var(--cyan)">relation</strong> pour voir ses propriétés.</p>
+      </div>
+      <div class="stats" id="stats"></div>
+    </aside>
+  </div>
+  <button id="sidebar-toggle-fab" title="Afficher le panneau" aria-label="Afficher le panneau">☰</button>
+
+  <div id="import-toast" role="status" aria-live="polite"></div>
+
+  <script src="../../data.js"></script>
+  <script src="../../json-import.js"></script>
+  <script src="../../graph-render.js"></script>
+  <script>
+    const _old = new URLSearchParams(location.search).get('id');
+    if (_old && _old !== 'import') { location.replace('graphe/' + _old + '/'); }
+    // ── Helpers ──────────────────────────────────────────────────────────────
+    function esc(str) {
+      if (str == null) return '';
+      return String(str).replace(/[&<>"']/g, m =>
+        ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;' }[m])
+      );
+    }
+
+    // ── Panneau latéral repliable (mobile) ──────────────────────────────────
+    const layoutEl   = document.getElementById('fullscreen-layout');
+    const sidebarFab = document.getElementById('sidebar-toggle-fab');
+    const sidebarClose = document.getElementById('sidebar-close');
+    const sidebarBackdrop = document.getElementById('sidebar-backdrop');
+    const isMobile = () => window.matchMedia('(max-width: 768px)').matches;
+
+    function setSidebarOpen(open) {
+      layoutEl.classList.toggle('sidebar-open', open);
+      sidebarFab.textContent = open ? '✕' : '☰';
+      sidebarFab.setAttribute('aria-label', open ? 'Masquer le panneau' : 'Afficher le panneau');
+      sidebarFab.title = open ? 'Masquer le panneau' : 'Afficher le panneau';
+    }
+
+    sidebarFab.addEventListener('click', () => {
+      setSidebarOpen(!layoutEl.classList.contains('sidebar-open'));
+    });
+    sidebarClose.addEventListener('click', () => setSidebarOpen(false));
+    sidebarBackdrop.addEventListener('click', () => setSidebarOpen(false));
+
+    // Sur mobile, le panneau est replié par défaut pour laisser toute la place au graphe.
+    setSidebarOpen(!isMobile());
+
+    // ── Import JSON (WynaGraph Workspace → Space) — mode auteur uniquement ──
+    // Hors mode auteur, l'interface d'import n'est pas seulement masquée en
+    // CSS : ses éléments sont retirés du document et aucun gestionnaire
+    // d'événement n'est posé. Il n'y a donc rien à révéler via l'inspecteur.
+    const AUTHOR_MODE  = window.WynaImport && WynaImport.isAuthorMode();
+    if (AUTHOR_MODE) document.body.classList.add('author-mode');
+
+    const toastEl = document.getElementById('import-toast');
+    let toastTimer = null;
+
+    function showImportToast(msg, isError) {
+      toastEl.textContent = msg;
+      toastEl.classList.toggle('error', !!isError);
+      toastEl.classList.add('show');
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => toastEl.classList.remove('show'), 4500);
+    }
+
+    let importBtn = null, importFile = null, copyDataBtn = null;
+    let dropzone = null, dropzonePick = null;
+
+    if (!AUTHOR_MODE) {
+      ['import-btn', 'copy-data-btn', 'import-file', 'graph-dropzone', 'drag-overlay']
+        .forEach(elId => {
+          const el = document.getElementById(elId);
+          if (el && el.parentNode) el.parentNode.removeChild(el);
+        });
+    } else {
+      importBtn    = document.getElementById('import-btn');
+      importFile   = document.getElementById('import-file');
+      copyDataBtn  = document.getElementById('copy-data-btn');
+      dropzone     = document.getElementById('graph-dropzone');
+      dropzonePick = document.getElementById('dropzone-pick');
+
+      const importSelectedFile = (file) => {
+        // WynaImport (json-import.js) valide, stocke en sessionStorage puis
+        // recharge la page sur graph.html?id=import.
+        WynaImport.handleFile(file, msg => showImportToast(msg, true));
+      };
+
+      importBtn.addEventListener('click', () => importFile.click());
+      dropzonePick.addEventListener('click', () => importFile.click());
+      importFile.addEventListener('change', () => {
+        importSelectedFile(importFile.files && importFile.files[0]);
+        importFile.value = ''; // permet de réimporter le même fichier
+      });
+
+      // Glisser-déposer d'un fichier .json
+      let dragDepth = 0;
+      document.addEventListener('dragenter', e => {
+        e.preventDefault();
+        dragDepth++;
+        layoutEl.classList.add('drag-over');
+      });
+      document.addEventListener('dragover', e => e.preventDefault());
+      document.addEventListener('dragleave', () => {
+        dragDepth = Math.max(0, dragDepth - 1);
+        if (dragDepth === 0) layoutEl.classList.remove('drag-over');
+      });
+      document.addEventListener('drop', e => {
+        e.preventDefault();
+        dragDepth = 0;
+        layoutEl.classList.remove('drag-over');
+        const f = e.dataTransfer && e.dataTransfer.files && e.dataTransfer.files[0];
+        if (f) importSelectedFile(f);
+      });
+    }
+
+    // ── Init ─────────────────────────────────────────────────────────────────
+    const params = new URLSearchParams(location.search);
+    const id = "bibliotheque-personnelle";
+    const sel    = document.getElementById("selected");
+    const title  = document.getElementById("side-title");
+    const stats  = document.getElementById("stats");
+
+    // Résolution du graphe :
+    //  • ?id=import  → graphe importé (sessionStorage, via json-import.js)
+    //  • ?id=xxx     → graphe modèle défini dans data.js
+    let graph = null;
+    if (id === 'import') {
+      graph = (window.WynaImport && WynaImport.loadImportedGraph()) || null;
+    } else if (id) {
+      graph = GRAPHS.find((g) => g.id === id);
+    }
+
+    if (!graph) {
+      if (AUTHOR_MODE) {
+        // Mode auteur : écran d'import
+        const notFound = id && id !== 'import';
+        document.getElementById('graph-topbar-title').textContent =
+          notFound ? 'Graphe introuvable' : 'Importer un graphe';
+        dropzone.hidden = false;
+        document.getElementById('graph-search-wrap').style.display = 'none';
+        document.getElementById('graph-tools').style.display = 'none';
+        sel.innerHTML = `<p class="sel-empty">Importez un fichier <strong style="color:var(--cyan)">.json</strong>
+          exporté depuis WynaGraph Workspace pour explorer votre graphe ici.</p>`;
+        if (notFound) {
+          showImportToast('Graphe introuvable — vous pouvez importer un fichier JSON à la place.', true);
+        }
+      } else {
+        // Visiteur : comportement d'origine, aucune interface d'import
+        document.getElementById('graph-topbar-title').textContent = 'Graphe introuvable';
+        document.getElementById('graph-search-wrap').style.display = 'none';
+        document.getElementById('graph-tools').style.display = 'none';
+      }
+    } else {
+      renderGraph(graph);
+    }
+
+    function renderGraph(graph) {
+      if (dropzone) dropzone.hidden = true;   // absente hors mode auteur
+      document.title = `${graph.title} — WynaGraph`;
+      document.getElementById('graph-topbar-title').textContent = graph.title;
+      document.getElementById('graph-topbar-stats').textContent =
+        `${graph.nodes.length} nœuds · ${(graph.edges || graph.relationships || []).length} liens`;
+
+      const { network, nodes, edges, graph: graphN, hasPositions, stopAutoFit } = buildNetwork(
+        document.getElementById("graph"),
+        graph,
+        { interactive: true }
+      );
+      // Utiliser le graphe normalisé pour les clics
+      const g = graphN;
+      const graphEl = document.getElementById("graph");
+      const topbarStats = document.getElementById("graph-topbar-stats");
+      const statsTotal = `${g.nodes.length} nœuds · ${g.edges.length} liens`;
+      topbarStats.textContent = statsTotal;
+
+      // Stats
+      stats.innerHTML = `
+        <div><strong>${g.nodes.length}</strong> nœuds</div>
+        <div><strong>${g.edges.length}</strong> liens</div>`;
+
+      // Import : signaler les relations écartées (nœud source/cible inconnu)
+      if (graph.droppedEdges) {
+        showImportToast(`${graph.droppedEdges} relation(s) ignorée(s) : nœud source ou cible introuvable dans le fichier.`);
+      }
+
+      // ── Publication : copier le graphe importé comme entrée data.js ───────
+      // (bouton visible uniquement en mode auteur ET pour un graphe importé)
+      if (graph.id === 'import' && AUTHOR_MODE) {
+        document.body.classList.add('imported-graph');
+        copyDataBtn.addEventListener('click', async () => {
+          const suggested = (graph.title || 'mon-graphe')
+            .toLowerCase()
+            .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+            .replace(/[^a-z0-9]+/g, '-')
+            .replace(/^-+|-+$/g, '') || 'mon-graphe';
+          const newId = prompt('Identifiant du graphe (utilisé dans l’URL graphe/<id>/=…) :', suggested);
+          if (!newId || !newId.trim()) return;
+
+          const entry = {
+            id: newId.trim(),
+            title: graph.title || newId.trim(),
+            category: 'À classer',                       // ← à ajuster (sert au classement de la galerie)
+            description: 'Description courte à rédiger.',
+            longDescription: 'Description longue à rédiger.',
+            nodes: graph.nodes,
+            relationships: graph.relationships || [],
+          };
+          // Indentation alignée sur data.js + virgule finale, prêt à coller
+          // dans le tableau window.GRAPHS.
+          const snippet = '  ' + JSON.stringify(entry, null, 2).split('\n').join('\n  ') + ',';
+
+          try {
+            await navigator.clipboard.writeText(snippet);
+            showImportToast('Entrée copiée ! Collez-la dans le tableau window.GRAPHS de data.js, puis renseignez catégorie et descriptions.');
+          } catch (err) {
+            console.log(snippet);
+            showImportToast('Copie automatique impossible — l’entrée a été affichée dans la console du navigateur (F12).', true);
+          }
+        });
+      }
+
+      // ── Réinitialiser la sidebar ──────────────────────────────────────────
+      function resetSidebar() {
+        title.textContent = "Sélection";
+        sel.innerHTML = `<p class="sel-empty">Cliquez sur un <strong style="color:#fff">nœud</strong> pour voir ses connexions,
+          ou sur une <strong style="color:var(--cyan)">relation</strong> pour voir ses propriétés.</p>`;
+      }
+
+      // ── Clic sur un NŒUD ─────────────────────────────────────────────────
+      function openNodePanel(nodeId) {
+        const node = g.nodes.find((n) => n.id === nodeId);
+        if (!node) return;
+
+        title.textContent = node.label;
+
+        const connections = g.edges
+          .filter((e) => e.source === nodeId || e.target === nodeId)
+          .map((e) => ({
+            neighbor: (e.source === nodeId ? e.target : e.source),
+            label: e.label || "",
+          }))
+          .map((c) => ({
+            ...c,
+            neighborLabel: (g.nodes.find((n) => n.id === c.neighbor)?.label || c.neighbor),
+          }));
+
+        const catHtml = node.group
+          ? `<div class="sel-node-category">${esc(node.group)}</div>`
+          : "";
+
+        const propsHtml = (node.properties && node.properties.length)
+          ? `<div class="sel-section-label">Propriétés</div>
+             <ul class="sel-props-list">
+               ${node.properties.map(p => `<li>${esc(p)}</li>`).join("")}
+             </ul>`
+          : "";
+
+        const connHtml = connections.length
+          ? `<div class="sel-section-label">Connexions (${connections.length})</div>
+             <ul class="sel-connections-list">
+               ${connections.map(c =>
+                 `<li>${esc(c.neighborLabel)}${c.label ? `<br><span style="font-size:.78rem;color:var(--cyan)">${esc(c.label)}</span>` : ""}</li>`
+               ).join("")}
+             </ul>`
+          : `<p class="sel-empty" style="margin-top:8px">Aucune connexion directe.</p>`;
+
+        sel.innerHTML = catHtml + propsHtml + connHtml;
+      }
+
+      // ── Clic sur une ARÊTE ───────────────────────────────────────────────
+      function openEdgePanel(edgeId) {
+        const edge = edges.get(edgeId);
+        if (!edge) return;
+
+        // Retrouver les labels des nœuds source/cible
+        const fromLabel = g.nodes.find(n => n.id === edge.from)?.label || edge.from;
+        const toLabel   = g.nodes.find(n => n.id === edge.to  )?.label || edge.to;
+
+        title.textContent = "Relation";
+
+        const propsHtml = (edge.properties && edge.properties.length)
+          ? `<div class="sel-section-label">Propriétés</div>
+             <ul class="sel-props-list">
+               ${edge.properties.map(p => `<li>${esc(p)}</li>`).join("")}
+             </ul>`
+          : `<p class="sel-empty" style="margin-top:10px;font-size:.82rem;">Aucune propriété définie pour cette relation.</p>`;
+
+        sel.innerHTML = `
+          <div class="sel-relation-header">
+            <b>${esc(fromLabel)}</b>
+            <span class="sel-relation-arrow">→</span>
+            <b>${esc(toLabel)}</b>
+          </div>
+          ${edge.label
+            ? `<div class="sel-section-label">Type de relation</div>
+               <p style="font-size:.9rem;color:#fff;margin-bottom:8px;">${esc(edge.label)}</p>`
+            : ""}
+          ${propsHtml}
+        `;
+      }
+
+      // ── Événements réseau ─────────────────────────────────────────────────
+      network.on("click", (params) => {
+        if (params.nodes.length > 0) {
+          openNodePanel(params.nodes[0]);
+          if (isMobile()) setSidebarOpen(true);
+        } else if (params.edges.length > 0) {
+          openEdgePanel(params.edges[0]);
+          if (isMobile()) setSidebarOpen(true);
+        } else {
+          resetSidebar();
+        }
+      });
+
+      // ── Boutons Physique / Recadrer ─────────────────────────────────────
+      // Même contrat que l'export HTML du Workspace : physique coupée par
+      // défaut (la mise en page est respectée, un nœud déplacé reste où on
+      // le pose), réactivable à la demande.
+      const btnFit = document.getElementById("btn-fit");
+      btnFit.addEventListener("click", () => {
+        // Recadre sur ce qui est réellement affiché (filtres compris).
+        fitVisible(Object.keys(computeVisible()));
+      });
+
+      // La physique est active à l'ouverture : le graphe se déploie sous
+      // les yeux du visiteur, qui choisit lui-même de la figer. Une fois
+      // coupée, un nœud déplacé reste où on le pose.
+      let physicsOn = !hasPositions;
+      const btnPhysics = document.getElementById("btn-physics");
+      btnPhysics.textContent = "Physique : " + (physicsOn ? "ON" : "OFF");
+      btnPhysics.classList.toggle("active", physicsOn);
+      btnPhysics.addEventListener("click", () => {
+        physicsOn = !physicsOn;
+        network.setOptions({ physics: { enabled: physicsOn } });
+        btnPhysics.textContent = "Physique : " + (physicsOn ? "ON" : "OFF");
+        btnPhysics.classList.toggle("active", physicsOn);
+      });
+
+      // ── Légende des catégories ──────────────────────────────────────────
+      // Pastille cliquée = filtre solo (re-clic pour annuler).
+      // Œil = masquage de la catégorie, cumulable sur plusieurs catégories.
+      const legendBox   = document.getElementById("graph-legend");
+      const legendTitle = document.getElementById("graph-legend-title");
+      const chipsEl     = document.getElementById("graph-legend-chips");
+      const categories  = [...new Set(
+        g.nodes.map(n => (n.group || "").trim()).filter(c => c && c.toLowerCase() !== "default")
+      )].sort((a, b) => a.localeCompare(b));
+
+      if (categories.length) {
+        legendBox.hidden = false;
+        legendTitle.textContent = "▾ Catégories";
+        legendTitle.addEventListener("click", () => {
+          const collapsed = legendBox.classList.toggle("collapsed");
+          legendTitle.textContent = (collapsed ? "▸ " : "▾ ") + "Catégories";
+        });
+        categories.forEach(cat => {
+          const color = colorFor(cat);
+          const chip = document.createElement("span");
+          chip.className = "chip";
+          chip.style.background = color;
+          chip.style.borderColor = color;
+          chip.style.color = textColorFor(color);
+          chip.dataset.cat = cat;
+
+          const label = document.createElement("span");
+          label.className = "chip-label";
+          label.textContent = cat;
+          chip.appendChild(label);
+
+          const eye = document.createElement("span");
+          eye.className = "chip-eye";
+          eye.textContent = "👁";
+          eye.title = "Masquer/afficher cette catégorie";
+          eye.addEventListener("click", ev => {
+            ev.stopPropagation();
+            if (filterState.hiddenCats[cat]) delete filterState.hiddenCats[cat];
+            else filterState.hiddenCats[cat] = true;
+            applyFilters();
+          });
+          chip.appendChild(eye);
+
+          chip.addEventListener("click", () => {
+            filterState.cat = (filterState.cat === cat) ? null : cat;
+            applyFilters();
+          });
+          chipsEl.appendChild(chip);
+        });
+      }
+
+      // ── Recherche et filtres (n'altèrent que l'affichage) ──────────────
+      // Un nœud est visible s'il passe les trois : recherche, filtre solo,
+      // et catégorie non masquée. La recherche porte sur le nom, la
+      // catégorie et les propriétés des nœuds, ainsi que sur les libellés
+      // et propriétés des relations (qui révèlent leurs deux extrémités).
+      const filterState = { q: "", cat: null, hiddenCats: {} };
+      const searchInput   = document.getElementById("graph-search");
+      const searchWrap    = document.getElementById("graph-search-wrap");
+      const searchClear   = document.getElementById("graph-search-clear");
+      const searchResults = document.getElementById("graph-search-results");
+      const btnReset      = document.getElementById("btn-reset");
+      const nodeById = {};
+      g.nodes.forEach(n => { nodeById[n.id] = n; });
+
+      function normalizeText(str) {
+        return String(str || "")
+          .toLowerCase()
+          .normalize("NFD").replace(/[\u0300-\u036f]/g, ""); // retire les accents
+      }
+
+      function nodeHaystack(n) {
+        const props = Array.isArray(n.properties) ? n.properties.join(" ") : "";
+        return normalizeText(`${n.label || ""} ${n.id} ${n.group || ""} ${props}`);
+      }
+
+      function categoryAllowed(n) {
+        const c = (n.group || "").trim();
+        if (filterState.hiddenCats[c]) return false;
+        return !filterState.cat || c === filterState.cat;
+      }
+
+      function computeVisible() {
+        const q = normalizeText(filterState.q.trim());
+        const visible = {};
+        g.nodes.forEach(n => {
+          const matchQ = !q || nodeHaystack(n).includes(q);
+          if (matchQ && categoryAllowed(n)) visible[n.id] = true;
+        });
+        // La recherche porte aussi sur les relations : un libellé (ou une
+        // propriété) de relation qui correspond révèle ses deux extrémités.
+        if (q) {
+          g.edges.forEach(e => {
+            const hay = normalizeText(`${e.label || ""} ${(e.properties || []).join(" ")}`);
+            if (!hay.includes(q)) return;
+            [e.source, e.target].forEach(id => {
+              const n = nodeById[id];
+              if (n && categoryAllowed(n)) visible[id] = true;
+            });
+          });
+        }
+        return visible;
+      }
+
+      // Recadre la vue sur les nœuds encore visibles après filtrage.
+      // vis-network ignore l'argument `nodes` s'il est vide : dans ce cas
+      // (aucun résultat) on laisse la vue en place plutôt que de sauter.
+      function fitVisible(visibleIds) {
+        // Le filtrage pilote désormais la vue : le cadrage automatique du
+        // démarrage doit cesser, sinon il recadrerait sur tout le graphe.
+        stopAutoFit();
+        if (!visibleIds.length) return;
+        network.fit({
+          nodes: visibleIds,
+          animation: { duration: 400, easingFunction: "easeInOutQuad" }
+        });
+      }
+
+      function applyFilters(opts) {
+        const recenter = !opts || opts.recenter !== false;
+        const visible = computeVisible();
+
+        nodes.update(g.nodes.map(n => ({ id: n.id, hidden: !visible[n.id] })));
+        // Une liaison n'est visible que si ses deux extrémités le sont.
+        let visibleEdges = 0;
+        edges.update(g.edges.map((e, i) => {
+          const show = !!(visible[e.source] && visible[e.target]);
+          if (show) visibleEdges++;
+          return { id: i, hidden: !show };
+        }));
+
+        // Retour visuel : pastille active, autres atténuées, masquées
+        // barrées, compteur à jour.
+        chipsEl.classList.toggle("has-filter", !!filterState.cat);
+        let anyHidden = false;
+        chipsEl.querySelectorAll(".chip").forEach(ch => {
+          ch.classList.toggle("chip-active", ch.dataset.cat === filterState.cat);
+          const isHidden = !!filterState.hiddenCats[ch.dataset.cat];
+          ch.classList.toggle("chip-hidden", isHidden);
+          const eyeEl = ch.querySelector(".chip-eye");
+          if (eyeEl) eyeEl.textContent = isHidden ? "⊘" : "👁";
+          if (isHidden) anyHidden = true;
+        });
+
+        const filtered = filterState.q.trim() || filterState.cat || anyHidden;
+        const visibleCount = Object.keys(visible).length;
+        topbarStats.textContent = filtered
+          ? `${visibleCount} / ${g.nodes.length} nœuds · ${visibleEdges} / ${g.edges.length} liens`
+          : statsTotal;
+        stats.innerHTML = `
+          <div><strong>${filtered ? visibleCount + " / " : ""}${g.nodes.length}</strong> nœuds</div>
+          <div><strong>${filtered ? visibleEdges + " / " : ""}${g.edges.length}</strong> liens</div>`;
+
+        // La vue tableau reflète exactement ce qui est visible dans le
+        // graphe : on la redessine à chaque changement de filtre.
+        if (tableVisible) renderTable();
+
+        // Recadrage sur ce qui reste affiché : sans cela, filtrer une
+        // catégorie peut laisser la vue centrée sur une zone désormais vide.
+        // Inutile tant que le graphe est masqué par la vue tableau — le
+        // recadrage est alors fait au retour en vue graphe.
+        if (recenter && !tableVisible) fitVisible(Object.keys(visible));
+      }
+
+      btnReset.addEventListener("click", () => {
+        searchInput.value = "";
+        searchWrap.classList.remove("has-value", "show-results");
+        searchResults.innerHTML = "";
+        filterState.q = "";
+        filterState.cat = null;
+        filterState.hiddenCats = {};
+        // Volontairement sans recadrage : réinitialiser rétablit l'affichage
+        // complet, mais la vue reste où le visiteur l'avait laissée. Le
+        // bouton « Recadrer » est là pour ça.
+        applyFilters({ recenter: false });
+      });
+
+      // ── Vue tableau (lecture seule) ─────────────────────────────────────
+      // Mêmes règles que le Workspace : une ligne par relation visible
+      // (Catégorie du nœud source / Source / Relation / Cible), plus une
+      // ligne par élément visible sans relation visible. Tri par colonne au
+      // clic (croissant / décroissant / aucun).
+      const tableWrap = document.getElementById("graph-table-wrap");
+      const btnView   = document.getElementById("btn-view");
+      const btnCards  = document.getElementById("btn-cards");
+      let tableVisible = false;
+      // Mode de présentation des MÊMES lignes : false = tableau, true = pastilles.
+      // Sur mobile les pastilles sont forcées (4 colonnes y sont illisibles) et
+      // le bouton de bascule est masqué : il mentirait sur l'état réel.
+      let cardsMode = false;
+      const tSort = { col: null, dir: 1 };
+      const COLS = [
+        { key: "cat",  label: "Catégorie" },
+        { key: "from", label: "Source" },
+        { key: "rel",  label: "Relation" },
+        { key: "to",   label: "Cible" }
+      ];
+
+      btnView.addEventListener("click", () => {
+        tableVisible = !tableVisible;
+        tableWrap.hidden = !tableVisible;
+        graphEl.style.visibility = tableVisible ? "hidden" : "visible";
+        btnView.textContent = tableVisible ? "Vue graphe" : "Vue tableau";
+        btnView.classList.toggle("active", tableVisible);
+        syncCardsButton();
+        if (tableVisible) { resetSidebar(); renderTable(); }
+        // Retour au graphe : les filtres ont pu changer pendant que la vue
+        // tableau masquait le graphe, on recadre sur ce qui reste visible.
+        else fitVisible(Object.keys(computeVisible()));
+      });
+
+      // Le libellé décrit la vue vers laquelle on VA basculer.
+      function syncCardsButton() {
+        btnCards.hidden = !tableVisible || isMobile();
+        btnCards.textContent = cardsMode ? "▤ Tableau" : "▦ Pastilles";
+        btnCards.classList.toggle("active", cardsMode);
+      }
+
+      btnCards.addEventListener("click", () => {
+        cardsMode = !cardsMode;
+        // On ne touche ni au tri, ni à la recherche, ni aux filtres de
+        // catégorie : ce sont les mêmes lignes, présentées autrement.
+        syncCardsButton();
+        renderTable();
+      });
+
+      // Le rendu bifurque sur isMobile() à chaque appel, mais rien ne
+      // redessinait au franchissement du seuil : en repassant de mobile à
+      // desktop, les pastilles forcées restaient et le bouton ne revenait
+      // qu'après un rechargement. On ne redessine qu'au franchissement réel
+      // du seuil, et seulement si la vue tableau est ouverte.
+      let lastIsMobile = isMobile();
+      window.addEventListener("resize", () => {
+        const now = isMobile();
+        if (now === lastIsMobile) return;
+        lastIsMobile = now;
+        if (!tableVisible) return;
+        syncCardsButton();
+        renderTable();
+      });
+
+      function buildTableRows() {
+        const visible = computeVisible();
+        const usedIds = {};
+        const rows = [];
+
+        g.edges.forEach((e, i) => {
+          if (!visible[e.source] || !visible[e.target]) return;
+          const s = nodeById[e.source], tgt = nodeById[e.target];
+          if (!s || !tgt) return;
+          usedIds[s.id] = usedIds[tgt.id] = true;
+          rows.push({ type: "edge", edgeId: i, edge: e, fromNode: s, toNode: tgt });
+        });
+        // Éléments visibles sans relation visible : affichés quand même.
+        g.nodes.forEach(n => {
+          if (visible[n.id] && !usedIds[n.id]) rows.push({ type: "node", node: n });
+        });
+
+        if (tSort.col) {
+          rows.sort((a, b) => {
+            const va = sortValue(a, tSort.col), vb = sortValue(b, tSort.col);
+            return va < vb ? -tSort.dir : va > vb ? tSort.dir : 0;
+          });
+        }
+        return rows;
+      }
+
+      function sortValue(row, key) {
+        if (row.type === "edge") {
+          switch (key) {
+            case "cat":  return normalizeText(row.fromNode.group);
+            case "from": return normalizeText(row.fromNode.label);
+            case "rel":  return normalizeText(row.edge.label);
+            case "to":   return normalizeText(row.toNode.label);
+          }
+        }
+        if (key === "cat")  return normalizeText(row.node.group);
+        if (key === "from") return normalizeText(row.node.label);
+        return "";
+      }
+
+      // Cellule "nom + propriétés en sous-ligne" — tout en textContent.
+      function makeCell(main, props) {
+        const td = document.createElement("td");
+        const m = document.createElement("div");
+        m.className = "cell-main";
+        m.textContent = main || "";
+        td.appendChild(m);
+        if (Array.isArray(props) && props.length) {
+          const p = document.createElement("div");
+          p.className = "cell-props";
+          p.textContent = props.join(" | ");
+          td.appendChild(p);
+        }
+        return td;
+      }
+
+      function renderTable() {
+        while (tableWrap.firstChild) tableWrap.removeChild(tableWrap.firstChild);
+        const rows = buildTableRows();
+
+        if (!rows.length) {
+          const empty = document.createElement("div");
+          empty.className = "table-empty";
+          empty.textContent = "Aucun élément visible avec les filtres actuels.";
+          tableWrap.appendChild(empty);
+          return;
+        }
+
+        // Pastilles : choix explicite sur PC, forcé sur mobile.
+        if (cardsMode || isMobile()) { renderCards(rows); return; }
+
+        const table = document.createElement("table");
+        const thead = document.createElement("thead");
+        const trh = document.createElement("tr");
+        COLS.forEach(col => {
+          const th = document.createElement("th");
+          th.textContent = col.label + " ";
+          const ind = document.createElement("span");
+          ind.className = "sort-ind" + (tSort.col === col.key ? "" : " idle");
+          ind.textContent = tSort.col !== col.key ? "↕" : (tSort.dir === 1 ? "▲" : "▼");
+          th.appendChild(ind);
+          th.addEventListener("click", () => {
+            if (tSort.col !== col.key) { tSort.col = col.key; tSort.dir = 1; }
+            else if (tSort.dir === 1) { tSort.dir = -1; }
+            else { tSort.col = null; tSort.dir = 1; }
+            renderTable();
+          });
+          trh.appendChild(th);
+        });
+        thead.appendChild(trh);
+        table.appendChild(thead);
+
+        const tbody = document.createElement("tbody");
+        rows.forEach(row => {
+          const tr = document.createElement("tr");
+          if (row.type === "edge") {
+            const catTd = document.createElement("td");
+            catTd.textContent = (row.fromNode.group || "").trim() || "—";
+            tr.appendChild(catTd);
+            tr.appendChild(makeCell(row.fromNode.label, row.fromNode.properties));
+            tr.appendChild(makeCell(row.edge.label, row.edge.properties));
+            tr.appendChild(makeCell(row.toNode.label, row.toNode.properties));
+            tr.addEventListener("click", () => {
+              openEdgePanel(row.edgeId);
+              if (isMobile()) setSidebarOpen(true);
+            });
+          } else {
+            const catTd = document.createElement("td");
+            catTd.textContent = (row.node.group || "").trim() || "—";
+            tr.appendChild(catTd);
+            tr.appendChild(makeCell(row.node.label, row.node.properties));
+            tr.appendChild(document.createElement("td"));
+            tr.appendChild(document.createElement("td"));
+            tr.addEventListener("click", () => {
+              openNodePanel(row.node.id);
+              if (isMobile()) setSidebarOpen(true);
+            });
+          }
+          tbody.appendChild(tr);
+        });
+        table.appendChild(tbody);
+        tableWrap.appendChild(table);
+      }
+
+      // ── Rendu pastilles ─────────────────────────────────────────────────
+      // Mêmes lignes que le tableau (buildTableRows), donc mêmes filtres,
+      // même tri, même définition de « visible ». Seule la présentation
+      // change : une carte par relation ou par élément isolé.
+      function renderCards(rows) {
+        // Le tri se fait par les en-têtes de colonnes, qui n'existent pas
+        // ici : sans cette barre, passer en pastilles ferait perdre l'accès
+        // au tri jusqu'au retour au tableau.
+        const sortBar = document.createElement("div");
+        sortBar.className = "cards-sort";
+        const sortLabel = document.createElement("span");
+        sortLabel.className = "cards-sort-label";
+        sortLabel.textContent = "Trier :";
+        sortBar.appendChild(sortLabel);
+
+        COLS.forEach(col => {
+          const b = document.createElement("button");
+          b.type = "button";
+          b.className = "cards-sort-btn" + (tSort.col === col.key ? " active" : "");
+          b.textContent = col.label + (tSort.col === col.key ? (tSort.dir === 1 ? " ▲" : " ▼") : "");
+          b.addEventListener("click", () => {
+            if (tSort.col !== col.key) { tSort.col = col.key; tSort.dir = 1; }
+            else if (tSort.dir === 1) { tSort.dir = -1; }
+            else { tSort.col = null; tSort.dir = 1; }
+            renderTable();
+          });
+          sortBar.appendChild(b);
+        });
+        tableWrap.appendChild(sortBar);
+
+        const list = document.createElement("div");
+        list.className = "cards-list";
+
+        rows.forEach(row => {
+          const isEdge = row.type === "edge";
+          const node   = isEdge ? row.fromNode : row.node;
+          const cat    = (node.group || "").trim();
+
+          const card = document.createElement("article");
+          card.className = "gcard" + (isEdge ? "" : " gcard-isolated");
+
+          // Badge de catégorie : mêmes couleurs que la légende et que les
+          // bordures de nœuds dans le graphe (colorFor + textColorFor).
+          const badge = document.createElement("span");
+          badge.className = "gcard-cat";
+          badge.textContent = cat || "—";
+          if (cat) {
+            const color = colorFor(cat);
+            badge.style.background  = color;
+            badge.style.borderColor = color;
+            badge.style.color       = textColorFor(color);
+          }
+          card.appendChild(badge);
+
+          const titleRow = document.createElement("div");
+          titleRow.className = "gcard-title";
+
+          const src = document.createElement("strong");
+          src.className = "gcard-src";
+          src.textContent = node.label || node.id;
+          titleRow.appendChild(src);
+
+          if (isEdge) {
+            const rel = document.createElement("span");
+            rel.className = "gcard-rel";
+            rel.textContent = "→ " + (row.edge.label || "lié à") + " →";
+            titleRow.appendChild(rel);
+
+            const tgt = document.createElement("strong");
+            tgt.className = "gcard-tgt";
+            tgt.textContent = row.toNode.label || row.toNode.id;
+            titleRow.appendChild(tgt);
+          } else {
+            const lonely = document.createElement("span");
+            lonely.className = "gcard-lonely";
+            lonely.textContent = "— élément isolé —";
+            titleRow.appendChild(lonely);
+          }
+          card.appendChild(titleRow);
+
+          addCardProps(card, "📌", node.properties);
+          if (isEdge) {
+            addCardProps(card, "🔗", row.edge.properties);
+            addCardProps(card, "🎯", row.toNode.properties);
+          }
+
+          // Même destination qu'un clic de ligne dans le tableau.
+          card.addEventListener("click", () => {
+            if (isEdge) openEdgePanel(row.edgeId);
+            else openNodePanel(row.node.id);
+            if (isMobile()) setSidebarOpen(true);
+          });
+
+          list.appendChild(card);
+        });
+
+        tableWrap.appendChild(list);
+      }
+
+      function addCardProps(card, icon, props) {
+        if (!Array.isArray(props) || !props.length) return;
+        const div = document.createElement("div");
+        div.className = "gcard-props";
+        div.textContent = icon + " " + props.join(" | ");
+        card.appendChild(div);
+      }
+
+      // ── Liste de résultats de recherche (focus sur un nœud) ─────────────
+      function getMatches(query) {
+        const q = normalizeText(query);
+        if (!q) return null;
+        return g.nodes.filter(n => nodeHaystack(n).includes(q) && categoryAllowed(n));
+      }
+
+      function renderResultsList(query) {
+        const matches = getMatches(query);
+        if (matches === null || matches.length === 0) {
+          searchResults.innerHTML = matches !== null
+            ? `<div class="gs-result-empty">Aucun nœud trouvé.</div>`
+            : "";
+          return;
+        }
+        const shown = matches.slice(0, 25);
+        searchResults.innerHTML = shown.map(n => `
+          <div class="gs-result" data-id="${esc(n.id)}">
+            <span>${esc(n.label)}</span>
+            ${n.group ? `<span class="gs-result-group">${esc(n.group)}</span>` : ""}
+          </div>
+        `).join("") + (matches.length > shown.length
+          ? `<div class="gs-result-empty">+ ${matches.length - shown.length} autres résultats…</div>`
+          : "");
+      }
+
+      function focusOnNode(nodeId) {
+        network.selectNodes([nodeId]);
+        network.focus(nodeId, { scale: 1.3, animation: { duration: 500, easingFunction: "easeInOutQuad" } });
+        openNodePanel(nodeId);
+        if (isMobile()) setSidebarOpen(true);
+      }
+
+      let searchDebounce = null;
+      searchInput.addEventListener("input", () => {
+        const val = searchInput.value;
+        searchWrap.classList.toggle("has-value", val.length > 0);
+        searchWrap.classList.toggle("show-results", val.length > 0);
+
+        clearTimeout(searchDebounce);
+        searchDebounce = setTimeout(() => {
+          filterState.q = val;
+          applyFilters();
+          renderResultsList(val);
+        }, 120);
+      });
+
+      searchInput.addEventListener("keydown", (e) => {
+        if (e.key === "Enter") {
+          const first = searchResults.querySelector(".gs-result");
+          if (first) {
+            focusOnNode(first.dataset.id);
+            searchWrap.classList.remove("show-results");
+          }
+        } else if (e.key === "Escape") {
+          clearSearch();
+        }
+      });
+
+      searchInput.addEventListener("focus", () => {
+        if (searchInput.value) searchWrap.classList.add("show-results");
+      });
+
+      searchResults.addEventListener("click", (e) => {
+        const item = e.target.closest(".gs-result");
+        if (!item) return;
+        focusOnNode(item.dataset.id);
+        searchWrap.classList.remove("show-results");
+      });
+
+      function clearSearch() {
+        searchInput.value = "";
+        searchWrap.classList.remove("has-value", "show-results");
+        filterState.q = "";
+        // Comme « Réinitialiser » : lever un filtre ne déplace pas la vue.
+        applyFilters({ recenter: false });
+        searchResults.innerHTML = "";
+        searchInput.blur();
+      }
+      searchClear.addEventListener("click", clearSearch);
+
+      document.addEventListener("click", (e) => {
+        if (!searchWrap.contains(e.target)) {
+          searchWrap.classList.remove("show-results");
+        }
+      });
+    }
+  </script>
+</body>
+</html>
