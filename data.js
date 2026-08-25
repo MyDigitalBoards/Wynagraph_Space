@@ -12068,7 +12068,7 @@ window.GRAPHS = [
 
 {
   "id": "garde-robe",
-  "title": "Garde-robe : cartographier son dressing pour s'habiller (vraiment) mieux",
+  "title": "Garde-robe : cartographier son dressing pour éviter les achats inutiles",
   "category": "Style de vie",
   "description": "Vos vêtements reliés par usage, saison et associations — pour redécouvrir ce que vous possédez déjà.",
   "longDescription": "La plupart des dressings contiennent plus de vêtements que ce que l'on porte réellement. Une cartographie par pièce, usage et association permet de redécouvrir des combinaisons oubliées, et d'acheter plus juste.",
