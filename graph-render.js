@@ -1,4 +1,16 @@
 
+// Couleurs de categorie fournies par le fichier importe lui-meme (export
+// JSON du Workspace WynaGraph, voir exportToJSON dans import-export.js :
+// chaque nœud y porte son propre hex de categorie sous n.color). Repeuplee
+// a chaque normalizeGraph() (donc a chaque chargement de graphe), lue par
+// colorFor() ci-dessous — un seul point de verite pour que le graphe, la
+// legende ET les cartes utilisent tous la MEME couleur importee plutot que
+// la palette generique du site. Vide (comportement par defaut, inchange)
+// pour un graphe du blog qui ne fournit pas ce champ.
+let importedCategoryColors = {};
+
+const HEX_COLOR_RE = /^#[0-9a-f]{6}$/i;
+
 function normalizeGraph(graph) {
   // Normaliser les nœuds
   const nodes = (graph.nodes || []).map(n => ({
@@ -8,6 +20,20 @@ function normalizeGraph(graph) {
     size:       n.size || 18,
     properties: normalizeProperties(n.properties),
   }));
+
+  // Un nœud peut porter sa couleur de categorie (voir plus haut) : on la
+  // retient ici, categorie par categorie (premiere valeur valide rencontree
+  // gagne, comme l'assignation de categorie a l'import dans le Workspace),
+  // AVANT tout rendu — remis a zero a chaque nouveau graphe pour ne pas
+  // laisser les couleurs d'un import precedent contaminer le suivant.
+  importedCategoryColors = {};
+  nodes.forEach(n => {
+    const key = (n.group || "").toLowerCase();
+    const hex = typeof n.color === "string" ? n.color.trim() : "";
+    if (key && !importedCategoryColors[key] && HEX_COLOR_RE.test(hex)) {
+      importedCategoryColors[key] = hex;
+    }
+  });
 
   // Accepter "edges" ou "relationships"
   const rawEdges = graph.edges || graph.relationships || [];
@@ -80,6 +106,11 @@ function hashString(str) {
 function colorFor(group) {
   const key = (group || "").toLowerCase();
   if (!key || key === "default" || key === "unassigned") return CATEGORY_COLORS.default;
+  // Priorite a la couleur fournie par le fichier importe lui-meme (voir
+  // normalizeGraph) : elle doit l'emporter sur la palette generique du
+  // site, sinon un graphe importe depuis le Workspace perdrait les
+  // couleurs par categorie que l'utilisateur y a definies.
+  if (importedCategoryColors[key]) return importedCategoryColors[key];
   if (CATEGORY_COLORS[key]) return CATEGORY_COLORS[key];
   return FALLBACK_PALETTE[hashString(key) % FALLBACK_PALETTE.length];
 }
